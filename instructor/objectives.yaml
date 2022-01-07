@@ -1,5 +1,4 @@
 ---
-
 section: running Python
   tutorials: [running_python.ipynb]
   questions:
@@ -11,4 +10,4 @@ section: running Python
   objective: use basic Markdown in a notebook
     tutorials: []
     questions:
-    links:
+    links:   
