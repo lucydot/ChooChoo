@@ -1,0 +1,42 @@
+name: Fat Controller
+
+on: 
+  issue:
+    types: created
+  issue_comment:
+    types: created
+    
+jobs:
+  get-people:
+    runs-on: ubuntu-latest
+    env: 
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    outputs:
+      people: ${{ steps.get-people.outputs.people }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+        cache: 'pip'
+    - run: pip install .
+    - id: get-people
+      run: echo "::set-output name=people::$(choochoo get-people)"
+      
+#  ${{github.actor == github.event.issue_comment.issue.owner}}
+        
+  student:
+    needs: get-people
+    if: contains(needs.get-people.outputs.people,github.actor) 
+    runs-on: ubuntu-latest
+    env: 
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+        cache: 'pip'
+    - run: pip install .
+    - run: choochoo ${{ github.event.comment.body }}
+    
