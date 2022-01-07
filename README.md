@@ -2,7 +2,7 @@
 
 ChooChoo is a **Ch**ecklist t**oo**l for educators. 
 
-✨ ChooChoo encourages learning through self-assessment, collaboration and responsive teaching. More on the underlying pedagogy can be found [here]().
+✨ ChooChoo encourages learning through self-assessment, collaboration and diagnostic teaching. More on the underlying pedagogy can be found [here]().
 
 ✨ This repository contains an empty ChooChoo project for those who want to start from scratch. Alternatively, you can use or adapt an [existing ChooChoo project]().
 
