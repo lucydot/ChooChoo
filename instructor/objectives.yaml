@@ -6,10 +6,10 @@ section: running Python
   
   objective: open and save a Jupyter Notebook
     tutorials: []
-    questions: [070122_open.yaml]
+    questions: []
     links: []
     
   objective: use basic Markdown in a notebook
     tutorials: []
-    questions:
+    questions: [070122_markdown.yaml]
     links:   
