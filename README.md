@@ -8,6 +8,8 @@ ChooChoo is a **Ch**ecklist t**oo**l for educators.
 
 ✨ To use ChooChoo you do not need to download anything. Simply clone a ChooChoo project repository and follow the [Quick Start guide]().
 
+✨ ChooChoo is free to use and adapt under a Creative Commons License. Pretty-please say hi :wave: if you are using ChooChoo - you can find my email address [here](https://lucydot.github.io/about/).
+
 ## Features
 
 - 📋 Create checklists for your students to work through
