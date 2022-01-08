@@ -1,33 +1,15 @@
 name: Fat Controller
 
 on: 
-  issue:
+  issues:
     types: created
   issue_comment:
     types: created
     
 jobs:
-  get-people:
-    runs-on: ubuntu-latest
-    env: 
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    outputs:
-      people: ${{ steps.get-people.outputs.people }}
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
-        cache: 'pip'
-    - run: pip install .
-    - id: get-people
-      run: echo "::set-output name=people::$(choochoo get-people)"
       
-#  ${{github.actor == github.event.issue_comment.issue.owner}}
-        
-  student:
-    needs: get-people
-    if: contains(needs.get-people.outputs.people,github.actor) 
+  check-ticket:
+    if: github.event_name == issues
     runs-on: ubuntu-latest
     env: 
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -38,5 +20,49 @@ jobs:
         python-version: '3.x'
         cache: 'pip'
     - run: pip install .
-    - run: choochoo ${{ github.event.comment.body }}
+    - run: choochoo check-ticket 
+    
+  choochoo:
+    if: |
+      github.event_name == issue_comment && 
+      github.actor == github.event.issue_comment.issue.owner &&
+      startsWith(github.event.comment.body,'choochoo ')
+    runs-on: ubuntu-latest
+    env: 
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+        cache: 'pip'
+    - run: pip install .
+    - run: ${{ github.event.comment.body }}
+    
+  no-choochoo-command:
+    if: !startsWith(github.event.comment.body,'choochoo ')
+    runs-on: ubuntu-latest
+    env: 
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - run: python ./choochoo/delivery.py --type no_choochoo
+    
+  not-issue-owner:
+   if: |
+     github.event_name == issue_comment && 
+     github.actor != github.event.issue_comment.issue.owner &&
+   runs-on: ubuntu-latest
+   env: 
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+   steps:
+   - uses: actions/setup-python@v2
+     with:
+       python-version: '3.x'
+   - run: python ./choochoo/delivery.py --type not_owner
+    
+    
+  
     
