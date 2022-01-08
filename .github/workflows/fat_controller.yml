@@ -9,7 +9,9 @@ on:
 jobs:
       
   check-ticket:
-    if: github.event_name == issues
+    if: |
+      github.event_name == issues && 
+      github.event.issue_comment.issue.label.name == "instructor"
     runs-on: ubuntu-latest
     env: 
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -20,7 +22,7 @@ jobs:
         python-version: '3.x'
         cache: 'pip'
     - run: pip install .
-    - run: choochoo check-ticket 
+    - run: ${{ choochoo check {0} is instructor, github.actor }}
     
   choochoo:
     if: |
