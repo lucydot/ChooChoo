@@ -22,7 +22,7 @@ jobs:
         python-version: '3.x'
         cache: 'pip'
     - run: pip install .
-    - run: ${{ choochoo check {0} is instructor, github.actor }}
+    - run: ${{ choochoo create {0} as instructor, github.actor }}
     
   choochoo:
     if: |
