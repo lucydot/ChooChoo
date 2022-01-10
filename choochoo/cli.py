@@ -21,13 +21,6 @@ def interface():
   # returns true if the command string matches the argument string
   command_matches = lambda string: bool(re.match(string, command))
   
-  if command_matches("create (@\w+) as instructor"):
-    handle = argv[2]
-    if management.check_instructor(handle,silent=True) is False:
-      delivery.issue_reply("Choochoo is closing this issue as ",handle," \
-                           is not listed as an instructor in settings.yml.")
-      delivery.close_issue()
-    
   if command_matches("check (@\w+) is instructor"):
     handle = argv[2]
     management.check_instructor(handle)
