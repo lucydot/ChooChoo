@@ -22,7 +22,7 @@ jobs:
         python-version: '3.x'
         cache: 'pip'
     - run: pip install .
-    - run: ${{ format(python ./scripts/check_ticket.py --handle {0}, github.actor) }}
+    - run: ${{ format(python ./scripts/check_ticket.py {0}, github.actor) }}
     
   choochoo:
     if: |
