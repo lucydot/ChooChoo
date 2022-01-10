@@ -22,7 +22,7 @@ jobs:
         python-version: '3.x'
         cache: 'pip'
     - run: pip install .
-    - run: ${{ choochoo create {0} as instructor, github.actor }}
+    - run: ${{ format(python ./scripts/check_ticket.py --handle {0}, github.actor) }}
     
   choochoo:
     if: |
@@ -50,7 +50,7 @@ jobs:
     - uses: actions/setup-python@v2
       with:
         python-version: '3.x'
-    - run: python ./choochoo/delivery.py --type no_choochoo
+    - run: python ./scripts/no_choochoo.py
     
   not-issue-owner:
    if: |
@@ -63,7 +63,7 @@ jobs:
    - uses: actions/setup-python@v2
      with:
        python-version: '3.x'
-   - run: python ./choochoo/delivery.py --type not_owner
+   - run: python ./scripts/not_owner.py
     
     
   
