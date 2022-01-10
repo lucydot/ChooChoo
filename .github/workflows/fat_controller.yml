@@ -41,17 +41,6 @@ jobs:
     - run: pip install .
     - run: ${{ github.event.comment.body }}
     
-  no-choochoo-command:
-    if: !startsWith(github.event.comment.body,'choochoo ')
-    runs-on: ubuntu-latest
-    env: 
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    steps:
-    - uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
-    - run: python ./scripts/no_choochoo.py
-    
   not-issue-owner:
    if: |
      github.event_name == issue_comment && 
@@ -62,7 +51,7 @@ jobs:
    steps:
    - uses: actions/setup-python@v2
      with:
-       python-version: '3.x'
+       python-version: '3.x'   # need to pip install pygithub API?
    - run: python ./scripts/not_owner.py
     
     
