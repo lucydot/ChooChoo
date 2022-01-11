@@ -1,4 +1,4 @@
 from choochoo issues
 
-issues.issue_reply("Choochoo only executes commands from the issue author \
-                       (the person who raised the issue thread).")
+issues.issue_reply("Choochoo is ignoring this command as you are not the \
+                   issue author.")
