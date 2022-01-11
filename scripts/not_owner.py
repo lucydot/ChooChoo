@@ -5,5 +5,5 @@ in an issue thread they did not author (create).
 
 from choochoo import issues
 
-issues.issue_reply("Choochoo is ignoring this command as you are not the \
+issues.make_comment("Choochoo is ignoring this command as you are not the \
                    issue author.")
