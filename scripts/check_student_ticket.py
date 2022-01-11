@@ -9,7 +9,7 @@ from sys import argv
 from choochoo import management, issues
 
 handle = argv[1]
-if management.check_student(handle,silent=True) is False:
+if management.check_student(handle) is False:
   issues.issue_reply("Choochoo is closing this issue as ",handle," \
                        is not listed as an student in settings.yml.")
   issues.close_issue()
