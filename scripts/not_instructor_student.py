@@ -5,7 +5,7 @@ in an issue thread that is not labelled as "instructor" or "teacher".
 
 from choochoo import issues
 
-issues.issue_reply("""Choochoo is ignoring this command as this is not an 
+issues.make_comment("""Choochoo is ignoring this command as this is not an 
                    Instructor or Student issue thread.
                    
                    Instructors: add your name to settings.yml and then raise an Instructor issue.
