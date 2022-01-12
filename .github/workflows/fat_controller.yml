@@ -7,7 +7,6 @@ on:
     types: created
     
 jobs:
-      
   check-instructor-ticket:
     if: |
       github.event_name == issues && 
