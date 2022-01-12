@@ -19,7 +19,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: '3.9+'
         cache: 'pip'
     - run: pip install .
     - run: ${{ format(python ./scripts/check_instructor_ticket.py {0}, github.actor) }}
@@ -35,7 +35,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: '3.9+'
         cache: 'pip'
     - run: pip install .
     - run: ${{ format(python ./scripts/check_student_ticket.py {0}, github.actor) }}
@@ -51,7 +51,7 @@ jobs:
    steps:
    - uses: actions/setup-python@v2
      with:
-       python-version: '3.x'   # need to pip install pygithub API?
+       python-version: '3.9+'   # need to pip install pygithub API?
        cache: 'pip'
    - run: pip install .
    - run: python ./scripts/not_owner.py    
@@ -70,7 +70,7 @@ jobs:
    steps:
    - uses: actions/setup-python@v2
      with:
-       python-version: '3.x'   # need to pip install pygithub API?
+       python-version: '3.9+'   # need to pip install pygithub API?
        cache: 'pip'
    - run: pip install .
    - run: python ./scripts/not_instructor_teacher.py    
@@ -92,7 +92,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: '3.9+'
         cache: 'pip'
     - run: pip install .
     - run: ${{ github.event.comment.body }}
