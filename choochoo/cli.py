@@ -2,6 +2,7 @@
 
 Contains the single function `interface`.
 """
+import github
 import re
 from sys import argv
 
@@ -16,6 +17,10 @@ def interface():
   and then calls other choochoo functions as appropriate. 
   If it does not match the sentence then a message is returned to the user.
   """
+
+  repository = management.Repository()
+  issue_number = issues.issue_number()
+  issue = issues.Issue(repository,issue_number)
   
   command = ' '.join(argv[1:])
   
@@ -25,23 +30,23 @@ def interface():
   if command_matches("check (@\w+) is instructor"):
     handle = argv[2]
     if management.check_instructor(handle):
-      issues.make_comment(handle," is an instructor")
+      issue.make_comment(handle," is an instructor")
     else:
-      issues.make_comment(handle," is not an instructor")
+      issue.make_comment(handle," is not an instructor")
     
   elif command_matches("check (@\w+) is admin"):
     handle = argv[2]
     if management.check_admin(handle):
-      issues.make_comment(handle," is an admin")
+      issue.make_comment(handle," is an admin")
     else:
-      issues.make_comment(handle," is not an admin")
+      issue.make_comment(handle," is not an admin")
     
   elif command_matches("check (@\w+) is student"):
     handle = argv[2]
     if management.check_student(handle):
-      issues.make_comment(handle," is a student")
+      issue.make_comment(handle," is a student")
     else:
-      issues.make_comment(handle," is not a student")
+      issue.make_comment(handle," is not a student")
     
     
   
