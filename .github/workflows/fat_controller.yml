@@ -26,8 +26,8 @@ jobs:
 #      with:
 #        python-version: '3.9+'
 #        cache: 'pip'
-#    - run: pip install .
-     - run: ${{ format(python ./scripts/check_instructor_ticket.py {0}, github.actor) }}
+     - run: pip install .
+#     - run: ${{ format(python ./scripts/check_instructor_ticket.py {0}, github.actor) }}
     
   check_student_ticket:
     if: |
