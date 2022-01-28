@@ -17,16 +17,16 @@ jobs:
 #    if: |
 #      github.event_name == issues && 
 #      github.event.issue_comment.issue.label.name == "instructor"
-#    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 #    env: 
 #      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#    steps:
-#    - uses: actions/checkout@v2
-#    - uses: actions/setup-python@v2
-#      with:
-#        python-version: '3.9+'
-#        cache: 'pip'
-     - run: pip install .
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.9+'
+        cache: 'pip'
+    - run: pip install .
 #     - run: ${{ format(python ./scripts/check_instructor_ticket.py {0}, github.actor) }}
     
   check_student_ticket:
