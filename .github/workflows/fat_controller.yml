@@ -7,7 +7,6 @@ on:
     types: [created]
     
 jobs:
-
   check_instructor_ticket:
     name: check-instructor-ticket
     if: |
