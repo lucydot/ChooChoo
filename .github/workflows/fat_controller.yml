@@ -2,7 +2,7 @@ name: Fat Controller
 
 on: 
 
-  issue:
+  issues:
     types: 
     - created
     
@@ -26,8 +26,10 @@ jobs:
       with:
         python-version: '3.9+'
         cache: 'pip'
-    - run: pip install .
-    - run: ${{ format(python ./scripts/check_instructor_ticket.py {0}, github.actor) }}
+    - name: Install choochoo
+      run: pip install .
+    - name: Check if instructor
+      run: ${{ format(python ./scripts/check_instructor_ticket.py {0}, github.actor) }}
     
   check_student_ticket:
     if: |
