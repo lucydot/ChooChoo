@@ -2,7 +2,7 @@ name: Fat Controller
 
 on: 
 
-  issue:
+  issues:
     types: 
     - created
     
