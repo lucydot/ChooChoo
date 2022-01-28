@@ -7,7 +7,8 @@ on:
     types: created
     
 jobs:
-  check-instructor-ticket:
+
+  check_instructor_ticket:
     name: check-instructor-ticket
     if: |
       github.event_name == issues && 
@@ -24,7 +25,7 @@ jobs:
     - run: pip install .
     - run: ${{ format(python ./scripts/check_instructor_ticket.py {0}, github.actor) }}
     
-  check-student-ticket:
+  check_student_ticket:
     if: |
       github.event_name == issues && 
       github.event.issue_comment.issue.label.name == "student"
@@ -40,7 +41,7 @@ jobs:
     - run: pip install .
     - run: ${{ format(python ./scripts/check_student_ticket.py {0}, github.actor) }}
     
-  not-issue-owner:
+  not_issue_owner:
    if: |
      github.event_name == issue_comment && 
      github.actor != github.event.issue_comment.issue.owner &&
@@ -57,7 +58,7 @@ jobs:
    - run: python ./scripts/not_owner.py    
    
    
-  not-instructor-student:
+  not_instructor_student:
     if: |
       github.event_name == issue_comment && 
       github.actor == github.event.issue_comment.issue.owner &&
