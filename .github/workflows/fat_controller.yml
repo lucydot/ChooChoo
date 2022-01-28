@@ -1,38 +1,17 @@
 name: Fat Controller
 
 on: 
+
   issue:
-    types: [created]
+    types: 
+    - created
+    
   issue_comment:
-    types: [created]
+    types: 
+    - created
     
 jobs:
-  build:
-    runs-on: ubuntu-20.04
-    steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-python@v1
-      with:
-        python-version: '3.6'
-        architecture: 'x64'
-        ref: 'checkboxes'   
-    - name: Install library and other requirements
-      run: |
-        pip install jupyter matplotlib numpy nbconvert PyGithub python-dotenv 
-    - name: Execute report notebook
-      env:
-        GH_TOKEN:  ${{ secrets.GITHUB_TOKEN }}
-      run: |
-         jupyter nbconvert --to notebook --execute --inplace _notebooks/2021-08-02-Python-progress.ipynb        
-    - name: Commit changes
-      uses: EndBug/add-and-commit@v4
-      with:
-        author_name: Lucy Whalley
-        message: "Update GitHub checkbox report"
-        add: "."
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-        
+
   check_instructor_ticket:
     name: check-instructor-ticket
     if: |
