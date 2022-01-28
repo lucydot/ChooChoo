@@ -2,9 +2,9 @@ name: Fat Controller
 
 on: 
   issue:
-    types: created
+    types: [created]
   issue_comment:
-    types: created
+    types: [created]
     
 jobs:
 
