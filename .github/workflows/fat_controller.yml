@@ -8,6 +8,7 @@ on:
     
 jobs:
   check-instructor-ticket:
+    name: check-instructor-ticket
     if: |
       github.event_name == issues && 
       github.event.issue_comment.issue.label.name == "instructor"
