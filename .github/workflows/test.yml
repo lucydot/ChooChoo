@@ -1,11 +1,14 @@
-name: Run and commit notebook hourly
+name: Fat Controller
 
-on:
-  push:
-  pull_request:
-  schedule:
-    - cron: '0 * * * *'
-  workflow_dispatch:
+on: 
+
+  issue:
+    types: 
+    - created
+    
+  issue_comment:
+    types: 
+    - created
     
 jobs:
   build:
