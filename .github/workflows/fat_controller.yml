@@ -1,7 +1,7 @@
 name: Fat Controller
 
 on: 
-  issues:
+  issue:
     types: created
   issue_comment:
     types: created
