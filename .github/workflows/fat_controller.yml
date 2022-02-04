@@ -5,7 +5,7 @@ on:
 
   issues:
     types: 
-    - created
+    - opened
     
   issue_comment:
     types: 
