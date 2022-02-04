@@ -16,7 +16,7 @@ jobs:
     name: check-instructor-ticket
     if: |
       github.event_name == 'issues' && 
-      github.event.issue.label.name == 'instructor'
+      github.event.label.name == 'instructor'
     runs-on: ubuntu-latest
     env: 
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -34,7 +34,7 @@ jobs:
   check_student_ticket:
     if: |
       github.event_name == 'issues' && 
-      github.event.issue.label.name == 'student'
+      github.event.label.name == 'student'
     runs-on: ubuntu-latest
     env: 
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
