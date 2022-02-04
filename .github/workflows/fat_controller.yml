@@ -11,7 +11,16 @@ on:
     - created
     
 jobs:
-
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-python@v1
+      with:
+        python-version: '3.6'
+        architecture: 'x64'
+        ref: 'checkboxes'   
+        
   check_instructor_ticket:
     name: check-instructor-ticket
     if: |
