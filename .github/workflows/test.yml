@@ -31,31 +31,77 @@ jobs:
     - name: Check if instructor
       run: ${{ format('python ./scripts/check_instructor_ticket.py {0}', github.actor) }}
       
-  build:
-    runs-on: ubuntu-20.04
+  check_student_ticket:
+    if: |
+      github.event_name == 'issues' && 
+      github.event.issue_comment.issue.label.name == "student"
+    runs-on: ubuntu-latest
+    env: 
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-python@v1
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
       with:
-        python-version: '3.6'
-        architecture: 'x64'
-        ref: 'checkboxes'   
-    - name: Install library and other requirements
-      run: |
-        pip install jupyter matplotlib numpy nbconvert PyGithub python-dotenv 
-    - name: Execute report notebook
-      env:
-        GH_TOKEN:  ${{ secrets.GITHUB_TOKEN }}
-      run: |
-         jupyter nbconvert --to notebook --execute --inplace _notebooks/2021-08-02-Python-progress.ipynb        
-    - name: Commit changes
-      uses: EndBug/add-and-commit@v4
+        python-version: '3.9+'
+        cache: 'pip'
+    - run: pip install .
+    - run: ${{ format('python ./scripts/check_student_ticket.py {0}', github.actor) }}
+    
+  not_issue_owner:
+   if: |
+     github.event_name == 'issue_comment' && 
+     github.actor != github.event.issue_comment.issue.owner &&
+     startsWith(github.event.comment.body,'choochoo ')
+   runs-on: ubuntu-latest
+   env: 
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+   steps:
+   - uses: actions/setup-python@v2
+     with:
+       python-version: '3.9+'   # need to pip install pygithub API?
+       cache: 'pip'
+   - run: pip install .
+   - run: python ./scripts/not_owner.py    
+   
+   
+  not_instructor_student:
+    if: |
+      github.event_name == 'issue_comment' && 
+      github.actor == github.event.issue_comment.issue.owner &&
+      github.event.issue_comment.issue.label.name != 'instructor' &&
+      github.event.issue_comment.issue.label.name != 'student' &&
+      startsWith(github.event.comment.body,'choochoo ')
+   runs-on: ubuntu-latest
+   env: 
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+   steps:
+   - uses: actions/setup-python@v2
+     with:
+       python-version: '3.9+'   # need to pip install pygithub API?
+       cache: 'pip'
+   - run: pip install .
+   - run: python ./scripts/not_instructor_student.py    
+
+  
+  choochoo:
+    if: |
+      github.event_name == 'issue_comment' && 
+      github.actor == github.event.issue_comment.issue.owner &&
+      (
+        github.event.issue_comment.issue.label.name == 'instructor' ||
+        github.event.issue_comment.issue.label.name == 'student'
+      ) &&
+      startsWith(github.event.comment.body,'choochoo ')
+    runs-on: ubuntu-latest
+    env: 
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+      GITHUB_REPOSITORY: ${{ GITHUB_REPOSITORY }}
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
       with:
-        author_name: Lucy Whalley
-        message: "Update GitHub checkbox report"
-        add: "."
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-
-
-
+        python-version: '3.9+'
+        cache: 'pip'
+    - run: pip install .
+    - run: ${{ github.event.comment.body }}
