@@ -14,7 +14,7 @@ on:
 jobs:
   check_instructor_ticket:
     name: check-instructor-ticket
-    if: ${{ github.event.issue.title == 'Choochoo instructor thread' }} #github.event_name == 'issues' }} #&& github.event.label.name == 'instructor' }}
+    if: github.event.issue.title == 'Choochoo instructor thread' && github.event_name == 'issues' 
     runs-on: ubuntu-latest
     env: 
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -30,9 +30,7 @@ jobs:
       run: ${{ format('python ./scripts/check_instructor_ticket.py {0}', github.actor) }}
       
   check_student_ticket:
-    if: |
-      github.event_name == 'issues' && 
-      github.event.label.name == 'student'
+    if: github.event.issue.title == 'Choochoo student thread' && github.event_name == 'issues' 
     runs-on: ubuntu-latest
     env: 
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
