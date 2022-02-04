@@ -29,7 +29,7 @@ jobs:
     - name: Install choochoo
       run: pip install .
     - name: Check if instructor
-      run: ${{ format(python ./scripts/check_instructor_ticket.py {0}, github.actor) }}
+      run: ${{ format('python ./scripts/check_instructor_ticket.py {0}', github.actor) }}
       
   build:
     runs-on: ubuntu-20.04
