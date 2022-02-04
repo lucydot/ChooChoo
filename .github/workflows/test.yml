@@ -67,8 +67,8 @@ jobs:
     if: |
       github.event_name == 'issue_comment' && 
       github.actor == github.event.issue_comment.issue.owner &&
-      github.event.issue_comment.issue.label.name != "instructor" &&
-      github.event.issue_comment.issue.label.name != "student" &&
+      github.event.issue_comment.issue.label.name != 'instructor' &&
+      github.event.issue_comment.issue.label.name != 'student' &&
       startsWith(github.event.comment.body,'choochoo ')
     runs-on: ubuntu-latest
     env: 
