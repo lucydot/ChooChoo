@@ -46,3 +46,19 @@ jobs:
         cache: 'pip'
     - run: pip install .
     - run: ${{ format('python ./scripts/check_student_ticket.py {0}', github.actor) }}
+    
+  not_issue_owner:
+    if: |
+      github.event_name == issue_comment && 
+      github.actor != github.event.issue_comment.issue.owner &&
+      startsWith(github.event.comment.body,'choochoo ')
+    runs-on: ubuntu-latest
+    env: 
+       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.9+'   # need to pip install pygithub API?
+        cache: 'pip'
+    - run: pip install .
+    - run: python ./scripts/not_owner.py    
