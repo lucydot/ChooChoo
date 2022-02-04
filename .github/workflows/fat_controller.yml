@@ -23,7 +23,6 @@ jobs:
     - uses: actions/setup-python@v2
       with:
         python-version: '3.x'
-        cache: 'pip'
     - name: Install choochoo
       run: pip install .
     - name: Check if instructor
