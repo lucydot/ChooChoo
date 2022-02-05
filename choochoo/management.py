@@ -47,11 +47,11 @@ class Repository:
         return self.pygh_repo.get_issues(number=number,
             creator=creator)
         
-def check_instructor(handle: str) --> bool:
+def check_instructor(handle: str) -> bool:
     return handle in settings.Settings.instructors 
 
-def check_admin(handle: str) --> bool:
+def check_admin(handle: str) -> bool:
     return handle in settings.Settings.admins 
 
-def check_student(handle: str) --> bool:
+def check_student(handle: str) -> bool:
     return handle in settings.Settings.students
