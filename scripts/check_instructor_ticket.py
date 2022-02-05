@@ -9,7 +9,11 @@ from sys import argv
 from choochoo import management, issues
 
 handle = argv[1]
+
 if management.check_instructor(handle) is False:
-  issues.make_comment("Choochoo is closing this issue as ",handle," \
+  repository = management.Repository()
+  number = issues.issue_number()
+  issue = issues.Issue(repository,number)
+  issue.make_comment("Choochoo is closing this issue as ",handle," \
                        is not listed as an instructor in settings.yml.")
-  issues.close_issue()
+  issue.close_issue()

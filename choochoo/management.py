@@ -5,6 +5,7 @@ A collection of admin functions and the Repository class.
 """
 import github
 import dotenv 
+import os
 
 from choochoo import settings
 
@@ -28,7 +29,7 @@ class Repository:
     def repo_name(self):
         "Get repository in name/repo format"
         dotenv.load_dotenv()
-        return os.dotenv("GITHUB_REPOSITORY")
+        return os.getenv("GITHUB_REPOSITORY")
 
     def pygh_repo(self):
         "Get a repo object using PyGithubAPI"
@@ -48,10 +49,10 @@ class Repository:
             creator=creator)
         
 def check_instructor(handle: str) -> bool:
-    return handle in settings.Settings.instructors 
+    return handle in settings.Settings().instructors
 
 def check_admin(handle: str) -> bool:
-    return handle in settings.Settings.admins 
+    return handle in settings.Settings().admins 
 
 def check_student(handle: str) -> bool:
-    return handle in settings.Settings.students
+    return handle in settings.Settings().students

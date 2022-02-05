@@ -2,11 +2,18 @@
 A module for reading from, and writing to, the issues tracker on a choochoo repo.
 """
 import github
+import dotenv
+import os
+import sys
 from choochoo import management
 
 def issue_number():
-    dotenv.load_dotenv()
-    return os.getenv("ISSUE_NUMBER")
+    dotenv.load_dotenv()    
+    if os.getenv("ISSUE_NUMBER") is None:
+        sys.exit("This function should only be called when opening a Github issue.")
+    else:
+        return os.getenv("ISSUE_NUMBER")
+
 
 class Issue:
     """Class for holding, reading from and writing to a
