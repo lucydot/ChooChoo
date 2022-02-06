@@ -6,7 +6,7 @@ It checks to see the student is listed as such in the settings.yml. If not, then
 """
 
 from sys import argv
-from choochoo import management, issues
+from choochoo import management, issues, env
 
 handle = argv[1]
 
