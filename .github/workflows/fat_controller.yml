@@ -17,6 +17,8 @@ jobs:
     if: github.event.issue.title == 'Choochoo instructor thread' && github.event_name == 'issues' 
     runs-on: ubuntu-latest
     env: 
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - uses: actions/checkout@v2
