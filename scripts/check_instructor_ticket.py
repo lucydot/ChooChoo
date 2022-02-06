@@ -11,7 +11,7 @@ from choochoo import management, issues, env
 handle = argv[1]
 
 if management.check_instructor(handle) is False:
-  repository = env.Repository()
+  repository = management.Repository()
   number = env.issue_number()
   issue = issues.Issue(repository,number)
   issue.make_comment("Choochoo is closing this issue as ",handle," \

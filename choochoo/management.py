@@ -21,8 +21,8 @@ class Repository:
 
     def pygh_repo(self):
         "Get a repo object using PyGithubAPI"
-        g = github.Github(self._token())
-        return g.get_repo(self.repo_name())
+        g = github.Github(self._token)
+        return g.get_repo(self.repo_name)
 
     def student_issues(self,since=None):
         "Find student issues in the repo"
