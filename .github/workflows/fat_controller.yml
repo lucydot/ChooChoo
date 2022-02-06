@@ -49,7 +49,6 @@ jobs:
       startsWith(github.event.comment.body,'choochoo ')
     runs-on: ubuntu-latest
     steps:
-    steps:
     - uses: ben-z/actions-comment-on-issue@1.0.2
       with:
         message: "[checks ticket] I'm afraid you don't have permission to run choochoo commands here."
