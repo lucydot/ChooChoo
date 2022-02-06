@@ -48,15 +48,17 @@ jobs:
       github.actor != github.event.issue_comment.issue.owner &&
       startsWith(github.event.comment.body,'choochoo ')
     runs-on: ubuntu-latest
-    env: 
-       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-    - uses: actions/setup-python@v2
+    - uses: actions/github-script@v5
       with:
-        python-version: '3.x'   # need to pip install pygithub API?
-        cache: 'pip'
-    - run: pip install .
-    - run: python ./scripts/not_owner.py    
+        github-token: ${{secrets.BOT_ACCESS_TOKEN}}
+        script: |
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: '[checks train ticket] I'm afraid you do not have permission to run choochoo commands here.'
+          })  
     
   not_instructor_student:
     if: |
