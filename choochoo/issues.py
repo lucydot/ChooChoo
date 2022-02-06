@@ -2,17 +2,8 @@
 A module for reading from, and writing to, the issues tracker on a choochoo repo.
 """
 import github
-import dotenv
-import os
-import sys
 from choochoo import management
 
-def issue_number():
-    dotenv.load_dotenv()    
-    if os.getenv("ISSUE_NUMBER") is None:
-        sys.exit("No issue number found.")
-    else:
-        return os.getenv("ISSUE_NUMBER")
 
 
 class Issue:
@@ -27,11 +18,11 @@ class Issue:
         self.repository = repository
         self.number = number
         self.pygh_issue = self.repository.pygh_repo.get_issue(self.number)
+        print(self.pygh_issue)
 
-
-    def make_comment(*message):
+    def make_comment(self,*message):
         message = " ".join(message)
         self.pygh_issue.create_comment(message)
 
-    def close_issue():
-        self.pygh_issue.edit(state=closed)
+    def close_issue(self):
+        self.pygh_issue.edit(state='closed')

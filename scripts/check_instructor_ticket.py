@@ -14,6 +14,5 @@ if management.check_instructor(handle) is False:
   repository = management.Repository()
   number = env.issue_number()
   issue = issues.Issue(repository,number)
-  issue.make_comment("Choochoo is closing this issue as ",handle," \
-                       is not listed as an instructor in settings.yml.")
+  issue.make_comment("Choochoo is closing this issue as",handle,"is not listed as an instructor in settings.yml.")
   issue.close_issue()

@@ -14,7 +14,7 @@ def getenv(variable):
 
 def issue_number():
 	"Get issue number"
-	return getenv("ISSUE_NUMBER")
+	return int(getenv("ISSUE_NUMBER"))
     
 def _token():
 	"Get gh token, needed for the PyGithub API"
