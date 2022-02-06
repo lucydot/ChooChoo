@@ -65,12 +65,10 @@ jobs:
     env: 
        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-    - uses: actions/setup-python@v2
+    - uses: ben-z/actions-comment-on-issue@1.0.2
       with:
-        python-version: '3.x'   # need to pip install pygithub API?
-        cache: 'pip'
-    - run: pip install .
-    - run: python ./scripts/not_instructor_student.py   
+        message: "[checks ticket] To run choochoo commands you must be listed as a student or instructor."
+        GITHUB_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN }}
 
   choochoo:
     if: |
