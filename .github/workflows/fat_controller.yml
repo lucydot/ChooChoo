@@ -45,7 +45,7 @@ jobs:
   not_issue_owner:
     if: |
       github.event_name == 'issue_comment' && 
-      github.actor != github.event.issue_comment.issue.owner &&
+      github.actor != github.event.issue.owner &&
       startsWith(github.event.comment.body,'choochoo ')
     runs-on: ubuntu-latest
     steps:
@@ -57,9 +57,9 @@ jobs:
   not_instructor_student:
     if: |
       github.event_name == 'issue_comment' && 
-      github.actor == github.event.issue_comment.issue.owner &&
-      github.event.issue_comment.issue.label.name != 'instructor' &&
-      github.event.issue_comment.issue.label.name != 'student' &&
+      github.actor == github.event.issue.owner &&
+      github.event.issue.label.name != 'instructor' &&
+      github.event.issue.label.name != 'student' &&
       startsWith(github.event.comment.body,'choochoo ')
     runs-on: ubuntu-latest
     env: 
@@ -73,10 +73,10 @@ jobs:
   choochoo:
     if: |
       github.event_name == 'issue_comment' && 
-      github.actor == github.event.issue_comment.issue.owner &&
+      github.actor == github.event.issue.owner &&
       (
-        github.event.issue_comment.issue.label.name == 'instructor' ||
-        github.event.issue_comment.issue.label.name == 'student'
+        github.event.issue.label.name == 'instructor' ||
+        github.event.issue.label.name == 'student'
       ) &&
       startsWith(github.event.comment.body,'choochoo ')
     runs-on: ubuntu-latest
