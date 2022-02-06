@@ -29,7 +29,7 @@ jobs:
     - run: ${{ format('python ./scripts/check_instructor_ticket.py {0}', github.actor) }}
       
   check_student_ticket:
-    if: github.event.issue.title == 'Choochoo student thread' && github.event_name == 'issues' 
+    if: github.event.label.name == 'student' 
     runs-on: ubuntu-latest
     env: 
       ISSUE_NUMBER: ${{ github.event.issue.number }}
