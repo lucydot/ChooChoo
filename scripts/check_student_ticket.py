@@ -15,6 +15,6 @@ if management.check_student(handle) is False:
   repository = management.Repository()
   number = env.issue_number()
   issue = issues.Issue(repository,number)
-  issues.make_comment("Choochoo is closing this issue as",handle, \
+  issue.make_comment("Choochoo is closing this issue as",handle, \
                        "is not listed as an student in settings.yml.")
-  issues.close_issue()
+  issue.close_issue()
