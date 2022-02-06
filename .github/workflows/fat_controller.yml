@@ -6,7 +6,10 @@ on:
   issues:
     types: 
     - labeled
-    - commented
+    
+  issue_comment:
+    types: 
+    - created
     
 jobs:
   check_instructor_ticket:
@@ -41,6 +44,7 @@ jobs:
     
   not_issue_owner:
     if: |
+      github.event_name == 'issue_comment' && 
       github.actor != github.event.issue_comment.issue.owner &&
       startsWith(github.event.comment.body,'choochoo ')
     runs-on: ubuntu-latest
