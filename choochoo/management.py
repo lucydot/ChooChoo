@@ -4,10 +4,7 @@ A module for choochoo project repository management.
 A collection of admin functions and the Repository class.
 """
 import github
-import dotenv 
-import os
-
-from choochoo import settings
+from choochoo import settings, env
 
 class Repository:
     """ Class for reading repository information.
@@ -18,25 +15,14 @@ class Repository:
     """
 
     def __init__(self):
-        self.repo_name = self.repo_name
+        self.repo_name = env.repo_name()
+        self._token = env._token()
         self.pygh_repo = self.pygh_repo()
-
-    def _token(self):
-        "Get gh token, needed for the PyGithub API"
-        dotenv.load_dotenv()
-        return os.getenv("GH_TOKEN")
-
-    def repo_name(self):
-        "Get repository in name/repo format"
-        dotenv.load_dotenv()
-        return os.getenv("GITHUB_REPOSITORY")
 
     def pygh_repo(self):
         "Get a repo object using PyGithubAPI"
-        token = self._token()
-        repo_name = self.repo_name()
-        g = github.Github(token)
-        return g.get_repo(repo_name)
+        g = github.Github(self._token())
+        return g.get_repo(self.repo_name())
 
     def student_issues(self,since=None):
         "Find student issues in the repo"

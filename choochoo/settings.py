@@ -1,7 +1,7 @@
 """
 A module for reading and writing to the settings yml file.
 """
-import os
+
 import yaml  # Pyyaml
 from typing import List # this is not needed for Python3.9+
 from choochoo import management

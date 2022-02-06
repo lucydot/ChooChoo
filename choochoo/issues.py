@@ -10,7 +10,7 @@ from choochoo import management
 def issue_number():
     dotenv.load_dotenv()    
     if os.getenv("ISSUE_NUMBER") is None:
-        sys.exit("This function should only be called when opening a Github issue.")
+        sys.exit("No issue number found.")
     else:
         return os.getenv("ISSUE_NUMBER")
 

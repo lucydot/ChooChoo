@@ -6,13 +6,13 @@ It checks to see the instructor is listed as such in the settings.yml. If not, t
 """
 
 from sys import argv
-from choochoo import management, issues
+from choochoo import management, issues, env
 
 handle = argv[1]
 
 if management.check_instructor(handle) is False:
-  repository = management.Repository()
-  number = issues.issue_number()
+  repository = env.Repository()
+  number = env.issue_number()
   issue = issues.Issue(repository,number)
   issue.make_comment("Choochoo is closing this issue as ",handle," \
                        is not listed as an instructor in settings.yml.")
