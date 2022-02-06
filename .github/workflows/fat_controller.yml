@@ -49,16 +49,11 @@ jobs:
       startsWith(github.event.comment.body,'choochoo ')
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/github-script@v5
+    steps:
+    - uses: ben-z/actions-comment-on-issue@1.0.2
       with:
-        github-token: ${{secrets.BOT_ACCESS_TOKEN}}
-        script: |
-          github.rest.issues.createComment({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: '[checks train ticket] I'm afraid you do not have permission to run choochoo commands here.'
-          })  
+        message: "[checks ticket] I'm afraid you don't have permission to run choochoo commands here."
+        GITHUB_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN }}
     
   not_instructor_student:
     if: |
