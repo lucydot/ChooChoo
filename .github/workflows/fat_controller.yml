@@ -13,7 +13,6 @@ on:
     
 jobs:
   check_instructor_ticket:
-    name: check-instructor-ticket
     if: github.event.label.name == 'instructor' 
     runs-on: ubuntu-latest
     env: 
