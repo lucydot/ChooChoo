@@ -18,7 +18,6 @@ class Issue:
         self.repository = repository
         self.number = number
         self.pygh_issue = self.repository.pygh_repo.get_issue(self.number)
-        print(self.pygh_issue)
 
     def make_comment(self,*message):
         message = " ".join(message)

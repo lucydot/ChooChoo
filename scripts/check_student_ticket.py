@@ -9,7 +9,12 @@ from sys import argv
 from choochoo import management, issues
 
 handle = argv[1]
+
 if management.check_student(handle) is False:
-  issues.make_comment("Choochoo is closing this issue as ",handle," \
-                       is not listed as an student in settings.yml.")
+
+  repository = management.Repository()
+  number = env.issue_number()
+  issue = issues.Issue(repository,number)
+  issues.make_comment("Choochoo is closing this issue as",handle, \
+                       "is not listed as an student in settings.yml.")
   issues.close_issue()
