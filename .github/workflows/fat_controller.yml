@@ -14,7 +14,7 @@ on:
 jobs:
   check_instructor_ticket:
     name: check-instructor-ticket
-    if: github.event.issue.title == 'Choochoo instructor thread' && github.event_name == 'issues' 
+    if: contains(github.event.issue.labels, 'instructor') && github.event_name == 'issues' 
     runs-on: ubuntu-latest
     env: 
       ISSUE_NUMBER: ${{ github.event.issue.number }}
