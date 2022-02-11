@@ -73,7 +73,7 @@ jobs:
   choochoo:
     if: |
       github.event_name == 'issue_comment' && 
-      github.actor == github.event.issue.owner &&
+      github.actor == github.event.issue.user.login &&
       (
         github.event.issue.label.name == 'instructor' ||
         github.event.issue.label.name == 'student'
