@@ -6,7 +6,7 @@ import github
 import re
 from sys import argv
 
-from choochoo import management, issues
+from choochoo import management, issues, env
 
 def interface():
   """ This function interfaces between the user and the choochoo package.
@@ -19,7 +19,7 @@ def interface():
   """
 
   repository = management.Repository()
-  issue_number = issues.issue_number()
+  issue_number = env.issue_number()
   issue = issues.Issue(repository,issue_number)
   
   command = ' '.join(argv[1:])
