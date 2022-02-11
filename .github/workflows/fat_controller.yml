@@ -72,7 +72,7 @@ jobs:
     steps:
     - uses: ben-z/actions-comment-on-issue@1.0.2
       with:
-        message: "[checks ticket] To run choochoo commands you must be listed as a student or instructor."
+        message: "[checks ticket] To run choochoo commands your issue must be labelled with `instructor` or `student`"
         GITHUB_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN }}
 
   choochoo:
