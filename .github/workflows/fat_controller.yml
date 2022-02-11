@@ -6,7 +6,10 @@ on:
   issues:
     types: 
     - labeled
-    - commented
+    
+  issue_comment:
+    types: 
+    - created
     
 jobs:
   check_instructor_ticket:
@@ -41,46 +44,39 @@ jobs:
     
   not_issue_owner:
     if: |
-      github.actor != github.event.issue_comment.issue.owner &&
+      github.event_name == 'issue_comment' && 
+      github.actor != github.event.issue.user.login &&
       startsWith(github.event.comment.body,'choochoo ')
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/github-script@v5
+    - uses: ben-z/actions-comment-on-issue@1.0.2
       with:
-        github-token: ${{secrets.BOT_ACCESS_TOKEN}}
-        script: |
-          github.rest.issues.createComment({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: '[checks train ticket] I'm afraid you do not have permission to run choochoo commands here.'
-          })  
+        message: "[checks ticket] I'm afraid you don't have permission to run choochoo commands here."
+        GITHUB_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN }}
     
   not_instructor_student:
     if: |
       github.event_name == 'issue_comment' && 
-      github.actor == github.event.issue_comment.issue.owner &&
-      github.event.issue_comment.issue.label.name != 'instructor' &&
-      github.event.issue_comment.issue.label.name != 'student' &&
+      github.actor == github.event.issue.user.login &&
+      !contains( github.event.issue.labels.*.name, 'instructor') &&
+      !contains( github.event.issue.labels.*.name, 'student') &&
       startsWith(github.event.comment.body,'choochoo ')
     runs-on: ubuntu-latest
     env: 
        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-    - uses: actions/setup-python@v2
+    - uses: ben-z/actions-comment-on-issue@1.0.2
       with:
-        python-version: '3.x'   # need to pip install pygithub API?
-        cache: 'pip'
-    - run: pip install .
-    - run: python ./scripts/not_instructor_student.py   
+        message: "[checks ticket] To run choochoo commands your issue must be labelled with `instructor` or `student`"
+        GITHUB_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN }}
 
   choochoo:
     if: |
       github.event_name == 'issue_comment' && 
-      github.actor == github.event.issue_comment.issue.owner &&
+      github.actor == github.event.issue.user.login &&
       (
-        github.event.issue_comment.issue.label.name == 'instructor' ||
-        github.event.issue_comment.issue.label.name == 'student'
+        contains( github.event.issue.labels.*.name, 'instructor') ||
+        contains( github.event.issue.labels.*.name, 'student')
       ) &&
       startsWith(github.event.comment.body,'choochoo ')
     runs-on: ubuntu-latest
@@ -93,6 +89,13 @@ jobs:
     - uses: actions/setup-python@v2
       with:
         python-version: '3.x'
-        cache: 'pip'
     - run: pip install .
     - run: ${{ github.event.comment.body }}
+    
+  print_context:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_CONTEXT: ${{ toJson(github) }}
+    steps:
+    - run: echo "$GITHUB_CONTEXT"
+
