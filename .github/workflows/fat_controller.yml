@@ -45,13 +45,13 @@ jobs:
   not_issue_owner:
     if: |
       github.event_name == 'issue_comment' && 
-      github.actor != github.event.issue.owner &&
+      github.actor != context.issue.owner &&
       startsWith(github.event.comment.body,'choochoo ')
     runs-on: ubuntu-latest
     env:
       EVENT: ${{ github.event_name }}
       ACTOR: ${{ github.actor }}
-      OWNER: ${{ github.event.issue.owner }}
+      OWNER: ${{ context.issue.owner }}
     steps:
     - run: echo $EVENT $ACTOR $OWNER
     - uses: ben-z/actions-comment-on-issue@1.0.2
@@ -62,7 +62,7 @@ jobs:
   not_instructor_student:
     if: |
       github.event_name == 'issue_comment' && 
-      github.actor == github.event.issue.owner &&
+      github.actor == context.issue.owner &&
       github.event.issue.label.name != 'instructor' &&
       github.event.issue.label.name != 'student' &&
       startsWith(github.event.comment.body,'choochoo ')
