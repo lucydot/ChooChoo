@@ -48,12 +48,7 @@ jobs:
       github.actor != github.event.issue.user.login &&
       startsWith(github.event.comment.body,'choochoo ')
     runs-on: ubuntu-latest
-    env:
-      EVENT: ${{ github.event_name }}
-      ACTOR: ${{ github.actor }}
-      OWNER: ${{ github.event.issue.user.login }}
     steps:
-    - run: echo $EVENT $ACTOR $OWNER
     - uses: ben-z/actions-comment-on-issue@1.0.2
       with:
         message: "[checks ticket] I'm afraid you don't have permission to run choochoo commands here."
