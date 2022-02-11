@@ -6,7 +6,7 @@ import github
 import re
 from sys import argv
 
-from choochoo import management, delivery
+from choochoo import management, issues
 
 def interface():
   """ This function interfaces between the user and the choochoo package.
