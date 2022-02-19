@@ -24,3 +24,7 @@ def repo_name():
 	"Get repository in name/repo format"
 	return getenv("GITHUB_REPOSITORY")
 
+def github_actor():
+	"Get the user who triggered the action"
+	return getenv("GITHUB_ACTOR")
+

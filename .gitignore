@@ -1,2 +1,4 @@
 .env
+choochoo.egg-info/
+*.pyc
 
