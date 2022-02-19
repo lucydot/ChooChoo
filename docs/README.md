@@ -9,5 +9,6 @@
 ### TODO:
 
 [ ] allow parsing of multiple usernames in the CLI. Allow multiple users to be added as students, instructors etc: so instead of finding handles by positions, search by words starting with @ and then form into a list of strings. Regex will do this task quite nicely!
+[ ] the cli is clunky: perhaps use switch instead (Python 3.9+ only). Or create my own simple parser (command class).
 [ ] separate out the choochoo repo from the project repo. Install choochoo in the repo. This separates out what a choochoo admin and what a choochoo developer needs. There will then be the choochoo repo, the choochoo-template repo and the choochoo-physics repo and so on.
 [ ] whenever anything is committed to main in questions, tutorials or proposed_questions then automatically compile into html on gh-pages (jekyll, markdown or pandoc type thing?)
