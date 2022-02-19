@@ -30,10 +30,14 @@ def interface():
   user_input_list = argv[1:]
   author = env.github_actor()
   
+  student_commands = []
+  
   # returns true if the command string matches the argument string
   input_matches = lambda string: bool(re.match(string, user_input))
   
-  if input_matches("check (@[\w-]+) is instructor"):
+  if input_matches(command="check (@[\w-]+) is instructor"):
+    student_commands.append(command)
+    
     handle = user_input_list[1]
     if management.check_instructor(handle):
       issue.make_comment(handle," is an instructor")
