@@ -1,15 +1,32 @@
 ---
-section: running Python
-  tutorials: [running_python.ipynb]
-  questions: []
-  links: [https://nu-cem.github.io/CompPhys/2021/08/02/01-Running_Python]
-  
-  objective: open and save a Jupyter Notebook
-    tutorials: []
+sections:
+  - name: Running Python
+    tutorials: [running_python.ipynb]
     questions: []
-    links: []
-    
-  objective: use basic Markdown in a notebook
+    links: [https://nu-cem.github.io/CompPhys/2021/08/02/01-Running_Python]
+    objectives: 
+      - name: open and save a Jupyter Notebook
+        tutorials: []
+        questions: []
+        links: []
+      - name: use basic Markdown in a notebook
+        tutorials: [markdown.ipynb]
+        questions: [070122_markdown.yml]
+        links: []
+
+
+  - name: Lists
     tutorials: [lists.ipynb]
-    questions: [070122_markdown.yml]
-    links:   
+    questions: []
+    links: [https://nu-cem.github.io/CompPhys/2021/08/02/01-lists]
+    objectives: 
+      - name: create a list
+        tutorials: []
+        questions: []
+        links: []
+      - name: add  to a list
+        tutorials: [addlists.ipynb]
+        questions: [070122_lists.yml]
+        links: []
+  
+
