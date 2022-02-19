@@ -62,7 +62,7 @@ class Settings:
         self.write_dictionary()
       
     def remove_admins(self, old_admin_handles: List[str]) -> None:
-        self._admins = [handle for handle in settings["admins"] if handle not in old_admin_handles]
+        self._admins = [handle for handle in self._admins if handle not in old_admin_handles]
         self._dictionary["admins"] = self._admins
         self.write_dictionary
 
@@ -82,7 +82,7 @@ class Settings:
         self.write_dictionary()
       
     def remove_instructors(self, old_instructor_handles: List[str]) -> None:
-        self._instructors = [handle for handle in settings["instructors"] if handle not in old_instructor_handles]
+        self._instructors = [handle for handle in self._instructors if handle not in old_instructor_handles]
         self._dictionary["instructors"] = self._instructors
         self.write_dictionary()
 
@@ -99,10 +99,11 @@ class Settings:
     def add_students(self, new_student_handles: List[str]) -> None:  # include check to see if admin already in list?
         self._students = self._students + new_student_handles
         self._dictionary["students"] = self._students
+        print(self._dictionary["students"])
         self.write_dictionary()
       
     def remove_students(self, old_student_handles: List[str]) -> None:
-        self._students = [handle for handle in settings["students"] if handle not in old_student_handles]
+        self._students = [handle for handle in self._students if handle not in old_student_handles]
         self._dictionary["students"] = self._students
         self.write_dictionary()
 

@@ -1,7 +1,8 @@
----
-project_title: Python for Physical Scientists
+admins:
+- lucydot
+instructors:
+- lucydot
 project_repo: lucydot/ChooChoo
-
-admins: [lucydot]
-instructors: [lucydot]
-students: [matilda]
+project_title: Python for Physical Scientists
+students:
+- matilda

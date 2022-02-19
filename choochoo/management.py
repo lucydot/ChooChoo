@@ -35,10 +35,12 @@ class Repository:
             creator=creator)
         
 def check_instructor(handle: str) -> bool:
-    return handle in settings.Settings().instructors
+    """returns true if handle (without the @ prefix) is listed
+    under instructors in the settings file"""
+    return handle[1:] in settings.Settings().instructors
 
 def check_admin(handle: str) -> bool:
-    return handle in settings.Settings().admins 
+    return handle[1:] in settings.Settings().admins 
 
 def check_student(handle: str) -> bool:
-    return handle in settings.Settings().students
+    return handle[1:] in settings.Settings().students
