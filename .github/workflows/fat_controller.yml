@@ -94,8 +94,8 @@ jobs:
     - run: ${{ github.event.comment.body }}
     - uses: EndBug/add-and-commit@v4  
       with:
-        author_name: %% github_token owner
-        message: "Update GitHub checkbox report"
+        author_name: choochoo-bot
+        message: "choochoo command completed"
         add: "."
     
   print_context:
