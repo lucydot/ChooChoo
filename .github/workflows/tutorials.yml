@@ -3,7 +3,9 @@ name: Compile tutorial and publish
 on:
   push:
     paths:
-    - 'tutorials/**'
+      - 'tutorials/**'
+    branches:    
+      - 'main'
   workflow_dispatch:
     
 jobs:
