@@ -31,7 +31,7 @@ jobs:
         author_name: choochoo-bot
         message: "Convert notebook to html and publish"
         add: "./tutorials/**"
-        push: origin gh_pages --set-upstream --force
+        push: origin gh-pages --set-upstream --force
       env:
         GITHUB_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN }}
 
