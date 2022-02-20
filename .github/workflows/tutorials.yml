@@ -25,15 +25,12 @@ jobs:
         GH_TOKEN:  ${{ secrets.GITHUB_TOKEN }}
       run: |
          jupyter nbconvert --to html ./tutorials/*.ipynb       
-    - name: Commit changes
-      uses: EndBug/add-and-commit@v8
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4.2.5
       with:
-        author_name: choochoo-bot
-        message: "Convert notebook to html and publish"
-        add: "./tutorials/**"
-        push: origin gh-pages --set-upstream --force
-      env:
-        GITHUB_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN }}
+        branch: gh-pages # The branch the action should deploy to.
+        folder: tutorials # The folder the action should deploy.
+
 
 
 
