@@ -3,7 +3,7 @@ name: Compile tutorial and publish
 on:
   push:
     paths:
-      - 'tutorials/**'
+      - 'tutorials/*'
     branches:    
       - 'main'
   workflow_dispatch:
@@ -24,12 +24,17 @@ jobs:
       env:
         GH_TOKEN:  ${{ secrets.GITHUB_TOKEN }}
       run: |
-         jupyter nbconvert --to html ./tutorials/*.ipynb       
+         jupyter nbconvert --to html --inplace ./tutorials/*.ipynb       
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.2.5
       with:
         branch: gh-pages # The branch the action should deploy to.
         folder: tutorials # The folder the action should deploy.
+        target-folder: tutorials
+        commit-message: build tutorials
+        clean: false
+        git-config-name: choochoo-bot
+        git-config-email:  <>
 
 
 
