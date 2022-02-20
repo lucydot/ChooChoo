@@ -24,7 +24,8 @@ jobs:
       env:
         GH_TOKEN:  ${{ secrets.GITHUB_TOKEN }}
       run: |
-         jupyter nbconvert --to html --inplace ./tutorials/*.ipynb       
+         jupyter nbconvert --to html ./tutorials/*.ipynb  
+         rm ./tutorials/*.ipynb 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.2.5
       with:
