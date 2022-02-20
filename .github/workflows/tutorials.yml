@@ -24,7 +24,7 @@ jobs:
       env:
         GH_TOKEN:  ${{ secrets.GITHUB_TOKEN }}
       run: |
-         jupyter nbconvert --to html _notebooks/2021-08-02-Python-progress.ipynb        
+         jupyter nbconvert --to html ./tutorials/**.ipynb       
     - name: Commit changes
       uses: EndBug/add-and-commit@v4
       with:
