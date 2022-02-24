@@ -1,0 +1,27 @@
+name: Publish plots
+
+on:
+  push:
+    paths:
+      - 'plots/*'
+    branches:    
+      - 'main'
+  workflow_dispatch:
+    
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v1
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4.2.5
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: plots # The folder the action should deploy.
+        target-folder: plots
+        commit-message: publish plots
+        clean: false
+        git-config-name: choochoo-bot
+        git-config-email:  <>
+
+
