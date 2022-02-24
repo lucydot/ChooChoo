@@ -6,7 +6,7 @@ import github
 import re
 from sys import argv
 
-from choochoo import management, issues, settings, env
+from choochoo import management, issues, settings, env, plot
 
 def interface():
   """ This function interfaces between the user and the choochoo package.
@@ -101,18 +101,26 @@ def interface():
       settings.Settings().remove_admins([handle[1:]])
     else:
       issue.make_comment(no_permission_message)
-    pass
 
   elif input_matches("build checklist"):
     """Convert objectives.yml into the choochoo-student-thread.md.
     Bonus would be if it checks for broken links when building."""
-    pass
+    if management.check_admin(author):
+      objectives.generate_student_thread()
+    else:
+      issue.make_comment(no_permission_message)
 
   elif input_matches("summarise class progress"):
     """Update a webpage displaying class progress. 
     Print a link to this webpage on the thread.
     Also print summary data useful for teaching to issue thread"""
-    pass
+    if management.check_instructor(author) \
+    or management.check_admin(author):
+      tick_count = plot.parse_tickboxes()
+      plot.create_plot(tick_count)
+      issue.make_comment("The summary plot has been generated at {}".format(?????))
+    else:
+      issue.make_comment(no_permission_message)
 
   elif input_matches("generate (@[0-9]+) questions"):
     """Generate a webpage with a random selection of X

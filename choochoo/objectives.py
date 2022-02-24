@@ -24,26 +24,28 @@ def string_generator(long_name, short_name, table=False):
     else:
         return ''.join(string_list)
 
-shutil.copyfile('./instructor/objectives_header.md',
-    './.github/ISSUE_TEMPLATE/choochoo-student-thread.md')
+def generate_student_thread():
 
-with open("./instructor/objectives.yml", "r") as stream:
-    try:
-        objectives_dictionary = yaml.load(stream, Loader=yaml.FullLoader)
-    except yaml.YAMLError as exc:
-        print(exc)
+    shutil.copyfile('./instructor/objectives_header.md',
+        './.github/ISSUE_TEMPLATE/choochoo-student-thread.md')
 
-with open("./.github/ISSUE_TEMPLATE/choochoo-student-thread.md","a") as f:
-    for section in objectives_dictionary['sections']:
-        print("\n\n### "+ section['name'],file=f)
-        print("|"+string_generator('tutorials','Tutorial')
-                 +string_generator('questions','Question')
-                 +string_generator('links','Link'),file=f)
+    with open("./instructor/objectives.yml", "r") as stream:
+        try:
+            objectives_dictionary = yaml.load(stream, Loader=yaml.FullLoader)
+        except yaml.YAMLError as exc:
+            print(exc)
 
-        print("\n| objective | tutorials | questions | links |\n|----|----|----|----|",file=f)
-        for objective in section['objectives']:
-            print("|"+objective['name']+"|"
-                +string_generator('tutorials','T',table=True)
-                +string_generator('questions','Q',table=True)
-                +string_generator('links','L',table=True),file=f)
+    with open("./.github/ISSUE_TEMPLATE/choochoo-student-thread.md","a") as f:
+        for section in objectives_dictionary['sections']:
+            print("\n\n### "+ section['name'],file=f)
+            print("|"+string_generator('tutorials','Tutorial')
+                     +string_generator('questions','Question')
+                     +string_generator('links','Link'),file=f)
+
+            print("\n| objective | tutorials | questions | links |\n|----|----|----|----|",file=f)
+            for objective in section['objectives']:
+                print("|"+objective['name']+"|"
+                    +string_generator('tutorials','T',table=True)
+                    +string_generator('questions','Q',table=True)
+                    +string_generator('links','L',table=True),file=f)
 
