@@ -4,9 +4,9 @@ ChooChoo is a **Ch**ecklist t**oo**l for educators.
 
 ✨ ChooChoo encourages learning through self-assessment, collaboration and diagnostic teaching. You can read more about the pedagogy underlying ChooChoo [here]().
 
-✨ This repository contains an empty ChooChoo project for those who want to start from scratch. Alternatively, you can use or adapt an [existing ChooChoo project]().
+✨ This repository contains the Python package that powers ChooChoo.
 
-✨ To use ChooChoo you do not need to download anything. Simply clone a ChooChoo project repository and follow the [Quick Start guide]().
+✨ If you would like to create your own ChooChoo project, or adapt/use an [existing ChooChoo project]() please head over to the [ChooChoo-template repository]()
 
 ✨ ChooChoo is free to use and adapt under a Creative Commons License. Pretty-please say hi :wave: if you are using ChooChoo - you can find my email address [here](https://lucydot.github.io/about/).
 
