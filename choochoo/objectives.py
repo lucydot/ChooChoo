@@ -5,6 +5,7 @@ github issues template markdown file.
 
 import shutil
 import yaml
+from choochoo import objectives_header_path, objectives_path, issue_template_path
 
 def string_generator(long_name, short_name, table=False):
     string_list = []
@@ -26,16 +27,16 @@ def string_generator(long_name, short_name, table=False):
 
 def generate_student_thread():
 
-    shutil.copyfile('./instructor/objectives_header.md',
-        './.github/ISSUE_TEMPLATE/choochoo-student-thread.md')
+    shutil.copyfile(objectives_header_path,
+        issue_template_path)
 
-    with open("./instructor/objectives.yml", "r") as stream:
+    with open(objectives_path, "r") as stream:
         try:
             objectives_dictionary = yaml.load(stream, Loader=yaml.FullLoader)
         except yaml.YAMLError as exc:
             print(exc)
 
-    with open("./.github/ISSUE_TEMPLATE/choochoo-student-thread.md","a") as f:
+    with open(issue_template_path,"a") as f:
         for section in objectives_dictionary['sections']:
             print("\n\n### "+ section['name'],file=f)
             print("|"+string_generator('tutorials','Tutorial')
