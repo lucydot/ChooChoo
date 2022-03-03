@@ -13,10 +13,10 @@ class Settings:
       The settings file is downloaded from the online repository
       (rather than a local installed copy).
     """
-    def __init__(self, path = settings_path):
+    def __init__(self):
 
         self.repository = management.Repository()
-        self.path = path
+        self.path = settings_path
         self._dictionary = self.load_dictionary()  
         self._project_title = self.dictionary["project_title"]
         self._admins = self.dictionary["admins"]
