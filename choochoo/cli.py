@@ -171,7 +171,7 @@ def issues_interface():
  
 def check_instructor():
     handle = argv[1]
-
+    print(handle)
     if settings.Settings().check_instructor(handle) is False:
 
         repository = management.Repository()
