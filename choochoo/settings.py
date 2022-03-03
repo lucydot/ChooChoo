@@ -5,6 +5,7 @@ A module for reading and writing to the settings yml file.
 import yaml  # Pyyaml
 from typing import List # this is not needed for Python3.9+
 from choochoo import management
+from choochoo import settings_path
 
 class Settings:
     """Class for reading and writing to the settings yml file.
@@ -12,7 +13,7 @@ class Settings:
       The settings file is downloaded from the online repository
       (rather than a local installed copy).
     """
-    def __init__(self, path = "./instructor/settings.yml"):
+    def __init__(self, path = settings_path):
 
         self.repository = management.Repository()
         self.path = path
