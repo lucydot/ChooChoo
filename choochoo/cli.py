@@ -118,7 +118,7 @@ def interface():
     or management.check_admin(author):
       tick_count = plot.parse_tickboxes()
       plot.create_plot(tick_count)
-      issue.make_comment("The summary plot has been generated at {}".format(?????))
+      issue.make_comment("The summary plot has been generated at {}".format('?????'))
     else:
       issue.make_comment(no_permission_message)
 
