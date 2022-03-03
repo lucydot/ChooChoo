@@ -1,5 +1,5 @@
-"""Module for parsing the student's checkboxes and
-generating a summary plot of class progress"""
+"""Module for 
+generating summary plots"""
 
 import matplotlib.pyplot as plt
 
