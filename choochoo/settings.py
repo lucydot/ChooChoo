@@ -108,15 +108,15 @@ class Settings:
         self._dictionary["students"] = self._students
         self.write_dictionary()
   
-    def check_instructor(handle: str) -> bool:
+    def check_instructor(self, handle: str) -> bool:
         """returns true if handle (without the @ prefix) is listed
         under instructors in the settings file"""
         return handle[1:] in self.instructors
 
-    def check_admin(handle: str) -> bool:
+    def check_admin(self, handle: str) -> bool:
         return handle[1:] in self.admins 
 
-    def check_student(handle: str) -> bool:
+    def check_student(self, handle: str) -> bool:
         return handle[1:] in self.students
 
 
