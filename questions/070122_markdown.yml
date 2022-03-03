@@ -1,5 +1,0 @@
-title: Writing in Markdown
-question: |
-How do you format a line of code in Markdown? For example, `x=5`.
-answer: |
-You can use backticks for formatting code. For the example above we write \`x=5\`.
