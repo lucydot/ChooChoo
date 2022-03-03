@@ -8,7 +8,7 @@ from sys import argv
 
 from choochoo import management, issues, settings, env, plot
 
-def interface():
+def issues_interface():
   """ This function interfaces between the user and the choochoo package.
   Choochoo receives and sends messages using comments on a Github issue thread.
   
@@ -168,4 +168,26 @@ def interface():
     
   else:
     issue.make_comment(wrong_command_message.format(command))
-  
+ 
+def check_instructor():
+    handle = argv[1]
+
+    if management.check_instructor(handle) is False:
+
+        repository = management.Repository()
+        number = env.issue_number()
+        issue = issues.Issue(repository,number)
+        issue.make_comment("Choochoo is closing this issue as",handle,"is not listed as an instructor in settings.yml.")
+        issue.close_issue()
+
+def check_student():
+    handle = argv[1]
+
+    if management.check_student(handle) is False:
+
+        repository = management.Repository()
+        number = env.issue_number()
+        issue = issues.Issue(repository,number)
+        issue.make_comment("Choochoo is closing this issue as",handle, \
+                       "is not listed as an student in settings.yml.")
+        issue.close_issue()
