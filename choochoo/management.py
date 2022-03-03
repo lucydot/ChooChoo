@@ -5,9 +5,8 @@ A collection of admin functions and the Repository class.
 """
 import github
 from choochoo import settings, env
+from choochoo import issue_template_path
 import re
-
-issue_template_path = "./.github/ISSUE_TEMPLATE/choochoo-student-thread.md"
 
 class Repository:
     """ Class for reading repository information.
