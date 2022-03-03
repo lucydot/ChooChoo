@@ -106,8 +106,16 @@ class Settings:
         self._students = [handle for handle in self._students if handle not in old_student_handles]
         self._dictionary["students"] = self._students
         self.write_dictionary()
-
-
   
-  
+    def check_instructor(handle: str) -> bool:
+        """returns true if handle (without the @ prefix) is listed
+        under instructors in the settings file"""
+        return handle[1:] in self.instructors
+
+    def check_admin(handle: str) -> bool:
+        return handle[1:] in self.admins 
+
+    def check_student(handle: str) -> bool:
+        return handle[1:] in self.students
+
 
