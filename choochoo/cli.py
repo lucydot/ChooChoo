@@ -172,7 +172,7 @@ def issues_interface():
 def check_instructor():
     handle = argv[1]
 
-    if management.check_instructor(handle) is False:
+    if settings.Settings().check_instructor(handle) is False:
 
         repository = management.Repository()
         number = env.issue_number()
@@ -183,7 +183,7 @@ def check_instructor():
 def check_student():
     handle = argv[1]
 
-    if management.check_student(handle) is False:
+    if settings.Settings().check_student(handle) is False:
 
         repository = management.Repository()
         number = env.issue_number()
