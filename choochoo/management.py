@@ -5,6 +5,9 @@ A collection of admin functions and the Repository class.
 """
 import github
 from choochoo import settings, env
+import re
+
+issue_template_path = "./.github/ISSUE_TEMPLATE/choochoo-student-thread.md"
 
 class Repository:
     """ Class for reading repository information.
@@ -33,14 +36,28 @@ class Repository:
         "Find an issue by number or issue creator"
         return self.pygh_repo.get_issues(number=number,
             creator=creator)
-        
-def check_instructor(handle: str) -> bool:
-    """returns true if handle (without the @ prefix) is listed
-    under instructors in the settings file"""
-    return handle[1:] in settings.Settings().instructors
+    
+    def file_content(filepath):
+        "return content of specified file"
+        return self.pygh_repo.get_contents(filepath).decoded_content.decode()
 
-def check_admin(handle: str) -> bool:
-    return handle[1:] in settings.Settings().admins 
+    def parse_tickboxes(self):
+        """Parse issue data and sum up the number of ticked boxes for each objective.
+        Return as a dictionary with each objective as the key and number of ticks as the value."""
 
-def check_student(handle: str) -> bool:
-    return handle[1:] in settings.Settings().students
+        issue_template_content = file_content(issue_template_path)
+        objectives = re.findall(r'\[ ] (.*)\n', issue_template_content)
+        student_issues = self.student_issues(labels=[issue_template_label])
+        tick_count = dict.fromkeys(objectives,0)
+
+        for issue in student_issues:
+            body = issue.body
+            for objective in tick_count.keys():
+                if objective in body:
+                    splits = body.split(objective,maxsplit=2)
+                    if splits[0][-4:-1] == '[x]':
+                        tick_count[objective] += 1
+                else:
+                    print("problem: '{}' not in string in issue # {}".format(task, issue.number))
+
+        return tick_count
