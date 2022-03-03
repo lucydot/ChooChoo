@@ -177,7 +177,7 @@ def check_instructor():
         repository = management.Repository()
         number = env.issue_number()
         issue = issues.Issue(repository,number)
-        issue.make_comment("Choochoo is closing this issue as",handle,"is not listed as an instructor in settings.yml.")
+        issue.make_comment("[Checks ticket] I'm closing this issue as",handle,"is not listed as an instructor in settings.yml.")
         issue.close_issue()
 
 def check_student():
@@ -188,6 +188,6 @@ def check_student():
         repository = management.Repository()
         number = env.issue_number()
         issue = issues.Issue(repository,number)
-        issue.make_comment("Choochoo is closing this issue as",handle, \
+        issue.make_comment("[Checks ticket] I'm closing this issue as",handle, \
                        "is not listed as an student in settings.yml.")
         issue.close_issue()
