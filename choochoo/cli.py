@@ -8,7 +8,7 @@ from sys import argv
 
 from choochoo import repository, issue, settings, env, plot, objectives
 
-def issues_interface():
+def issue_interface():
   """ This function interfaces between the user and the choochoo package.
   Choochoo receives and sends messages using comments on a Github issue thread.
   
@@ -24,7 +24,7 @@ def issues_interface():
 
   repo = repository.Repository()
   issue_number = env.issue_number()
-  issue = issue.Issue(repo,issue_number)
+  issue_thread = issue.Issue(repo,issue_number)
   
   user_settings = settings.Settings()
   
@@ -40,23 +40,23 @@ def issues_interface():
   if input_matches("check (@[\w-]+) is instructor"):    
     handle = user_input_list[1]
     if user_settings.check_instructor(handle):
-      issue.make_comment(handle," is an instructor")
+      issue_thread.make_comment(handle," is an instructor")
     else:
-      issue.make_comment(handle," is not an instructor")
+      issue_thread.make_comment(handle," is not an instructor")
     
   elif input_matches("check (@[\w-]+) is admin"):
     handle = user_input_list[1]
     if user_settings.check_admin(handle):
-      issue.make_comment(handle," is an admin")
+      issue_thread.make_comment(handle," is an admin")
     else:
-      issue.make_comment(handle," is not an admin")
+      issue_thread.make_comment(handle," is not an admin")
     
   elif input_matches("check (@[\w-]+) is student"):
     handle = user_input_list[1]
     if user_settings.check_student(handle):
-      issue.make_comment(handle," is a student")
+      issue_thread.make_comment(handle," is a student")
     else:
-      issue.make_comment(handle," is not a student")
+      issue_thread.make_comment(handle," is not a student")
 
   elif input_matches("add (@[\w-]+) as student"):
     handle = user_input_list[1]
@@ -64,7 +64,7 @@ def issues_interface():
     or user_settings.check_admin(author):
       user_settings.add_students([handle[1:]])
     else:
-      issue.make_comment(no_permission_message)
+      issue_thread.make_comment(no_permission_message)
 
   elif input_matches("add (@[\w-]+) as instructor"):
     handle = user_input_list[1]
@@ -72,14 +72,14 @@ def issues_interface():
     or user_settings.check_admin(author):
       user_settings.add_instructors([handle[1:]])
     else:
-      issue.make_comment(no_permission_message)
+      issue_thread.make_comment(no_permission_message)
 
   elif input_matches("add (@[\w-]+) as admin"):
     handle = user_input_list[1]
     if user_settings.check_admin(author):
       user_settings.add_admins([handle[1:]])
     else:
-      issue.make_comment(no_permission_message)
+      issue_thread.make_comment(no_permission_message)
 
   elif input_matches("remove (@[\w-]+) as student"):
     handle = user_input_list[1]
@@ -87,7 +87,7 @@ def issues_interface():
     or user_settings.check_admin(author):
       user_settings.remove_students([handle[1:]])
     else:
-      issue.make_comment(no_permission_message)
+      issue_thread.make_comment(no_permission_message)
 
   elif input_matches("remove (@[\w-]+) as instructor"):
     handle = user_input_list[1]
@@ -95,14 +95,14 @@ def issues_interface():
     or user_settings.check_admin(author):
       user_settings.remove_instructors([handle[1:]])
     else:
-      issue.make_comment(no_permission_message)
+      issue_thread.make_comment(no_permission_message)
 
   elif input_matches("remove (@[\w-]+) as admin"):
     handle = user_input_list[1]
     if user_settings.check_admin(author):
       user_settings.remove_admins([handle[1:]])
     else:
-      issue.make_comment(no_permission_message)
+      issue_thread.make_comment(no_permission_message)
       
   elif input_matches("list people"):
     """ prints out a list of all admins, instructors and students """
@@ -113,9 +113,9 @@ def issues_interface():
     Bonus would be if it checks for broken links when building."""
     if user_settings.check_admin(author):
       objectives.generate_student_thread()
-      issue.make_comment("ChooChoo! Checklist has been built")
+      issue_thread.make_comment("ChooChoo! Checklist has been built")
     else:
-      issue.make_comment(no_permission_message)
+      issue_thread.make_comment(no_permission_message)
 
   elif input_matches("summarise class progress"):
     """Update a webpage displaying class progress. 
@@ -125,9 +125,9 @@ def issues_interface():
     or user_settings.check_admin(author):
       tick_count = repo.parse_tickboxes()
       plot.create_plot(tick_count)
-      issue.make_comment("The summary plot has been generated at {}".format('?????'))
+      issue_thread.make_comment("The summary plot has been generated at {}".format('?????'))
     else:
-      issue.make_comment(no_permission_message)
+      issue_thread.make_comment(no_permission_message)
 
   elif input_matches("generate (@[0-9]+) questions"):
     """Generate a webpage with a random selection of X
@@ -174,23 +174,23 @@ def issues_interface():
     pass
     
   else:
-    issue.make_comment(wrong_command_message.format(command))
+    issue_thread.make_comment(wrong_command_message.format(command))
  
 def check_instructor():
     handle = argv[1]
     if settings.Settings().check_instructor(handle) is False:
         repo = repository.Repository()
         number = env.issue_number()
-        issue = issue.Issue(repo,number)
-        issue.make_comment("[Checks ticket] I'm closing this issue as",handle,"is not listed as an instructor in settings.yml.")
-        issue.close_issue()
+        issue_thread = issue.Issue(repo,number)
+        issue_thread.make_comment("[Checks ticket] I'm closing this issue as",handle,"is not listed as an instructor in settings.yml.")
+        issue_thread.close_issue()
 
 def check_student():
     handle = argv[1]
     if settings.Settings().check_student(handle) is False:
         repo = repository.Repository()
         number = env.issue_number()
-        issue = issue.Issue(repo,number)
-        issue.make_comment("[Checks ticket] I'm closing this issue as",handle, \
+        issue_thread = issue.Issue(repo,number)
+        issue_thread.make_comment("[Checks ticket] I'm closing this issue as",handle, \
                        "is not listed as an student in settings.yml.")
-        issue.close_issue()
+        issue_thread.close_issue()
