@@ -7,3 +7,4 @@ settings_path = "./instructor/settings.yml"
 issue_template_path = "./.github/ISSUE_TEMPLATE/choochoo-student-thread.md"
 objectives_header_path = "./instructor/objectives_header.md"
 objectives_path = "./instructor/objectives.yml"
+env_path = None # defaults to project root when set to None
