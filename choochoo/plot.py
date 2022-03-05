@@ -14,7 +14,7 @@ def create_plot(tick_count):
 	num_objectives = len(tick_count)
 	fig, ax = plt.subplots(1,1,figsize=(20,num_objectives))
 	
-	issue_count = len(repository.Repository().student_issues())
+	issue_count = repository.Repository().student_issues().totalCount 
 
 	ax.barh(range(num_objectives),tick_count.values(), align='center')
 	ax.set_yticks(range(num_objectives))
