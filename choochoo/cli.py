@@ -101,12 +101,17 @@ def issues_interface():
       settings.Settings().remove_admins([handle[1:]])
     else:
       issue.make_comment(no_permission_message)
+      
+  elif input_matches("list people"):
+    """ prints out a list of all admins, instructors and students """
+    pass
 
   elif input_matches("build checklist"):
     """Convert objectives.yml into the choochoo-student-thread.md.
     Bonus would be if it checks for broken links when building."""
     if settings.Settings().check_admin(author):
       objectives.generate_student_thread()
+      issue.make_comment("ChooChoo! Checklist has been built")
     else:
       issue.make_comment(no_permission_message)
 
