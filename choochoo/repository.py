@@ -28,8 +28,7 @@ class Repository:
 
     def student_issues(self,since=None):
         "Find student issues in the repo"
-        return self.pygh_repo.get_issues(labels=
-            ['student'],since=since)
+        return self.pygh_repo.get_issues(labels=['student'],since=since)
 
     def issue(self,number=None,creator=None):
         "Find an issue by number or issue creator"
