@@ -5,8 +5,8 @@ import os
 import dotenv
 import sys
 
-def getenv(variable):
-    dotenv.load_dotenv()  
+def getenv(variable,filepath=None):
+    dotenv.load_dotenv(filepath)  
     if os.getenv(variable) is None:
     	sys.exit("Environment variable {} not found.".format(variable))
     else:
