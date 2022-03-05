@@ -26,8 +26,10 @@ def issues_interface():
   issue_number = env.issue_number()
   issue = issues.Issue(repo,issue_number)
   
-  user_input = ' '.join(argv[1:])
+  user_settings = settings.Settings()
+  
   user_input_list = argv[1:]
+  user_input = ' '.join(argv[1:])
   author = env.github_actor()
   
   student_commands = []
@@ -37,68 +39,68 @@ def issues_interface():
   
   if input_matches("check (@[\w-]+) is instructor"):    
     handle = user_input_list[1]
-    if settings.Settings().check_instructor(handle):
+    if user_settings.check_instructor(handle):
       issue.make_comment(handle," is an instructor")
     else:
       issue.make_comment(handle," is not an instructor")
     
   elif input_matches("check (@[\w-]+) is admin"):
     handle = user_input_list[1]
-    if settings.Settings().check_admin(handle):
+    if user_settings.check_admin(handle):
       issue.make_comment(handle," is an admin")
     else:
       issue.make_comment(handle," is not an admin")
     
   elif input_matches("check (@[\w-]+) is student"):
     handle = user_input_list[1]
-    if settings.Settings().check_student(handle):
+    if user_settings.check_student(handle):
       issue.make_comment(handle," is a student")
     else:
       issue.make_comment(handle," is not a student")
 
   elif input_matches("add (@[\w-]+) as student"):
     handle = user_input_list[1]
-    if settings.Settings().check_instructor(author) \
-    or settings.Settings().check_admin(author):
-      settings.Settings().add_students([handle[1:]])
+    if user_settings.check_instructor(author) \
+    or user_settings.check_admin(author):
+      user_settings.add_students([handle[1:]])
     else:
       issue.make_comment(no_permission_message)
 
   elif input_matches("add (@[\w-]+) as instructor"):
     handle = user_input_list[1]
-    if settings.Settings().check_instructor(author) \
-    or settings.Settings().check_admin(author):
-      settings.Settings().add_instructors([handle[1:]])
+    if user_settings.check_instructor(author) \
+    or user_settings.check_admin(author):
+      user_settings.add_instructors([handle[1:]])
     else:
       issue.make_comment(no_permission_message)
 
   elif input_matches("add (@[\w-]+) as admin"):
     handle = user_input_list[1]
-    if settings.Settings().check_admin(author):
-      settings.Settings().add_admins([handle[1:]])
+    if user_settings.check_admin(author):
+      user_settings.add_admins([handle[1:]])
     else:
       issue.make_comment(no_permission_message)
 
   elif input_matches("remove (@[\w-]+) as student"):
     handle = user_input_list[1]
-    if settings.Settings().check_instructor(author) \
-    or settings.Settings().check_admin(author):
-      settings.Settings().remove_students([handle[1:]])
+    if user_settings.check_instructor(author) \
+    or user_settings.check_admin(author):
+      user_settings.remove_students([handle[1:]])
     else:
       issue.make_comment(no_permission_message)
 
   elif input_matches("remove (@[\w-]+) as instructor"):
     handle = user_input_list[1]
-    if settings.Settings().check_instructor(author) \
-    or settings.Settings().check_admin(author):
-      settings.Settings().remove_instructors([handle[1:]])
+    if user_settings.check_instructor(author) \
+    or user_settings.check_admin(author):
+      user_settings.remove_instructors([handle[1:]])
     else:
       issue.make_comment(no_permission_message)
 
   elif input_matches("remove (@[\w-]+) as admin"):
     handle = user_input_list[1]
-    if settings.Settings().check_admin(author):
-      settings.Settings().remove_admins([handle[1:]])
+    if user_settings.check_admin(author):
+      user_settings.remove_admins([handle[1:]])
     else:
       issue.make_comment(no_permission_message)
       
@@ -109,7 +111,7 @@ def issues_interface():
   elif input_matches("build checklist"):
     """Convert objectives.yml into the choochoo-student-thread.md.
     Bonus would be if it checks for broken links when building."""
-    if settings.Settings().check_admin(author):
+    if user_settings.check_admin(author):
       objectives.generate_student_thread()
       issue.make_comment("ChooChoo! Checklist has been built")
     else:
@@ -119,9 +121,9 @@ def issues_interface():
     """Update a webpage displaying class progress. 
     Print a link to this webpage on the thread.
     Also print summary data useful for teaching to issue thread"""
-    if settings.Settings().check_instructor(author) \
-    or settings.Settings().check_admin(author):
-      tick_count = plot.parse_tickboxes()
+    if user_settings.check_instructor(author) \
+    or user_settings.check_admin(author):
+      tick_count = repo.parse_tickboxes()
       plot.create_plot(tick_count)
       issue.make_comment("The summary plot has been generated at {}".format('?????'))
     else:
@@ -176,9 +178,7 @@ def issues_interface():
  
 def check_instructor():
     handle = argv[1]
-    print(handle)
     if settings.Settings().check_instructor(handle) is False:
-
         repo = repository.Repository()
         number = env.issue_number()
         issue = issues.Issue(repo,number)
@@ -187,9 +187,7 @@ def check_instructor():
 
 def check_student():
     handle = argv[1]
-
     if settings.Settings().check_student(handle) is False:
-
         repo = repository.Repository()
         number = env.issue_number()
         issue = issues.Issue(repo,number)
