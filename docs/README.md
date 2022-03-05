@@ -16,3 +16,4 @@
 [ ] Choochoo returns update messages when something succesfully done
 [ ] Assign the issues to appropriate people (the people who raised them?)
 [ ] Use yaml + python dictionaries to do the many:many mapping between objectives and questions? OR play around with a mysql database which would be fun but prob overkill
+[ ] Stop students from creating more than one checklist per person
