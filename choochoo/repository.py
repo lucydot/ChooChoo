@@ -1,7 +1,7 @@
 """
 A module for choochoo project repository management.
 
-A collection of admin functions and the Repository class.
+Includes the Repository class.
 """
 import github
 from choochoo import settings, env
