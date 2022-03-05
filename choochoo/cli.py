@@ -22,9 +22,9 @@ def issues_interface():
   wrong_command_message = """I'm sorry I don't recognise the command `{0}`.
       To list all available choochoo commands use `choochoo print commands`."""
 
-  repository = repository.Repository()
+  repo = repository.Repository()
   issue_number = env.issue_number()
-  issue = issues.Issue(repository,issue_number)
+  issue = issues.Issue(repo,issue_number)
   
   user_input = ' '.join(argv[1:])
   user_input_list = argv[1:]
@@ -174,9 +174,9 @@ def check_instructor():
     print(handle)
     if settings.Settings().check_instructor(handle) is False:
 
-        repository = repository.Repository()
+        repo = repository.Repository()
         number = env.issue_number()
-        issue = issues.Issue(repository,number)
+        issue = issues.Issue(repo,number)
         issue.make_comment("[Checks ticket] I'm closing this issue as",handle,"is not listed as an instructor in settings.yml.")
         issue.close_issue()
 
@@ -185,9 +185,9 @@ def check_student():
 
     if settings.Settings().check_student(handle) is False:
 
-        repository = repository.Repository()
+        repo = repository.Repository()
         number = env.issue_number()
-        issue = issues.Issue(repository,number)
+        issue = issues.Issue(repo,number)
         issue.make_comment("[Checks ticket] I'm closing this issue as",handle, \
                        "is not listed as an student in settings.yml.")
         issue.close_issue()
