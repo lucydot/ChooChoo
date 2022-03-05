@@ -6,7 +6,7 @@ import github
 import re
 from sys import argv
 
-from choochoo import repository, issues, settings, env, plot, objectives
+from choochoo import repository, issue, settings, env, plot, objectives
 
 def issues_interface():
   """ This function interfaces between the user and the choochoo package.
@@ -24,7 +24,7 @@ def issues_interface():
 
   repo = repository.Repository()
   issue_number = env.issue_number()
-  issue = issues.Issue(repo,issue_number)
+  issue = issue.Issue(repo,issue_number)
   
   user_settings = settings.Settings()
   
@@ -181,7 +181,7 @@ def check_instructor():
     if settings.Settings().check_instructor(handle) is False:
         repo = repository.Repository()
         number = env.issue_number()
-        issue = issues.Issue(repo,number)
+        issue = issue.Issue(repo,number)
         issue.make_comment("[Checks ticket] I'm closing this issue as",handle,"is not listed as an instructor in settings.yml.")
         issue.close_issue()
 
@@ -190,7 +190,7 @@ def check_student():
     if settings.Settings().check_student(handle) is False:
         repo = repository.Repository()
         number = env.issue_number()
-        issue = issues.Issue(repo,number)
+        issue = issue.Issue(repo,number)
         issue.make_comment("[Checks ticket] I'm closing this issue as",handle, \
                        "is not listed as an student in settings.yml.")
         issue.close_issue()
