@@ -56,6 +56,6 @@ class Repository:
                     if splits[0][-4:-1] == '[x]':
                         tick_count[objective] += 1
                 else:
-                    print("problem: '{}' not in string in issue # {}".format(task, issue.number))
+                    print("problem: '{}' not in string in issue # {}".format(objective, issue.number))
 
         return tick_count
