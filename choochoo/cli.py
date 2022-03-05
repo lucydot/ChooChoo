@@ -6,7 +6,7 @@ import github
 import re
 from sys import argv
 
-from choochoo import repository, issues, settings, env, plot
+from choochoo import repository, issues, settings, env, plot, objectives
 
 def issues_interface():
   """ This function interfaces between the user and the choochoo package.
