@@ -44,7 +44,7 @@ class Repository:
         Return as a dictionary with each objective as the key and number of ticks as the value."""
 
         issue_template_content = self.file_content(issue_template_path)
-        objectives = re.findall(r'\[ ] (.*)\|', issue_template_content)
+        objectives = re.findall(r'\[ ] (.*?)\|', issue_template_content)
         student_issues = self.student_issues()
         tick_count = dict.fromkeys(objectives,0)
 
