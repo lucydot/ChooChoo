@@ -1,11 +1,12 @@
 """
-A module for reading from, and writing to, the issues tracker on a choochoo repo.
+A module for interacting with an Github repo issue thread.
+Contains the Issue class.
 """
+
 import github
 
 class Issue:
-    """Class for holding, reading from and writing to a
-    repository issue.
+    """Class for interacting with an Github repo issue thread.
     """
 
     def __init__(self,
