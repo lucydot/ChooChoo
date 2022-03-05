@@ -4,9 +4,10 @@ A module for reading environment variables
 import os
 import dotenv
 import sys
+from choochoo import env_path
 
-def getenv(variable,filepath=None):
-    dotenv.load_dotenv(filepath)  
+def getenv(variable):
+    dotenv.load_dotenv(env_path)  
     if os.getenv(variable) is None:
     	sys.exit("Environment variable {} not found.".format(variable))
     else:
