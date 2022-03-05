@@ -1,4 +1,4 @@
-# ChooChoo! 📋 ✔️
+<img src="./docs/images/icon.png" width="400">
 
 ChooChoo is a **Ch**ecklist t**oo**l for educators. 
 
