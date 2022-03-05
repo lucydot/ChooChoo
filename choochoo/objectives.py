@@ -43,9 +43,9 @@ def generate_student_thread():
                      +string_generator('questions','Question')
                      +string_generator('links','Link'),file=f)
 
-            print("\n| objective | tutorials | questions | links |\n|----|----|----|----|",file=f)
+            print("\n| | objective | tutorials | questions | links |\n|----|----|----|----|",file=f)
             for objective in section['objectives']:
-                print("|"+objective['name']+"|"
+                print("|[ ]| "+objective['name']+"|"
                     +string_generator('tutorials','T',table=True)
                     +string_generator('questions','Q',table=True)
                     +string_generator('links','L',table=True),file=f)
