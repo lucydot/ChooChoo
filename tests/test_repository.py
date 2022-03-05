@@ -7,6 +7,7 @@ env_path = './files/.env'
 
 repo = repository.Repository()
 
-def test_parse_tickboxes():
-  pass
+# def test_parse_tickboxes():
+#  assert repo.parse_tickboxes() == 
+
   
