@@ -2,9 +2,6 @@
 A module for reading from, and writing to, the issues tracker on a choochoo repo.
 """
 import github
-from choochoo import management
-
-
 
 class Issue:
     """Class for holding, reading from and writing to a
