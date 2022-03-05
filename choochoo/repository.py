@@ -26,9 +26,9 @@ class Repository:
         g = github.Github(self._token)
         return g.get_repo(self.repo_name)
 
-    def student_issues(self,since=None):
+    def student_issues(self):
         "Find student issues in the repo"
-        return self.pygh_repo.get_issues(labels=['student'],since=since)
+        return self.pygh_repo.get_issues(labels=['student'])
 
     def issue(self,number=None,creator=None):
         "Find an issue by number or issue creator"
