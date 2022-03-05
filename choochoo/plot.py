@@ -2,6 +2,7 @@
 generating summary plots"""
 
 import matplotlib.pyplot as plt
+from choochoo import repository
 
 issue_template_path = "./.github/ISSUE_TEMPLATE/choochoo-student-thread.md"
 output_plot_path = "./plots/summary_plot.png"
@@ -12,6 +13,8 @@ def create_plot(tick_count):
 
 	num_objectives = len(tick_count)
 	fig, ax = plt.subplots(1,1,figsize=(20,num_objectives))
+	
+	issue_count = len(repository.Repository().student_issues())
 
 	ax.barh(range(num_objectives),tick_count.values(), align='center')
 	ax.set_yticks(range(num_objectives))
