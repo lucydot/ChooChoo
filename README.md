@@ -1,4 +1,4 @@
-<img src="./docs/images/icon.png" width="400">
+<img src="./docs/images/icon2.png" width="800">
 
 ChooChoo is a **Ch**ecklist t**oo**l for educators. 
 
