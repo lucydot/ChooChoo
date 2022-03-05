@@ -31,12 +31,12 @@ class Repository:
         return self.pygh_repo.get_issues(labels=
             [student],since=since)
 
-    def issue(number=None,creator=None):
+    def issue(self,number=None,creator=None):
         "Find an issue by number or issue creator"
         return self.pygh_repo.get_issues(number=number,
             creator=creator)
     
-    def file_content(filepath):
+    def file_content(self,filepath):
         "return content of specified file"
         return self.pygh_repo.get_contents(filepath).decoded_content.decode()
 
