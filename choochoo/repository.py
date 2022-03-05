@@ -46,7 +46,7 @@ class Repository:
 
         issue_template_content = self.file_content(issue_template_path)
         objectives = re.findall(r'\[ ] (.*)\n', issue_template_content)
-        student_issues = self.student_issues(labels=['student'])
+        student_issues = self.student_issues()
         tick_count = dict.fromkeys(objectives,0)
 
         for issue in student_issues:
