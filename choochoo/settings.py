@@ -4,7 +4,7 @@ A module for reading and writing to the settings yml file.
 
 import yaml  # Pyyaml
 from typing import List # this is not needed for Python3.9+
-from choochoo import management
+from choochoo import repository
 from choochoo import settings_path
 
 class Settings:
@@ -15,7 +15,7 @@ class Settings:
     """
     def __init__(self):
 
-        self.repository = management.Repository()
+        self.repository = repository.Repository()
         self.path = settings_path
         self._dictionary = self.load_dictionary()  
         self._project_title = self.dictionary["project_title"]
