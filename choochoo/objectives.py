@@ -7,7 +7,7 @@ import shutil
 import yaml
 from choochoo import objectives_header_path, objectives_path, issue_template_path
 
-def string_generator(long_name, short_name, table=False):
+def string_generator(section,long_name, short_name, table=False):
     string_list = []
 
     if len(section[long_name]) == 1:
@@ -39,14 +39,14 @@ def generate_student_thread():
     with open(issue_template_path,"a") as f:
         for section in objectives_dictionary['sections']:
             print("\n\n### "+ section['name'],file=f)
-            print("|"+string_generator('tutorials','Tutorial')
-                     +string_generator('questions','Question')
-                     +string_generator('links','Link'),file=f)
+            print("|"+string_generator(section,'tutorials','Tutorial')
+                     +string_generator(section,'questions','Question')
+                     +string_generator(section,'links','Link'),file=f)
 
             print("\n| | objective | tutorials | questions | links |\n|----|----|----|----|",file=f)
             for objective in section['objectives']:
                 print("|[ ]| "+objective['name']+"|"
-                    +string_generator('tutorials','T',table=True)
-                    +string_generator('questions','Q',table=True)
-                    +string_generator('links','L',table=True),file=f)
+                    +string_generator(objective,'tutorials','T',table=True)
+                    +string_generator(objective,'questions','Q',table=True)
+                    +string_generator(objective,'links','L',table=True),file=f)
 
