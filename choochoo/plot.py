@@ -17,11 +17,11 @@ def create_plot(tick_count):
 	issue_count = repository.Repository().student_issues().totalCount 
 
 	ax.barh(range(num_objectives),tick_count.values(), align='center')
-	ax.set_yticks(range(num_objectives))
-	ax.set_xticks(range(issue_count+0.1))
+	ax.set_yticks(range(num_objectives+1))
+	ax.set_xticks(range(issue_count+1))
 	ax.set_yticklabels(tick_count.keys())
 	ax.invert_yaxis()
-	ax.set_xlabel('# of checked boxes')
+	ax.set_xlabel('# completed')
 
 	for item in ([ax.title, ax.xaxis.label, ax.yaxis.label] +
 	             ax.get_xticklabels() + ax.get_yticklabels()):
