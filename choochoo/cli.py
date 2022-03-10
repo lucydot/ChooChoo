@@ -146,10 +146,13 @@ def issue_interface():
   elif input_matches("vote yes for question ([\w]+.yml)"):
     """Add a yes vote to one of the proposed questions"""
     pass
-
-  elif input_matches("vote no for question ([\w]+.yml)"):
-    """Add a no vote to one of the proposed questions"""
-    pass
+  
+  elif input_matches("bank question"):
+    """Append question from the thread number specified to the question bank"""
+    if user_settings.check_admin(author):
+        pass
+    else:
+        issue_thread.make_comment(no_permission_message)
 
   elif input_matches("summarise voting"):
     """Generate a webpage with a list of proposed questions
