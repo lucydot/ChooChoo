@@ -21,5 +21,11 @@ class Issue:
         message = " ".join(message)
         self.pygh_issue.create_comment(message)
 
+    def add_label(self,label):
+        self.pygh_issue.edit(labels=pygh_issue.labels+[github.Label.Label(name=label)])
+
+    def remove_label(self, label):
+        self.pygh_issue.edit(github.Label.Label(name=label))
+
     def close_issue(self):
         self.pygh_issue.edit(state='closed')
