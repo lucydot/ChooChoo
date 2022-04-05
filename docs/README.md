@@ -18,3 +18,4 @@
 - [ ] Use yaml + python dictionaries to do the many:many mapping between objectives and questions? OR play around with a mysql database which would be fun but prob overkill
 - [ ] Stop students from creating more than one checklist per person
 - [ ] Think about how to handle testing 
+- [ ] Think about how choochoo will integrate into an existing course repo rather than being in a standalone repo. Integration may lead to less functionality - for example, may not have an associated gh_pages branch.
