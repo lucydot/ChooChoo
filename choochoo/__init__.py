@@ -9,3 +9,4 @@ objectives_header_path = "./instructor/objectives_header.md"
 objectives_path = "./instructor/objectives.yml"
 env_path = None # defaults to project root when set to None
 question_bank_path = "./questions/question_bank.yml"
+output_plot_path = "./plots/summary_plot.png"
