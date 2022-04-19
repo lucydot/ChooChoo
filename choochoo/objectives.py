@@ -10,13 +10,13 @@ from choochoo import objectives_header_path, objectives_path, issue_template_pat
 def string_generator(section,long_name, short_name, table=False):
     string_list = []
 
+    string_list.append(" | ")
+
     if len(section[long_name]) == 1:
         string_list.extend(("[",long_name,"](",section[long_name][0],") "))
     else:
         for index,link in enumerate(section[long_name]):
             string_list.extend(("[",short_name,str(index+1),"](",link,") "))
-
-    string_list.append(" | ")
 
     if len(section[long_name]) ==  0 and table is True:
         return "| "
@@ -38,7 +38,7 @@ def generate_student_thread():
 
     with open(issue_template_path,"a") as f:
         for section in objectives_dictionary['sections']:
-            print("\n\n### "+ section['name']+" | "+string_generator(section,'tutorials','T')
+            print("\n\n### "+ section['name']+string_generator(section,'tutorials','T')
                      +string_generator(section,'questions','Q')
                      +string_generator(section,'links','L'),file=f)
 
