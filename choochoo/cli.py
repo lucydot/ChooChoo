@@ -106,8 +106,10 @@ def issue_interface():
       
   elif input_matches("list people"):
     """ prints out a list of all admins, instructors and students """
-    pass
-
+    issue_thread.make_comment("Choochoo admins: ", user_settings.admins, 
+      "\n", "Choochoo instructors: ", user_settings.instructors, 
+      "\n", "Choochoo students: ", user_settings.students)
+    
   elif input_matches("build checklist"):
     """Convert objectives.yml into the choochoo-student-thread.md.
     Bonus would be if it checks for broken links when building."""
@@ -125,7 +127,8 @@ def issue_interface():
     or user_settings.check_admin(author):
       tick_count = repo.parse_tickboxes()
       plot.create_plot(tick_count)
-      issue_thread.make_comment("The summary plot has been generated at {}".format('?????'))
+      issue_thread.make_comment("The summary plot has been generated:","\n",
+        "![](./plots/summary_plot.png)")
     else:
       issue_thread.make_comment(no_permission_message)
 
