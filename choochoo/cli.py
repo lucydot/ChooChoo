@@ -1,6 +1,6 @@
 """A simple command line interface for choochoo.
 
-Contains the single function `interface`.
+Contains the single function `issue_interface`.
 """
 import github
 import re
@@ -12,10 +12,10 @@ def issue_interface():
   """ This function interfaces between the user and the choochoo package.
   Choochoo receives and sends messages using comments on a Github issue thread.
   
-  It takes user sub-commands and parses them as a complete sentence. 
+  It takes a user sub-command and parses it as a complete sentence. 
   It matches this sentence to one within a pre-defined list, 
   and then calls other choochoo functions as appropriate. 
-  If it does not match the sentence then a message is returned to the user.
+  If it cannot find a match then an error message is returned to the user.
   """
 
   no_permission_message = "**[checks ticket]** You do not have permission to run this command."
