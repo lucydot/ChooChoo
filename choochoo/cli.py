@@ -128,7 +128,7 @@ def issue_interface():
       tick_count = repo.parse_tickboxes()
       plot.create_plot(tick_count)
       issue_thread.make_comment("The summary plot has been generated:","\n",
-        "![](../raw/main/plots/summary_plot.png)")
+        "![](../raw/{}/plots/summary_plot.png)".format(user_settings.choochoo_branch))
     else:
       issue_thread.make_comment(no_permission_message)
 

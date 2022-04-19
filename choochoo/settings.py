@@ -22,7 +22,9 @@ class Settings:
         self._admins = self.dictionary["admins"]
         self._instructors = self.dictionary["instructors"]
         self._students = self.dictionary["students"]
-
+        self.choochoo_branch = self.dictionary["choochoo_branch"]
+        self.gh-pages_branch = self.dictionary["gh-pages_branch"]
+        self.gh-pages = self.dictionary["gh-pages"]
 
     @property
     def dictionary(self):
