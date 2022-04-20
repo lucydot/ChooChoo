@@ -8,4 +8,6 @@
 - Instructors are advised to create one repo for each class group
 - Can't re-type choochoo commands by editing:  need to write a new issue comment
 - Automatically assumes branch names but this can be edited
+- Only one webpage of questions per username
+- See some comments in the code - need to run through and move here / to the issues tracker.
 
