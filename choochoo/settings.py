@@ -4,7 +4,6 @@ A module for reading and writing to the settings yml file.
 
 import yaml  # Pyyaml
 from typing import List # this is not needed for Python3.9+
-from choochoo import repository
 from choochoo import settings_path
 
 class Settings:
@@ -13,9 +12,9 @@ class Settings:
       The settings file is downloaded from the online repository
       (rather than a local installed copy).
     """
-    def __init__(self):
+    def __init__(self,repository):
 
-        self.repository = repository.Repository()
+        self.repository = repository
         self.path = settings_path
         self._dictionary = self.load_dictionary()  
         self._project_title = self.dictionary["project_title"]
@@ -23,16 +22,18 @@ class Settings:
         self._instructors = self.dictionary["instructors"]
         self._students = self.dictionary["students"]
         self.choochoo_branch = self.dictionary["choochoo_branch"]
-        self.gh-pages_branch = self.dictionary["gh-pages_branch"]
-        self.gh-pages = self.dictionary["gh-pages"]
+        self.gh_pages_branch = self.dictionary["gh-pages_branch"]
+        self.gh_pages = self.dictionary["gh-pages"]
+        self.questions = self.dictionary["questions"]
+        self.votes_required = self.dictionary["votes_required"]
+        self.web_address = self.dictionary["web_address"]
 
     @property
     def dictionary(self):
         return self._dictionary
 
     def load_dictionary(self):  
-        settings_file = self.repository.pygh_repo.get_contents(self.path, ref="main")
-        settings_string = settings_file.decoded_content.decode()
+        settings_string = self.repository.file_content(self.path)
         return yaml.safe_load(settings_string)
   
     def write_dictionary(self):   
@@ -52,6 +53,10 @@ class Settings:
     @property
     def admins(self):
         return self._admins
+
+    def at_admins(self):
+        "a list of admins with @ signs included"
+        return ["@"+item for item in self.admins]
 
     @admins.setter
     def admins(self, new_admin_handles: List[str]) -> None:  
