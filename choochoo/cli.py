@@ -111,9 +111,9 @@ def issue_interface():
         
     elif input_matches("list people"):
         """ prints out a list of all admins, instructors and students """
-        issue_thread.make_comment("Choochoo admins: ", user_settings.admins, 
-          "\n", "Choochoo instructors: ", user_settings.instructors, 
-          "\n", "Choochoo students: ", user_settings.students)
+        issue_thread.make_comment("🚂 Admins: ", user_settings.admins, 
+          "\n", "🚂 Instructors: ", user_settings.instructors, 
+          "\n", "🚂 Students: ", user_settings.students)
         
     elif input_matches("build checklists"):
         """Convert objectives.yml into the choochoo-student-thread.md
