@@ -7,7 +7,8 @@ import re
 from sys import argv
 import random
 
-from choochoo import repository, issue, settings, environment, plot, objectives, question, question_folder_path
+from choochoo import repository, issue, settings, environment, plot, objectives, question, question_bank
+from choochoo import question_folder_path
 
 def issue_interface():
     """ This function interfaces between the user and the choochoo package.
