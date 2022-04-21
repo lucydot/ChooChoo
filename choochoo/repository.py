@@ -46,13 +46,13 @@ class Repository:
 
         student_issues = self.student_issues()
 
-        obj = objectives.Objectives(self.repository)
+        obj = objectives.Objectives(self)
 
         total_tick_count = obj.dict_from_template
 
-        for issue in student_issues:
+        for student_issue in student_issues:
 
-            student_issue = issue.Issue(self,issue.number)
+            student_issue = issue.Issue(student_issue.issue_number)
             tick_log = student_issue.tick_log()
 
             for objective, value in tick_log.items():
