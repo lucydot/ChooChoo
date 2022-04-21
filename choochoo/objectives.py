@@ -92,7 +92,7 @@ class Objectives:
                 for objective in section['objectives']:
 
                     count += 1
-                    print(count+") - [ ] "+objective['name']+" | "
+                    print(str(count)+") - [ ] "+objective['name']+" | "
                         +string_generator(objective,'tutorials','T',table=False)
                         +string_generator(objective,'questions','Q',table=False)
                         +string_generator(objective,'links','L',table=False),file=stream)
