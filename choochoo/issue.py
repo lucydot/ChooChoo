@@ -55,7 +55,7 @@ class Issue:
         
         obj = objectives.Objectives(self.repository)
         tick_log = obj.dict_from_template
-
+        
         body = self.pygh_issue.body
         for objective in tick_log.keys():
             if objective in body:
@@ -63,7 +63,7 @@ class Issue:
                   if splits[0][-4:-1] == '[x]':
                       tick_log[objective]["select"] = True
             else:
-                print("problem: '{}' not in string in issue # {}".format(objective, issue.number))
+                print("problem: '{}' not in string in issue # {}".format(objective, self.number))
 
         return tick_log
 

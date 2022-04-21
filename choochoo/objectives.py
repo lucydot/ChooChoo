@@ -12,13 +12,13 @@ from choochoo import utilities, objectives_header_path, objectives_path, issue_t
 def string_generator(section,long_name, short_name, table=False):
     string_list = []
 
-    string_list.append(" | ")
-
     if len(section[long_name]) == 1:
         string_list.extend(("[",long_name,"](",section[long_name][0],") "))
     else:
         for index,link in enumerate(section[long_name]):
             string_list.extend(("[",short_name,str(index+1),"](",link,") "))
+
+    string_list.append(" | ")
 
     if len(section[long_name]) ==  0 and table is True:
         return "| "
@@ -45,15 +45,15 @@ class Objectives:
 
         issue_template_content = self.repository.file_content(issue_template_path)
         objectives = re.findall(r'\[ ] (.*?)\|', issue_template_content)
- 
-        objectives_dict = dict.fromkeys(objectives,{'id':0,'select':0})
 
+        objectives_dict = dict.fromkeys(objectives,{'id':0,'select':0})
         # instead of count could parse id from the template - 
         # this would be more robust code
-        count = 0
-        for objective,value in objectives_dict.items():
-            count += 1
-            value['id'] = count
+
+        
+        # After lots of faffing!....eventually correct....here be dragons
+        for i,key in enumerate(objectives_dict):
+            objectives_dict[key] = {'id' : i+1, 'select' : 0}
 
         return objectives_dict
 
@@ -93,7 +93,8 @@ class Objectives:
 
                     count += 1
 
-                    print(str(count)+") - [ ] "+objective['name']
+                    # note that the pipe below is important for the regex to find objectives
+                    print(str(count)+") - [ ] "+objective['name']+" | "
                         +string_generator(objective,'tutorials','T',table=False)
                         +string_generator(objective,'questions','Q',table=False)
                         +string_generator(objective,'links','L',table=False),file=stream)
