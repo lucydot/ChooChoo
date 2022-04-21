@@ -28,7 +28,7 @@ def string_generator(section,long_name, short_name, table=False):
 
 class Objectives:
 
-    def __init(self, repository):
+    def __init__(self, repository):
 
         self.repository = repository
         self.dict_from_yaml = utilities.read_yaml(objectives_path)
