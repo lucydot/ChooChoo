@@ -12,19 +12,19 @@ class Env:
 
 		try:
 			self.issue_number = self.issue_number()
-		except BaseException as error::
+		except BaseException as error:
 			pass
 		try:
 			self._token = self._token()
-		except BaseException as error::
+		except BaseException as error:
 			pass
 		try:
 			self.repo_name = self.repo_name()
-		except BaseException as error::
+		except BaseException as error:
 			pass
 		try:
 			self.github_actor = self.github_actor()
-		except BaseException as error::
+		except BaseException as error:
 			pass
 
 
