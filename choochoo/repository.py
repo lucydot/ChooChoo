@@ -53,6 +53,7 @@ class Repository:
         for student_issue in student_issues:
 
             student_issue = issue.Issue(student_issue.issue_number)
+
             tick_log = student_issue.tick_log()
 
             for objective, value in tick_log.items():
