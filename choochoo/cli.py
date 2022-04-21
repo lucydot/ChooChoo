@@ -149,8 +149,8 @@ def issue_interface():
             questions_list = qbank.questions_from_objectives_list(objectives_list)
             random_questions = random.sample(questions_list,number_qs)
             qbank.build_user_markdown(random_questions,author)
-            issue_thread.make_comment("All aboard! Your personalised webpage has been generated at "+/
-                "["+user_settings.web_address+"/"+question_folder_path+author+".md]("+ /
+            issue_thread.make_comment("All aboard! Your personalised webpage has been generated at "+
+                "["+user_settings.web_address+"/"+question_folder_path+author+".md]("+ 
                 user_settings.web_address+"/"+question_folder_path+author+".md)")
           
         else:
@@ -173,8 +173,8 @@ def issue_interface():
             questions_list = qbank.questions_from_objectives_list(objectives_list)
             random_questions = random.sample(questions_list,number_qs)
             qbank.build_user_markdown(random_questions,author)
-            issue_thread.make_comment("All aboard! Your personalised webpage has been generated at "+/
-                "["+user_settings.web_address+"/"+question_folder_path+author+".md]("+ /
+            issue_thread.make_comment("All aboard! Your personalised webpage has been generated at "+
+                "["+user_settings.web_address+"/"+question_folder_path+author+".md]("+ 
                 user_settings.web_address+"/"+question_folder_path+author+".md)")
 
         else:
