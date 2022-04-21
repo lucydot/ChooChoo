@@ -120,7 +120,7 @@ def issue_interface():
         else:
             issue_thread.make_comment(no_permission_message)
 
-    elif input_matches("summarise class progress"):n_
+    elif input_matches("summarise class progress"):
         """Update a webpage displaying class progress. 
         Print a link to this webpage on the thread.
         Also print summary data useful for teaching to issue thread"""
