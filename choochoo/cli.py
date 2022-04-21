@@ -371,19 +371,19 @@ def check_instructor():
     handle = argv[1]
     env = environment.Env()
     repo = repository.Repository(env)
-    if settings.Settings(repo).check_instructor(handle) is False:
+    if settings.Settings(repo).check_instructor(handle) is False and settings.Settings(repo).check_admin(handle) is False:
         issue_thread = issue.Issue(repo,env.issue_number)
-        issue_thread.make_comment("[Checks ticket] I'm closing this issue as",handle,"is not listed as an instructor in settings.yml.")
+        issue_thread.make_comment("[Checks ticket] I'm closing this issue as",handle,"is not listed as an or admin or instructor in settings.yml.")
         issue_thread.close_issue()
 
 def check_student():
     handle = argv[1]
     env = environment.Env()
     repo = repository.Repository(env)
-    if settings.Settings(repo).check_student(handle) is False:
+    if settings.Settings(repo).check_student(handle) is False and settings.Settings(repo).check_admin(handle) is False settings.Settings(repo).check_instructor(handle) is False:
         issue_thread = issue.Issue(repo,env.issue_number)
         issue_thread.make_comment("[Checks ticket] I'm closing this issue as",handle, \
-                       "is not listed as an student in settings.yml.")
+                       "is not listed as a student, admin or instructor in settings.yml.")
         issue_thread.close_issue()
 
 
