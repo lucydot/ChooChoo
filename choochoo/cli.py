@@ -62,6 +62,7 @@ def issue_interface():
         if user_settings.check_instructor(author) \
         or user_settings.check_admin(author):
             user_settings.add_students([handle[1:]])
+            issue_thread.make_comment(handle, " is now a student. Choo-choo!")
         else:
            issue_thread.make_comment(no_permission_message)
 
@@ -70,6 +71,7 @@ def issue_interface():
         if user_settings.check_instructor(author) \
         or user_settings.check_admin(author):
            user_settings.add_instructors([handle[1:]])
+           issue_thread.make_comment(handle, " is now an instructor. Choo-choo!")
         else:
            issue_thread.make_comment(no_permission_message)
 
@@ -77,6 +79,7 @@ def issue_interface():
         handle = user_input_list[1]
         if user_settings.check_admin(author):
             user_settings.add_admins([handle[1:]])
+            issue_thread.make_comment(handle, " is now an admin. Choo-choo!")
         else:
             issue_thread.make_comment(no_permission_message)
 
@@ -85,6 +88,7 @@ def issue_interface():
         if user_settings.check_instructor(author) \
         or user_settings.check_admin(author):
             user_settings.remove_students([handle[1:]])
+            issue_thread.make_comment(handle, " is no longer a student. Bye-bye!")
         else:
            issue_thread.make_comment(no_permission_message)
 
@@ -93,6 +97,7 @@ def issue_interface():
         if user_settings.check_instructor(author) \
         or user_settings.check_admin(author):
             user_settings.remove_instructors([handle[1:]])
+            issue_thread.make_comment(handle, " is no longer an instructor. Bye-bye!")
         else:
             issue_thread.make_comment(no_permission_message)
 
@@ -100,6 +105,7 @@ def issue_interface():
         handle = user_input_list[1]
         if user_settings.check_admin(author):
             user_settings.remove_admins([handle[1:]])
+            issue_thread.make_comment(handle, " is no longer an admin. Bye-bye!")
         else:
             issue_thread.make_comment(no_permission_message)
         
