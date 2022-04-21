@@ -28,7 +28,7 @@ def issue_interface():
     qbank = question_bank.QuestionBank(repo)
     user_settings = settings.Settings(repo)
 
-    author = env.github_actor()
+    author = env.github_actor
     user_input_list = argv[1:]
     user_input = ' '.join(argv[1:])
     
