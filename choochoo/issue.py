@@ -34,11 +34,11 @@ class Issue:
     def close_issue(self):
         self.pygh_issue.edit(state='closed')
 
-    def edit_issue_bottom(self,*message)
+    def edit_issue_bottom(self,*message):
         message = " ".join(message)
         self.pygh_issue.edit(body=self.pygh_issue.body+"\n"+message)
 
-    def check_label(self,label)
+    def check_label(self,label):
         return label in [label.name for label in self.pygh_issue.get_labels()]
 
     def tick_log(self):
