@@ -134,7 +134,7 @@ def issue_interface():
         if user_settings.check_instructor(author) \
         or user_settings.check_admin(author):
             total_tick_count = repo.total_tick_count()
-            plot.create_plot(total_tick_count)
+            plot.create_plot(repo,total_tick_count)
             issue_thread.make_comment("The summary plot has been generated:","\n",
               "![](../raw/{}/plots/summary_plot.png)".format(user_settings.choochoo_branch))
         else:

@@ -52,7 +52,7 @@ class Repository:
 
         for student_issue in student_issues:
 
-            student_issue = issue.Issue(student_issue.number)
+            student_issue = issue.Issue(self,student_issue.number)
 
             tick_log = student_issue.tick_log()
 
