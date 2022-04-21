@@ -18,8 +18,8 @@ class Repository:
     """
 
     def __init__(self,env):
-        self.repo_name = env.repo_name()
-        self._token = env._token()
+        self.repo_name = env.repo_name
+        self._token = env._token
         self.pygh_repo = self.pygh_repo()
 
     def pygh_repo(self):
