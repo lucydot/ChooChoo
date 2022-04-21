@@ -85,7 +85,7 @@ class Objectives:
         with open(issue_template_path,"a") as stream:
 
             for section in objectives_dictionary['sections']:
-                print("\n\n### "+ section['name']+string_generator(section,'tutorials','T',table=False)
+                print("\n\n### "+ section['name']+" | "+string_generator(section,'tutorials','T',table=False)
                          +string_generator(section,'questions','Q',table=False)
                          +string_generator(section,'links','L',table=False),file=stream)
 
