@@ -19,7 +19,9 @@ class Issue:
         self.pygh_issue = self.repository.pygh_repo.get_issue(self.number)
 
     def make_comment(self,*message):
-        message = " ".join(message)
+        # so lists can be passed but are flattened
+        flat_message = [item for sublist in message for item in sublist]
+        message = " ".join(flat_message)
         self.pygh_issue.create_comment(message)
 
     def add_label(self,label):
