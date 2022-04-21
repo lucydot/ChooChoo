@@ -1,13 +1,16 @@
 """ A module containing helper functions used by the other choochoo modules
 """
 
-def read_yaml(self,pathname):
+import yaml
+import string
+
+def read_yaml(pathname):
 
     with open(pathname, "r") as stream:
         try:
-                dictionary = yaml.load(stream, Loader=yaml.FullLoader)
+            dictionary = yaml.load(stream, Loader=yaml.FullLoader)
         except yaml.YAMLError as exc:
-                print(exc)
+            print(exc)
 
     return dictionary
 

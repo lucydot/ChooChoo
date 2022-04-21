@@ -1,5 +1,4 @@
 import yaml
-import string   # for stripping punctuation
 from choochoo import question_bank_path, question_bank_markdown_path, question_folder_path, utilities
 
 class QuestionBank:
@@ -12,8 +11,8 @@ class QuestionBank:
     def __init__(self,repository):
 
         self.repository = repository
-        self.dictionary_list = self.get_dictionary_list()
         self.path = question_bank_path
+        self.dictionary_list = self.get_dictionary_list()
 
     def get_dictionary_list(self):
 

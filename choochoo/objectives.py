@@ -6,6 +6,7 @@ Contains the Objectives class.
 
 import shutil
 import yaml
+import re
 from choochoo import utilities, objectives_header_path, objectives_path, issue_template_path, question_issue_template_path
 
 def string_generator(section,long_name, short_name, table=False):
@@ -45,8 +46,7 @@ class Objectives:
         issue_template_content = self.repository.file_content(issue_template_path)
         objectives = re.findall(r'\[ ] (.*?)\|', issue_template_content)
  
-        objectives_dict = OrderedDict.fromkeys(objectives,{'id':0,'select':0})
-        # could use dict here but ordereddict makes clear that order matters
+        objectives_dict = dict.fromkeys(objectives,{'id':0,'select':0})
 
         # instead of count could parse id from the template - 
         # this would be more robust code
@@ -65,7 +65,7 @@ class Objectives:
     def names_from_yaml(self):
 
         objectives_dictionary = self.dict_from_yaml
-        objective_name_list = []
+        objectives_name_list = []
 
         for section in objectives_dictionary['sections']:
             for objective in section['objectives']:
