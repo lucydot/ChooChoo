@@ -231,7 +231,6 @@ def issue_interface():
         
         if user_settings.check_admin(author):
             qbank.build_bank_markdown
-            # need to create a workflow to build the webpage itself when this file is created
             issue_thread.make_comment("The question bank is building...")
         else:
             issue_thread.make_comment(no_permission_message)

@@ -29,17 +29,17 @@ class QuestionBank:
         dictionary_list = self.get_dictionary_list()
 
         with open(question_bank_markdown_path, 'w') as f:
-            for entry in dictionary_list:
-                self.question_dict_as_markdown(f, entry)
+            for question_dict in dictionary_list:
+                self.question_dict_as_markdown(f, question_dict)
 
     def question_dict_as_markdown(self, f, question_dict):
 
-        f.write("## "+entry["title"]+utilities.string_to_anchor_link(entry["title"])+"\n")
-        f.write("#### authors: "+entry["authors"]+"\n")
-        f.write("#### checklist items: "+entry["checklist_items"]+"\n")
-        f.write(entry["question"]+"\n")
+        f.write("## "+question_dict["title"]+utilities.string_to_anchor_link(question_dict["title"])+"\n")
+        f.write("#### authors: "+" ".join(question_dict["authors"])+"\n")
+        f.write("#### checklist items: "+" ".join(question_dict["checklist_items"])+"\n")
+        f.write(question_dict["question"]+"\n")
         f.write("<details>\n<summary>Answer</summary>\n")
-        f.write(entry["answer"]+"\n</details>")
+        f.write(question_dict["answer"]+"\n</details>")
         f.write("\n\n")
 
 
