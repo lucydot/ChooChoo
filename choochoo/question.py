@@ -50,11 +50,11 @@ class Question:
         dictionary["issue"] = issue
         dictionary["repository"] = issue.repository
         issue_body = dictionary["issue"].pygh_issue.body
-        dictionary["question"] = re.search("Question\\r\\n\\r\\n(?s)(.*)\\r\\n\\r\\n### Answer",issue_body).group(1).replace('\r', '')
-        dictionary["answer"] = re.search("Answer\\r\\n\\r\\n(?s)(.*)\\r\\n\\r\\n### Checklist",issue_body).group(1).replace('\r', '')
-        dictionary["title"] = re.search("Title\\r\\n\\r\\n(?s)(.*)\\r\\n\\r\\n### Question",issue_body).group(1)
-        dictionary["authors"] = re.search("Authors\\r\\n\\r\\n(?s)(.*)\\r\\n\\r\\n### Title",issue_body).group(1).split()
-        dictionary["checklist_items"] = re.findall("\[X\] (?s)(.*?)\\r\\n",issue_body)
+        dictionary["question"] = re.search("Question(?s)(.*)### Answer",issue_body).group(1).strip()
+        dictionary["answer"] = re.search("Answer(?s)(.*)### Checklist",issue_body).group(1).strip()
+        dictionary["title"] = re.search("Title(?s)(.*)### Question",issue_body).strip()
+        dictionary["authors"] = re.search("Authors(?s)(.*)### Title",issue_body).strip().split()
+        dictionary["checklist_items"] = [item.split() for item in re.findall("\[X\] (?s)(.*?)",issue_body)]
         dictionary["status"] = 'proposed'
         try:
             dictionary["votes"] = re.findall("Votes: ([1-9]\d*)")[-1] # find final value

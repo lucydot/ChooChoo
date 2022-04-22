@@ -193,6 +193,8 @@ def issue_interface():
 
         You are not allowed to vote for your own proposed question.
         """
+        print(author)
+        print(issue_thread.pygh_issue.user.name)
         if issue_thread.check_label("question proposal") and \
           author is not issue_thread.pygh_issue.user.name:
               proposed_question = question.Question.from_issue(issue_thread)
