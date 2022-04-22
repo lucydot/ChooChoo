@@ -194,7 +194,7 @@ def issue_interface():
         You are not allowed to vote for your own proposed question.
         """
         if issue_thread.check_label("question proposal") and \
-          author is not issue_thread.user:
+          author is not issue_thread.pygh_issue.user.name:
               proposed_question = question.Question.from_issue(issue_thread)
               proposed_question.upvote(author)
               issue_thread.make_comment("Your vote has been registered ☑️")
