@@ -58,7 +58,7 @@ class Question:
         dictionary["status"] = 'proposed'
         try:
             dictionary["votes"] = int(re.findall("Votes: ([1-9]\d*)",issue_body)[-1]) # find final value
-        except ValueError:
+        except IndexError:
             dictionary["votes"] = 0
 
         return cls(dictionary)
