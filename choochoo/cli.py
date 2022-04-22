@@ -231,7 +231,7 @@ def issue_interface():
         
         if user_settings.check_admin(author):
             qbank.build_bank_markdown()
-            issue_thread.make_comment("The question bank is building and will soon be available at {}".format(user_settings.web_address+question_bank_path))
+            issue_thread.make_comment("The question bank is building and will soon be available at [{0}]({0})".format(user_settings.web_address+"/"+question_bank_path,))
         else:
             issue_thread.make_comment(no_permission_message)
 
