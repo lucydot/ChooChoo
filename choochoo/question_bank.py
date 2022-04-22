@@ -30,7 +30,7 @@ class QuestionBank:
 
         import matplotlib.pyplot as plt
         plt.plot([2,3],[3,7])
-        plt.savefig("./questions/test.png")
+        plt.savefig("./plots/test.png")
 
         with open(question_bank_markdown_path, 'w') as f:
             for question_dict in dictionary_list:
