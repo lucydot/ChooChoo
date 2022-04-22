@@ -30,21 +30,16 @@ class QuestionBank:
 
         with open(question_bank_markdown_path, 'w') as f:
             for question_dict in dictionary_list:
-                f.write("## "+question_dict["title"]+utilities.string_to_anchor_link(question_dict["title"])+"\n")
-                f.write("#### authors: "+" ".join(question_dict["authors"])+"\n")
-                f.write("#### checklist items: "+" ".join(question_dict["checklist_items"])+"\n")
-                f.write(question_dict["question"]+"\n")
-                f.write("<details>\n<summary>Answer</summary>\n")
-                f.write(question_dict["answer"]+"\n</details>")
-                f.write("\n\n")
+                question_dict_as_markdown(f,question_dict)
+
 
     def question_dict_as_markdown(self, f, question_dict):
 
-        f.write("## "+question_dict["title"]+utilities.string_to_anchor_link(question_dict["title"])+"\n")
-        f.write("#### authors: "+" ".join(question_dict["authors"])+"\n")
-        f.write("#### checklist items: "+" ".join(question_dict["checklist_items"])+"\n")
-        f.write(question_dict["question"]+"\n")
-        f.write("<details>\n<summary>Answer</summary>\n")
+        f.write("## "+question_dict["title"])
+        f.write("**authors**: "+" ".join(question_dict["authors"]))
+        f.write("**checklist items**: "+" ".join(question_dict["checklist_items"]))
+        f.write(question_dict["question"])
+        f.write("<details>\n<summary>Answer</summary>")
         f.write(question_dict["answer"]+"\n</details>")
         f.write("\n\n")
 
