@@ -230,7 +230,7 @@ def issue_interface():
         Building this page triggers a github action to deploy on the gh_pages branch."""
         
         if user_settings.check_admin(author):
-            qbank.build_bank_markdown
+            qbank.build_bank_markdown()
             issue_thread.make_comment("The question bank is building...")
         else:
             issue_thread.make_comment(no_permission_message)
