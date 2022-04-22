@@ -5,6 +5,7 @@ import re
 import yaml
 from choochoo import question_bank
 from choochoo import question_bank_path
+from choochoo import settings
 
 class Question:
     """ A class for holding and editing information about a Choochoo question.

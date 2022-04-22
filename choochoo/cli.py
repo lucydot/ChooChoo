@@ -31,6 +31,8 @@ def issue_interface():
     author = env.github_actor
     user_input_list = argv[1:]
     user_input = ' '.join(argv[1:])
+
+    check_student(author)  # check again if student, admin or instructor.
     
     
     # returns true if the command string matches the argument string
