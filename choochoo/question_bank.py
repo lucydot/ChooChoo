@@ -30,7 +30,7 @@ class QuestionBank:
 
         with open(question_bank_markdown_path, 'w') as f:
             for question_dict in dictionary_list:
-                question_dict_as_markdown(f,question_dict)
+                self.question_dict_as_markdown(f,question_dict)
 
 
     def question_dict_as_markdown(self, f, question_dict):

@@ -8,7 +8,7 @@ from sys import argv
 import random
 
 from choochoo import repository, issue, settings, environment, plot, objectives, question, question_bank
-from choochoo import question_folder_path
+from choochoo import question_folder_path, question_bank_path
 
 def issue_interface():
     """ This function interfaces between the user and the choochoo package.
@@ -231,7 +231,7 @@ def issue_interface():
         
         if user_settings.check_admin(author):
             qbank.build_bank_markdown()
-            issue_thread.make_comment("The question bank is building...")
+            issue_thread.make_comment("The question bank is building and will soon be available at {}".format(user_settings.web_address+question_bank_path))
         else:
             issue_thread.make_comment(no_permission_message)
 
