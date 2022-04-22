@@ -27,10 +27,12 @@ class QuestionBank:
         """convert the question bank yml file into markdown"""
 
         dictionary_list = self.get_dictionary_list()
+        
+        f = open("./questions/test.txt", "w")
+        f.write("jndkljnb")
+        f.close() 
 
-        import matplotlib.pyplot as plt
-        plt.plot([2,3],[3,7])
-        plt.savefig(output_plot_path,dpi=250)
+        print(dictionary_list)
 
         with open(question_bank_markdown_path, 'w') as f:
             for question_dict in dictionary_list:
