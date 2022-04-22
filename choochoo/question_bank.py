@@ -28,6 +28,10 @@ class QuestionBank:
 
         dictionary_list = self.get_dictionary_list()
 
+        import matplotlib.pyplot as plt
+        plt.plot([2,3],[3,7])
+        plt.savefig("./questions/test.png")
+
         with open(question_bank_markdown_path, 'w') as f:
             for question_dict in dictionary_list:
                 f.write("## "+question_dict["title"]+utilities.string_to_anchor_link(question_dict["title"])+"\n")
