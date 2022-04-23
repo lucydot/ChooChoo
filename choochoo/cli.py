@@ -312,62 +312,50 @@ wrong_command_message = """I'm sorry I don't recognise the command `{0}`.
     To list all available choochoo commands use `choochoo print commands`."""
 
 student_commands_message = """
-`list people` \n
-`check [@handle] is student` \n
-`check [@handle] is admin` \n
-`check [@handle] is instructor` \n
-`generate [positive integer] questions` \n
-`generate [positive integer] questions for objectives [positive integers]` \n \n
-The following command can be ran in a question proposal issue thread only: \n
-`vote up` \n
+`choochoo list people` \n
+`choochoo check [@handle] is [student/admin/instructor]` \n
+`choochoo generate [positive integer] questions` \n
+`choochoo generate [positive integer] questions for objectives [positive integers with spaces]` \n \n
+The following command can be ran in a issue thread labelled `question proposal` only: \n
+`choochoo vote up` \n
 
 """
 
 admin_commands_message = """
 People management: \n 
-`list people` \n
-`check [@handle] is student` \n
-`check [@handle] is admin` \n
-`check [@handle] is instructor` \n
-`add [@handle] as student` \n
-`add [@handle] as admin` \n
-`add [@handle] as instructor` \n
-`remove [@handle] as student` \n
-`remove [@handle] as admin` \n
-`remove [@handle] as instructor` \n \n
+`choochoo list people` \n
+`choochoo check [@handle] is [student/admin/instructor]` \n
+`choochoo add [@handle] as [student/admin/instructor]` \n
+`choochoo remove [@handle] as [student/admin/instructor]` \n
 Checklist management and monitoring: \n
-`build checklists` \n
-`add question [web address] to objective [positive integer]` \n
-`add link [web address] to objective [positive integer]` \n
-`add tutorial [web address] to objective [positive integer]` \n
-`summarise class progress` \n \n
+`choochoo build checklists` \n
+`choochoo add question [web address] to objective [positive integer]` \n
+`choochoo add link [web address] to objective [positive integer]` \n
+`choochoo add tutorial [web address] to objective [positive integer]` \n
+`choochoo summarise class progress` \n \n
 Question management: \n
-`build question bank` \n \n
-The following command can be ran in a question proposal issue thread only: \n
-`vote up` \n
-`bank question` \n \n
+`choochoo build question bank` \n \n
+The following command can be ran in a issue thread labelled `question proposal` only: \n
+`choochoo vote up` \n
+`choochoo bank question` \n \n
 The following command can be ran in a student checklist issue thread only: \n
-`generate [positive integer] questions` \n
-`generate [positive integer] questions for objectives [positive integers with spaces]` \n
+`choochoo generate [positive integer] questions` \n
+`choochoo generate [positive integer] questions for objectives [positive integers with spaces]` \n
 """
 
 instructor_commands_message = """
 People management: \n 
-list people \n
-`check [@handle] is student` \n
-`check [@handle] is admin` \n
-`check [@handle] is instructor` \n
-`add [@handle] as student` \n
-`add [@handle] as instructor` \n
-`remove [@handle] as student` \n
-`remove [@handle] as instructor` \n \n
+`choochoo list people` \n
+`choochoo check [@handle] is [student/admin/instructor]` \n
+`choochoo add [@handle] as [student/instructor]` \n
+`choochoo remove [@handle] as [student/instructor]` \n
 Checklist monitoring: \n
-`summarise class progress` \n \n
-The following command can be ran in a question proposal issue thread only: \n
-`vote up` \n \n
+`choochoo summarise class progress` \n \n
+The following command can be ran in a issue thread labelled `question proposal` only: \n
+`choochoo vote up` \n \n
 The following command can be ran in a student checklist issue thread only: \n
-`generate [positive integer] questions` \n
-`generate [positive integer] questions for objectives [positive integers]` \n
+`choochoo generate [positive integer] questions` \n
+`choochoo generate [positive integer] questions for objectives [positive integers with spaces]` \n
 """
  
 def check_instructor():

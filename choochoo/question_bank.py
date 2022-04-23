@@ -27,6 +27,7 @@ class QuestionBank:
         """convert the question bank yml file into markdown"""
 
         dictionary_list = self.get_dictionary_list()
+        print(dictionary_list)
 
         with open(question_bank_markdown_path, 'w') as f:
             for question_dict in dictionary_list:
