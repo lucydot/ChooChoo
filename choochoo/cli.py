@@ -215,7 +215,7 @@ def issue_interface():
         if user_settings.check_admin(author) and issue_thread.check_label("question proposal"):
 
             if question.Question.from_issue(issue_thread).in_bank is True:
-                issue_thread.make_comment("A question with this title is already in the bank")
+                issue_thread.make_comment("Oh dear! A question with this title is already in the bank")
 
             else:
                 question.Question.from_issue(issue_thread).bank_question()  # change this to initalise from the issue_thread rather than number?

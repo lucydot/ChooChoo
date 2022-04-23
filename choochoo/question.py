@@ -83,6 +83,6 @@ class Question:
 
         dictionary_list = question_bank.QuestionBank(self.repository).get_dictionary_list()
         dictionary_list.append([{"authors":self.authors,"title":self.title,"question":self.question,"answer":self.answer,"checklist_items":self.checklist_items}])
-        with open(self.question_bank_path, 'w') as stream:
+        with open(question_bank_path, 'w') as stream:
             yaml.dump(self.dictionary_list, stream)
       
