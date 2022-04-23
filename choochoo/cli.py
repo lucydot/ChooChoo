@@ -344,11 +344,11 @@ Checklist management and monitoring: \n
 Question management: \n
 `build question bank` \n \n
 The following command can be ran in a question proposal issue thread only: \n
-`vote up \n
-`bank question \n \n
+`vote up` \n
+`bank question` \n \n
 The following command can be ran in a student checklist issue thread only: \n
 `generate [positive integer] questions` \n
-`generate [positive integer] questions for objectives [positive integers]` \n
+`generate [positive integer] questions for objectives [positive integers with spaces]` \n
 """
 
 instructor_commands_message = """
