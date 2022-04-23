@@ -37,7 +37,7 @@ class Question:
             self.issue = self.dictionary["issue"]
 
     def upvote(self,voter):
-        user_settings = settings.Settings()
+        user_settings = settings.Settings(self.repository)
         self.votes += 1
         self.issue.edit_issue_bottom("✨ {} has up-voted! **Total votes:** {}".format(voter,self.votes))
         votes_required = user_settings.votes_required
