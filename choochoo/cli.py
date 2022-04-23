@@ -142,7 +142,7 @@ def issue_interface():
         else:
            issue_thread.make_comment(no_permission_message)
 
-    elif input_matches("generate (@[0-9]+) questions"):
+    elif input_matches("generate ([1-9][0-9]*) questions"):
         """Generate a webpage with a random selection of [positive integer]
         questions from the unticked boxes.
 
@@ -166,7 +166,7 @@ def issue_interface():
             issue_thread.make_comment("Halt! You can only run this command in a choochoo student thread")
 
 
-    elif input_matches("generate (@[0-9]+) questions for objectives (@[0-9]+)"):
+    elif input_matches("generate ([1-9][0-9]*) questions for objectives ([0-9 ]+)"):
         """Generate a webpage with a random selection of X
         questions from a given subset of objectives.
 
@@ -177,7 +177,7 @@ def issue_interface():
         On completion a link to the webpage is posted on the thread (there may be a slight delay in deployment)."""
         if issue_thread.check_label("student"):
             number_qs = user_input_list[1]
-            id_list = user_input_list[5]
+            id_list = user_input_list[5:]
             objectives_list = obj.objectives_list_by_id(self,id_list)
             questions_list = qbank.questions_from_objectives_list(objectives_list)
             random_questions = random.sample(questions_list,number_qs)
