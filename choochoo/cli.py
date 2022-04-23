@@ -32,7 +32,7 @@ def issue_interface():
     user_input_list = argv[1:]
     user_input = ' '.join(argv[1:])
 
-    check_student(author)  # check again if student, admin or instructor.
+    check_student(author=author)  # check again if student, admin or instructor.
     
     
     # returns true if the command string matches the argument string
@@ -379,8 +379,11 @@ def check_instructor():
         issue_thread.make_comment("[Checks ticket] I'm closing this issue as",handle,"is not listed as an or admin or instructor in settings.yml.")
         issue_thread.close_issue()
 
-def check_student():
-    handle = argv[1]
+def check_student(author=None):
+    if author:
+        handle = author
+    else:
+        handle = argv[1]
     env = environment.Env()
     repo = repository.Repository(env)
     if settings.Settings(repo).check_student(handle) is False and settings.Settings(repo).check_admin(handle) is False and settings.Settings(repo).check_instructor(handle) is False:
