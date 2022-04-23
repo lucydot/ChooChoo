@@ -219,8 +219,8 @@ def issue_interface():
 
             else:
                 question.Question.from_issue(issue_thread).bank_question()  # change this to initalise from the issue_thread rather than number?
-                issue_thread.remove_label("question_proposal")
-                issue_thread.add_label("accepted_question")
+                issue_thread.remove_label("question proposal")
+                issue_thread.add_label("accepted question")
                 issue_thread.make_comment("The question has been banked 💰")
             
         else:
@@ -304,7 +304,7 @@ def issue_interface():
             issue_thread.make_comment(no_permission_message)
       
     else:
-        issue_thread.make_comment(wrong_command_message.format(command))
+        issue_thread.make_comment(wrong_command_message.format(user_input))
 
 no_permission_message = "**[checks ticket]** You do not have permission to run this command."
 
