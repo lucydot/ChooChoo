@@ -39,6 +39,8 @@ class Question:
     def upvote(self,voter):
         user_settings = settings.Settings(self.repository)
         self.votes += 1
+        if self.votes == 1:
+            self.issue.edit_issue_bottom("\n \n")
         self.issue.edit_issue_bottom("✨ {} has up-voted! **Total votes:** {}".format(voter,self.votes))
         votes_required = user_settings.votes_required
         if self.votes == votes_required:
@@ -58,7 +60,7 @@ class Question:
         dictionary["checklist_items"] = [item.split() for item in re.findall("\[X\] (?s)(.*?)",issue_body)]
         dictionary["status"] = 'proposed'
         try:
-            dictionary["votes"] = int(re.findall("Votes: ([1-9]\d*)",issue_body)[-1]) # find final value
+            dictionary["votes"] = int(re.findall("votes: ([1-9]\d*)",issue_body)[-1]) # find final value
         except IndexError:
             dictionary["votes"] = 0
 
