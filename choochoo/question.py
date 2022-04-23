@@ -60,7 +60,7 @@ class Question:
         dictionary["checklist_items"] = [item.split() for item in re.findall("\[X\] (?s)(.*?)",issue_body)]
         dictionary["status"] = 'proposed'
         try:
-            dictionary["votes"] = int(re.findall("votes: ([1-9]\d*)",issue_body)[-1]) # find final value
+            dictionary["votes"] = int(re.findall("votes:.*([1-9]\d*)",issue_body)[-1]) # find final value
         except IndexError:
             dictionary["votes"] = 0
 
