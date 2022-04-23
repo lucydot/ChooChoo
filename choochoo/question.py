@@ -41,7 +41,7 @@ class Question:
         self.votes += 1
         if self.votes == 1:
             self.issue.edit_issue_bottom("\n \n")
-        self.issue.edit_issue_bottom("✨ {} has up-voted! **Total votes:** {}".format(voter,self.votes))
+        self.issue.edit_issue_bottom("✨ @{} has up-voted! **Total votes:** {}".format(voter,self.votes))
         votes_required = user_settings.votes_required
         if self.votes == votes_required:
             self.issue.make_comment("📢 Calling all admins! This question may be ready for acceptance 📢", "\n",
