@@ -43,7 +43,7 @@ class Objectives:
         It returns a dictionary in which each value is itself a dictionary....
         lovely, messy nests"""
 
-        issue_template_content = self.repository.file_content(issue_template_path)
+        issue_template_content = self.repository.file_content(student_issue_template_path)
         objectives = re.findall(r'\[ ] (.*?)\|', issue_template_content)
 
         objectives_dict = dict.fromkeys(objectives,{'id':0,'select':0})
@@ -76,13 +76,13 @@ class Objectives:
     def generate_student_thread(self):
 
         shutil.copyfile(objectives_header_path,
-            issue_template_path)
+            student_issue_template_path)
 
         objectives_dictionary = self.dict_from_yaml
 
         count = 0
 
-        with open(issue_template_path,"a") as stream:
+        with open(student_issue_template_path,"a") as stream:
 
             for section in objectives_dictionary['sections']:
                 print("\n\n### "+ section['name']+" | "+string_generator(section,'tutorials','T',table=False)
