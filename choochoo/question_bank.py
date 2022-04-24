@@ -37,13 +37,13 @@ class QuestionBank:
 
         f.write("## "+question_dict["title"]+"\n")
         f.write("**authors**: "+" ".join(question_dict["authors"]))
-        f.write("\n")
+        f.write('\n')
         f.write("**checklist items**: "+" ".join(question_dict["checklist_items"]))
-        f.write("\n")
+        f.write('\n')
         f.write(question_dict["question"]+"\n")
         f.write("<details>\n<summary>Answer</summary>\n")
         f.write(question_dict["answer"]+"\n</details>")
-        f.write("\n\n")
+        f.write('\n\n')
 
 
     def questions_from_objectives_list(self, objectives_list):
