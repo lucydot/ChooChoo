@@ -57,7 +57,7 @@ class Question:
         dictionary["answer"] = re.search("Answer(?s)(.*)### Checklist",issue_body).group(1).strip()
         dictionary["title"] = re.search("Title(?s)(.*)### Question",issue_body).group(1).strip()
         dictionary["authors"] = re.search("Authors(?s)(.*)### Title",issue_body).group(1).strip().split()
-        dictionary["checklist_items"] = [item.split() for item in re.findall("\[X\] (?s)(.*?)",issue_body)]
+        dictionary["checklist_items"] = [item.strip() for item in re.findall("\[X\](.*?)\\n",issue_body)]
         dictionary["status"] = 'proposed'
         try:
             dictionary["votes"] = int(re.findall("votes:.*([1-9]\d*)",issue_body)[-1]) # find final value

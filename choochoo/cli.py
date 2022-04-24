@@ -316,44 +316,44 @@ student_commands_message = """
 `choochoo check [@handle] is [student/admin/instructor]` \n
 `choochoo generate [positive integer] questions` \n
 `choochoo generate [positive integer] questions for objectives [positive integers with spaces]` \n \n
-The following command can be ran in a issue thread labelled `question proposal` only: \n
+❓🔖 The following command can be used in a issue thread labelled `question proposal`: \n
 `choochoo vote up` \n
 
 """
 
 admin_commands_message = """
-People management: \n 
+🧑‍🤝‍🧑 People management: \n 
 `choochoo list people` \n
 `choochoo check [@handle] is [student/admin/instructor]` \n
 `choochoo add [@handle] as [student/admin/instructor]` \n
 `choochoo remove [@handle] as [student/admin/instructor]` \n
-Checklist management and monitoring: \n
+☑️ Checklist management and monitoring: \n
 `choochoo build checklists` \n
 `choochoo add question [web address] to objective [positive integer]` \n
 `choochoo add link [web address] to objective [positive integer]` \n
 `choochoo add tutorial [web address] to objective [positive integer]` \n
 `choochoo summarise class progress` \n \n
-Question management: \n
+❓Question management: \n
 `choochoo build question bank` \n \n
-The following command can be ran in a issue thread labelled `question proposal` only: \n
+🔖 The following command can be used in a issue thread labelled `question proposal`: \n
 `choochoo vote up` \n
 `choochoo bank question` \n \n
-The following command can be ran in a student checklist issue thread only: \n
+🔖 The following command can be used in a issue thread labelled `student`: \n
 `choochoo generate [positive integer] questions` \n
 `choochoo generate [positive integer] questions for objectives [positive integers with spaces]` \n
 """
 
 instructor_commands_message = """
-People management: \n 
+🧑‍🤝‍🧑 People management: \n 
 `choochoo list people` \n
 `choochoo check [@handle] is [student/admin/instructor]` \n
 `choochoo add [@handle] as [student/instructor]` \n
 `choochoo remove [@handle] as [student/instructor]` \n
-Checklist monitoring: \n
+☑️ Checklist monitoring: \n
 `choochoo summarise class progress` \n \n
-The following command can be ran in a issue thread labelled `question proposal` only: \n
+🔖 The following command can be used in a issue thread labelled `question proposal`: \n
 `choochoo vote up` \n \n
-The following command can be ran in a student checklist issue thread only: \n
+🔖 The following command can be used in a issue thread labelled `student`: \n
 `choochoo generate [positive integer] questions` \n
 `choochoo generate [positive integer] questions for objectives [positive integers with spaces]` \n
 """
