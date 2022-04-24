@@ -53,7 +53,7 @@ class Issue:
         """Parse issue data and record which objectives are ticked.
         Return as a dictionary with each objective as the key and a bool value - true for ticked, false for not ticked."""
         
-        
+
         obj = objectives.Objectives(self.repository)
         tick_log = obj.dict_from_template
         
@@ -70,7 +70,7 @@ class Issue:
 
     def unticked_objectives_list(self):
 
-        return [item[0] for item in self.tick_log.items() if item[1]["select"] == False]
+        return [item[0] for item in self.tick_log().items() if item[1]["select"] == False]
 
 
 
