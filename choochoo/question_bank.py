@@ -1,5 +1,5 @@
 import yaml
-from choochoo import question_bank_path, question_bank_markdown_path, question_folder_path, utilities
+from choochoo import question_bank_yml_path, question_bank_markdown_path, question_folder_path, utilities
 
 class QuestionBank:
     """ A class for manipulating the question_bank and converting between yaml (for data storage)
@@ -27,7 +27,6 @@ class QuestionBank:
         """convert the question bank yml file into markdown"""
 
         dictionary_list = self.get_dictionary_list()
-        print(dictionary_list)
 
         with open(question_bank_markdown_path, 'w') as f:
             for question_dict in dictionary_list:

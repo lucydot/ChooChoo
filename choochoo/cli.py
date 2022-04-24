@@ -8,7 +8,7 @@ from sys import argv
 import random
 
 from choochoo import repository, issue, settings, environment, plot, objectives, question, question_bank
-from choochoo import question_folder_path, question_bank_path
+from choochoo import question_folder_path, question_bank_path, question_bank_yml_path
 
 def issue_interface():
     """ This function interfaces between the user and the choochoo package.
@@ -159,8 +159,7 @@ def issue_interface():
             random_questions = random.sample(questions_list,number_qs)
             qbank.build_user_markdown(random_questions,author)
             issue_thread.make_comment("All aboard! Your personalised webpage has been generated at "+
-                "["+user_settings.web_address+"/"+question_folder_path+author+".md]("+ 
-                user_settings.web_address+"/"+question_folder_path+author+".md)")
+                "[{0}]({0})".format(user_settings.web_address+"/"+question_folder_path+author))
           
         else:
             issue_thread.make_comment("Halt! You can only run this command in a choochoo student thread")
@@ -235,7 +234,7 @@ def issue_interface():
         
         if user_settings.check_admin(author):
             qbank.build_bank_markdown()
-            issue_thread.make_comment("The question bank is building and will soon be available at [{0}]({0})".format(user_settings.web_address+"/"+question_bank_path,))
+            issue_thread.make_comment("The question bank is building and will soon be available at [{0}]({0})".format(user_settings.web_address+"/"+question_bank_path))
         else:
             issue_thread.make_comment(no_permission_message)
 
