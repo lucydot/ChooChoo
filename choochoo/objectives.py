@@ -44,7 +44,7 @@ class Objectives:
         lovely, messy nests"""
 
         issue_template_content = self.repository.file_content(student_issue_template_path)
-        objectives = re.findall(r'\[ ] (.*?)\|', issue_template_content)
+        objectives = [item.strip() for item in re.findall(r'\[ ] (.*?)\|', issue_template_content)]
 
         objectives_dict = dict.fromkeys(objectives,{'id':0,'select':0})
         # instead of count could parse id from the template - 
