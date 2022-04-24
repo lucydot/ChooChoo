@@ -3,8 +3,7 @@
 
 import re
 import yaml
-from choochoo import question_bank
-from choochoo import question_bank_yml_path
+from choochoo import question_bank, question_bank_yml_path
 from choochoo import settings
 
 class Question:

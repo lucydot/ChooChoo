@@ -4,7 +4,7 @@ A module for choochoo project repository management.
 Includes the Repository class.
 """
 import github
-from choochoo import student_issue_template_path, issue, objectives
+from choochoo import issue, objectives
 import re
 
 class Repository:

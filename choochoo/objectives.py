@@ -32,7 +32,7 @@ class Objectives:
     def __init__(self, repository):
 
         self.repository = repository
-        self.dict_from_yaml = utilities.read_yaml(objectives_path)
+        self.dict_from_yaml = utilities.read_yaml(objectives_yml_path)
         self.names_from_yaml = self.names_from_yaml()
         self.dict_from_template = self.dict_from_template()
 
