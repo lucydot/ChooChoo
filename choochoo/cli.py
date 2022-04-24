@@ -177,7 +177,7 @@ def issue_interface():
         if issue_thread.check_label("student"):
             number_qs = int(user_input_list[1])
             id_list = [int(item) for item in user_input_list[5:]]
-            objectives_list = obj.objectives_list_by_id(self,id_list)
+            objectives_list = obj.objectives_list_by_id(id_list)
             questions_list = qbank.questions_from_objectives_list(objectives_list)
             random_questions = random.sample(questions_list,number_qs)
             qbank.build_user_markdown(random_questions,author)
