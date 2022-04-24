@@ -37,8 +37,10 @@ class QuestionBank:
     def question_dict_as_markdown(self, f, question_dict):
 
         f.write("## "+question_dict["title"]+"\n")
-        f.write("**authors**: "+" ".join(question_dict["authors"])+"\n")
-        f.write("**checklist items**: "+" ".join(question_dict["checklist_items"])+"\n")
+        f.write("**authors**: "+" ".join(question_dict["authors"]))
+        f.write("\n")
+        f.write("**checklist items**: "+" ".join(question_dict["checklist_items"]))
+        f.write("\n")
         f.write(question_dict["question"]+"\n")
         f.write("<details>\n<summary>Answer</summary>\n")
         f.write(question_dict["answer"]+"\n</details>")
