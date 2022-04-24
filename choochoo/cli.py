@@ -153,7 +153,7 @@ def issue_interface():
         On completion a link to the webpage is posted on the thread (there may be a slight delay in deployment)."""
 
         if issue_thread.check_label("student"):
-            number_qs = user_input_list[1]
+            number_qs = int(user_input_list[1])
             objectives_list = issue_thread.unticked_objectives_list()
             questions_list = qbank.questions_from_objectives_list(objectives_list)
             random_questions = random.sample(questions_list,number_qs)
@@ -175,8 +175,8 @@ def issue_interface():
 
         On completion a link to the webpage is posted on the thread (there may be a slight delay in deployment)."""
         if issue_thread.check_label("student"):
-            number_qs = user_input_list[1]
-            id_list = user_input_list[5:]
+            number_qs = int(user_input_list[1])
+            id_list = [int(item) for item in user_input_list[5:]]
             objectives_list = obj.objectives_list_by_id(self,id_list)
             questions_list = qbank.questions_from_objectives_list(objectives_list)
             random_questions = random.sample(questions_list,number_qs)
