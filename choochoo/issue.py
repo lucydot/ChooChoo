@@ -70,7 +70,7 @@ class Issue:
 
     def unticked_objectives_list(self):
 
-        return [item[0].strip() for item in self.tick_log().items() if item[1]["select"] == False]
+        return [item[0] for item in self.tick_log().items() if item[1]["select"] == False]
 
 
 
