@@ -293,7 +293,7 @@ def issue_interface():
         else:
             issue_thread.make_comment(no_permission_message)
 
-    elif input_matches("print commands"):
+    elif input_matches("list commands"):
         if user_settings.check_admin(author):
             issue_thread.make_comment(admin_commands_message)
         elif user_settings.check_instructor(author):
@@ -309,7 +309,7 @@ def issue_interface():
 no_permission_message = "**[checks ticket]** You do not have permission to run this command."
 
 wrong_command_message = """I'm sorry I don't recognise the command `{0}`.
-    To list all available choochoo commands use `choochoo print commands`."""
+    To list all available choochoo commands use `choochoo list commands`."""
 
 student_commands_message = """
 `choochoo list people` \n
