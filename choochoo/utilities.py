@@ -14,6 +14,11 @@ def read_yaml(pathname):
 
     return dictionary
 
+def write_yaml(dictionary,pathname):
+
+    with open(pathname, 'w') as stream:
+        yaml.dump(dictionary, stream)
+
 def string_to_anchor_link(input_string):
 
     s = input_string.translate(str.maketrans('', '', string.punctuation))

@@ -34,7 +34,6 @@ def issue_interface():
 
     check_student(author=author)  # check again if student, admin or instructor.
     
-    
     # returns true if the command string matches the argument string
     input_matches = lambda string: bool(re.match("^"+string+"$", user_input))
     
@@ -257,12 +256,12 @@ def issue_interface():
             objective_number = int(user_input_list[5])
             objective_name = obj.objectives_list_by_id([objective_number])[0]
             current_dict = obj.dict_from_yaml
-            for section in current_dict['sections']:
-                for objective in section["objectives"]:
+            for i, section in enumerate(current_dict['sections']):
+                for j, objective in enumerate(section["objectives"]):
                     if objective["name"] == objective_name:
-                        objective["questions"].append(question_link)
-                        # how to terminate search?
-                        # redundance code here with the next two elif blocks
+                        current_dict['sections'][i]['objectives'][j]["questions"].append(question_link)
+                        obj.write_yaml(current_dict)
+                        break
 
         else:
             issue_thread.make_comment(no_permission_message)
@@ -274,11 +273,12 @@ def issue_interface():
             objective_number = int(user_input_list[5])
             objective = obj.objectives_list_by_id([objective_number])[0]
             current_dict = obj.dict_from_yaml
-            for section in current_dict['sections']:
-                for objective in section["objectives"]:
+            for i, section in enumerate(current_dict['sections']):
+                for j, objective in enumerate(section["objectives"]):
                     if objective["name"] == objective_name:
-                        objective["links"].append(link)
-                        # how to terminate search?
+                        current_dict['sections'][i]['objectives'][j]["links"].append(link)
+                        obj.write_yaml(current_dict)
+                        break
         else:
             issue_thread.make_comment(no_permission_message)
 
@@ -289,11 +289,12 @@ def issue_interface():
             objective_number = int(user_input_list[5])
             objective = obj.objectives_list_by_id([objective_number])[0]
             current_dict = obj.dict_from_yaml
-            for section in current_dict['sections']:
-                for objective in section["objectives"]:
+            for i, section in enumerate(current_dict['sections']):
+                for j, objective in enumerate(section["objectives"]):
                     if objective["name"] == objective_name:
-                        objective["tutorials"].append(tutorial_link)
-                        # how to terminate search?
+                        current_dict['sections'][i]['objectives'][j]["tutorials"].append(tutorial_link)
+                        obj.write_yaml(current_dict)
+                        break
         else:
             issue_thread.make_comment(no_permission_message)
 

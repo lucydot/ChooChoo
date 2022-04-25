@@ -57,6 +57,9 @@ class Objectives:
 
         return objectives_dict
 
+    def dict_to_yaml(self,dictionary):
+        utilities.write_yaml(dictionary,objectives_yml_path)
+
     def objectives_list_by_id(self,id_list):
         """ return a list of objectives which have been selected by id number"""
 
