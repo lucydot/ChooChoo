@@ -249,7 +249,7 @@ def issue_interface():
         Print a link to the webpage on the thread."""
         pass
 
-    elif input_matches("add question ([\w]+) to objective (@[0-9]+)"):
+    elif input_matches("add question ([\w]+) to objective ([1-9]+)"):
         """If question still proposed then move it to accepted.
         Add question to the specified objective."""
         if user_settings.check_admin(author):
@@ -267,7 +267,7 @@ def issue_interface():
         else:
             issue_thread.make_comment(no_permission_message)
 
-    elif input_matches("add link ([\w]+) to objective (@[0-9]+)"):
+    elif input_matches("add link ([\w]+) to objective ([1-9]+)"):
         """Add link to the specified objective."""
         if user_settings.check_admin(author):
             link = user_input_list[2]
@@ -282,7 +282,7 @@ def issue_interface():
         else:
             issue_thread.make_comment(no_permission_message)
 
-    elif input_matches("add tutorial ([\w]+) to objective (@[0-9]+)"):
+    elif input_matches("add tutorial ([\w]+) to objective ([1-9]+)"):
         """Add tutorial to the specified objective."""
         if user_settings.check_admin(author):
             tutorial_link = user_input_list[2]
