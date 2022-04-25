@@ -257,7 +257,7 @@ def issue_interface():
             objective_number = int(user_input_list[5])
             objective_name = obj.objectives_list_by_id([objective_number])[0]
             current_dict = obj.dict_from_yaml
-            for section in current_dict:
+            for section in current_dict['sections']:
                 for objective in section["objectives"]:
                     if objective["name"] == objective_name:
                         objective["questions"].append(question_link)
@@ -274,7 +274,7 @@ def issue_interface():
             objective_number = int(user_input_list[5])
             objective = obj.objectives_list_by_id([objective_number])[0]
             current_dict = obj.dict_from_yaml
-            for section in current_dict:
+            for section in current_dict['sections']:
                 for objective in section["objectives"]:
                     if objective["name"] == objective_name:
                         objective["links"].append(link)
@@ -289,7 +289,7 @@ def issue_interface():
             objective_number = int(user_input_list[5])
             objective = obj.objectives_list_by_id([objective_number])[0]
             current_dict = obj.dict_from_yaml
-            for section in current_dict:
+            for section in current_dict['sections']:
                 for objective in section["objectives"]:
                     if objective["name"] == objective_name:
                         objective["tutorials"].append(tutorial_link)
