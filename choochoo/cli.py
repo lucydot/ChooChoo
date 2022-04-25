@@ -255,7 +255,7 @@ def issue_interface():
         if user_settings.check_admin(author):
             question_link = user_input_list[2]
             objective_number = int(user_input_list[5])
-            objective_name = obj.objectives_list_by_id(self,[objective_number])[0]
+            objective_name = obj.objectives_list_by_id([objective_number])[0]
             current_dict = obj.dict_from_yaml
             for section in current_dict:
                 for objective in section["objectives"]:
@@ -272,7 +272,7 @@ def issue_interface():
         if user_settings.check_admin(author):
             link = user_input_list[2]
             objective_number = int(user_input_list[5])
-            objective = obj.objectives_list_by_id(self,[objective_number])[0]
+            objective = obj.objectives_list_by_id([objective_number])[0]
             current_dict = obj.dict_from_yaml
             for section in current_dict:
                 for objective in section["objectives"]:
@@ -287,7 +287,7 @@ def issue_interface():
         if user_settings.check_admin(author):
             tutorial_link = user_input_list[2]
             objective_number = int(user_input_list[5])
-            objective = obj.objectives_list_by_id(self,[objective_number])[0]
+            objective = obj.objectives_list_by_id([objective_number])[0]
             current_dict = obj.dict_from_yaml
             for section in current_dict:
                 for objective in section["objectives"]:
