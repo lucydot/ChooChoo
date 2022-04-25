@@ -88,9 +88,9 @@ class Objectives:
         with open(student_issue_template_path,"a") as stream:
 
             for section in objectives_dictionary['sections']:
-                print("\n\n### "+ section['name']+" | "+string_generator(section,'tutorials','T',table=False)
-                         +string_generator(section,'questions','Q',table=False)
-                         +string_generator(section,'links','L',table=False),file=stream)
+                print("\n\n### "+ section['name']+" | "+string_generator(section,'T1','T',table=False)
+                         +string_generator(section,'Q1','Q',table=False)
+                         +string_generator(section,'L1','L',table=False),file=stream)
 
                 for objective in section['objectives']:
 
@@ -98,9 +98,9 @@ class Objectives:
 
                     # note that the pipe below is important for the regex to find objectives
                     print(str(count)+") - [ ] "+objective['name']+" | "
-                        +string_generator(objective,'tutorials','T',table=False)
-                        +string_generator(objective,'questions','Q',table=False)
-                        +string_generator(objective,'links','L',table=False),file=stream)
+                        +string_generator(objective,'T1','T',table=False)
+                        +string_generator(objective,'Q1','Q',table=False)
+                        +string_generator(objective,'L1','L',table=False),file=stream)
 
     def generate_question_thread(self):
 
