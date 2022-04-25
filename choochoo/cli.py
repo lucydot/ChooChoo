@@ -179,7 +179,12 @@ def issue_interface():
             id_list = [int(item) for item in user_input_list[5:]]
             objectives_list = obj.objectives_list_by_id(id_list)
             questions_list = qbank.questions_from_objectives_list(objectives_list)
-            random_questions = random.sample(questions_list,number_qs)
+            if len(questions_list) >= number_qs:
+                random_questions = random.sample(questions_list,number_qs)
+            else:
+                issue_thread.make_comment("""Uh-oh - the number of questions requested exceeds the number 
+                    available for these objectives.\n Building a question page with {} questions.""".format(len(questions_list)))
+                random_questions = questions_list
             qbank.build_user_markdown(random_questions,author)
             issue_thread.make_comment("All aboard! Your personalised webpage has been generated at "+
                 "["+user_settings.web_address+"/"+question_folder_path+author+".md]("+ 
