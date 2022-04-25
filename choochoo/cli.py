@@ -260,7 +260,7 @@ def issue_interface():
                 for j, objective in enumerate(section["objectives"]):
                     if objective["name"] == objective_name:
                         current_dict['sections'][i]['objectives'][j]["questions"].append(question_link)
-                        obj.write_yaml(current_dict)
+                        obj.dict_to_yaml(current_dict)
                         break
 
         else:
@@ -277,7 +277,7 @@ def issue_interface():
                 for j, objective in enumerate(section["objectives"]):
                     if objective["name"] == objective_name:
                         current_dict['sections'][i]['objectives'][j]["links"].append(link)
-                        obj.write_yaml(current_dict)
+                        obj.dict_to_yaml(current_dict)
                         break
         else:
             issue_thread.make_comment(no_permission_message)
@@ -293,7 +293,7 @@ def issue_interface():
                 for j, objective in enumerate(section["objectives"]):
                     if objective["name"] == objective_name:
                         current_dict['sections'][i]['objectives'][j]["tutorials"].append(tutorial_link)
-                        obj.write_yaml(current_dict)
+                        obj.dict_to_yaml(current_dict)
                         break
         else:
             issue_thread.make_comment(no_permission_message)
