@@ -249,12 +249,12 @@ def issue_interface():
         Print a link to the webpage on the thread."""
         pass
 
-    elif input_matches("add question ([\w]+) to objective ([1-9]+)"):
+    elif input_matches("add question (.+) to objective ([1-9]+)"):
         """If question still proposed then move it to accepted.
         Add question to the specified objective."""
         if user_settings.check_admin(author):
             question_link = user_input_list[2]
-            objective_number = user_input_list[5]
+            objective_number = int(user_input_list[5])
             objective_name = obj.objectives_list_by_id(self,[objective_number])[0]
             current_dict = obj.dict_from_yaml
             for section in current_dict:
@@ -267,11 +267,11 @@ def issue_interface():
         else:
             issue_thread.make_comment(no_permission_message)
 
-    elif input_matches("add link ([\w]+) to objective ([1-9]+)"):
+    elif input_matches("add link (.+) to objective ([1-9]+)"):
         """Add link to the specified objective."""
         if user_settings.check_admin(author):
             link = user_input_list[2]
-            objective_number = user_input_list[5]
+            objective_number = int(user_input_list[5])
             objective = obj.objectives_list_by_id(self,[objective_number])[0]
             current_dict = obj.dict_from_yaml
             for section in current_dict:
@@ -282,11 +282,11 @@ def issue_interface():
         else:
             issue_thread.make_comment(no_permission_message)
 
-    elif input_matches("add tutorial ([\w]+) to objective ([1-9]+)"):
+    elif input_matches("add tutorial (.+) to objective ([1-9]+)"):
         """Add tutorial to the specified objective."""
         if user_settings.check_admin(author):
             tutorial_link = user_input_list[2]
-            objective_number = user_input_list[5]
+            objective_number = int(user_input_list[5])
             objective = obj.objectives_list_by_id(self,[objective_number])[0]
             current_dict = obj.dict_from_yaml
             for section in current_dict:
