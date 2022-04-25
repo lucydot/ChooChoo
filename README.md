@@ -1,3 +1,5 @@
+![fat controller workflow](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-fat-controller.yml/badge.svg) ![plots workflow](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-plots.yml/badge.svg) ![questions workflow](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-questions.yml/badge.svg) ![tutorials workflow](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-tutorials.yml/badge.svg)
+
 <img src="./docs/images/icon2.png" width="800">
 
 ChooChoo is a **Ch**ecklist t**oo**l for educators. 
