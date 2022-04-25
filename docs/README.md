@@ -11,4 +11,5 @@
 - Automatically assumes branch names but this can be edited
 - Only one webpage of questions per username
 - See some comments in the code - need to run through and move here / to the issues tracker.
+- Note delay in running an action adn the un-intended consequences this may have (for example, building the checklist after adding links)
 
