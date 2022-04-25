@@ -36,7 +36,7 @@ def issue_interface():
     
     
     # returns true if the command string matches the argument string
-    input_matches = lambda string: bool(re.match(string, user_input))
+    input_matches = lambda string: bool(re.match("^"+string+"$", user_input))
     
     if input_matches("check (@[\w-]+) is instructor"):    
         handle = user_input_list[1]
