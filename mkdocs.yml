@@ -14,7 +14,6 @@ nav:
     - Commands: commands.md
     - Pedagogy: pedagogy.md
     - Citation: citation.md
-    - License: license.md
     - Developers: developers.md
 theme:
   name: 'material'
