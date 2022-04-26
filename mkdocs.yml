@@ -6,6 +6,14 @@ repo_name: 'lucydot/choochoo'
 repo_url: 'https://github.com/lucydot/choochoo'
 nav:
     - Home: index.md
-    - About: about.md
+    - Introduction: intro.md
+    - Quickstart: 
+      - Student: quickstart/student
+      - Instructor: quickstart/instructor
+    - Tools: tools.md
+    - Commands: commands.md
+    - Citation: citation.md
+    - License: license.md
+    - Developers: developers.md
 theme:
   name: 'material'
