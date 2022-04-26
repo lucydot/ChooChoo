@@ -12,6 +12,7 @@ nav:
       - Instructor: quickstart/instructor
     - Tools: tools.md
     - Commands: commands.md
+    - Pedagogy: pedagogy.md
     - Citation: citation.md
     - License: license.md
     - Developers: developers.md
