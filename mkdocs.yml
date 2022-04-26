@@ -1,1 +1,10 @@
-
+site_name: ChooChoo Documentation
+site_description: 'Documentation site for ChooChoo the checklist tool'
+site_author: 'Lucy Whalley
+docs_dir: docs/
+repo_name: 'lucydot/choochoo'
+repo_url: 'https://github.com/lucydot/choochoo'
+nav:
+    - Home: index.md
+theme:
+  name: 'material'
