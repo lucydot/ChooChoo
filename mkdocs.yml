@@ -8,8 +8,8 @@ nav:
     - Home: index.md
     - Introduction: intro.md
     - Quickstart: 
-      - Student: quickstart/student
-      - Instructor: quickstart/instructor
+      - Student: quickstart/student.md
+      - Instructor: quickstart/instructor.md
     - Tools: tools.md
     - Commands: commands.md
     - Pedagogy: pedagogy.md
