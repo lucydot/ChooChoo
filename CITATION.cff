@@ -8,9 +8,8 @@ message: >-
   metadata from this file.
 type: software
 authors:
-  - given-names: Lucy
+  - given-names: Lucy Dorothy
     family-names: Whalley
-    name-particle: Dorothy
     email: l.whalley@northumbria.ac.uk
     affiliation: Northumbria University
     orcid: 'https://orcid.org/0000-0002-2992-9871'
