@@ -1,14 +1,33 @@
+Welcome! 🚂
+
+ChooChoo is a **Ch**ecklist t**oo**l for educators. 
+
+⚠️ ChooChoo is currently under development. It has a planned release date of September 2022.   
+⚠️ Full documentation is on its way soon-ish 🐢  
+⚠️ If you would like to beta-test ChooChoo for your own teaching, please [get in contact](https://lucydot.github.io/about/).  
+
+## What is ChooChoo?
+
+✨ ChooChoo encourages learning through self-assessment, collaboration and diagnostic teaching. You can read more about the pedagogy underlying ChooChoo here (TODO: link).
+
+✨ Students and instructors interact with ChooChoo-bot through a Github issue thread. This makes ChooChoo especially relevant to those who already teach using Github. It's also a great way to introduce your students to the wonderful world of Git, Github and version control!
+
+✨ ChooChoo is free to use and adapt under a Creative Commons License. 
+
+### Features
+
+- 📋 Create checklists for your students to work through
+- 🔗 Link checklist items to a question bank and/or tutorials
+- ❓ Enable students contributions to the question bank
+- ☑️ Use student peer-review to decide which contributions are published
+- 📊 Generate online plots to summarise class progress in real time 
+
+## Interested?
+
+The quick-start guide for instructors is here (TODO: add link). 
+
+*Pretty-please* say hi :wave: if you are using ChooChoo - you can find my email address [here](https://lucydot.github.io/about/). If I know people are using it, I'm more likely to do my housework (sweeping out the old dusty code, polishing up the documentation 🧹).
 
 
-- Choochoo is a "fork-and-go" project
-- Choochoo assumes that the repo is public
-- for local testing need a .env file that should not be version controlled!
-- the locomotive emoji is from: https://creazilla.com/nodes/54585-locomotive-emoji-clipart (creative commons with attribution, from Twitter)
-- People management: the issue labels determine permissions for particular choochoo commands. Any thread with 'instructor' label can issue instructor commands, any thread with 'student' label can issue student commands. To add instructors or students to a project you can edit the settings.yml. Alternatively, instructors can use the choochoo command.
-- Instructors are advised to create one repo for each class group
-- Can't re-type choochoo commands by editing:  need to write a new issue comment
-- Automatically assumes branch names but this can be edited
-- Only one webpage of questions per username
-- See some comments in the code - need to run through and move here / to the issues tracker.
-- Note delay in running an action adn the un-intended consequences this may have (for example, building the checklist after adding links)
+
 
