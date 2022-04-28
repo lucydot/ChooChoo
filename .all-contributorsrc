@@ -13,6 +13,21 @@
       "contributions": [
         "ideas"
       ]
+    },
+      "login": "lucydot",
+      "name": "Lucy Whalley",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2452935?v=4",
+      "profile": "http://lucydot.github.io",
+      "contributions": [
+        "code",
+        "doc",
+        "test",
+        "ideas",
+        "infra",
+        "maintenance",
+        "projectManagement"
+
+      ]
     }
   ],
   "contributorsPerLine": 7,

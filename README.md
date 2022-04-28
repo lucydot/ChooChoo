@@ -37,6 +37,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/jcohen02"><img src="https://avatars.githubusercontent.com/u/8027703?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jeremy Cohen</b></sub></a><br /><a href="#ideas-jcohen02" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://lucydot.github.io"><img src="https://avatars.githubusercontent.com/u/2452935?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lucy Whalley</b></sub></a><br /><a href="https://github.com/lucydot/ChooChoo/commits?author=lucydot" title="Code">💻</a> <a href="https://github.com/lucydot/ChooChoo/commits?author=lucydot" title="Documentation">📖</a> <a href="https://github.com/lucydot/ChooChoo/commits?author=lucydot" title="Tests">⚠️</a> <a href="#ideas-lucydot" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-lucydot" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-lucydot" title="Maintenance">🚧</a> <a href="#projectManagement-lucydot" title="Project Management">📆</a></td>
   </tr>
 </table>
 
