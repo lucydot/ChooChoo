@@ -7,13 +7,21 @@ repo_url: 'https://github.com/lucydot/choochoo'
 nav:
     - Home: index.md
     - Introduction: intro.md
-    - Quickstart: 
-      - Student: quickstart/student.md
-      - Instructor: quickstart/instructor.md
+    - Instructors:
+      - Setup: instructors/setup.md
+      - Questions: instructors/questions.md
+      - Tutorials: instructors/tutorials.md
+      - Links: instructors/links.md
+      - Plots: instructors/plots.md
+      - Commands: instructors/commands.md
+    - Students: 
+      - Setup: students/setup.md
+      - Questions: students/questions.md
+      - Commands: students/commands.md
     - Tools: tools.md
-    - Commands: commands.md
     - Pedagogy: pedagogy.md
+    - Contributing: developers.md
     - Citation: citation.md
-    - Developers: developers.md
+
 theme:
   name: 'material'
