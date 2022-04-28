@@ -4,7 +4,7 @@
 
 ChooChoo is a **Ch**ecklist t**oo**l for educators. 
 
-⚠️ ChooChoo is currently under development. It has a planned release date of September 2022.
+⚠️ ChooChoo is currently under development. It has a planned release date of September 2022. Documentation is on its way soon-ish 🐢.
 
 ✨ ChooChoo encourages learning through self-assessment, collaboration and diagnostic teaching. You can read more about the pedagogy underlying ChooChoo here (TODO: link).
 
