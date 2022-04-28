@@ -1,4 +1,7 @@
 ![fat controller workflow](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-fat-controller.yml/badge.svg) ![plots workflow](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-plots.yml/badge.svg) ![questions workflow](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-questions.yml/badge.svg) ![tutorials workflow](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-tutorials.yml/badge.svg)
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <img src="./docs/images/icon2.png" width="800">
 
@@ -23,3 +26,23 @@ ChooChoo is a **Ch**ecklist t**oo**l for educators.
 - 📊 Generate online plots to summarise class progress in real time 
 
 
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/jcohen02"><img src="https://avatars.githubusercontent.com/u/8027703?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jeremy Cohen</b></sub></a><br /><a href="#ideas-jcohen02" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
