@@ -11,3 +11,4 @@
 - Only one webpage of questions per username
 - See some comments in the code - need to run through and move here / to the issues tracker.
 - Note delay in running an action adn the un-intended consequences this may have (for example, building the checklist after adding links)
+- see guide for developers here: https://landlab.readthedocs.io/en/master/development/index.html
