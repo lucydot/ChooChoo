@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#choochoo-target-audience" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -222,10 +227,43 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Introduction
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#which-skills-are-needed-to-use-choochoo" class="md-nav__link">
+    Which skills are needed to use ChooChoo?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -549,6 +587,23 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#which-skills-are-needed-to-use-choochoo" class="md-nav__link">
+    Which skills are needed to use ChooChoo?
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -566,9 +621,50 @@
 
 
 
-  <h1>Introduction</h1>
-
-
+<p>ChooChoo is a Checklist tool for educators. ChooChoo encourages learning through self-assessment, collaboration and diagnostic teaching. If you would like to know more about the pedagogy underlying ChooChoo please read the <a href="../pedagogy/">Pedagogy page</a>.</p>
+<p>If you use ChooChoo as part of any published work, please <a href="../citation/">cite accordingly</a>.</p>
+<h1 id="choochoo-target-audience">ChooChoo target audience</h1>
+<p>ChooChoo is domain agnostic. It is primarily aimed at people who already use Github for their teaching, and who would like a straight-forward way to assess the progress of their students. It can be integrated into an existing Github repository, or exist as a standalone project.</p>
+<p>We strongly encourage people to share their ChooChoo repositories so that others can use and adapt existing checklists and question sets. For example, the <a href="">ChooChoo-physics</a> repository can be easily adapted for use in other undergraduate computational physics courses. A full list of ChooChoo projects is maintained <a href="">here</a>.</p>
+<h3 id="which-skills-are-needed-to-use-choochoo">Which skills are needed to use ChooChoo?</h3>
+<p>ChooChoo is based around Github and, in particular, Github Issues. Self-assessment questions (an optional feature) are written using Markdown syntax. In addition, instructors use yaml to set the ChooChoo checklists and settings. All three tools (Github, Markdown, yaml) are <em>very</em> widely used within the programming community. Learning these skills will, in many cases, be a worthwhile time investment for those who continue to work in technology-related fields. To learn more about the tools that ChooChoo is built on top of please read the [Tools page].</p>
+<h1 id="choochoo-bot">ChooChoo-bot</h1>
+<p>Students and instructors interact with the ChooChoo-bot helper using comments in a Github issue thread. All comments starting with <code>choochoo</code> will be received by ChooChoo-bot. </p>
+<h1 id="choochoo-roles-and-issue-types">ChooChoo roles and issue types</h1>
+<p>There are three roles within a ChooChoo project: <code>admin</code>, <code>instructor</code> and <code>student</code>:
+- <strong>Students</strong> can generate personal checklists to work through, propose self-assessment questions and vote on proposed questions. 
+- <strong>Instructors</strong> can add or remove students, summarise class progress as a bar chart, and add questions to the question bank. 
+- <strong>Admins</strong> can do the same as instructors, in addition they are able to generate the student checklist template and add/remove instructors. </p>
+<p>Documentation for students can be found in the <a href="./students/">student section</a>. <strong>We suggest linking to this from any associated course pages.</strong> Documentation for admins and instructors can be found in the <a href="./instructors/">instructor section</a>.</p>
+<p>There are also three ChooChoo issue types: <code>student</code>, <code>instructor</code> and <code>question_proposal</code>. 
+- <strong><code>student</code> issues</strong> can by a student, instructor or admin. They contain an automatically generated, personal checklist for the student to work through. They also contain links to any associated tutorials, questions or external websites.
+- <strong><code>instructor</code> issues</strong> can be created by an instructor or admin. They are used to monitor class progress (generate plots) and add/remove students.
+- <strong><code>question_proposal</code> issues</strong> can be created by a student, instructor or admin. They contain the proposed question. They also contain any discussion about the question and the votes in support of the question.</p>
+<p>The table below summarises the <code>choochoo-bot</code> commands, who can use each command, and where each command can be used. A summary of the available student commands is available <a href="./students/commands">here</a>. A summary of the available instructor commands is available <a href="./instructors/commands">here</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th align="center"><code>student</code> role</th>
+<th align="center"><code>instructor</code> role</th>
+<th align="center"><code>admin</code> role</th>
+<th align="center"><code>student</code> issue</th>
+<th align="center"><code>instructor</code> issue</th>
+<th align="center"><code>question_proposal</code> issue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>choochoo</code> add student</td>
+<td align="center">❌</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">❌</td>
+<td align="center">✅</td>
+<td align="center">❌</td>
+</tr>
+</tbody>
+</table>
 
               
             </article>
