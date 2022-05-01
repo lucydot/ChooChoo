@@ -5,7 +5,7 @@ docs_dir: docs/
 repo_name: 'lucydot/choochoo'
 repo_url: 'https://github.com/lucydot/choochoo'
 nav:
-    - Home: index.md
+    - Welcome: index.md
     - Introduction: intro.md
     - Instructors:
       - Setup: instructors/setup.md
@@ -30,3 +30,6 @@ theme:
   
 markdown_extensions:
   - def_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
