@@ -8,7 +8,7 @@ ChooChoo is a **Ch**ecklist t**oo**l for educators.
 
 ## What is ChooChoo?
 
-✨ ChooChoo encourages learning through self-assessment, collaboration and diagnostic teaching. You can read more about the pedagogy underlying ChooChoo here (TODO: link).
+✨ ChooChoo encourages learning through self-assessment, collaboration and diagnostic teaching. You can read more about the pedagogy underlying ChooChoo [here](./pedagogy.md).
 
 ✨ Students and instructors interact with ChooChoo-bot through a Github issue thread. This makes ChooChoo especially relevant to those who already teach using Github. It's also a great way to introduce your students to the wonderful world of Git, Github and version control!
 
@@ -19,12 +19,12 @@ ChooChoo is a **Ch**ecklist t**oo**l for educators.
 - 📋 Create checklists for your students to work through
 - 🔗 Link checklist items to a question bank and/or tutorials
 - ❓ Enable students contributions to the question bank
-- ☑️ Use student peer-review to decide which contributions are published
+- ☑️ Use student peer-review to decide which questions are published
 - 📊 Generate online plots to summarise class progress in real time 
 
 ## Interested?
 
-The quick-start guide for instructors is here (TODO: add link). 
+The setup guide for instructors is [here](./instructors/setup.md). 
 
 *Pretty-please* say hi :wave: if you are using ChooChoo - you can find my email address [here](https://lucydot.github.io/about/). If I know people are using it, I'm more likely to do my housework (sweeping out the old dusty code, polishing up the documentation 🧹).
 
