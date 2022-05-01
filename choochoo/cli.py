@@ -321,7 +321,7 @@ student_commands_message = """
 `choochoo check [@handle] is [student/admin/instructor]` \n
 `choochoo generate [positive integer] questions` \n
 `choochoo generate [positive integer] questions for objectives [positive integers with spaces]` \n \n
-❓🔖 The following command can be used in a issue thread labelled `question proposal`: \n
+❓ The following command can be used in a issue thread labelled `question proposal`: \n
 `choochoo vote up` \n
 
 """
@@ -338,12 +338,11 @@ admin_commands_message = """
 `choochoo add link [web address] to objective [positive integer]` \n
 `choochoo add tutorial [web address] to objective [positive integer]` \n
 `choochoo summarise class progress` \n \n
-❓Question management: \n
 `choochoo build question bank` \n \n
-🔖 The following command can be used in a issue thread labelled `question proposal`: \n
+❓ The following command can be used in a issue thread labelled `question proposal`: \n
 `choochoo vote up` \n
 `choochoo bank question` \n \n
-🔖 The following command can be used in a issue thread labelled `student`: \n
+👩🏽‍🎓 The following command can be used in a issue thread labelled `student`: \n
 `choochoo generate [positive integer] questions` \n
 `choochoo generate [positive integer] questions for objectives [positive integers with spaces]` \n
 """
@@ -356,9 +355,9 @@ instructor_commands_message = """
 `choochoo remove [@handle] as [student/instructor]` \n
 ☑️ Checklist monitoring: \n
 `choochoo summarise class progress` \n \n
-🔖 The following command can be used in a issue thread labelled `question proposal`: \n
+❓ The following command can be used in a issue thread labelled `question proposal`: \n
 `choochoo vote up` \n \n
-🔖 The following command can be used in a issue thread labelled `student`: \n
+👩🏽‍🎓 The following command can be used in a issue thread labelled `student`: \n
 `choochoo generate [positive integer] questions` \n
 `choochoo generate [positive integer] questions for objectives [positive integers with spaces]` \n
 """
