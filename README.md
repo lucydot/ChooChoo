@@ -22,9 +22,8 @@ ChooChoo is a **Ch**ecklist t**oo**l for educators.
 - 📋 Create checklists for your students to work through
 - 🔗 Link checklist items to a question bank and/or tutorials
 - ❓ Enable students contributions to the question bank
-- ☑️ Student peer-review to decide which contributions are published
-- 📊 Generate online plots to summarise class progress in real time 
-
+- ☑️ Use student peer-review to decide which questions are published
+- 📊 Generate online plots to summarise class progress in real time
 
 
 ## Contributors ✨
