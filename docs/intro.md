@@ -10,10 +10,18 @@ We strongly encourage people to share their ChooChoo repositories so that others
 ### Which skills are needed to use ChooChoo?
 ChooChoo is based around Github and, in particular, Github Issues. Self-assessment questions (an optional feature) are written using Markdown syntax. In addition, instructors use yaml to set the ChooChoo checklists and settings. All three tools (Github, Markdown, yaml) are *very* widely used within the programming community. Learning these skills will, in many cases, be a worthwhile time investment for those who continue to work in technology-related fields. To learn more about the tools that ChooChoo is built on top of please read the [Tools page].
 
-# ChooChoo-bot 
-Students and instructors interact with the ChooChoo-bot helper using comments in a Github issue thread. All comments starting with `choochoo` will be received by ChooChoo-bot. 
+# `choochoo-bot` 
+Students and instructors interact with the `choochoo-bot` helper using comments in a Github issue thread. All comments starting with `choochoo` will be received by `choochoo-bot`. 
 
-# ChooChoo roles and issue types
+# ChooChoo issue types
+
+There are three ChooChoo issue types: `student`, `instructor` and `question_proposal`. 
+
+- **`student`** issues can created by a student, instructor or admin. They contain an automatically generated, personal checklist to work through. They also contain links to any associated tutorials, questions or external websites.
+- **`instructor`** issues can be created by an instructor or admin. They are used to monitor class progress (generate plots) and add/remove students.
+- **`question_proposal`** issues can be created by a student, instructor or admin. They contain the proposed question. They also contain any discussion about the question and the votes in support of the question.
+
+# ChooChoo roles 
 There are three roles within a ChooChoo project: `admin`, `instructor` and `student`:
 
 - **Students** can generate personal checklists to work through, propose self-assessment questions and vote on proposed questions. 
@@ -22,17 +30,36 @@ There are three roles within a ChooChoo project: `admin`, `instructor` and `stud
 
 Documentation for students can be found in the [student section](./students/). **We suggest linking to this from any associated course pages.** Documentation for admins and instructors can be found in the [instructor section](./instructors/).
 
-There are also three ChooChoo issue types: `student`, `instructor` and `question_proposal`. 
+The table below summarises who can run the `choochoo-bot` commands. [Student command examples](./students/commands.md) and [instructor command examples](./instructors/commands.md) are also available.
 
-- **`student` issues** can by a student, instructor or admin. They contain an automatically generated, personal checklist for the student to work through. They also contain links to any associated tutorials, questions or external websites.
-- **`instructor` issues** can be created by an instructor or admin. They are used to monitor class progress (generate plots) and add/remove students.
-- **`question_proposal` issues** can be created by a student, instructor or admin. They contain the proposed question. They also contain any discussion about the question and the votes in support of the question.
+Command types:
 
-The table below summarises the `choochoo-bot` commands, who can use each command, and where each command can be used. A summary of the available student commands is available [here](./students/commands). A summary of the available instructor commands is available [here](./instructors/commands).
+- 🧑‍🤝‍🧑 = people management (including `choochoo-bot`)
+- ☑️ = checklist management 
+- ❓ = question management *can only be ran in an issue labelled 'question'*
+- 👩🏽‍🎓 = student *can only be ran in an issue labelled 'student'*
 
-| Command | `student` role | `instructor` role | `admin` role | `student` issue | `instructor` issue | `question_proposal` issue |
-| ------ | :----:  | :----:  | :----:  | :----:  | :----:  | :----: |
-| `choochoo add student` |:material-close: | :material-check: | :material-check: |:material-close: |:material-check: |:material-close: |
+| Type | Command | `student`  | `instructor`  | `admin`  | 
+| :-----: | ------ | :----:  | :----:  | :----:  |
+| 🧑‍🤝‍🧑* |`choochoo list commands` |:material-check: | :material-check: | :material-check: |
+| 🧑‍🤝‍🧑 | `choochoo list people` |:material-check: | :material-check: | :material-check: |
+| 🧑‍🤝‍🧑 |`choochoo check [@handle] is [student/instructor/admin]` |:material-check: | :material-check: | :material-check: |
+| 🧑‍🤝‍🧑 |`choochoo add [@handle] as [student/instructor]` |:material-close: | :material-check: | :material-check: |
+| 🧑‍🤝‍🧑 |`choochoo remove [@handle] as [student/instructor]` |:material-close: | :material-check: | :material-check: |
+| 🧑‍🤝‍🧑 |`choochoo add [@handle] as [admin]` |:material-close: | :material-close: | :material-check: |
+| 🧑‍🤝‍🧑 |`choochoo remove [@handle] as [admin]` |:material-close: | :material-close: | :material-check: |
+| ☑️ |`choochoo summarise class progress` |:material-close: | :material-check: | :material-check: |
+| ☑️ |`choochoo build checklists` |:material-close: | :material-close: | :material-check: |
+| ☑️ |`choochoo add question [web address] to objective [positive integer]` |:material-close: | :material-close: | :material-check: |
+| ☑️ |`choochoo add link [web address] to objective [positive integer]` |:material-close: | :material-close: | :material-check: |
+| ☑️ |`choochoo add tutorial [web address] to objective [positive integer]` |:material-close: | :material-close: | :material-check: |
+| ☑️ |`choochoo build question bank`| :material-close: | :material-close: | :material-check: |
+| ❓ |`choochoo vote up`| :material-check: | :material-check: | :material-check: |
+| ❓ |`choochoo bank question`| :material-close: | :material-close: | :material-check: |
+| 👩🏽‍🎓 |`choochoo generate [positive integer] questions`|:material-check: | :material-check: | :material-check: |
+| 👩🏽‍🎓 |`choochoo generate [positive integer] questions for objectives [positive integers with spaces]`|:material-check: | :material-check: | :material-check: |
+
+
 
 
 
