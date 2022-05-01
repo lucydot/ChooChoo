@@ -27,3 +27,6 @@ nav:
 
 theme:
   name: 'material'
+  
+markdown_extensions:
+  - def_list
