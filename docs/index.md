@@ -25,7 +25,7 @@ See the [setup guide](./instructors/setup.md) for instructors.
 *Pretty-please* say hi :wave: if you are using ChooChoo - you can find my email address [here](https://lucydot.github.io/about/). If I know people are using it, I'm more likely to do my housework (sweeping out the old dusty code, polishing up the documentation 🧹).
 
 ---------
-** ⚠️ ⚠️ ⚠️ Help! I'm a student and I'm lost ⚠️ ⚠️ ⚠️ **
+⚠️ ⚠️ ⚠️ **Help! I'm a student and I'm lost** ⚠️ ⚠️ ⚠️ 
 
 Fear not! The place you're looking for is probably the [student setup instructions](./students/setup.md).
 
