@@ -32,7 +32,7 @@ The table below summarises the `choochoo-bot` commands, who can use each command
 
 | Command | `student` role | `instructor` role | `admin` role | `student` issue | `instructor` issue | `question_proposal` issue |
 | ------ | :----:  | :----:  | :----:  | :----:  | :----:  | :----: |
-| `choochoo` add student |❌ | ✅ | ✅ |❌ |✅ |❌ |
+| `choochoo add student` |:material-close: | :material-check: | :material-check: |:material-close: |:material-check: |:material-close: |
 
 
 
