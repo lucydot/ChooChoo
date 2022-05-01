@@ -41,7 +41,7 @@ Command types:
 
 | Type | Command | `student`  | `instructor`  | `admin`  | 
 | :-----: | ------ | :----:  | :----:  | :----:  |
-| 🧑‍🤝‍🧑* |`choochoo list commands` |:material-check: | :material-check: | :material-check: |
+| 🧑‍🤝‍🧑 |`choochoo list commands` |:material-check: | :material-check: | :material-check: |
 | 🧑‍🤝‍🧑 | `choochoo list people` |:material-check: | :material-check: | :material-check: |
 | 🧑‍🤝‍🧑 |`choochoo check [@handle] is [student/instructor/admin]` |:material-check: | :material-check: | :material-check: |
 | 🧑‍🤝‍🧑 |`choochoo add [@handle] as [student/instructor]` |:material-close: | :material-check: | :material-check: |
