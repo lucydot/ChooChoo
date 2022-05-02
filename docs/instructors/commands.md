@@ -3,15 +3,15 @@
     The ChooChoo command line interface is currently fragile. The commands must be written exactly as listed; capitalisation and whitespace matters. 
     Making the interface more robust is on the developer-todo.
 
-==`choochoo list commands`==
+`choochoo list commands`
 
 :   List all commands available to the user type (either student, instructor or admin).
 
-`==choochoo list people==`
+`choochoo list people`
 
 :   List all students, instructors and admins by github username. The list is parsed from. `./instructor/settings.yml`.
 
-<mark>`choochoo build checklists`</mark>
+`choochoo build checklists`
     
 !!! Warning
 
@@ -29,9 +29,8 @@
 
 :   Generate a bar chart summarising class progress through the checklist. Unless otherwise specified the bar chart will be published at `username.github.io/repo_name/`. 
 
-`choochoo check [@handle] is [student/instructor/admin]`
-
-!!! Example "`choochoo check @lucydot is instructor`"
+**`choochoo check [@handle] is [student/instructor/admin]`**    
+*e.g.* `choochoo check @lucydot is instructor`
 
 :    Check if github username `@handle` is listed as a student, instructor or admin in `./instructor/settings.yml`.
 
