@@ -1,5 +1,3 @@
-ChooChoo is a **Ch**ecklist t**oo**l for educators  🚂
-
 !!! warning
 
     ChooChoo (including this documentation) is currently under development 🐢. It has a planned release date of September 2022.
@@ -7,6 +5,7 @@ ChooChoo is a **Ch**ecklist t**oo**l for educators  🚂
 
 ## What is ChooChoo?
 
+- ✨ ChooChoo is a **Ch**ecklist t**oo**l for educators  
 - ✨ ChooChoo encourages learning through student **self-assessment**, class **collaboration** and **diagnostic teaching**.
 - ✨ Students and instructors interact with `choochoo-bot` through a **Github issue thread**. This makes ChooChoo especially relevant to those who already teach using Github. It's also a great way to introduce your students to the wonderful world of Git, Github and version control!
 - ✨ ChooChoo is free to use and adapt under a **Creative Commons License**. 
