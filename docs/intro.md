@@ -1,11 +1,17 @@
-ChooChoo is a Checklist tool for educators. ChooChoo encourages learning through self-assessment, collaboration and diagnostic teaching. If you would like to know more about the pedagogy underlying ChooChoo please read the [Pedagogy page](./pedagogy.md).
+ChooChoo is a checklist tool for educators. ChooChoo encourages learning through self-assessment, collaboration and diagnostic teaching. If you would like to know more about the pedagogy underlying ChooChoo please read the [Pedagogy page](./pedagogy.md).
 
-If you use ChooChoo as part of any published work, please [cite accordingly](./citation.md).
+!!! warning
+
+    If you use ChooChoo as part of any published work, please [cite accordingly](./citation.md).
 
 ## ChooChoo target audience
-ChooChoo is domain agnostic. It is primarily aimed at people who already use Github for their teaching, and who would like a straight-forward way to assess the progress of their students. It can be integrated into an existing Github repository, or exist as a standalone project.
+ChooChoo is domain agnostic. It is primarily aimed at people who already use Github for their teaching, and who would like a straight-forward way to assess the progress of their students. It can be integrated into an existing Github repository, or exist as a standalone project. A list of ChooChoo projects is maintained [here](./projects.md).
 
-We strongly encourage people to share their ChooChoo repositories so that others can use and adapt existing checklists and question sets. For example, the [ChooChoo-physics]() repository can be easily adapted for use in other undergraduate computational physics courses. A full list of ChooChoo projects is maintained [here]().
+!!! note "Sharing is caring"
+
+    Users are strongly encouraged to share their ChooChoo repositories. This will enable other people to start from existing checklists and question 
+    sets and will make setup quicker over time. This can also incentivise student participation in the question bank, as their work will have impact 
+    beyond a single institution. 
 
 ### Which skills are needed to use ChooChoo?
 ChooChoo is based around Github and, in particular, Github Issues. Self-assessment questions (an optional feature) are written using Markdown syntax. In addition, instructors use yaml to set the ChooChoo checklists and settings. All three tools (Github, Markdown, yaml) are *very* widely used within the programming community. Learning these skills will, in many cases, be a worthwhile time investment for those who continue to work in technology-related fields. To learn more about the tools that ChooChoo is built on top of please read the [Tools page].
