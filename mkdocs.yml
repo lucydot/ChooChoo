@@ -38,7 +38,9 @@ markdown_extensions:
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_generator: !!python/name:materialx.emoji.to_svg      
+  - pymdownx.tabbed:
+      alternate_style: true 
   
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
