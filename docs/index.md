@@ -21,7 +21,7 @@
 ## Interested?
 See the [setup guide](./instructors/setup.md) for instructors. 
 
-*Pretty-please* say hi :wave: if you are using ChooChoo - either through the [discussions page](https://github.com/lucydot/ChooChoo/discussions) or [via email](https://lucydot.github.io/about/). If we know people are using it, we're more likely to do the housework (sweeping out the old dusty code, polishing up the documentation 🧹).
+*Pretty-please* say hi :wave: if you are using ChooChoo - either through the [discussions page](https://github.com/lucydot/ChooChoo/discussions) or [via email](https://lucydot.github.io/about/). If we know people are using it, we're more likely to do the housework- sweeping out the old dusty code, polishing up the documentation 🧹.
 
 !!! tip
 
