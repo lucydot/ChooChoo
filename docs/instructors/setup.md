@@ -1,16 +1,13 @@
-## All aboard! The ChooChoo journey
+## All aboard! Setting up ChooChoo
 
 ``` mermaid
 graph LR
   A[1. Get ChooChoo files] --> B[2. Set repository permissions];
-  B --> C[3. Specify settings];
-  B --> D[4. Specify objectives];
-  C --> E[5. Build student checklists];
+  A --> C[3. Specify settings];
+  A --> D[4. Set objectives];
+  C --> E[5. Test setup];
+  B --> E;
   D --> E;
-  E --> G[6. Extend the question bank];
-  E --> F[7. Monitor class progress];
-  G --> H[8. Target your teaching];
-  F --> H;
 ```
 
 ## 1. Get ChooChoo files
@@ -88,7 +85,7 @@ All ChooChoo settings are contained within `./instructor/settings.yml`. This is 
 `gh-pages_branch`: The branch used to publish web content. This is most commonly `gh-pages`. For more information on Github Pages please see the [Tools page](./tools.md).     
 `web_address`: The web address for this ChooChoo project. In most cases this will be `https://username.github.io/repo_name`.     
 
-## 4. Specify ChooChoo objectives
+## 4. Set ChooChoo objectives
 
 The ChooChoo checklist is generated from `./instructor/objectives.yml`. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the [Tools page](./tools.md).
 
@@ -112,4 +109,25 @@ Each objective contains:
 `tutorials`: A list of links to tutorials associated with this objective.    
 `links`: A list of other links associated with this objective.  
 
+## 5. Test setup
 
+1. Visit your choochoo repository (most likely github.com/username/repo_name)
+2. Click on  the `Issues` tab towards the top of the page
+
+!!! Note
+
+    If you do not see the `Issues` tab you may need to enable issues in `Settings`-> `General`-> `Features`.
+    
+3. Click on `New Issue`
+4. Click `Get Started` next to `ChooChoo instructor thread`
+5. Click on `Preview` to check the formatting looks correct
+6. Repeat steps 1 through 5 for `ChooChoo student thread` 
+7. Click `Submit new issue` to automatically generate a checklist
+8. Read through the checklist and double check formatting, spelling, links etc
+
+*If questions are enabled:*
+9. Repeat steps 1 through 4 for `Question thread` (if questions are enabled)
+10. Read through `Checklist items` at the bottom of the form and double check formatting, spelling etc.
+
+*If gh-pages is enabled:*
+11. Visit the repository website (most likely username.github.io/repo_name) to verify that a page exists
