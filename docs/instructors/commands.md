@@ -25,7 +25,7 @@
 
 `choochoo build question bank`
 
-!!!  Note ""
+!!!  Note " "
 
     Admin-only command.
     
@@ -41,16 +41,66 @@
 
 :    Check if github username `@handle` is listed as a student, instructor or admin in `./instructor/settings.yml`.
 
-`choochoo add [@handle] as [student/instructor/admin]`
+`choochoo add [@handle] as [student/instructor]`
 
 !!! Example "`choochoo add @lucydot as instructor`"
 
-:    Add github username `@handle` as a student, instructor or admin in `./instructor/settings.yml`.
+:    Add github username `@handle` as a student or instructor in `./instructor/settings.yml`.
 
-`choochoo remove [@handle] as [student/instructor/admin]`
+`choochoo remove [@handle] as [student/instructor]`
 
 !!! Example "`choochoo remove @lucydot as instructor`"
 
-:    Remove github username `@handle` as a student, instructor or admin in `./instructor/settings.yml`.
-    
+:    Remove github username `@handle` as a student or instructor in `./instructor/settings.yml`.
 
+`choochoo add [@handle] as admin`
+
+!!!  Note " "
+
+    Admin-only command.
+
+!!! Example "`choochoo add @lucydot as admin`"
+
+:    Add github username `@handle` as an admin in `./instructor/settings.yml`.
+
+`choochoo remove [@handle] as admin`
+
+!!!  Note " "
+
+    Admin-only command.
+
+!!! Example "`choochoo remove @lucydot as admin`"
+
+:    Remove github username `@handle` as an admin in `./instructor/settings.yml`.
+    
+`choochoo add question [web address] to objective [positive integer]`
+
+!!!  Note " "
+
+    Admin-only command.
+
+!!! Example "`choochoo add question https://lucydot.github.io/ChooChoo-template/questions/question_bank#markdown to objective 2`"
+
+:    Add a question to an objective in the checklist. The question is specified using a full web address (including `https://`). Anchor links can be used to link to particular question within the published question bank (as in the example above). The objective is referenced using the number given in the `student` issue template.
+
+`choochoo add link [web address] to objective [positive integer]`
+
+!!!  Note " "
+
+    Admin-only command.
+
+!!! Example "`choochoo add link https://www.markdownguide.org/basic-syntax/ to objective 2`"
+
+:    Add a link to an objective in the checklist. The link is specified using a full web address (including `https://`). The objective is referenced using the number given in the `student` issue template.
+
+`choochoo add tutorial [web address] to objective [positive integer]`
+
+!!!  Note " "
+
+    Admin-only command.
+
+!!! Example "`choochoo add tutorial https://lucydot.github.io/ChooChoo-template/tutorials/lists to objective 3`"
+
+:    Add a tutorial to an objective in the checklist. The link is specified using a full web address (including `https://`). This (of-course!) allows the possibility to add any tutorials that are contained within `https://username.github.io/repo_name/tutorials/`. The objective is referenced using the number given in the `student` issue template.
+
+`choochoo vote up`
