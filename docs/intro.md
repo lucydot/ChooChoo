@@ -14,7 +14,7 @@ ChooChoo is domain agnostic. It is primarily aimed at people who already use Git
     beyond a single institution. 
 
 ### Which skills are needed to use ChooChoo?
-ChooChoo is based around Github and, in particular, Github Issues. Self-assessment questions (an optional feature) are written using Markdown syntax. In addition, instructors use yaml to set the ChooChoo checklists and settings. All three tools (Github, Markdown, yaml) are *very* widely used within the programming community. Learning these skills will, in many cases, be a worthwhile time investment for those who continue to work in technology-related fields. To learn more about the tools that ChooChoo is built on top of please read the [Tools page].
+ChooChoo is based around Github and, in particular, Github Issues. Self-assessment questions (an optional feature) are written using Markdown syntax. In addition, instructors use yaml to specify the ChooChoo checklists and settings. All three tools (Github, Markdown, yaml) are *very* widely used within the programming community. Learning these skills will, in many cases, be a worthwhile time investment for those who continue to work in technology-related fields. To learn more about the tools that ChooChoo is built on top of please read the [Tools page].
 
 ## choochoo-bot
 Students and instructors interact with the `choochoo-bot` helper using comments in a Github issue thread. All comments starting with `choochoo` will be received by `choochoo-bot`. 
@@ -37,13 +37,15 @@ There are three roles within a ChooChoo project: `admin`, `instructor` and `stud
 Documentation for students can be found in the [student section](./students/). **We suggest linking to this from any associated course pages.** Documentation for admins and instructors can be found in the [instructor section](./instructors/).
 
 ## ChooChoo commands:
-The table below summarises who can run the `choochoo-bot` commands. [Student command examples](./students/commands.md) and [instructor command examples](./instructors/commands.md) are also available.
+ChooChoo commands can be split into three types. Each question type is associated with a ChooChoo issue type(s).
 
-The commands can be split into three types:
+| Icon | Description | Used in |
+|:------:|-----------|---------|
+👩🏾‍💻 | choochoo-management | any issue |
+❓ | choochoo-question | issue labelled 'question' |
+📋 | choochoo-checklist |issue labelled 'student'|
 
-- 👩🏾‍💻 = choochoo-management *can be ran in any issue*
-- ❓ = choochoo-question *can only be ran in an issue labelled 'question'*
-- 📋 = choochoo-checklist *can only be ran in an issue labelled 'student'*
+The table below summarises who can run ChooChoo commands. [Student command examples](./students/commands.md) and [instructor command examples](./instructors/commands.md) are also available.
 
 | Type | Command | `student`  | `instructor`  | `admin`  | 
 | :-----: | ------ | :----:  | :----:  | :----:  |
