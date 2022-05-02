@@ -713,7 +713,7 @@ sets and will make setup quicker over time. This can also incentivise student pa
 beyond a single institution. </p>
 </div>
 <h3 id="which-skills-are-needed-to-use-choochoo">Which skills are needed to use ChooChoo?</h3>
-<p>ChooChoo is based around Github and, in particular, Github Issues. Self-assessment questions (an optional feature) are written using Markdown syntax. In addition, instructors use yaml to set the ChooChoo checklists and settings. All three tools (Github, Markdown, yaml) are <em>very</em> widely used within the programming community. Learning these skills will, in many cases, be a worthwhile time investment for those who continue to work in technology-related fields. To learn more about the tools that ChooChoo is built on top of please read the [Tools page].</p>
+<p>ChooChoo is based around Github and, in particular, Github Issues. Self-assessment questions (an optional feature) are written using Markdown syntax. In addition, instructors use yaml to specify the ChooChoo checklists and settings. All three tools (Github, Markdown, yaml) are <em>very</em> widely used within the programming community. Learning these skills will, in many cases, be a worthwhile time investment for those who continue to work in technology-related fields. To learn more about the tools that ChooChoo is built on top of please read the [Tools page].</p>
 <h2 id="choochoo-bot">choochoo-bot</h2>
 <p>Students and instructors interact with the <code>choochoo-bot</code> helper using comments in a Github issue thread. All comments starting with <code>choochoo</code> will be received by <code>choochoo-bot</code>. </p>
 <h2 id="choochoo-issue-types">ChooChoo issue types</h2>
@@ -732,13 +732,34 @@ beyond a single institution. </p>
 </ul>
 <p>Documentation for students can be found in the <a href="./students/">student section</a>. <strong>We suggest linking to this from any associated course pages.</strong> Documentation for admins and instructors can be found in the <a href="./instructors/">instructor section</a>.</p>
 <h2 id="choochoo-commands">ChooChoo commands:</h2>
-<p>The table below summarises who can run the <code>choochoo-bot</code> commands. <a href="../students/commands/">Student command examples</a> and <a href="../instructors/commands/">instructor command examples</a> are also available.</p>
-<p>The commands can be split into three types:</p>
-<ul>
-<li>👩🏾‍💻 = choochoo-management <em>can be ran in any issue</em></li>
-<li>❓ = choochoo-question <em>can only be ran in an issue labelled 'question'</em></li>
-<li>📋 = choochoo-checklist <em>can only be ran in an issue labelled 'student'</em></li>
-</ul>
+<p>ChooChoo commands can be split into three types. Each question type is associated with a ChooChoo issue type(s).</p>
+<table>
+<thead>
+<tr>
+<th align="center">Icon</th>
+<th>Description</th>
+<th>Used in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">👩🏾‍💻</td>
+<td>choochoo-management</td>
+<td>any issue</td>
+</tr>
+<tr>
+<td align="center">❓</td>
+<td>choochoo-question</td>
+<td>issue labelled 'question'</td>
+</tr>
+<tr>
+<td align="center">📋</td>
+<td>choochoo-checklist</td>
+<td>issue labelled 'student'</td>
+</tr>
+</tbody>
+</table>
+<p>The table below summarises who can run ChooChoo commands. <a href="../students/commands/">Student command examples</a> and <a href="../instructors/commands/">instructor command examples</a> are also available.</p>
 <table>
 <thead>
 <tr>
