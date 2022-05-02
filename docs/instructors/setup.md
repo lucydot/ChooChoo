@@ -107,7 +107,7 @@ Each ChooChoo checklist contains one or more sections. Each section contains:
 
 Each objective contains:
 
-`name`: Objective name/description.
+`name`: Objective name/description.     
 `questions`: A list of links to questions associated with this objective.    
 `tutorials`: A list of links to tutorials associated with this objective.    
 `links`: A list of other links associated with this objective.  
