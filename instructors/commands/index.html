@@ -576,16 +576,16 @@
 Making the interface more robust is on the developer-todo.</p>
 </div>
 <dl>
-<dt><mark><code>choochoo list commands</code></mark></dt>
+<dt><code>choochoo list commands</code></dt>
 <dd>
 <p>List all commands available to the user type (either student, instructor or admin).</p>
 </dd>
-<dt><code>==choochoo list people==</code></dt>
+<dt><code>choochoo list people</code></dt>
 <dd>
 <p>List all students, instructors and admins by github username. The list is parsed from. <code>./instructor/settings.yml</code>.</p>
 </dd>
 </dl>
-<p><mark><code>choochoo build checklists</code></mark></p>
+<p><code>choochoo build checklists</code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This command should not be used once your class is in progress. Strange things will happen if <code>student</code> and <code>question</code> issues are raised for different checklist builds. </p>
@@ -602,13 +602,11 @@ Build and publish a webpage containing all questions in the question bank. Unles
 <dd>
 <p>Generate a bar chart summarising class progress through the checklist. Unless otherwise specified the bar chart will be published at <code>username.github.io/repo_name/</code>. </p>
 </dd>
-</dl>
-<p><code>choochoo check [@handle] is [student/instructor/admin]</code></p>
-<div class="admonition example">
-<p class="admonition-title"><code>choochoo check @lucydot is instructor</code></p>
-</div>
-<dl>
-<dd>Check if github username <code>@handle</code> is listed as a student, instructor or admin in <code>./instructor/settings.yml</code>.</dd>
+<dt><strong><code>choochoo check [@handle] is [student/instructor/admin]</code></strong>    </dt>
+<dt><em>e.g.</em> <code>choochoo check @lucydot is instructor</code></dt>
+<dd>
+<p>Check if github username <code>@handle</code> is listed as a student, instructor or admin in <code>./instructor/settings.yml</code>.</p>
+</dd>
 </dl>
 <p><code>choochoo add [@handle] as [student/instructor]</code></p>
 <div class="admonition example">
