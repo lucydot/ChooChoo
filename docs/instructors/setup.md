@@ -2,18 +2,18 @@
 
 ``` mermaid
 graph LR
-  A[Fork/copy ChooChoo files] --> B[Set repository permissions];
-  B --> C[Specify settings];
-  B --> D[Specify objectives];
-  C --> E[Build student checklists];
+  A[1. Get ChooChoo files] --> B[2. Set repository permissions];
+  B --> C[3. Specify settings];
+  B --> D[4. Specify objectives];
+  C --> E[5. Build student checklists];
   D --> E;
-  E --> G[Extend the question bank];
-  E --> F[Monitor class progress];
-  G --> H[Target your teaching];
+  E --> G[6. Extend the question bank];
+  E --> F[7. Monitor class progress];
+  G --> H[8. Target your teaching];
   F --> H;
 ```
 
-## Getting the ChooChoo files
+## 1. Get ChooChoo files
 
 There are three ways to get the files required to run ChooChoo:
 
@@ -61,13 +61,13 @@ The third option (integrate) requires a good understanding of Github. If you are
     - Your ChooChoo repo should be public if you have standard (free) Github account and want to publish tutorials, questions and summary plots online.
     - You are advised to create one ChooChoo repository for each class group. This will allow you to track the progress of each individual class rather than all classes combined.
     
-## Permissions
+## 2. Set repository permissions
 
 Commands to `choochoo-bot` trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses `secrets.BOT_ACCESS_TOKEN`,  which requires a `BOT_ACCESS_TOKEN` to be added to your repository secrets. To do this please get in contact through the [ChooChoo discussion page](https://github.com/lucydot/ChooChoo/discussions/) or [email](https://lucydot.github.io/about/).
 
 Alternatively you can use the `secrets.GITHUB_TOKEN` which is automatically generated during any workflow run. To do this replace all instances of `secrets.BOT_ACCESS_TOKEN` with `secrets.GITHUB_TOKEN` in the `.github/workflows/` directory. The disadvantage of this approach is that `choochoo-bot` is replaced by the less charming `gh-actions` bot.
 
-## ChooChoo settings
+## 3. Specify ChooChoo settings
 
 All ChooChoo settings are contained within `./instructor/settings.yml`. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the [Tools page](./tools.md).
 
@@ -88,7 +88,7 @@ All ChooChoo settings are contained within `./instructor/settings.yml`. This is 
 `gh-pages_branch`: The branch used to publish web content. This is most commonly `gh-pages`. For more information on Github Pages please see the [Tools page](./tools.md).     
 `web_address`: The web address for this ChooChoo project. In most cases this will be `https://username.github.io/repo_name`.     
 
-## ChooChoo objectives
+## 4. Specify ChooChoo objectives
 
 The ChooChoo checklist is generated from `./instructor/objectives.yml`. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the [Tools page](./tools.md).
 
