@@ -730,6 +730,12 @@
   <h1>Setup</h1>
 
 <h2 id="all-aboard-the-choochoo-journey">All aboard! The ChooChoo journey</h2>
+<pre class="mermaid"><code>graph LR
+  A[Start] --&gt; B{Error?};
+  B --&gt;|Yes| C[Hmm...];
+  C --&gt; D[Debug];
+  D --&gt; B;
+  B ----&gt;|No| E[Yay!];</code></pre>
 <h2 id="getting-choochoo">Getting ChooChoo</h2>
 <p>There are three ways to get setup with ChooChoo:</p>
 <ol>
