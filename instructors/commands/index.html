@@ -686,6 +686,51 @@ Making the interface more robust is on the developer-todo.</p>
 <dd>Add a tutorial to an objective in the checklist. The link is specified using a full web address (including <code>https://</code>). This (of-course!) allows the possibility to add any tutorials that are contained within <code>https://username.github.io/repo_name/tutorials/</code>. The objective is referenced using the number given in the <code>student</code> issue template.</dd>
 </dl>
 <p><code>choochoo vote up</code></p>
+<div class="admonition note">
+<p class="admonition-title"> </p>
+<p><code>question</code> issues only.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title"> </p>
+<p>Admin-only command.</p>
+</div>
+<dl>
+<dd>Add an up-vote to the proposed question. Once a pre-specified number of votes is met an admin will be invited to add the question to the question bank.</dd>
+</dl>
+<p><code>choochoo bank question</code></p>
+<div class="admonition note">
+<p class="admonition-title"> </p>
+<p><code>question</code> issues only.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title"> </p>
+<p>Admin-only command.</p>
+</div>
+<dl>
+<dd>Add the proposed question to the question bank. <code>choochoo build question bank</code> is required to publish the question online.</dd>
+</dl>
+<p><code>choochoo generate [positive integer] questions</code></p>
+<div class="admonition note">
+<p class="admonition-title"> </p>
+<p><code>student</code> issues only.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title"><code>choochoo generate 5 questions</code></p>
+</div>
+<dl>
+<dd>Generate a webpage containing [positive integer] questions from the question bank. <strong>The questions correspond to the objectives which have not been ticked in the issue thread.</strong> Unless otherwise specified the webpage can be found at <code>username.github.io/repo_name/questions/handle</code> where <code>handle</code> is the github username of the person issuing the command.</dd>
+</dl>
+<p><code>choochoo generate [positive integer] questions for objectives [positive integers with spaces]</code></p>
+<div class="admonition note">
+<p class="admonition-title"> </p>
+<p><code>student</code> issues only.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title"><code>choochoo generate 5 questions for objectives 1 2 4</code></p>
+</div>
+<dl>
+<dd>Generate a webpage containing [positive integer] questions from the question bank. <strong>The questions correspond to the specified objectives.</strong> Unless otherwise specified the webpage can be found at <code>username.github.io/repo_name/questions/handle</code> where <code>handle</code> is the github username of the person issuing the command.</dd>
+</dl>
 
               
             </article>
