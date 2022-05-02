@@ -11,7 +11,7 @@
 
 :   List all students, instructors and admins by github username. The list is parsed from. `./instructor/settings.yml`.
 
-`choochoo build checklists`
+<mark>`choochoo build checklists`</mark>
     
 !!! Warning
 
