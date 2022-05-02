@@ -3,7 +3,7 @@
     The ChooChoo command line interface is currently fragile. The commands must be written exactly as listed; capitalisation and whitespace matters. 
     Making the interface more robust is on the developer-todo.
 
-`choochoo list commands`
+==`choochoo list commands`==
 
 :   List all commands available to the user type (either student, instructor or admin).
 
