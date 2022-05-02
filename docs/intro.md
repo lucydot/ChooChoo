@@ -10,7 +10,7 @@ ChooChoo is domain agnostic. It is primarily aimed at people who already use Git
 !!! note "Sharing is caring"
 
     Users are strongly encouraged to share their ChooChoo repositories. This will enable other people to start from existing checklists and question 
-    sets and will make setup quicker over time. This can also incentivise student participation in the question bank, as their work will have impact 
+    sets and will make setup quicker over time. Sharing can also incentivise student participation in building the question bank, as their work will have impact 
     beyond a single institution. 
 
 ### Which skills are needed to use ChooChoo?
