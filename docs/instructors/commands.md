@@ -104,3 +104,46 @@
 :    Add a tutorial to an objective in the checklist. The link is specified using a full web address (including `https://`). This (of-course!) allows the possibility to add any tutorials that are contained within `https://username.github.io/repo_name/tutorials/`. The objective is referenced using the number given in the `student` issue template.
 
 `choochoo vote up`
+
+!!! note " "
+
+    `question` issues only.
+
+!!! note " "
+
+    Admin-only command.
+
+:    Add an up-vote to the proposed question. Once a pre-specified number of votes is met an admin will be invited to add the question to the question bank.
+
+`choochoo bank question`
+
+!!! note " "
+
+    `question` issues only.
+
+!!! note " "
+
+    Admin-only command.
+
+:   Add the proposed question to the question bank. `choochoo build question bank` is required to publish the question online.
+
+`choochoo generate [positive integer] questions`
+
+!!! note " "
+
+    `student` issues only.
+    
+!!! Example "`choochoo generate 5 questions`"
+
+:   Generate a webpage containing [positive integer] questions from the question bank. **The questions correspond to the objectives which have not been ticked in the issue thread.** Unless otherwise specified the webpage can be found at `username.github.io/repo_name/questions/handle` where `handle` is the github username of the person issuing the command.
+
+`choochoo generate [positive integer] questions for objectives [positive integers with spaces]`
+
+!!! note " "
+
+    `student` issues only.
+    
+!!! Example "`choochoo generate 5 questions for objectives 1 2 4`"
+
+:   Generate a webpage containing [positive integer] questions from the question bank. **The questions correspond to the specified objectives.** Unless otherwise specified the webpage can be found at `username.github.io/repo_name/questions/handle` where `handle` is the github username of the person issuing the command.
+
