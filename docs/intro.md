@@ -21,55 +21,18 @@ Students and instructors interact with the `choochoo-bot` helper using comments 
 
 ## ChooChoo issue types
 
-There are three ChooChoo issue types: `student`, `instructor` and `question_proposal`. 
+There are three ChooChoo issue types: `student`, `instructor` and `question`. 
 
 - **`student`** issues can created by a student, instructor or admin. They contain an automatically generated, personal checklist to work through. They also contain links to any associated tutorials, questions or external websites.
 - **`instructor`** issues can be created by an instructor or admin. They are used to monitor class progress (generate plots) and add/remove students.
 - **`question_proposal`** issues can be created by a student, instructor or admin. They contain the proposed question. They also contain any discussion about the question and the votes in support of the question.
 
 ## ChooChoo roles 
-There are three roles within a ChooChoo project: `admin`, `instructor` and `student`:
+There are three roles within a ChooChoo project: `student``instructor` and  `admin`:
 
-- **Students** can generate personal checklists to work through, propose self-assessment questions and vote on proposed questions. 
-- **Instructors** can add or remove students, summarise class progress as a bar chart, and add questions to the question bank. 
-- **Admins** can do the same as instructors, in addition they are able to generate the student checklist template and add/remove instructors. 
+- A **`student`** can generate personal checklists to work through, propose self-assessment questions and vote on proposed questions. 
+- An **`instructor`** can add or remove students, summarise class progress as a bar chart, and add questions to the question bank. 
+- An **`admin`** can do the same as instructors, in addition they are able to generate the student checklist template and add/remove instructors. 
 
-Documentation for students can be found in the [student section](./students/). **We suggest linking to this from any associated course pages.** Documentation for admins and instructors can be found in the [instructor section](./instructors/).
-
-## ChooChoo commands:
-ChooChoo commands can be split into three types. Each question type is associated with a ChooChoo issue type(s).
-
-| Icon | Description | Used in |
-|:------:|-----------|---------|
-👩🏾‍💻 | choochoo-management | any issue |
-❓ | choochoo-question | issue labelled 'question' |
-📋 | choochoo-checklist |issue labelled 'student'|
-
-The table below summarises who can run ChooChoo commands. [Student command examples](./students/commands.md) and [instructor command examples](./instructors/commands.md) are also available.
-
-| Type | Command | `student`  | `instructor`  | `admin`  | 
-| :-----: | ------ | :----:  | :----:  | :----:  |
-| 👩🏾‍💻 |`choochoo list commands` |:material-check: | :material-check: | :material-check: |
-| 👩🏾‍💻  | `choochoo list people` |:material-check: | :material-check: | :material-check: |
-| 👩🏾‍💻 |`choochoo build checklists` |:material-close: | :material-close: | :material-check: |
-| 👩🏾‍💻 |`choochoo build question bank`| :material-close: | :material-close: | :material-check: |
-| 👩🏾‍💻 |`choochoo summarise class progress` |:material-close: | :material-check: | :material-check: |
-| 👩🏾‍💻  |`choochoo check [@handle] is [student/instructor/admin]` |:material-check: | :material-check: | :material-check: |
-| 👩🏾‍💻 |`choochoo add [@handle] as [student/instructor]` |:material-close: | :material-check: | :material-check: |
-| 👩🏾‍💻 |`choochoo remove [@handle] as [student/instructor]` |:material-close: | :material-check: | :material-check: |
-| 👩🏾‍💻 |`choochoo add [@handle] as admin` |:material-close: | :material-close: | :material-check: |
-| 👩🏾‍💻 |`choochoo remove [@handle] as admin` |:material-close: | :material-close: | :material-check: |
-| 👩🏾‍💻 |`choochoo add question [web address] to objective [positive integer]` |:material-close: | :material-close: | :material-check: |
-| 👩🏾‍💻 |`choochoo add link [web address] to objective [positive integer]` |:material-close: | :material-close: | :material-check: |
-| 👩🏾‍💻 |`choochoo add tutorial [web address] to objective [positive integer]` |:material-close: | :material-close: | :material-check: |
-| ❓ |`choochoo vote up`| :material-check: | :material-check: | :material-check: |
-| ❓ |`choochoo bank question`| :material-close: | :material-close: | :material-check: |
-| 📋 |`choochoo generate [positive integer] questions`|:material-check: | :material-check: | :material-check: |
-| 📋 |`choochoo generate [positive integer] questions for objectives [positive integers with spaces]`|:material-check: | :material-check: | :material-check: |
-
-
-
-
-
-
+Documentation for students can be found in the [student section](./students/setup.md). **We suggest linking to this from any associated course pages.** Documentation for admins and instructors can be found in the [instructor section](./instructors/setup.md).
 
