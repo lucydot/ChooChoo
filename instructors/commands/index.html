@@ -576,16 +576,16 @@
 Making the interface more robust is on the developer-todo.</p>
 </div>
 <dl>
-<dt><code>choochoo list commands</code></dt>
+<dt><strong><code>choochoo list commands</code></strong></dt>
 <dd>
 <p>List all commands available to the user type (either student, instructor or admin).</p>
 </dd>
-<dt><code>choochoo list people</code></dt>
+<dt><strong><code>choochoo list people</code></strong></dt>
 <dd>
 <p>List all students, instructors and admins by github username. The list is parsed from. <code>./instructor/settings.yml</code>.</p>
 </dd>
 </dl>
-<p><code>choochoo build checklists</code></p>
+<p><strong><code>choochoo build checklists</code></strong></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This command should not be used once your class is in progress. Strange things will happen if <code>student</code> and <code>question</code> issues are raised for different checklist builds. </p>
@@ -593,12 +593,12 @@ Making the interface more robust is on the developer-todo.</p>
 <dl>
 <dd><em>Admin-only command</em><br />
 Build the <code>student</code> and <code>question</code> issue templates using the objectives listed in <code>./instructor/settings.yml</code>.</dd>
-<dt><code>choochoo build question bank</code></dt>
+<dt><strong><code>choochoo build question bank</code></strong></dt>
 <dd>
 <p><em>Admin-only command</em><br />
 Build and publish a webpage containing all questions in the question bank. Unless otherwise specified the web address is <code>username.github.io/repo_name/questions/question_bank</code>. The question bank file is located at <code>./questions/question_bank.yml</code>. This yaml file is converted to markdown before being published.</p>
 </dd>
-<dt><code>choochoo summarise class progress</code></dt>
+<dt><strong><code>choochoo summarise class progress</code></strong></dt>
 <dd>
 <p>Generate a bar chart summarising class progress through the checklist. Unless otherwise specified the bar chart will be published at <code>username.github.io/repo_name/</code>. </p>
 </dd>
@@ -607,86 +607,68 @@ Build and publish a webpage containing all questions in the question bank. Unles
 <dd>
 <p>Check if github username <code>@handle</code> is listed as a student, instructor or admin in <code>./instructor/settings.yml</code>.</p>
 </dd>
-</dl>
-<p><code>choochoo add [@handle] as [student/instructor]</code></p>
-<div class="admonition example">
-<p class="admonition-title"><code>choochoo add @lucydot as instructor</code></p>
-</div>
-<dl>
-<dd>Add github username <code>@handle</code> as a student or instructor in <code>./instructor/settings.yml</code>.</dd>
-</dl>
-<p><code>choochoo remove [@handle] as [student/instructor]</code></p>
-<div class="admonition example">
-<p class="admonition-title"><code>choochoo remove @lucydot as instructor</code></p>
-</div>
-<dl>
-<dd>Remove github username <code>@handle</code> as a student or instructor in <code>./instructor/settings.yml</code>.</dd>
-</dl>
-<p><code>choochoo add [@handle] as admin</code></p>
-<div class="admonition example">
-<p class="admonition-title"><code>choochoo add @lucydot as admin</code></p>
-</div>
-<dl>
-<dd><em>Admin-only command</em><br />
-Add github username <code>@handle</code> as an admin in <code>./instructor/settings.yml</code>.</dd>
-</dl>
-<p><code>choochoo remove [@handle] as admin</code></p>
-<div class="admonition example">
-<p class="admonition-title"><code>choochoo remove @lucydot as admin</code></p>
-</div>
-<dl>
-<dd><em>Admin-only command</em><br />
-Remove github username <code>@handle</code> as an admin in <code>./instructor/settings.yml</code>.</dd>
-</dl>
-<p><code>choochoo add question [web address] to objective [positive integer]</code></p>
-<div class="admonition example">
-<p class="admonition-title"><code>choochoo add question https://lucydot.github.io/ChooChoo-template/questions/question_bank#markdown to objective 2</code></p>
-</div>
-<dl>
-<dd><em>Admin-only command</em><br />
-Add a question to an objective in the checklist. The question is specified using a full web address (including <code>https://</code>). Anchor links can be used to link to particular question within the published question bank (as in the example above). The objective is referenced using the number given in the <code>student</code> issue template.</dd>
-</dl>
-<p><code>choochoo add link [web address] to objective [positive integer]</code></p>
-<div class="admonition example">
-<p class="admonition-title"><code>choochoo add link https://www.markdownguide.org/basic-syntax/ to objective 2</code></p>
-</div>
-<dl>
-<dd><em>Admin-only command</em><br />
-Add a link to an objective in the checklist. The link is specified using a full web address (including <code>https://</code>). The objective is referenced using the number given in the <code>student</code> issue template.</dd>
-</dl>
-<p><code>choochoo add tutorial [web address] to objective [positive integer]</code></p>
-<div class="admonition example">
-<p class="admonition-title"><code>choochoo add tutorial https://lucydot.github.io/ChooChoo-template/tutorials/lists to objective 3</code></p>
-</div>
-<dl>
-<dd><em>Admin-only command</em><br />
-Add a tutorial to an objective in the checklist. The link is specified using a full web address (including <code>https://</code>). This (of-course!) allows the possibility to add any tutorials that are contained within <code>https://username.github.io/repo_name/tutorials/</code>. The objective is referenced using the number given in the <code>student</code> issue template.</dd>
-<dt><code>choochoo vote up</code></dt>
+<dt><strong><code>choochoo add [@handle] as [student/instructor]</code></strong>    </dt>
+<dt><em>e.g.</em> <code>choochoo add @lucydot as instructor</code></dt>
+<dd>
+<p>Add github username <code>@handle</code> as a student or instructor in <code>./instructor/settings.yml</code>.</p>
+</dd>
+<dt><strong><code>choochoo remove [@handle] as [student/instructor]</code></strong>     </dt>
+<dt><em>e.g.</em> <code>choochoo remove @lucydot as instructor</code></dt>
+<dd>
+<p>Remove github username <code>@handle</code> as a student or instructor in <code>./instructor/settings.yml</code>.</p>
+</dd>
+<dt><strong><code>choochoo add [@handle] as admin</code></strong>       </dt>
+<dt><em>e.g.</em> <code>choochoo add @lucydot as admin</code></dt>
+<dd>
+<p><em>Admin-only command</em><br />
+Add github username <code>@handle</code> as an admin in <code>./instructor/settings.yml</code>.</p>
+</dd>
+<dt><strong><code>choochoo remove [@handle] as admin</code></strong>        </dt>
+<dt><em>e.g.</em> <code>choochoo remove @lucydot as admin</code></dt>
+<dd>
+<p><em>Admin-only command</em><br />
+Remove github username <code>@handle</code> as an admin in <code>./instructor/settings.yml</code>.</p>
+</dd>
+<dt><strong><code>choochoo add question [web address] to objective [positive integer]</code></strong>        </dt>
+<dt><em>e.g.</em> <code>choochoo add question https://lucydot.github.io/ChooChoo-template/questions/question_bank#markdown to objective 2</code></dt>
+<dd>
+<p><em>Admin-only command</em><br />
+Add a question to an objective in the checklist. The question is specified using a full web address (including <code>https://</code>). Anchor links can be used to link to particular question within the published question bank (as in the example above). The objective is referenced using the number given in the <code>student</code> issue template.</p>
+</dd>
+<dt><strong><code>choochoo add link [web address] to objective [positive integer]</code></strong>       </dt>
+<dt><em>e.g.</em> <code>choochoo add link https://www.markdownguide.org/basic-syntax/ to objective 2</code></dt>
+<dd>
+<p><em>Admin-only command</em><br />
+Add a link to an objective in the checklist. The link is specified using a full web address (including <code>https://</code>). The objective is referenced using the number given in the <code>student</code> issue template.</p>
+</dd>
+<dt><strong><code>choochoo add tutorial [web address] to objective [positive integer]</code></strong>       </dt>
+<dt><em>e.g.</em> <code>choochoo add tutorial https://lucydot.github.io/ChooChoo-template/tutorials/lists to objective 3</code></dt>
+<dd>
+<p><em>Admin-only command</em><br />
+Add a tutorial to an objective in the checklist. The link is specified using a full web address (including <code>https://</code>). This (of-course!) allows the possibility to add any tutorials that are contained within <code>https://username.github.io/repo_name/tutorials/</code>. The objective is referenced using the number given in the <code>student</code> issue template.</p>
+</dd>
+<dt><strong><code>choochoo vote up</code></strong></dt>
 <dd>
 <p><em>Admin-only command / <code>question</code> issues only</em><br />
 Add an up-vote to the proposed question. Once a pre-specified number of votes is met an admin will be invited to add the question to the question bank.</p>
 </dd>
-<dt><code>choochoo bank question</code></dt>
+<dt><strong><code>choochoo bank question</code></strong></dt>
 <dd>
 <p><em>Admin-only command / <code>question</code> issues only</em><br />
 Add the proposed question to the question bank. <code>choochoo build question bank</code> is required to publish the question online.</p>
 </dd>
-</dl>
-<p><code>choochoo generate [positive integer] questions</code></p>
-<div class="admonition example">
-<p class="admonition-title"><code>choochoo generate 5 questions</code></p>
-</div>
-<dl>
-<dd><em><code>student</code> issues only</em><br />
- Generate a webpage containing [positive integer] questions from the question bank. <strong>The questions correspond to the objectives which have not been ticked in the issue thread.</strong> Unless otherwise specified the webpage can be found at <code>username.github.io/repo_name/questions/handle</code> where <code>handle</code> is the github username of the person issuing the command.</dd>
-</dl>
-<p><code>choochoo generate [positive integer] questions for objectives [positive integers with spaces]</code></p>
-<div class="admonition example">
-<p class="admonition-title"><code>choochoo generate 5 questions for objectives 1 2 4</code></p>
-</div>
-<dl>
-<dd><em><code>student</code> issues only</em><br />
- Generate a webpage containing [positive integer] questions from the question bank. <strong>The questions correspond to the specified objectives.</strong> Unless otherwise specified the webpage can be found at <code>username.github.io/repo_name/questions/handle</code> where <code>handle</code> is the github username of the person issuing the command.</dd>
+<dt><strong><code>choochoo generate [positive integer] questions</code></strong>    </dt>
+<dt><em>e.g.</em> <code>choochoo generate 5 questions</code></dt>
+<dd>
+<p><em><code>student</code> issues only</em><br />
+ Generate a webpage containing [positive integer] questions from the question bank. <strong>The questions correspond to the objectives which have not been ticked in the issue thread.</strong> Unless otherwise specified the webpage can be found at <code>username.github.io/repo_name/questions/handle</code> where <code>handle</code> is the github username of the person issuing the command.</p>
+</dd>
+<dt><strong><code>choochoo generate [positive integer] questions for objectives [positive integers with spaces]</code></strong>     </dt>
+<dt><em>e.g.</em> <code>choochoo generate 5 questions for objectives 1 2 4</code></dt>
+<dd>
+<p><em><code>student</code> issues only</em><br />
+ Generate a webpage containing [positive integer] questions from the question bank. <strong>The questions correspond to the specified objectives.</strong> Unless otherwise specified the webpage can be found at <code>username.github.io/repo_name/questions/handle</code> where <code>handle</code> is the github username of the person issuing the command.</p>
+</dd>
 </dl>
 
               
