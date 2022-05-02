@@ -308,9 +308,43 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    Permissions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#choochoo-settings" class="md-nav__link">
     ChooChoo settings
   </a>
+  
+    <nav class="md-nav" aria-label="ChooChoo settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-settings-must-edit" class="md-nav__link">
+    Key settings (must edit)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-options-may-edit" class="md-nav__link">
+    User options (may edit)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-options-expert-users-only" class="md-nav__link">
+    Advanced options (expert users only)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -628,9 +662,43 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    Permissions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#choochoo-settings" class="md-nav__link">
     ChooChoo settings
   </a>
+  
+    <nav class="md-nav" aria-label="ChooChoo settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-settings-must-edit" class="md-nav__link">
+    Key settings (must edit)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-options-may-edit" class="md-nav__link">
+    User options (may edit)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-options-expert-users-only" class="md-nav__link">
+    Advanced options (expert users only)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -665,11 +733,11 @@
 <h2 id="getting-choochoo">Getting ChooChoo</h2>
 <p>There are three ways to get setup with ChooChoo:</p>
 <ol>
-<li>Fork the <a href="">choochoo-template repository</a> and specify the objectives/questions/tutorials for your course.</li>
-<li>Fork an <a href="">existing choochoo repository</a> and use or extend objectives/questions/tutorials from an existing ChooChoo project.</li>
+<li>Fork the <a href="https://github.com/lucydot/ChooChoo-template/">choochoo-template repository</a> and specify the objectives/questions/tutorials for your course.</li>
+<li>Fork an <a href="./existing.md">existing choochoo repository</a> and use or extend objectives/questions/tutorials from an existing ChooChoo project.</li>
 <li>Integrate choochoo into an existing Github repository.</li>
 </ol>
-<p>The third option (integrate) requires a better understanding of Github. If you are new to Github we recommend Forking the <a href="">choochoo-template</a> or an <a href="">existing choochoo repository</a>. For more setup details please select a tab below.</p>
+<p>The third option (integrate) requires a good understanding of Github. If you are new to Github we recommend forking the <a href="https://github.com/lucydot/ChooChoo-template/">choochoo-template</a> or an <a href="./existing.md">existing choochoo repository</a>. For more setup details please select a tab below.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Fork template</label><label for="__tabbed_1_2">Fork existing</label><label for="__tabbed_1_3">Integrate</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -689,9 +757,23 @@
 </ol>
 </div>
 <div class="tabbed-block">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This option requires a good understanding of Github. 
+If you are new to Github we recommend forking an existing choochoo repository or the template repository.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can copy the ChooChoo files into a dedicated branch if preferred. Just be sure to specify the branch in <code>./instructor/settings.yml</code>.</p>
+</div>
 <ol>
-<li>Automatically assumes branch names but this can be edited
-2.</li>
+<li>Visit https://github.com/lucydot/ChooChoo-template/</li>
+<li>Copy the <code>./instructor</code> folder and contents into the root of your repository</li>
+<li>Create an empty <code>./plots</code> folder in the root your repository</li>
+<li>[optional] Create an empty <code>./questions</code> folder in the root of your repository</li>
+<li>[optional] Create an empty <code>./tutorials</code> folder in the root of your repository</li>
+<li>Copy the contents of <code>.github/ISSUE_TEMPLATE/</code> into your repository. You may need to create this folder if it does not already exist.</li>
+<li>Copy the contents of <code>.github/workflows/</code> into your repository. You may need to create this folder if it does not already exist.</li>
 </ol>
 </div>
 </div>
@@ -703,21 +785,45 @@
 <li>You are advised to create one ChooChoo repository for each class group. This will allow you to track the progress of each individual class rather than all classes combined.</li>
 </ul>
 </div>
+<h2 id="permissions">Permissions</h2>
+<p>Commands to <code>choochoo-bot</code> trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses <code>secrets.BOT_ACCESS_TOKEN</code>,  which requires a <code>BOT_ACCESS_TOKEN</code> to be added to your repository secrets. To do this please get in contact through the <a href="https://github.com/lucydot/ChooChoo/discussions/">ChooChoo discussion page</a> or <a href="https://lucydot.github.io/about/">email</a>.</p>
+<p>Alternatively you can use the <code>secrets.GITHUB_TOKEN</code> which is automatically generated during any workflow run. To do this replace all instances of <code>secrets.BOT_ACCESS_TOKEN</code> with <code>secrets.GITHUB_TOKEN</code> in the <code>.github/workflows/</code> directory. The disadvantage of this approach is that <code>choochoo-bot</code> is replaced by the less charming <code>gh-actions</code> bot.</p>
 <h2 id="choochoo-settings">ChooChoo settings</h2>
 <p>All ChooChoo settings are contained within <code>./instructor/settings.yml</code>. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the <a href="./tools.md">Tools page</a>.</p>
+<h4 id="key-settings-must-edit">Key settings (must edit)</h4>
 <p><code>project_title</code>: The project title.  <br />
 <code>project_repo</code>: In the format <code>username/repo_name</code>.     <br />
 <code>admins</code>: A list of Github usernames without the <code>@</code> sign.         <br />
 <code>instructors</code>: A list of Github usernames without the <code>@</code> sign.<br />
-<code>students</code>: A list of Github usernames without the <code>@</code> sign.  </p>
-<p><code>choochoo_branch</code>: The branch where ChooChoo is installed. In most cases this will be the default <code>main</code> or <code>master</code> branch.    <br />
-<code>gh-pages</code>: If set to true then the question bank, tutorials and summary plot will be published on the <code>gh-pages_branch</code>.  <br />
+<code>students</code>: A list of Github usernames without the <code>@</code> sign.</p>
+<h4 id="user-options-may-edit">User options (may edit)</h4>
+<p><code>questions</code>: If set to <code>true</code> students can propose their own questions for the question bank.   <br />
+<code>votes_required</code>: The number of votes required before an admin is asked to add a question to the question bank.    </p>
+<h4 id="advanced-options-expert-users-only">Advanced options (expert users only)</h4>
+<p><code>gh-pages</code>: If set to true then the question bank, tutorials and summary plot will be published on the <code>gh-pages_branch</code>.<br />
+<code>choochoo_branch</code>: The branch where ChooChoo is installed. In most cases this will be the default <code>main</code> or <code>master</code> branch. 
 <code>gh-pages_branch</code>: The branch used to publish web content. This is most commonly <code>gh-pages</code>. For more information on Github Pages please see the <a href="./tools.md">Tools page</a>.   <br />
 <code>web_address</code>: The web address for this ChooChoo project. In most cases this will be <code>https://username.github.io/repo_name</code>.     </p>
-<p><code>questions</code>: If set to <code>true</code> students can propose their own questions for the question bank.   <br />
-<code>votes_required</code>: The number of votes required before an admin is asked to add a question to the question bank.     </p>
 <h2 id="choochoo-objectives">ChooChoo objectives</h2>
 <p>The ChooChoo checklist is generated from <code>./instructor/objectives.yml</code>. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the <a href="./tools.md">Tools page</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>All web links must be given using the full web address including <code>https://</code>.</li>
+<li>You do not need to provide links for all fields. If there are no links you must use empty square brackets <code>[]</code>.</li>
+</ul>
+</div>
+<p>Each ChooChoo checklist contains one or more sections. Each section contains:</p>
+<p><code>name</code>: Section name.   <br />
+<code>questions</code>: A list of links to questions associated with this section.  <br />
+<code>tutorials</code>: A list of links to tutorials associated with this section.  <br />
+<code>links</code>: A list of other links associated with this section.  <br />
+<code>objectives</code>: A list of objectives (see below).</p>
+<p>Each objective contains:</p>
+<p><code>name</code>: Objective name/description.
+<code>questions</code>: A list of links to questions associated with this objective.  <br />
+<code>tutorials</code>: A list of links to tutorials associated with this objective.  <br />
+<code>links</code>: A list of other links associated with this objective.  </p>
 
               
             </article>
