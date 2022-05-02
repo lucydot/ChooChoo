@@ -78,9 +78,9 @@ All ChooChoo settings are contained within `./instructor/settings.yml`. This is 
 #### User options (may edit)
 `questions`: If set to `true` students can propose their own questions for the question bank.     
 `votes_required`: The number of votes required before an admin is asked to add a question to the question bank.    
+`gh-pages`: If set to true then the question bank, tutorials and summary plot will be published on the `gh-pages_branch`. 
 
 #### Advanced options (expert users only)
-`gh-pages`: If set to true then the question bank, tutorials and summary plot will be published on the `gh-pages_branch`.  
 `choochoo_branch`: The branch where ChooChoo is installed. In most cases this will be the default `main` or `master` branch. 
 `gh-pages_branch`: The branch used to publish web content. This is most commonly `gh-pages`. For more information on Github Pages please see the [Tools page](./tools.md).     
 `web_address`: The web address for this ChooChoo project. In most cases this will be `https://username.github.io/repo_name`.     
@@ -125,9 +125,9 @@ Each objective contains:
 7. Click `Submit new issue` to automatically generate a checklist
 8. Read through the checklist and double check formatting, spelling, links etc
 
-*If questions are enabled:*
-9. Repeat steps 1 through 4 for `Question thread` (if questions are enabled)
-10. Read through `Checklist items` at the bottom of the form and double check formatting, spelling etc.
+*If `questions` are enabled:*   
+9. Repeat steps 1 through 4 for `Question thread` (if questions are enabled)    
+10. Read through `Checklist items` at the bottom of the form and double check formatting, spelling etc.   
 
-*If gh-pages is enabled:*
+*If `gh-pages` is enabled:*    
 11. Visit the repository website (most likely username.github.io/repo_name) to verify that a page exists
