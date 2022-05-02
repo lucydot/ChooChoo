@@ -570,7 +570,28 @@
 
   <h1>Commands</h1>
 
-
+<dl>
+<dt><code>choochoo list commands</code></dt>
+<dd>
+<p>List all commands available to the user type (either student, instructor or admin).</p>
+</dd>
+<dt><code>choochoo list people</code></dt>
+<dd>
+<p>List all students, instructors and admins by github username. The list is parsed from. <code>./instructor/settings.yml</code>.</p>
+</dd>
+</dl>
+<p><code>choochoo build checklists</code></p>
+<p>!!!  Note ""</p>
+<pre><code>Admin-only command.
+</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This command should not be used once your class is in progress. Strange things will happen if <code>student</code> and <code>question</code> issues are raised for different checklist builds. </p>
+</div>
+<dl>
+<dd>Build the <code>student</code> and <code>question</code> issue templates using the objectives listed in <code>./instructor/settings.yml</code>.</dd>
+</dl>
+<p>`</p>
 
               
             </article>
