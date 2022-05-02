@@ -301,8 +301,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-choochoo" class="md-nav__link">
-    Getting ChooChoo
+  <a href="#getting-the-choochoo-files" class="md-nav__link">
+    Getting the ChooChoo files
   </a>
   
 </li>
@@ -655,8 +655,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-choochoo" class="md-nav__link">
-    Getting ChooChoo
+  <a href="#getting-the-choochoo-files" class="md-nav__link">
+    Getting the ChooChoo files
   </a>
   
 </li>
@@ -731,17 +731,21 @@
 
 <h2 id="all-aboard-the-choochoo-journey">All aboard! The ChooChoo journey</h2>
 <pre class="mermaid"><code>graph LR
-  A[Start] --&gt; B{Error?};
-  B --&gt;|Yes| C[Hmm...];
-  C --&gt; D[Debug];
-  D --&gt; B;
-  B ----&gt;|No| E[Yay!];</code></pre>
-<h2 id="getting-choochoo">Getting ChooChoo</h2>
-<p>There are three ways to get setup with ChooChoo:</p>
+  A[Fork/copy ChooChoo files] --&gt; B[Set repository permissions];
+  B --&gt; C[Specify settings];
+  B --&gt; D[Specify objectives];
+  C --&gt; E[Build student checklists];
+  D --&gt; E;
+  E --&gt; G[Extend the question bank];
+  E --&gt; F[Monitor class progress];
+  G --&gt; H[Target your teaching];
+  F --&gt; H;</code></pre>
+<h2 id="getting-the-choochoo-files">Getting the ChooChoo files</h2>
+<p>There are three ways to get the files required to run ChooChoo:</p>
 <ol>
 <li>Fork the <a href="https://github.com/lucydot/ChooChoo-template/">choochoo-template repository</a> and specify the objectives/questions/tutorials for your course.</li>
 <li>Fork an <a href="./existing.md">existing choochoo repository</a> and use or extend objectives/questions/tutorials from an existing ChooChoo project.</li>
-<li>Integrate choochoo into an existing Github repository.</li>
+<li>Integrate ChooChoo into an existing Github repository.</li>
 </ol>
 <p>The third option (integrate) requires a good understanding of Github. If you are new to Github we recommend forking the <a href="https://github.com/lucydot/ChooChoo-template/">choochoo-template</a> or an <a href="./existing.md">existing choochoo repository</a>. For more setup details please select a tab below.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Fork template</label><label for="__tabbed_1_2">Fork existing</label><label for="__tabbed_1_3">Integrate</label></div>
