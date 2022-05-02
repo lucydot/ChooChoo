@@ -301,25 +301,25 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-the-choochoo-files" class="md-nav__link">
-    Getting the ChooChoo files
+  <a href="#1-get-choochoo-files" class="md-nav__link">
+    1. Get ChooChoo files
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#permissions" class="md-nav__link">
-    Permissions
+  <a href="#2-set-repository-permissions" class="md-nav__link">
+    2. Set repository permissions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#choochoo-settings" class="md-nav__link">
-    ChooChoo settings
+  <a href="#3-specify-choochoo-settings" class="md-nav__link">
+    3. Specify ChooChoo settings
   </a>
   
-    <nav class="md-nav" aria-label="ChooChoo settings">
+    <nav class="md-nav" aria-label="3. Specify ChooChoo settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -349,8 +349,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#choochoo-objectives" class="md-nav__link">
-    ChooChoo objectives
+  <a href="#4-specify-choochoo-objectives" class="md-nav__link">
+    4. Specify ChooChoo objectives
   </a>
   
 </li>
@@ -655,25 +655,25 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-the-choochoo-files" class="md-nav__link">
-    Getting the ChooChoo files
+  <a href="#1-get-choochoo-files" class="md-nav__link">
+    1. Get ChooChoo files
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#permissions" class="md-nav__link">
-    Permissions
+  <a href="#2-set-repository-permissions" class="md-nav__link">
+    2. Set repository permissions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#choochoo-settings" class="md-nav__link">
-    ChooChoo settings
+  <a href="#3-specify-choochoo-settings" class="md-nav__link">
+    3. Specify ChooChoo settings
   </a>
   
-    <nav class="md-nav" aria-label="ChooChoo settings">
+    <nav class="md-nav" aria-label="3. Specify ChooChoo settings">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -703,8 +703,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#choochoo-objectives" class="md-nav__link">
-    ChooChoo objectives
+  <a href="#4-specify-choochoo-objectives" class="md-nav__link">
+    4. Specify ChooChoo objectives
   </a>
   
 </li>
@@ -731,16 +731,16 @@
 
 <h2 id="all-aboard-the-choochoo-journey">All aboard! The ChooChoo journey</h2>
 <pre class="mermaid"><code>graph LR
-  A[Fork/copy ChooChoo files] --&gt; B[Set repository permissions];
-  B --&gt; C[Specify settings];
-  B --&gt; D[Specify objectives];
-  C --&gt; E[Build student checklists];
+  A[1. Get ChooChoo files] --&gt; B[2. Set repository permissions];
+  B --&gt; C[3. Specify settings];
+  B --&gt; D[4. Specify objectives];
+  C --&gt; E[5. Build student checklists];
   D --&gt; E;
-  E --&gt; G[Extend the question bank];
-  E --&gt; F[Monitor class progress];
-  G --&gt; H[Target your teaching];
+  E --&gt; G[6. Extend the question bank];
+  E --&gt; F[7. Monitor class progress];
+  G --&gt; H[8. Target your teaching];
   F --&gt; H;</code></pre>
-<h2 id="getting-the-choochoo-files">Getting the ChooChoo files</h2>
+<h2 id="1-get-choochoo-files">1. Get ChooChoo files</h2>
 <p>There are three ways to get the files required to run ChooChoo:</p>
 <ol>
 <li>Fork the <a href="https://github.com/lucydot/ChooChoo-template/">choochoo-template repository</a> and specify the objectives/questions/tutorials for your course.</li>
@@ -795,10 +795,10 @@ If you are new to Github we recommend forking an existing choochoo repository or
 <li>You are advised to create one ChooChoo repository for each class group. This will allow you to track the progress of each individual class rather than all classes combined.</li>
 </ul>
 </div>
-<h2 id="permissions">Permissions</h2>
+<h2 id="2-set-repository-permissions">2. Set repository permissions</h2>
 <p>Commands to <code>choochoo-bot</code> trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses <code>secrets.BOT_ACCESS_TOKEN</code>,  which requires a <code>BOT_ACCESS_TOKEN</code> to be added to your repository secrets. To do this please get in contact through the <a href="https://github.com/lucydot/ChooChoo/discussions/">ChooChoo discussion page</a> or <a href="https://lucydot.github.io/about/">email</a>.</p>
 <p>Alternatively you can use the <code>secrets.GITHUB_TOKEN</code> which is automatically generated during any workflow run. To do this replace all instances of <code>secrets.BOT_ACCESS_TOKEN</code> with <code>secrets.GITHUB_TOKEN</code> in the <code>.github/workflows/</code> directory. The disadvantage of this approach is that <code>choochoo-bot</code> is replaced by the less charming <code>gh-actions</code> bot.</p>
-<h2 id="choochoo-settings">ChooChoo settings</h2>
+<h2 id="3-specify-choochoo-settings">3. Specify ChooChoo settings</h2>
 <p>All ChooChoo settings are contained within <code>./instructor/settings.yml</code>. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the <a href="./tools.md">Tools page</a>.</p>
 <h4 id="key-settings-must-edit">Key settings (must edit)</h4>
 <p><code>project_title</code>: The project title.  <br />
@@ -814,7 +814,7 @@ If you are new to Github we recommend forking an existing choochoo repository or
 <code>choochoo_branch</code>: The branch where ChooChoo is installed. In most cases this will be the default <code>main</code> or <code>master</code> branch. 
 <code>gh-pages_branch</code>: The branch used to publish web content. This is most commonly <code>gh-pages</code>. For more information on Github Pages please see the <a href="./tools.md">Tools page</a>.   <br />
 <code>web_address</code>: The web address for this ChooChoo project. In most cases this will be <code>https://username.github.io/repo_name</code>.     </p>
-<h2 id="choochoo-objectives">ChooChoo objectives</h2>
+<h2 id="4-specify-choochoo-objectives">4. Specify ChooChoo objectives</h2>
 <p>The ChooChoo checklist is generated from <code>./instructor/objectives.yml</code>. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the <a href="./tools.md">Tools page</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
