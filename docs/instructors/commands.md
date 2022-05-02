@@ -1,4 +1,4 @@
-!!!  note
+!!! note
 
     The ChooChoo command line interface is currently fragile. The commands must be written exactly as listed; capitalisation and whitespace matters. 
     Making the interface more robust is on the developer-todo.
@@ -13,7 +13,7 @@
 
 `choochoo build checklists`
 
-!!!  note " "
+!!! note " "
 
     Admin-only command.
     
@@ -25,7 +25,7 @@
 
 `choochoo build question bank`
 
-!!!  note " "
+!!! note " "
 
     Admin-only command.
     
@@ -55,7 +55,7 @@
 
 `choochoo add [@handle] as admin`
 
-!!!  note " "
+!!! note " "
 
     Admin-only command.
 
@@ -65,7 +65,7 @@
 
 `choochoo remove [@handle] as admin`
 
-!!!  note " "
+!!! note " "
 
     Admin-only command.
 
@@ -75,7 +75,7 @@
     
 `choochoo add question [web address] to objective [positive integer]`
 
-!!!  note " "
+!!! note " "
 
     Admin-only command.
 
@@ -85,7 +85,7 @@
 
 `choochoo add link [web address] to objective [positive integer]`
 
-!!!  note " "
+!!! note " "
 
     Admin-only command.
 
@@ -95,7 +95,7 @@
 
 `choochoo add tutorial [web address] to objective [positive integer]`
 
-!!!  note " "
+!!! note " "
 
     Admin-only command.
 
