@@ -570,7 +570,31 @@
 
   <h1>Basic</h1>
 
-
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not re-edit an existing ChooChoo issue comment -<code>choochoo-bot</code> will not pick this up. 
+If you make a mistake it is best to create a new comment in the issue thread.
+You can always delete comments if you would like the issue thread to look less cluttered.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Commands to <code>choochoo-bot</code> trigger a Github Action workflow. 
+Each workflow can take a couple of minutes to run, and they do not run sequentially.
+In a small handful of use cases his can have some unwanted effects. For example, you may add a link using 
+<code>choochoo add [web-address] to objective 2</code> and then build the checklist using <code>choochoo build checklist</code>.
+There is a chance that the second workflow will complete before the first workflow,
+so that the new checklist will not include the new link. To avoid this problem it is best to double check the generated issue templates.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>There is often more than one way to do something in ChooChoo. For example:
+- to add a student to the repo an instructor or admin could use the command <code>choochoo add @handle as instructor</code>. 
+Alternatively, they could edit <code>./instructor/settings.yml</code> directly. 
+- to add a question to the question bank the instructor could raise a <code>question</code> issue and then use the command <code>choochoo bank question</code>.
+Alternatively, they could edit <code>./questions/question_bank.yml</code> directly. 
+In this sense, many of the ChooChoo instructor commands can be seen as convenience functions.</p>
+</div>
+<p>--8&lt;-- "includes/glossary.md"</p>
 
               
             </article>
