@@ -9,13 +9,13 @@ nav:
     - Introduction: intro.md
     - Instructors:
       - Setup: instructors/setup.md
+      - Basic: instructors/basic.md
       - Questions: instructors/questions.md
       - Tutorials: instructors/tutorials.md
-      - Links: instructors/links.md
-      - Plots: instructors/plots.md
       - Commands: instructors/commands.md
     - Students: 
       - Setup: students/setup.md
+      - Basic: students/basic.md
       - Questions: students/questions.md
       - Commands: students/commands.md
     - Tools: tools.md
