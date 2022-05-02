@@ -570,6 +570,10 @@
 
   <h1>Commands</h1>
 
+<p>!!!  Note</p>
+<pre><code>The ChooChoo command line interface is currently fragile. The commands must be written exactly as listed; capitalisation and whitespace matters. 
+Making the interface more robust is on the developer-todo.
+</code></pre>
 <dl>
 <dt><code>choochoo list commands</code></dt>
 <dd>
@@ -581,7 +585,7 @@
 </dd>
 </dl>
 <p><code>choochoo build checklists</code></p>
-<p>!!!  Note ""</p>
+<p>!!!  Note " "</p>
 <pre><code>Admin-only command.
 </code></pre>
 <div class="admonition warning">
@@ -591,7 +595,38 @@
 <dl>
 <dd>Build the <code>student</code> and <code>question</code> issue templates using the objectives listed in <code>./instructor/settings.yml</code>.</dd>
 </dl>
-<p>`</p>
+<p><code>choochoo build question bank</code></p>
+<p>!!!  Note ""</p>
+<pre><code>Admin-only command.
+</code></pre>
+<dl>
+<dd>Build and publish a webpage containing all questions in the question bank. Unless otherwise specified the web address is <code>username.github.io/repo_name/questions/question_bank</code>. The question bank file is located at <code>./questions/question_bank.yml</code>. This yaml file is converted to markdown before being published.</dd>
+<dt><code>choochoo summarise class progress</code></dt>
+<dd>
+<p>Generate a bar chart summarising class progress through the checklist. Unless otherwise specified the bar chart will be published at <code>username.github.io/repo_name/</code>. </p>
+</dd>
+</dl>
+<p><code>choochoo check [@handle] is [student/instructor/admin]</code></p>
+<div class="admonition example">
+<p class="admonition-title"><code>choochoo check @lucydot is instructor</code></p>
+</div>
+<dl>
+<dd>Check if github username <code>@handle</code> is listed as a student, instructor or admin in <code>./instructor/settings.yml</code>.</dd>
+</dl>
+<p><code>choochoo add [@handle] as [student/instructor/admin]</code></p>
+<div class="admonition example">
+<p class="admonition-title"><code>choochoo add @lucydot as instructor</code></p>
+</div>
+<dl>
+<dd>Add github username <code>@handle</code> as a student, instructor or admin in <code>./instructor/settings.yml</code>.</dd>
+</dl>
+<p><code>choochoo remove [@handle] as [student/instructor/admin]</code></p>
+<div class="admonition example">
+<p class="admonition-title"><code>choochoo remove @lucydot as instructor</code></p>
+</div>
+<dl>
+<dd>Remove github username <code>@handle</code> as a student, instructor or admin in <code>./instructor/settings.yml</code>.</dd>
+</dl>
 
               
             </article>
