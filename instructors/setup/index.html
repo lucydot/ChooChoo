@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#all-aboard-the-choochoo-journey" class="md-skip">
+        <a href="#all-aboard-setting-up-choochoo" class="md-skip">
           Skip to content
         </a>
       
@@ -294,8 +294,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#all-aboard-the-choochoo-journey" class="md-nav__link">
-    All aboard! The ChooChoo journey
+  <a href="#all-aboard-setting-up-choochoo" class="md-nav__link">
+    All aboard! Setting up ChooChoo
   </a>
   
 </li>
@@ -349,8 +349,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-specify-choochoo-objectives" class="md-nav__link">
-    4. Specify ChooChoo objectives
+  <a href="#4-set-choochoo-objectives" class="md-nav__link">
+    4. Set ChooChoo objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-test-setup" class="md-nav__link">
+    5. Test setup
   </a>
   
 </li>
@@ -648,8 +655,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#all-aboard-the-choochoo-journey" class="md-nav__link">
-    All aboard! The ChooChoo journey
+  <a href="#all-aboard-setting-up-choochoo" class="md-nav__link">
+    All aboard! Setting up ChooChoo
   </a>
   
 </li>
@@ -703,8 +710,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-specify-choochoo-objectives" class="md-nav__link">
-    4. Specify ChooChoo objectives
+  <a href="#4-set-choochoo-objectives" class="md-nav__link">
+    4. Set ChooChoo objectives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-test-setup" class="md-nav__link">
+    5. Test setup
   </a>
   
 </li>
@@ -729,17 +743,14 @@
 
   <h1>Setup</h1>
 
-<h2 id="all-aboard-the-choochoo-journey">All aboard! The ChooChoo journey</h2>
+<h2 id="all-aboard-setting-up-choochoo">All aboard! Setting up ChooChoo</h2>
 <pre class="mermaid"><code>graph LR
   A[1. Get ChooChoo files] --&gt; B[2. Set repository permissions];
-  B --&gt; C[3. Specify settings];
-  B --&gt; D[4. Specify objectives];
-  C --&gt; E[5. Build student checklists];
-  D --&gt; E;
-  E --&gt; G[6. Extend the question bank];
-  E --&gt; F[7. Monitor class progress];
-  G --&gt; H[8. Target your teaching];
-  F --&gt; H;</code></pre>
+  A --&gt; C[3. Specify settings];
+  A --&gt; D[4. Set objectives];
+  C --&gt; E[5. Test setup];
+  B --&gt; E;
+  D --&gt; E;</code></pre>
 <h2 id="1-get-choochoo-files">1. Get ChooChoo files</h2>
 <p>There are three ways to get the files required to run ChooChoo:</p>
 <ol>
@@ -814,7 +825,7 @@ If you are new to Github we recommend forking an existing choochoo repository or
 <code>choochoo_branch</code>: The branch where ChooChoo is installed. In most cases this will be the default <code>main</code> or <code>master</code> branch. 
 <code>gh-pages_branch</code>: The branch used to publish web content. This is most commonly <code>gh-pages</code>. For more information on Github Pages please see the <a href="./tools.md">Tools page</a>.   <br />
 <code>web_address</code>: The web address for this ChooChoo project. In most cases this will be <code>https://username.github.io/repo_name</code>.     </p>
-<h2 id="4-specify-choochoo-objectives">4. Specify ChooChoo objectives</h2>
+<h2 id="4-set-choochoo-objectives">4. Set ChooChoo objectives</h2>
 <p>The ChooChoo checklist is generated from <code>./instructor/objectives.yml</code>. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the <a href="./tools.md">Tools page</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -834,6 +845,28 @@ If you are new to Github we recommend forking an existing choochoo repository or
 <code>questions</code>: A list of links to questions associated with this objective.  <br />
 <code>tutorials</code>: A list of links to tutorials associated with this objective.  <br />
 <code>links</code>: A list of other links associated with this objective.  </p>
+<h2 id="5-test-setup">5. Test setup</h2>
+<ol>
+<li>Visit your choochoo repository (most likely github.com/username/repo_name)</li>
+<li>Click on  the <code>Issues</code> tab towards the top of the page</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you do not see the <code>Issues</code> tab you may need to enable issues in <code>Settings</code>-&gt; <code>General</code>-&gt; <code>Features</code>.</p>
+</div>
+<ol>
+<li>Click on <code>New Issue</code></li>
+<li>Click <code>Get Started</code> next to <code>ChooChoo instructor thread</code></li>
+<li>Click on <code>Preview</code> to check the formatting looks correct</li>
+<li>Repeat steps 1 through 5 for <code>ChooChoo student thread</code> </li>
+<li>Click <code>Submit new issue</code> to automatically generate a checklist</li>
+<li>Read through the checklist and double check formatting, spelling, links etc</li>
+</ol>
+<p><em>If questions are enabled:</em>
+9. Repeat steps 1 through 4 for <code>Question thread</code> (if questions are enabled)
+10. Read through <code>Checklist items</code> at the bottom of the form and double check formatting, spelling etc.</p>
+<p><em>If gh-pages is enabled:</em>
+11. Visit the repository website (most likely username.github.io/repo_name) to verify that a page exists</p>
 
               
             </article>
