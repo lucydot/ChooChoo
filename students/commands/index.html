@@ -570,7 +570,43 @@
 
   <h1>Commands</h1>
 
-
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The ChooChoo command line interface is currently fragile. The commands must be written exactly as listed; capitalisation and whitespace matters. 
+Making the interface more robust is on the developer-todo.</p>
+</div>
+<dl>
+<dt><strong><code>choochoo list commands</code></strong></dt>
+<dd>
+<p>List all commands available to the user type (either student, instructor or admin).</p>
+</dd>
+<dt><strong><code>choochoo list people</code></strong></dt>
+<dd>
+<p>List all students, instructors and admins by github username. The list is parsed from. <code>./instructor/settings.yml</code>.</p>
+</dd>
+<dt><strong><code>choochoo check [@handle] is [student/instructor/admin]</code></strong>    </dt>
+<dt><em>e.g.</em> <code>choochoo check @lucydot is instructor</code></dt>
+<dd>
+<p>Check if github username <code>@handle</code> is listed as a student, instructor or admin in <code>./instructor/settings.yml</code>.</p>
+</dd>
+<dt><strong><code>choochoo vote up</code></strong></dt>
+<dd>
+<p><em>Admin-only command / <code>question</code> issues only</em><br />
+Add an up-vote to the proposed question. Once a pre-specified number of votes is met an admin will be invited to add the question to the question bank.</p>
+</dd>
+<dt><strong><code>choochoo generate [positive integer] questions</code></strong>    </dt>
+<dt><em>e.g.</em> <code>choochoo generate 5 questions</code></dt>
+<dd>
+<p><em><code>student</code> issues only</em><br />
+ Generate a webpage containing [positive integer] questions from the question bank. <strong>The questions correspond to the objectives which have not been ticked in the issue thread.</strong> Unless otherwise specified the webpage can be found at <code>username.github.io/repo_name/questions/handle</code> where <code>handle</code> is the github username of the person issuing the command.</p>
+</dd>
+<dt><strong><code>choochoo generate [positive integer] questions for objectives [positive integers with spaces]</code></strong>     </dt>
+<dt><em>e.g.</em> <code>choochoo generate 5 questions for objectives 1 2 4</code></dt>
+<dd>
+<p><em><code>student</code> issues only</em><br />
+ Generate a webpage containing [positive integer] questions from the question bank. <strong>The questions correspond to the specified objectives.</strong> Unless otherwise specified the webpage can be found at <code>username.github.io/repo_name/questions/handle</code> where <code>handle</code> is the github username of the person issuing the command.</p>
+</dd>
+</dl>
 
               
             </article>
