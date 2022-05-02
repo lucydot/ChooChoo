@@ -2,21 +2,24 @@
 
 ``` mermaid
 graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
+  A[Fork/copy ChooChoo files] --> B[Set repository permissions];
+  B --> C[Specify settings];
+  B --> D[Specify objectives];
+  C --> E[Build student checklists];
+  D --> E;
+  E --> G[Extend the question bank];
+  E --> F[Monitor class progress];
+  G --> H[Target your teaching];
+  F --> H;
 ```
 
+## Getting the ChooChoo files
 
-## Getting ChooChoo
-
-There are three ways to get setup with ChooChoo:
+There are three ways to get the files required to run ChooChoo:
 
 1. Fork the [choochoo-template repository](https://github.com/lucydot/ChooChoo-template/) and specify the objectives/questions/tutorials for your course.
 2. Fork an [existing choochoo repository](./existing.md) and use or extend objectives/questions/tutorials from an existing ChooChoo project.
-3. Integrate choochoo into an existing Github repository.
+3. Integrate ChooChoo into an existing Github repository.
 
 The third option (integrate) requires a good understanding of Github. If you are new to Github we recommend forking the [choochoo-template](https://github.com/lucydot/ChooChoo-template/) or an [existing choochoo repository](./existing.md). For more setup details please select a tab below.
 
