@@ -636,13 +636,11 @@
 
 <h2 id="instructor-workflow">Instructor workflow</h2>
 <pre class="mermaid"><code>graph LR
-  A[1. &lt;a href='./setup.md'&gt;Setup ChooChoo&lt;/a&gt;] --&gt; B[2. Set repository permissions];
-  A --&gt; C[3. Specify settings];
-  A --&gt; D[4. Set objectives];
-  C --&gt; E[5. Test setup];
-  B --&gt; E;
-  D --&gt; E;
-  E --&gt; F[6. Share documentation];</code></pre>
+  A[1. &lt;a href='./setup.md'&gt;Setup ChooChoo&lt;/a&gt;] --&gt; B[2. Monitor class progress];
+  A --Add--&gt; C[3. questions];
+  A --Add--&gt; D[4. tutorials];
+  A --Add--&gt; E[5. links]
+  A --&gt; F[6. Accept student contributions];</code></pre>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Do not re-edit an existing ChooChoo issue comment -<code>choochoo-bot</code> will not pick this up. 
