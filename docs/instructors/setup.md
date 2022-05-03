@@ -168,4 +168,10 @@ Each objective contains:
 
 ## 7. Share documentation
 
+!!! Important
+
+    The objective list should not be adjusted once your class is in progress. 
+    Strange things will happen if `student` or `question` issues are raised for different objectives - 
+    this includes objective lists that are changed, re-ordered or re-worded. 
+
 Although some students will be comfortable using ChooChoo with minimal support or documentation, some may benefit from a walkthrough tutorial. We suggest sharing the link to the [student documentation](./student/setup.md) on your course webpage(s) and communication channels. In addition, we encourage you to do a live walkthrough of the steps contained in [student setup](./student/setup.md) and [student basic usage](./student/basic.md).
