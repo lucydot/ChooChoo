@@ -2,13 +2,22 @@
 
 ``` mermaid
 graph LR
-  A[1. <a href='./setup.md'>Setup ChooChoo</a>] --> B[2. Monitor class progress];
-  A --Add--> C[3. questions];
-  A --Add--> D[4. tutorials];
-  A --Add--> E[5. links]
-  A --> F[6. Accept student contributions];
+  A(1. <a href='./setup.md'>Setup ChooChoo</a>) --> B(<b>Basic usage</b> <br> 2. <a href='#2-monitor-class-progress'>Monitor class progress</a> <br> 3. <a href='#3-manage-class-participants'>Manage class participants</a> <br> 4. <a href='#4-add-links-to-the-objectives'>Add links to the objectives</a>); 
+  B --> C(<b>Advanced usage</b> <br> 5. <a href='./setup.md'>Publish tutorials</a> <br> 6. <a href='./setup.md'>Add questions to the question bank</a> <br> 7. <a href='./setup.md'>Accept student contributions</a>);
+  style A stroke:#333,stroke-width:4px
+  style B fill:#bbf,stroke:#333,stroke-width:4px,text-align:left
+  style C fill:#f9f,stroke:#333,stroke-width:4px,text-align:left
 ```
 
+## 1. Setup ChooChoo
+
+Please see the [Setup page](./setup.md).
+
+## 2. Monitor class progress
+
+1. Open any issue in the ChooChoo repository (or create a new one)
+2. Create a comment with the command `choochoo summarise class progress`
+3. A plot summarising class progress will be displayed in the issue thread. This may take a few minutes to appear.
 
 !!! Note
 
@@ -16,28 +25,41 @@ graph LR
     If you make a mistake it is best to create a new comment in the issue thread.
     You can always delete comments if you would like the issue thread to look less cluttered.
     
+## 3. Manage class participants
+
+1. You can add students and instructors using `choochoo add [@handle] as student` or `choochoo add [@handle] as instructor`. `@handle` is the Github username of the student/instructor.
+2. You can remove students and instructors using `choochoo remove [@handle] as student` or `choochoo remove [@handle] as instructor`.
+3. If you are an admin you can add and remove other admins using `choochoo add [@handle] as admin` or `choochoo remove [@handle] as admin`.
+4. To list all students, instructors and admins use `choochoo list people`.
+
+!!! Hint
+
+    There is often more than one way to do something in ChooChoo. For example:
+    to add a student to the repo an instructor or admin could use the command `choochoo add @handle as instructor`. 
+    Alternatively, they could edit `./instructor/settings.yml` directly. In this sense, many of the ChooChoo instructor commands 
+    can be seen as convenience functions.
+
+## 4. Add links to the objectives
+
+1a. You can add any link (an external tutorial, Youtube video etc) to a particular objective using the command `choochoo add link [webpage address] to objective [positive integer]`. The objective number can be found in any `student` issue thread.
+1b. Alternatively, you can also add a link by directly editing `./instructor/objectives.yml`. 
+2. To build a checklist containing this new link run `choochoo build checklists`.
+
+!!! Important
+
+    - All web links must be given using the full web address including `https://`.
+
 !!! Important
 
     Commands to `choochoo-bot` trigger a Github Action workflow. 
     Each workflow can take a couple of minutes to run, and they do not run sequentially.
     In a small handful of use cases his can have some unwanted effects. For example, you may add a link using 
-    `choochoo add [web-address] to objective 2` and then build the checklist using `choochoo build checklist`.
+    `choochoo add link [web-address] to objective 2` and then build the checklist using `choochoo build checklist`.
     There is a chance that the second workflow will complete before the first workflow,
-    so that the new checklist will not include the new link. To avoid this problem it is best to double check the generated issue templates.
+    so that the new checklist will not include the new link. 
+    To avoid this problem it is best to double check the generated student issue template by raising an issue.
 
-!!! Hint
-
-    There is often more than one way to do something in ChooChoo. For example:
-    - to add a student to the repo an instructor or admin could use the command `choochoo add @handle as instructor`. 
-    Alternatively, they could edit `./instructor/settings.yml` directly. 
-    - to add a question to the question bank the instructor could raise a `question` issue and then use the command `choochoo bank question`.
-    Alternatively, they could edit `./questions/question_bank.yml` directly. 
-    In this sense, many of the ChooChoo instructor commands can be seen as convenience functions.
-
-
-
-
-
+    
     
 --8<-- "includes/glossary.md"
 
