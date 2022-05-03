@@ -356,15 +356,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-test-setup" class="md-nav__link">
-    5. Test setup
+  <a href="#5-generate-templates" class="md-nav__link">
+    5. Generate templates
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-share-documentation" class="md-nav__link">
-    6. Share documentation
+  <a href="#6-test-setup" class="md-nav__link">
+    6. Test setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-share-documentation" class="md-nav__link">
+    7. Share documentation
   </a>
   
 </li>
@@ -739,15 +746,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-test-setup" class="md-nav__link">
-    5. Test setup
+  <a href="#5-generate-templates" class="md-nav__link">
+    5. Generate templates
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-share-documentation" class="md-nav__link">
-    6. Share documentation
+  <a href="#6-test-setup" class="md-nav__link">
+    6. Test setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-share-documentation" class="md-nav__link">
+    7. Share documentation
   </a>
   
 </li>
@@ -773,14 +787,19 @@
   <h1>Setup</h1>
 
 <h2 id="all-aboard-setting-up-choochoo">All aboard! Setting up ChooChoo</h2>
+<div class="admonition note">
+<p class="admonition-title">We know you're busy</p>
+<p>The typical ChooChoo setup should take roughly one hour. The exact time depends on whether you are using an existing ChooChoo project (in which case setup should be quicker) or creating a ChooChoo project from scratch (in which case setup time will partly depend on how many objectives you are specifying). It will also depend on how familiar you are with the underlying tools: Github, yaml and markdown. For more support in using these tools please see the <a href="./tools.md">Tools page</a>. If you are stuck, please <a href="https://github.com/lucydot/ChooChoo/discussions">get in contact</a>.</p>
+</div>
 <pre class="mermaid"><code>graph LR
-  A[1. Get ChooChoo files] --&gt; B[2. Set repository permissions];
+  A[1. Get ChooChoo files] --&gt; B[4. Set objectives];
+  A --&gt; D[2. Set repository permissions];
   A --&gt; C[3. Specify settings];
-  A --&gt; D[4. Set objectives];
-  C --&gt; E[5. Test setup];
+  D --&gt; E[5. Generate templates];
+  C --&gt; E;
   B --&gt; E;
-  D --&gt; E;
-  E --&gt; F[6. Share documentation];</code></pre>
+  E --&gt; F[6. Test setup];
+  F --&gt; G[7. Share documentation];</code></pre>
 <h2 id="1-get-choochoo-files">1. Get ChooChoo files</h2>
 <p>There are three ways to get the files required to run ChooChoo:</p>
 <ol>
@@ -837,10 +856,20 @@ If you are new to Github we recommend forking an existing choochoo repository or
 </ul>
 </div>
 <h2 id="2-set-repository-permissions">2. Set repository permissions</h2>
+<p>You need to enable workflows on the forked repository. To do this:
+1. Visit your repository (most likely at github.com/username/repo_name/)
+2. click on the <code>Actions</code> tab towards the top of the page
+3. Click on <code>I understand my workflows, go ahead and enable them</code></p>
 <p>Commands to <code>choochoo-bot</code> trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses <code>secrets.BOT_ACCESS_TOKEN</code>,  which requires a <code>BOT_ACCESS_TOKEN</code> to be added to your repository secrets. To do this please get in contact through the <a href="https://github.com/lucydot/ChooChoo/discussions/">ChooChoo discussion page</a> or <a href="https://lucydot.github.io/about/">email</a>.</p>
-<p>Alternatively you can use the <code>secrets.GITHUB_TOKEN</code> which is automatically generated during any workflow run. To do this replace all instances of <code>secrets.BOT_ACCESS_TOKEN</code> with <code>secrets.GITHUB_TOKEN</code> in the <code>.github/workflows/</code> directory. The disadvantage of this approach is that <code>choochoo-bot</code> is replaced by the less charming <code>gh-actions</code> bot.</p>
+<p>Alternatively you can use the <code>secrets.GITHUB_TOKEN</code> which is automatically generated during any workflow run. The disadvantage of this approach is that <code>choochoo-bot</code> is replaced by the less charming <code>gh-actions</code> bot. To do this nonetheless:
+1. Visit your repository (most likely at github.com/username/repo_name/)
+2. For each file in the <code>.github/workflows/</code> directory, replace all instances of <code>secrets.BOT_ACCESS_TOKEN</code> with <code>secrets.GITHUB_TOKEN</code>.</p>
 <h2 id="3-specify-choochoo-settings">3. Specify ChooChoo settings</h2>
 <p>All ChooChoo settings are contained within <code>./instructor/settings.yml</code>. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the <a href="./tools.md">Tools page</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Remember to add your own Github username to the list of <code>admins</code>.</p>
+</div>
 <h4 id="key-settings-must-edit">Key settings (must edit)</h4>
 <p><code>project_title</code>: The project title.  <br />
 <code>project_repo</code>: In the format <code>username/repo_name</code>.     <br />
@@ -875,7 +904,7 @@ If you are new to Github we recommend forking an existing choochoo repository or
 <code>questions</code>: A list of links to questions associated with this objective.  <br />
 <code>tutorials</code>: A list of links to tutorials associated with this objective.  <br />
 <code>links</code>: A list of other links associated with this objective.  </p>
-<h2 id="5-test-setup">5. Test setup</h2>
+<h2 id="5-generate-templates">5. Generate templates</h2>
 <ol>
 <li>Visit your choochoo repository (most likely github.com/username/repo_name)</li>
 <li>Click on  the <code>Issues</code> tab towards the top of the page</li>
@@ -885,6 +914,20 @@ If you are new to Github we recommend forking an existing choochoo repository or
 <p>If you do not see the <code>Issues</code> tab you may need to enable issues in <code>Settings</code>-&gt; <code>General</code>-&gt; <code>Features</code>.</p>
 </div>
 <ol>
+<li>Click on <code>New Issue</code></li>
+<li>Click <code>Get Started</code> next to <code>ChooChoo instructor thread</code></li>
+<li>Click <code>Submit new issue</code></li>
+<li>In the comment box type <code>choochoo generate checklists</code></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Each <code>choochoo</code> command takes a couple of minutes to run.
+If the <code>choochoo</code> command is a success you will see a reply in the issue thread.</p>
+</div>
+<h2 id="6-test-setup">6. Test setup</h2>
+<ol>
+<li>Visit your choochoo repository (most likely github.com/username/repo_name)</li>
+<li>Click on  the <code>Issues</code> tab towards the top of the page</li>
 <li>Click on <code>New Issue</code></li>
 <li>Click <code>Get Started</code> next to <code>ChooChoo instructor thread</code></li>
 <li>Click on <code>Preview</code> to check the formatting looks correct</li>
@@ -897,7 +940,7 @@ If you are new to Github we recommend forking an existing choochoo repository or
 10. Read through <code>Checklist items</code> at the bottom of the form and double check formatting, spelling etc.   </p>
 <p><em>If <code>gh-pages</code> is enabled:</em>  <br />
 11. Visit the repository website (most likely username.github.io/repo_name) to verify that a page exists</p>
-<h2 id="6-share-documentation">6. Share documentation</h2>
+<h2 id="7-share-documentation">7. Share documentation</h2>
 <p>Although some students will be comfortable using ChooChoo with minimal support or documentation, some may benefit from a walkthrough type tutorial. We suggest sharing the link to the <a href="./student/setup.md">student documentation</a> on your course webpage(s) and communication channels. In addition, we encourage you to do a live walkthrough of the steps contained in <a href="./student/setup.md">student setup</a> and <a href="./student/basic.md">student basic usage</a>.</p>
 
               
