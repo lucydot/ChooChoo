@@ -157,11 +157,13 @@ Each objective contains:
 7. Click `Submit new issue` to automatically generate a checklist
 8. Read through the checklist and double check formatting, spelling, links etc
 
-*If `questions` are enabled:*   
+*If `questions` are enabled:*  
+
 9. Repeat steps 1 through 4 for `Question thread` (if questions are enabled)    
 10. Read through `Checklist items` at the bottom of the form and double check formatting, spelling etc.   
 
 *If `gh-pages` is enabled:*    
+
 11. Visit the repository website (most likely username.github.io/repo_name) to verify that a page exists
 
 ## 7. Share documentation
