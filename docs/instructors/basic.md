@@ -1,9 +1,8 @@
 ## Instructor workflow
-
 ``` mermaid
 graph LR
-  A(1. <a href='./setup.md'>Setup ChooChoo</a>) --> B(<b>Basic usage</b> <br> 2. <a href='#2-monitor-class-progress'>Monitor class progress</a> <br> 3. <a href='#3-manage-class-participants'>Manage class participants</a> <br> 4. <a href='#4-add-links-to-the-objectives'>Add links to the objectives</a>); 
-  B --> C(<b>Advanced usage</b> <br> 5. <a href='./setup.md'>Publish tutorials</a> <br> 6. <a href='./setup.md'>Add questions to the question bank</a> <br> 7. <a href='./setup.md'>Accept student contributions</a>);
+  A(1. <a href='https://lucydot.github.io/ChooChoo/instructors/setup/'>Setup ChooChoo</a>) --> B(<b>Basic usage</b> <br> 2. <a href='https://lucydot.github.io/ChooChoo/instructors/basic#2-monitor-class-progress'>Monitor class progress</a> <br> 3. <a href='https://lucydot.github.io/ChooChoo/instructors/basic#3-manage-class-participants'>Manage class participants</a> <br> 4. <a href='https://lucydot.github.io/ChooChoo/instructors/basic#4-add-links-to-the-objectives'>Add links to the objectives</a>); 
+  B --> C(<b>Advanced usage</b> <br> 5. <a href='https://lucydot.github.io/ChooChoo/instructors/advanced#5-publish-tutorials'>Publish tutorials</a> <br> 6. <a href='https://lucydot.github.io/ChooChoo/instructors/advanced#6-add-questions-to-the-question-bank'>Add questions to the question bank</a> <br> 7. <a href='https://lucydot.github.io/ChooChoo/instructors/advanced#7-accept-student-contributions'>Accept student contributions</a> </br> 8. <a href='https://lucydot.github.io/ChooChoo/instructors/advanced#8-generate-personalised-question-sets'>Generate personalised question sets</a>);
   style A stroke:#333,stroke-width:4px
   style B fill:#bbf,stroke:#333,stroke-width:4px,text-align:left
   style C fill:#f9f,stroke:#333,stroke-width:4px,text-align:left
