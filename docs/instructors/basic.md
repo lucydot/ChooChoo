@@ -1,3 +1,16 @@
+## Instructor workflow
+
+``` mermaid
+graph LR
+  A[1. <a href='./setup.md'>Setup ChooChoo</a>] --> B[2. Set repository permissions];
+  A --> C[3. Specify settings];
+  A --> D[4. Set objectives];
+  C --> E[5. Test setup];
+  B --> E;
+  D --> E;
+  E --> F[6. Share documentation];
+```
+
 !!! Note
 
     Do not re-edit an existing ChooChoo issue comment -`choochoo-bot` will not pick this up. 
