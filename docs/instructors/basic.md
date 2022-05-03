@@ -2,14 +2,13 @@
 
 ``` mermaid
 graph LR
-  A[1. <a href='./setup.md'>Setup ChooChoo</a>] --> B[2. Set repository permissions];
-  A --> C[3. Specify settings];
-  A --> D[4. Set objectives];
-  C --> E[5. Test setup];
-  B --> E;
-  D --> E;
-  E --> F[6. Share documentation];
+  A[1. <a href='./setup.md'>Setup ChooChoo</a>] --> B[2. Monitor class progress];
+  A --Add--> C[3. questions];
+  A --Add--> D[4. tutorials];
+  A --Add--> E[5. links]
+  A --> F[6. Accept student contributions];
 ```
+
 
 !!! Note
 
@@ -34,6 +33,11 @@ graph LR
     - to add a question to the question bank the instructor could raise a `question` issue and then use the command `choochoo bank question`.
     Alternatively, they could edit `./questions/question_bank.yml` directly. 
     In this sense, many of the ChooChoo instructor commands can be seen as convenience functions.
+
+
+
+
+
     
 --8<-- "includes/glossary.md"
 
