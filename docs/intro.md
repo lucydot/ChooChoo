@@ -27,7 +27,7 @@ There are three roles within a ChooChoo project: `student`, `instructor` and  `a
 - An **`admin`** can do the same as an instructor, plus generate the Github issue templates, add questions to the question bank and add/remove instructors. 
 
 ## ChooChoo issue types
-There are three ChooChoo issue types: `student`, `instructor` and `question`. 
+There are three ChooChoo issue types: `student`, `instructor` and [optional] `question`. 
 
 - A **`student`** issue can be created by a student, instructor or admin. It contains an automatically generated, personal checklist to work through. It also contains links to any associated tutorials, questions or external websites.
 - An **`instructor`** issue can be created by an instructor or admin. It is used for general ChooChoo management: for example, to monitor class progress (generate plots), add/remove students or generate the Github issue templates.
