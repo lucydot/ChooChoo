@@ -14,7 +14,6 @@ nav:
       - Commands: instructors/commands.md
     - Students: 
       - Setup: students/setup.md
-      - Basic: students/basic.md
       - Questions: students/questions.md
       - Commands: students/commands.md
     - Commands: commands.md
@@ -37,6 +36,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.mark
   - attr_list
+  - abbr
+  - pymdownx.snippets
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg      
