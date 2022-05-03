@@ -1,4 +1,3 @@
-## ChooChoo commands:
 ChooChoo commands can be split into three types. Each question type is associated with a ChooChoo issue type(s).
 
 | Icon | Description | Used in |
