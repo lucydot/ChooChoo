@@ -871,14 +871,14 @@ If you are new to Github we recommend forking an existing choochoo repository or
 </ul>
 </div>
 <h2 id="2-set-repository-permissions">2. Set repository permissions</h2>
-<p>You need to enable workflows on the forked repository. To do this:
-1. Visit your repository (most likely at github.com/username/repo_name/)
-2. click on the <code>Actions</code> tab towards the top of the page
-3. Click on <code>I understand my workflows, go ahead and enable them</code></p>
+<p>You need to enable workflows on the forked repository. To do this:    <br />
+1. Visit your repository (most likely at github.com/username/repo_name/) <br />
+2. click on the <code>Actions</code> tab towards the top of the page <br />
+3. Click on <code>I understand my workflows, go ahead and enable them</code>   </p>
 <p>Commands to <code>choochoo-bot</code> trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses <code>secrets.BOT_ACCESS_TOKEN</code>,  which requires a <code>BOT_ACCESS_TOKEN</code> to be added to your repository secrets. To do this please get in contact through the <a href="https://github.com/lucydot/ChooChoo/discussions/">ChooChoo discussion page</a> or <a href="https://lucydot.github.io/about/">email</a>.</p>
-<p>Alternatively you can use the <code>secrets.GITHUB_TOKEN</code> which is automatically generated during any workflow run. The disadvantage of this approach is that <code>choochoo-bot</code> is replaced by the less charming <code>gh-actions</code> bot. To do this nonetheless:
-1. Visit your repository (most likely at github.com/username/repo_name/)
-2. For each file in the <code>.github/workflows/</code> directory, replace all instances of <code>secrets.BOT_ACCESS_TOKEN</code> with <code>secrets.GITHUB_TOKEN</code>.</p>
+<p>Alternatively you can use the <code>secrets.GITHUB_TOKEN</code> which is automatically generated during any workflow run. The disadvantage of this approach is that <code>choochoo-bot</code> is replaced by the less charming <code>gh-actions</code> bot. To do this nonetheless: <br />
+1. Visit your repository (most likely at github.com/username/repo_name/) <br />
+2. For each file in the <code>.github/workflows/</code> directory, replace all instances of <code>secrets.BOT_ACCESS_TOKEN</code> with <code>secrets.GITHUB_TOKEN</code>.   </p>
 <h2 id="3-specify-choochoo-settings">3. Specify ChooChoo settings</h2>
 <p>All ChooChoo settings are contained within <code>./instructor/settings.yml</code>. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the <a href="./tools.md">Tools page</a>.</p>
 <div class="admonition important">
