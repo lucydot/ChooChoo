@@ -46,7 +46,7 @@ Please see the [Setup page](./setup.md).
 
 !!! Important
 
-    - All web links must be given using the full web address including `https://`.
+    All web links must be given using the full web address including `https://`.
 
 !!! Important
 
