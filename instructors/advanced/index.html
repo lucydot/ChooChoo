@@ -349,6 +349,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#8-generate-personalised-question-sets" class="md-nav__link">
+    8. Generate personalised question sets
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -657,6 +664,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#8-generate-personalised-question-sets" class="md-nav__link">
+    8. Generate personalised question sets
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -679,8 +693,8 @@
 
 <h2 id="instructor-workflow">Instructor workflow</h2>
 <pre class="mermaid"><code>graph LR
-  A(1. &lt;a href='./setup.md'&gt;Setup ChooChoo&lt;/a&gt;) --&gt; B(&lt;b&gt;Basic usage&lt;/b&gt; &lt;br&gt; 2. &lt;a href='#2-monitor-class-progress'&gt;Monitor class progress&lt;/a&gt; &lt;br&gt; 3. &lt;a href='#3-manage-class-participants'&gt;Manage class participants&lt;/a&gt; &lt;br&gt; 4. &lt;a href='#4-add-links-to-the-objectives'&gt;Add links to the objectives&lt;/a&gt;); 
-  B --&gt; C(&lt;b&gt;Advanced usage&lt;/b&gt; &lt;br&gt; 5. &lt;a href='./setup.md'&gt;Publish tutorials&lt;/a&gt; &lt;br&gt; 6. &lt;a href='./setup.md'&gt;Add questions to the question bank&lt;/a&gt; &lt;br&gt; 7. &lt;a href='./setup.md'&gt;Accept student contributions&lt;/a&gt;);
+  A(1. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/setup/'&gt;Setup ChooChoo&lt;/a&gt;) --&gt; B(&lt;b&gt;Basic usage&lt;/b&gt; &lt;br&gt; 2. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/basic#2-monitor-class-progress'&gt;Monitor class progress&lt;/a&gt; &lt;br&gt; 3. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/basic#3-manage-class-participants'&gt;Manage class participants&lt;/a&gt; &lt;br&gt; 4. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/basic#4-add-links-to-the-objectives'&gt;Add links to the objectives&lt;/a&gt;); 
+  B --&gt; C(&lt;b&gt;Advanced usage&lt;/b&gt; &lt;br&gt; 5. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/advanced#5-publish-tutorials'&gt;Publish tutorials&lt;/a&gt; &lt;br&gt; 6. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/advanced#6-add-questions-to-the-question-bank'&gt;Add questions to the question bank&lt;/a&gt; &lt;br&gt; 7. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/advanced#7-accept-student-contributions'&gt;Accept student contributions&lt;/a&gt; &lt;/br&gt; 8. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/advanced#8-generate-personalised-question-sets'&gt;Generate personalised question sets&lt;/a&gt;);
   style A stroke:#333,stroke-width:4px
   style B fill:#bbf,stroke:#333,stroke-width:4px,text-align:left
   style C fill:#f9f,stroke:#333,stroke-width:4px,text-align:left</code></pre>
@@ -739,6 +753,13 @@ Alternatively, they could edit <code>./questions/question_bank.yml</code> direct
 <p>Students may need extra support to write effective questions. 
 You may like to point them to <a href="./existing.md">existing ChooChoo question banks</a> for inspiration.</p>
 </div>
+<h2 id="8-generate-personalised-question-sets">8. Generate personalised question sets</h2>
+<ul>
+<li>All ChooChoo participants can generate personalised question sets using one of two ways. Whichever way you choose, the command should be used in a <code>student</code> issue thread.</li>
+<li><code>choochoo generate [positive integer] questions</code> will generate a webpage containing [positive integer] questions from the question bank. The questions correspond to the objectives which have not been ticked in the issue thread. </li>
+<li><code>choochoo generate [positive integer] questions for objectives [positive integers with spaces]</code> will generate a webpage containing [positive integer] questions from the question bank. The questions correspond to the specified objectives.</li>
+<li>Unless otherwise specified the webpage can be found at username.github.io/repo_name/questions/handle where handle is the github username of the person issuing the command.</li>
+</ul>
 
               
             </article>
