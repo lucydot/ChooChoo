@@ -314,6 +314,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#1-setup-choochoo" class="md-nav__link">
+    1. Setup ChooChoo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-monitor-class-progress" class="md-nav__link">
+    2. Monitor class progress
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-manage-class-participants" class="md-nav__link">
+    3. Manage class participants
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-add-links-to-the-objectives" class="md-nav__link">
+    4. Add links to the objectives
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -615,6 +643,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#1-setup-choochoo" class="md-nav__link">
+    1. Setup ChooChoo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-monitor-class-progress" class="md-nav__link">
+    2. Monitor class progress
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-manage-class-participants" class="md-nav__link">
+    3. Manage class participants
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-add-links-to-the-objectives" class="md-nav__link">
+    4. Add links to the objectives
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -637,34 +693,58 @@
 
 <h2 id="instructor-workflow">Instructor workflow</h2>
 <pre class="mermaid"><code>graph LR
-  A[1. &lt;a href='./setup.md'&gt;Setup ChooChoo&lt;/a&gt;] --&gt; B[2. Monitor class progress];
-  A --Add--&gt; C[3. questions];
-  A --Add--&gt; D[4. tutorials];
-  A --Add--&gt; E[5. links]
-  A --&gt; F[6. Accept student contributions];</code></pre>
+  A(1. &lt;a href='./setup.md'&gt;Setup ChooChoo&lt;/a&gt;) --&gt; B(&lt;b&gt;Basic usage&lt;/b&gt; &lt;br&gt; 2. &lt;a href='#2-monitor-class-progress'&gt;Monitor class progress&lt;/a&gt; &lt;br&gt; 3. &lt;a href='#3-manage-class-participants'&gt;Manage class participants&lt;/a&gt; &lt;br&gt; 4. &lt;a href='#4-add-links-to-the-objectives'&gt;Add links to the objectives&lt;/a&gt;); 
+  B --&gt; C(&lt;b&gt;Advanced usage&lt;/b&gt; &lt;br&gt; 5. &lt;a href='./setup.md'&gt;Publish tutorials&lt;/a&gt; &lt;br&gt; 6. &lt;a href='./setup.md'&gt;Add questions to the question bank&lt;/a&gt; &lt;br&gt; 7. &lt;a href='./setup.md'&gt;Accept student contributions&lt;/a&gt;);
+  style A stroke:#333,stroke-width:4px
+  style B fill:#bbf,stroke:#333,stroke-width:4px,text-align:left
+  style C fill:#f9f,stroke:#333,stroke-width:4px,text-align:left</code></pre>
+<h2 id="1-setup-choochoo">1. Setup ChooChoo</h2>
+<p>Please see the <a href="../setup/">Setup page</a>.</p>
+<h2 id="2-monitor-class-progress">2. Monitor class progress</h2>
+<ol>
+<li>Open any issue in the ChooChoo repository (or create a new one)</li>
+<li>Create a comment with the command <code>choochoo summarise class progress</code></li>
+<li>A plot summarising class progress will be displayed in the issue thread. This may take a few minutes to appear.</li>
+</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Do not re-edit an existing ChooChoo issue comment -<code>choochoo-bot</code> will not pick this up. 
 If you make a mistake it is best to create a new comment in the issue thread.
 You can always delete comments if you would like the issue thread to look less cluttered.</p>
 </div>
+<h2 id="3-manage-class-participants">3. Manage class participants</h2>
+<ol>
+<li>You can add students and instructors using <code>choochoo add [@handle] as student</code> or <code>choochoo add [@handle] as instructor</code>. <code>@handle</code> is the Github username of the student/instructor.</li>
+<li>You can remove students and instructors using <code>choochoo remove [@handle] as student</code> or <code>choochoo remove [@handle] as instructor</code>.</li>
+<li>If you are an admin you can add and remove other admins using <code>choochoo add [@handle] as admin</code> or <code>choochoo remove [@handle] as admin</code>.</li>
+<li>To list all students, instructors and admins use <code>choochoo list people</code>.</li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>There is often more than one way to do something in ChooChoo. For example:
+to add a student to the repo an instructor or admin could use the command <code>choochoo add @handle as instructor</code>. 
+Alternatively, they could edit <code>./instructor/settings.yml</code> directly. In this sense, many of the ChooChoo instructor commands 
+can be seen as convenience functions.</p>
+</div>
+<h2 id="4-add-links-to-the-objectives">4. Add links to the objectives</h2>
+<p>1a. You can add any link (an external tutorial, Youtube video etc) to a particular objective using the command <code>choochoo add link [webpage address] to objective [positive integer]</code>. The objective number can be found in any <code>student</code> issue thread.
+1b. Alternatively, you can also add a link by directly editing <code>./instructor/objectives.yml</code>. 
+2. To build a checklist containing this new link run <code>choochoo build checklists</code>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul>
+<li>All web links must be given using the full web address including <code>https://</code>.</li>
+</ul>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Commands to <code>choochoo-bot</code> trigger a Github Action workflow. 
 Each workflow can take a couple of minutes to run, and they do not run sequentially.
 In a small handful of use cases his can have some unwanted effects. For example, you may add a link using 
-<code>choochoo add [web-address] to objective 2</code> and then build the checklist using <code>choochoo build checklist</code>.
+<code>choochoo add link [web-address] to objective 2</code> and then build the checklist using <code>choochoo build checklist</code>.
 There is a chance that the second workflow will complete before the first workflow,
-so that the new checklist will not include the new link. To avoid this problem it is best to double check the generated issue templates.</p>
-</div>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>There is often more than one way to do something in ChooChoo. For example:
-- to add a student to the repo an instructor or admin could use the command <code>choochoo add @handle as instructor</code>. 
-Alternatively, they could edit <code>./instructor/settings.yml</code> directly. 
-- to add a question to the question bank the instructor could raise a <code>question</code> issue and then use the command <code>choochoo bank question</code>.
-Alternatively, they could edit <code>./questions/question_bank.yml</code> directly. 
-In this sense, many of the ChooChoo instructor commands can be seen as convenience functions.</p>
+so that the new checklist will not include the new link. 
+To avoid this problem it is best to double check the generated student issue template by raising an issue.</p>
 </div>
 <p>--8&lt;-- "includes/glossary.md"</p>
 
