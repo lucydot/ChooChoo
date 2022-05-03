@@ -40,9 +40,8 @@ Please see the [Setup page](./setup.md).
 
 ## 4. Add links to the objectives
 
-1a. You can add any link (an external tutorial, Youtube video etc) to a particular objective using the command `choochoo add link [webpage address] to objective [positive integer]`. The objective number can be found in any `student` issue thread.
-1b. Alternatively, you can also add a link by directly editing `./instructor/objectives.yml`. 
-2. To build a checklist containing this new link run `choochoo build checklists`.
+1. You can add any link (an external tutorial, Youtube video etc) to a particular objective using the command `choochoo add link [webpage address] to objective [positive integer]`. The objective number can be found in any `student` issue thread.  Alternatively, you can also add a link by directly editing `./instructor/objectives.yml`.   
+2. To build a checklist containing this new link run `choochoo build checklists`.      
 
 !!! Important
 
