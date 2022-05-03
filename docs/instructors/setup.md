@@ -8,6 +8,7 @@ graph LR
   C --> E[5. Test setup];
   B --> E;
   D --> E;
+  E --> F[6. Share documentation];
 ```
 
 ## 1. Get ChooChoo files
@@ -131,3 +132,7 @@ Each objective contains:
 
 *If `gh-pages` is enabled:*    
 11. Visit the repository website (most likely username.github.io/repo_name) to verify that a page exists
+
+## 6. Share documentation
+
+Although some students will be comfortable using ChooChoo with minimal support or documentation, some may benefit from a walkthrough type tutorial. We suggest sharing the link to the [student documentation](./student/setup.md) on your course webpage(s) and communication channels. In addition, we encourage you to do a live walkthrough of the steps contained in [student setup](./student/setup.md) and [student basic usage](./student/basic.md).
