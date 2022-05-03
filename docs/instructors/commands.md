@@ -15,7 +15,7 @@
     
 !!! Warning
 
-    This command should not be used once your class is in progress. Strange things will happen if `student` and `question` issues are raised for different checklist builds. 
+    Objective lists should not be changed once your class is in progress. Strange things will happen if `student` and `question` issues are raised for different objectives - this includes any re-wording or re-ordering. You can, however, add/remove/edit the questions/tutorials/links associated with each objective.
 
 :   *Admin-only command*  
     Build the `student` and `question` issue templates using the objectives listed in `./instructor/settings.yml`.
