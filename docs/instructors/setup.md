@@ -67,16 +67,16 @@ The third option (integrate) requires a good understanding of Github. If you are
     
 ## 2. Set repository permissions
 
-You need to enable workflows on the forked repository. To do this:
-1. Visit your repository (most likely at github.com/username/repo_name/)
-2. click on the `Actions` tab towards the top of the page
-3. Click on `I understand my workflows, go ahead and enable them`
+You need to enable workflows on the forked repository. To do this:      
+1. Visit your repository (most likely at github.com/username/repo_name/)   
+2. click on the `Actions` tab towards the top of the page   
+3. Click on `I understand my workflows, go ahead and enable them`   
 
 Commands to `choochoo-bot` trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses `secrets.BOT_ACCESS_TOKEN`,  which requires a `BOT_ACCESS_TOKEN` to be added to your repository secrets. To do this please get in contact through the [ChooChoo discussion page](https://github.com/lucydot/ChooChoo/discussions/) or [email](https://lucydot.github.io/about/).
 
-Alternatively you can use the `secrets.GITHUB_TOKEN` which is automatically generated during any workflow run. The disadvantage of this approach is that `choochoo-bot` is replaced by the less charming `gh-actions` bot. To do this nonetheless:
-1. Visit your repository (most likely at github.com/username/repo_name/)
-2. For each file in the `.github/workflows/` directory, replace all instances of `secrets.BOT_ACCESS_TOKEN` with `secrets.GITHUB_TOKEN`.
+Alternatively you can use the `secrets.GITHUB_TOKEN` which is automatically generated during any workflow run. The disadvantage of this approach is that `choochoo-bot` is replaced by the less charming `gh-actions` bot. To do this nonetheless:   
+1. Visit your repository (most likely at github.com/username/repo_name/)   
+2. For each file in the `.github/workflows/` directory, replace all instances of `secrets.BOT_ACCESS_TOKEN` with `secrets.GITHUB_TOKEN`.   
 
 ## 3. Specify ChooChoo settings
 
