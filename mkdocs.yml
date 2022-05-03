@@ -20,6 +20,7 @@ nav:
       - Commands: students/commands.md
     - Tools: tools.md
     - Pedagogy: pedagogy.md
+    - Projects: existing.md
     - Contributing: 
       - Welcome: contributing/welcome.md
       - Development: contributing/development.md   
