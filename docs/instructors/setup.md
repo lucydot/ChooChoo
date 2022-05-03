@@ -1,14 +1,20 @@
 ## All aboard! Setting up ChooChoo
 
+!!! Note "We know you're busy"
+
+    The typical ChooChoo setup should take roughly one hour. The exact time depends on whether you are using an existing ChooChoo project (in which case setup should be quicker) or creating a ChooChoo project from scratch (in which case setup time will partly depend on how many objectives you are specifying). It will also depend on how familiar you are with the underlying tools: Github, yaml and markdown. For more support in using these tools please see the [Tools page](./tools.md). If you are stuck, please [get in contact](https://github.com/lucydot/ChooChoo/discussions).
+
+
 ``` mermaid
 graph LR
-  A[1. Get ChooChoo files] --> B[2. Set repository permissions];
+  A[1. Get ChooChoo files] --> B[4. Set objectives];
+  A --> D[2. Set repository permissions];
   A --> C[3. Specify settings];
-  A --> D[4. Set objectives];
-  C --> E[5. Test setup];
+  D --> E[5. Generate templates];
+  C --> E;
   B --> E;
-  D --> E;
-  E --> F[6. Share documentation];
+  E --> F[6. Test setup];
+  F --> G[7. Share documentation];
 ```
 
 ## 1. Get ChooChoo files
@@ -61,13 +67,24 @@ The third option (integrate) requires a good understanding of Github. If you are
     
 ## 2. Set repository permissions
 
+You need to enable workflows on the forked repository. To do this:
+1. Visit your repository (most likely at github.com/username/repo_name/)
+2. click on the `Actions` tab towards the top of the page
+3. Click on `I understand my workflows, go ahead and enable them`
+
 Commands to `choochoo-bot` trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses `secrets.BOT_ACCESS_TOKEN`,  which requires a `BOT_ACCESS_TOKEN` to be added to your repository secrets. To do this please get in contact through the [ChooChoo discussion page](https://github.com/lucydot/ChooChoo/discussions/) or [email](https://lucydot.github.io/about/).
 
-Alternatively you can use the `secrets.GITHUB_TOKEN` which is automatically generated during any workflow run. To do this replace all instances of `secrets.BOT_ACCESS_TOKEN` with `secrets.GITHUB_TOKEN` in the `.github/workflows/` directory. The disadvantage of this approach is that `choochoo-bot` is replaced by the less charming `gh-actions` bot.
+Alternatively you can use the `secrets.GITHUB_TOKEN` which is automatically generated during any workflow run. The disadvantage of this approach is that `choochoo-bot` is replaced by the less charming `gh-actions` bot. To do this nonetheless:
+1. Visit your repository (most likely at github.com/username/repo_name/)
+2. For each file in the `.github/workflows/` directory, replace all instances of `secrets.BOT_ACCESS_TOKEN` with `secrets.GITHUB_TOKEN`.
 
 ## 3. Specify ChooChoo settings
 
 All ChooChoo settings are contained within `./instructor/settings.yml`. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the [Tools page](./tools.md).
+
+!!! Important
+
+    Remember to add your own Github username to the list of `admins`.
 
 #### Key settings (must edit)
 `project_title`: The project title.    
@@ -110,7 +127,7 @@ Each objective contains:
 `tutorials`: A list of links to tutorials associated with this objective.    
 `links`: A list of other links associated with this objective.  
 
-## 5. Test setup
+## 5. Generate templates
 
 1. Visit your choochoo repository (most likely github.com/username/repo_name)
 2. Click on  the `Issues` tab towards the top of the page
@@ -119,6 +136,20 @@ Each objective contains:
 
     If you do not see the `Issues` tab you may need to enable issues in `Settings`-> `General`-> `Features`.
     
+3. Click on `New Issue`
+4. Click `Get Started` next to `ChooChoo instructor thread`
+5. Click `Submit new issue`
+6. In the comment box type `choochoo generate checklists`
+
+!!! Note
+
+    Each `choochoo` command takes a couple of minutes to run.
+    If the `choochoo` command is a success you will see a reply in the issue thread.
+
+## 6. Test setup
+
+1. Visit your choochoo repository (most likely github.com/username/repo_name)
+2. Click on  the `Issues` tab towards the top of the page
 3. Click on `New Issue`
 4. Click `Get Started` next to `ChooChoo instructor thread`
 5. Click on `Preview` to check the formatting looks correct
@@ -133,6 +164,6 @@ Each objective contains:
 *If `gh-pages` is enabled:*    
 11. Visit the repository website (most likely username.github.io/repo_name) to verify that a page exists
 
-## 6. Share documentation
+## 7. Share documentation
 
 Although some students will be comfortable using ChooChoo with minimal support or documentation, some may benefit from a walkthrough type tutorial. We suggest sharing the link to the [student documentation](./student/setup.md) on your course webpage(s) and communication channels. In addition, we encourage you to do a live walkthrough of the steps contained in [student setup](./student/setup.md) and [student basic usage](./student/basic.md).
