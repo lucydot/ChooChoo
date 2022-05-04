@@ -16,8 +16,11 @@ class QuestionBank:
 
     def get_dictionary_list(self):
 
-        dictionary_string = self.repository.file_content(self.path)
-        return yaml.safe_load(dictionary_string)  # could this be done as in objectives.get_objective_dict?
+        dictionary_string = self.repository.file_content(self.path) # could this be done as in objectives.get_objective_dict?
+        if yaml.safe_load(dictionary_string) is None:
+            return []
+        else:
+            return yaml.safe_load(dictionary_string)
 
     def get_question_titles(self):
 
