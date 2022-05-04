@@ -27,6 +27,9 @@ nav:
 
 theme:
   name: 'material'
+  logo: images/icon.png
+  favicon: images/1F683_color.png
+
   
 markdown_extensions:
   - def_list
