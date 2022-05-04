@@ -91,8 +91,16 @@ You need to add Issue labels to the forked repository. To do this:
 
 You may need to enable workflows on the repository. To do this:      
   
-2. Click on the `Actions` tab towards the top of the page.   
-3. Click on `I understand my workflows, go ahead and enable them`.   
+1. Click on the `Actions` tab towards the top of the page.   
+2. Click on `I understand my workflows, go ahead and enable them`.   
+
+#### Enable Github Pages
+
+You may need to enable Github to publish your gh-pages branch. To do this:
+
+1. Go to `Settings` -> `Pages`.
+2. Select the drop-down menu below `Source`.
+3. Select `gh-pages`.
 
 #### Set repository secrets
 
