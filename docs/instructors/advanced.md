@@ -2,20 +2,21 @@
 
 ``` mermaid
 graph LR
-  A(1. <a href='https://lucydot.github.io/ChooChoo/instructors/setup/'>Setup ChooChoo</a>) --> B(<b>Basic usage</b> <br> 2. <a href='https://lucydot.github.io/ChooChoo/instructors/basic#2-monitor-class-progress'>Monitor class progress</a> <br> 3. <a href='https://lucydot.github.io/ChooChoo/instructors/basic#3-manage-class-participants'>Manage class participants</a> <br> 4. <a href='https://lucydot.github.io/ChooChoo/instructors/basic#4-add-links-to-the-objectives'>Add links to the objectives</a>); 
-  B --> C(<b>Advanced usage</b> <br> 5. <a href='https://lucydot.github.io/ChooChoo/instructors/advanced#5-publish-tutorials'>Publish tutorials</a> <br> 6. <a href='https://lucydot.github.io/ChooChoo/instructors/advanced#6-add-questions-to-the-question-bank'>Add questions to the question bank</a> <br> 7. <a href='https://lucydot.github.io/ChooChoo/instructors/advanced#7-accept-student-contributions'>Accept student contributions</a> </br> 8. <a href='https://lucydot.github.io/ChooChoo/instructors/advanced#8-generate-personalised-question-sets'>Generate personalised question sets</a>);
+  A(1. <a href='https://lucydot.github.io/ChooChoo/instructors/setup/'>Setup ChooChoo</a>) --> B(<b>Basic usage</b> <br> 2. <a href='https://lucydot.github.io/ChooChoo/instructors/basic#2-monitor-class-progress'>Monitor class progress</a> <br> 3. <a href='https://lucydot.github.io/ChooChoo/instructors/basic#3-manage-class-participants'>Manage class participants</a> <br> 4. <a href='https://lucydot.github.io/ChooChoo/instructors/basic#4-add-links-to-the-objectives'>Add links to the objectives</a> </br> 5. <a href='https://lucydot.github.io/ChooChoo/instructors/basic#5-publish-tutorials'>Publish tutorials</a> ); 
+  B --> C(<b>Advanced usage</b> <br> 6. <a href='https://lucydot.github.io/ChooChoo/instructors/advanced#6-add-questions-to-the-question-bank'>Add questions to the question bank</a> <br> 7. <a href='https://lucydot.github.io/ChooChoo/instructors/advanced#7-accept-student-contributions'>Accept student contributions</a> </br> 8. <a href='https://lucydot.github.io/ChooChoo/instructors/advanced#8-generate-personalised-question-sets'>Generate personalised question sets</a>);
   style A stroke:#333,stroke-width:4px
   style B fill:#bbf,stroke:#333,stroke-width:4px,text-align:left
   style C fill:#f9f,stroke:#333,stroke-width:4px,text-align:left
 ```
+## ChooChoo question bank
 
-## 5. Publish tutorials
+ChooChoo is designed so that admins, instructors and students can propose questions for the question bank. Other participants then review the proposed questions, and up-vote those which they think should be accepted to the bank.
 
-1. Copy/extend/write a class tutorial using Jupyter Notebooks (`.ipynb`) or Markdown (`.md`).
-2. Commit your `.ipynb` or `.md` file to `./tutorials/`.
-3. This will automatically trigger a build. After a few minutes your tutorial will be available to view at `username.github.io/repo_name/tutorials/filename`.
-4. You can link your new tutorials to a particular objective using the command `choochoo add tutorial [webpage address] to objective [positive integer]`. The objective number can be found in any `student` issue thread.
-5. To build a checklist containing this new link run `choochoo build checklists`.
+This process is motivated by the evidenced benefits of co-creation in education. It is now well established that learners construct knowledge when they are actively engaging with content rather than passively taking in information. Teaching is not a one-way process flowing from teacher to student; the best learning takes place when knowledge is created together. By writing assessment questions the students are actively engaging with the subject matter, and developing a deeper understanding of it. In addition to this it is an opportunity to learn basic Markdown. For more about the pedagogy underlying ChooChoo, please see the [Pedagogy page](./pedagogy.md).
+
+!!! Note
+
+    Students can propose questions for the question bank, and vote for the questions they think should be accepted. However only admins can add questions to the question bank; they have ultimate responsibility for quality control.
 
 ## 6. Add questions to the question bank
 
