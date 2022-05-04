@@ -10,10 +10,10 @@ nav:
     - Instructors:
       - Setup: instructors/setup.md
       - Basic: instructors/basic.md
-      - Advanced: instructors/advanced.md
+      - Questions: instructors/advanced.md
       - Commands: instructors/commands.md
     - Students: 
-      - Setup: students/setup.md
+      - Basic: students/setup.md
       - Questions: students/questions.md
       - Commands: students/commands.md
     - Commands: commands.md
