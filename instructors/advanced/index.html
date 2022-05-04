@@ -327,8 +327,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-publish-tutorials" class="md-nav__link">
-    5. Publish tutorials
+  <a href="#choochoo-question-bank" class="md-nav__link">
+    ChooChoo question bank
   </a>
   
 </li>
@@ -641,8 +641,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-publish-tutorials" class="md-nav__link">
-    5. Publish tutorials
+  <a href="#choochoo-question-bank" class="md-nav__link">
+    ChooChoo question bank
   </a>
   
 </li>
@@ -703,19 +703,18 @@
 
 <h2 id="instructor-workflow">Instructor workflow</h2>
 <pre class="mermaid"><code>graph LR
-  A(1. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/setup/'&gt;Setup ChooChoo&lt;/a&gt;) --&gt; B(&lt;b&gt;Basic usage&lt;/b&gt; &lt;br&gt; 2. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/basic#2-monitor-class-progress'&gt;Monitor class progress&lt;/a&gt; &lt;br&gt; 3. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/basic#3-manage-class-participants'&gt;Manage class participants&lt;/a&gt; &lt;br&gt; 4. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/basic#4-add-links-to-the-objectives'&gt;Add links to the objectives&lt;/a&gt;); 
-  B --&gt; C(&lt;b&gt;Advanced usage&lt;/b&gt; &lt;br&gt; 5. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/advanced#5-publish-tutorials'&gt;Publish tutorials&lt;/a&gt; &lt;br&gt; 6. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/advanced#6-add-questions-to-the-question-bank'&gt;Add questions to the question bank&lt;/a&gt; &lt;br&gt; 7. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/advanced#7-accept-student-contributions'&gt;Accept student contributions&lt;/a&gt; &lt;/br&gt; 8. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/advanced#8-generate-personalised-question-sets'&gt;Generate personalised question sets&lt;/a&gt;);
+  A(1. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/setup/'&gt;Setup ChooChoo&lt;/a&gt;) --&gt; B(&lt;b&gt;Basic usage&lt;/b&gt; &lt;br&gt; 2. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/basic#2-monitor-class-progress'&gt;Monitor class progress&lt;/a&gt; &lt;br&gt; 3. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/basic#3-manage-class-participants'&gt;Manage class participants&lt;/a&gt; &lt;br&gt; 4. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/basic#4-add-links-to-the-objectives'&gt;Add links to the objectives&lt;/a&gt; &lt;/br&gt; 5. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/basic#5-publish-tutorials'&gt;Publish tutorials&lt;/a&gt; ); 
+  B --&gt; C(&lt;b&gt;Advanced usage&lt;/b&gt; &lt;br&gt; 6. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/advanced#6-add-questions-to-the-question-bank'&gt;Add questions to the question bank&lt;/a&gt; &lt;br&gt; 7. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/advanced#7-accept-student-contributions'&gt;Accept student contributions&lt;/a&gt; &lt;/br&gt; 8. &lt;a href='https://lucydot.github.io/ChooChoo/instructors/advanced#8-generate-personalised-question-sets'&gt;Generate personalised question sets&lt;/a&gt;);
   style A stroke:#333,stroke-width:4px
   style B fill:#bbf,stroke:#333,stroke-width:4px,text-align:left
   style C fill:#f9f,stroke:#333,stroke-width:4px,text-align:left</code></pre>
-<h2 id="5-publish-tutorials">5. Publish tutorials</h2>
-<ol>
-<li>Copy/extend/write a class tutorial using Jupyter Notebooks (<code>.ipynb</code>) or Markdown (<code>.md</code>).</li>
-<li>Commit your <code>.ipynb</code> or <code>.md</code> file to <code>./tutorials/</code>.</li>
-<li>This will automatically trigger a build. After a few minutes your tutorial will be available to view at <code>username.github.io/repo_name/tutorials/filename</code>.</li>
-<li>You can link your new tutorials to a particular objective using the command <code>choochoo add tutorial [webpage address] to objective [positive integer]</code>. The objective number can be found in any <code>student</code> issue thread.</li>
-<li>To build a checklist containing this new link run <code>choochoo build checklists</code>.</li>
-</ol>
+<h2 id="choochoo-question-bank">ChooChoo question bank</h2>
+<p>ChooChoo is designed so that admins, instructors and students can propose questions for the question bank. Other participants then review the proposed questions, and up-vote those which they think should be accepted to the bank.</p>
+<p>This process is motivated by the evidenced benefits of co-creation in education. It is now well established that learners construct knowledge when they are actively engaging with content rather than passively taking in information. Teaching is not a one-way process flowing from teacher to student; the best learning takes place when knowledge is created together. By writing assessment questions the students are actively engaging with the subject matter, and developing a deeper understanding of it. In addition to this it is an opportunity to learn basic Markdown. For more about the pedagogy underlying ChooChoo, please see the <a href="./pedagogy.md">Pedagogy page</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Students can propose questions for the question bank, and vote for the questions they think should be accepted. However only admins can add questions to the question bank; they have ultimate responsibility for quality control.</p>
+</div>
 <h2 id="6-add-questions-to-the-question-bank">6. Add questions to the question bank</h2>
 <ol>
 <li>Open a <code>Question thread</code> issue in the ChooChoo repository</li>
