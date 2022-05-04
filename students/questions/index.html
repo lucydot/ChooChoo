@@ -410,6 +410,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#editing-a-question" class="md-nav__link">
+    Editing a question
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#voting-for-a-question" class="md-nav__link">
     Voting for a question
   </a>
@@ -621,6 +628,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#editing-a-question" class="md-nav__link">
+    Editing a question
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#voting-for-a-question" class="md-nav__link">
     Voting for a question
   </a>
@@ -648,13 +662,16 @@
   <h1>Questions</h1>
 
 <h2 id="student-contributions-to-the-question-bank">Student contributions to the question-bank</h2>
+<p>ChooChoo is designed so that students can propose questions for the question bank. Other students then review the proposed questions, and up-vote those which they think should be accepted to the bank.</p>
+<p>You may think that this is your instructor passing on the hard work of question-design to their students. Not so! It is now well established that learners construct knowledge when they are actively engaging with content rather than passively taking in education. Teaching is not a one-way process flowing from teacher to student; the best learning takes place when knowledge is co-created. By writing assessment questions you are actively engaging with the subject matter, and developing a deeper understanding of it. In addition you will learn how to use, an extremely popular language that is used across seveal technical domains.</p>
+<p>And there is additional benefit for those who have contributions accepted, as your work will have value beyond your own learning. Most ChooChoo repositories are openly licensed and publicly shared with the global community; your work will be used to support the learning of others across the world. </p>
 <div class="admonition question">
-<p class="admonition-title">Why should I bother writing a question for the question bank?</p>
+<p class="admonition-title">What makes a good question?</p>
+<p>Writing effective assessment questions is not always easy. 
+A good rule of thumb is to have a variety of questions: some which are open-ended (for example, "write a piece of code that does X,Y and Z"),
+and some which are closed (for example, "fill the blank" type questions).
+Take a look at <a href="./existing.md">existing ChooChoo question banks</a> for inspiration.</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Contributing to ChooChoo</p>
-</div>
-<p>Your course repository is powered by ChooChoo, which is an open-source project. This means ChooChoo can be modified and shared freely as it is publically accessible. This also means that ChooChoo relies on a community of people (that includes you!) to make contributions and improvements. You do not need to be a programmer to make contributions to the ChooChoo code. It may be that you have spotted a mistake in the documentation, or you have a suggestion for how the software could be improved. If you are interested in improving ChooChoo (no matter how small the contribution), please visit the <a href="./contributing/welcome.md">Contributing docs</a>. All contributions will be recognised on the ChooChoo <a href="https://github.com/lucydot/ChooChoo/README#contributions">README page</a>.</p>
 <h2 id="proposing-a-question">Proposing a question</h2>
 <ol>
 <li>Open a <code>Question thread</code> issue in the ChooChoo repository</li>
@@ -671,33 +688,36 @@
 <li>
 <p>Click on <code>submit new issue</code></p>
 </li>
-<li>If you are happy with the question, you can add it to the question bank using <code>choochoo bank question</code></li>
-<li>A message will be posted to the issue thread when the question has been successfully banked. </li>
-<li>You can build the question bank for online viewing using <code>choochoo build question bank</code></li>
-<li>A message will be posted to the issue thread which contains a link to the webpage. It may take a few minutes for the webpage to reflect your latest changes.</li>
-<li>You can link your new question to a particular objective using the command <code>choochoo add question [webpage address] to objective [positive integer]</code>. The webpage address could be an anchor link to a question in your question bank. To get the anchor link, hover over the question title - you will see a link icon appear. The objective number can be found in any <code>student</code> issue thread.</li>
-<li>To build a checklist containing this new link run <code>choochoo build checklists</code>.</li>
+<li>Mention your classmates in the issue thread, and ask them to review your question. They will probably (hopefully!) have suggestions for improvement. Once they are happy with the question they can <a href="#voting-for-a-question">vote it up</a>.</li>
 </ol>
 <div class="admonition info">
 <p class="admonition-title">Writing in Markdown</p>
+<p>Markdown is a language for creating formatted text using a plain-text editor. For example a <code>#</code> in markdown converts text to a heading; <code># This is a heading</code> will be displayed as a bold heading in large font (without the <code>#</code>). It used in many technical domains, and is especially popular for software documentation. In addition Github supports Markdown; you can write plain text files in Markdown and then preview the formatted text using the <code>Preview</code> tab. For more information about Markdown we suggest you take a look at <a href="https://www.markdownguide.org/basic-syntax/">one of the many tutorials online</a>.</p>
 </div>
-<div class="admonition question">
-<p class="admonition-title">What makes a good question?</p>
-<p>Writing questions for self-assessment is not always easy. 
-A good rule of thumb is to have a variety of questions: some which are open-ended (for example, "write a piece of code that does X,Y and Z"),
-and some which are closed (for example, "fill the blank" type questions).
-Take a look at <a href="./existing.md">existing ChooChoo question banks</a> for inspiration.</p>
-</div>
-<h2 id="voting-for-a-question">Voting for a question</h2>
-<ul>
-<li>Students are also allowed to propose questions using the <code>Question thread</code> issue form. </li>
-<li>ChooChoo participants can then vote their support for a question using the command <code>choochoo vote up</code> in the corresponding issue thread. </li>
-<li>When a certain number of votes are reached (determined by the <code>votes_required</code> option in <code>./instructor/settings.yml</code>), the admins will be mentioned in the issue thread. </li>
-<li>To accept and publish this student contribution follow steps 4 to 9 in <a href="#6-add-questions-to-the-question-bank">Step 6</a> above.</li>
-</ul>
+<h2 id="editing-a-question">Editing a question</h2>
+<ol>
+<li>Open your Question issue thread</li>
+<li>Click the button with the three dots (next to the smiley face) and click <code>Edit</code>. You will see Markdown text displayed. </li>
+<li>Carefully edit the relevant fields. <strong>Do not</strong> edit the headings (starting withh <code>###</code>).</li>
+<li>Click on <code>Preview</code> to preview your edits.</li>
+<li>Once you are happy, click <code>Update comment</code>.</li>
+</ol>
 <div class="admonition note">
 <p class="admonition-title">Course chit-chat</p>
-<p>Feel free to use the Github issue comments to discuss the question. The comment boxes aren't only for <code>choochoo</code> commands. If you have a question for a fellow student, try mentioning them (with an <code>@</code> sign before their username) in the issue thread - they will receive a notification when you do.</p>
+<p>The issue comments aren't only for <code>choochoo</code> commands. You can also use this as a place for discussion, for example to suggest improvements to the question. If you have a question for a fellow student, try mentioning them (with an <code>@</code> sign before their username) in the issue thread - they will receive a notification when you do.</p>
+</div>
+<h2 id="voting-for-a-question">Voting for a question</h2>
+<ol>
+<li>Open the <code>Question thread</code> issue you would like to vote for</li>
+<li>Double check that all of the proposed fields are correct  (<code>authors</code>, <code>title</code>, <code>question</code>, <code>answer</code>). </li>
+<li>Verify that the correct Checklist items have been selected.</li>
+<li>If improvements can be made, make a comment in the issue thread. Mention (with an <code>@</code> sign) the authors of the question in the thread.</li>
+<li>Once you are happy with the proposed question, show your support with the command <code>choochoo vote up</code>.</li>
+<li>When a certain number of votes are reached (as determined by your instructor), the course admins will be mentioned and asked to add the question to the question bank.</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Contributing to ChooChoo</p>
+<p>Your course repository is powered by ChooChoo, which is an open-source project. This means ChooChoo can be modified and shared freely as it is publically accessible. This also means that ChooChoo relies on a community of people (that includes you!) to make contributions and improvements. You do not need to be a programmer to make contributions to the ChooChoo code. It may be that you have spotted a mistake in the documentation, or you have a suggestion for how the software could be improved. If you are interested in improving ChooChoo (no matter how small the contribution), please visit the <a href="./contributing/welcome.md">Contributing docs</a>. All contributions will be recognised on the ChooChoo <a href="https://github.com/lucydot/ChooChoo/README#contributions">README page</a>.</p>
 </div>
 
               
