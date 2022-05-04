@@ -84,8 +84,8 @@ You need to add Issue labels to the forked repository. To do this:
 3. Click on the `New label` button
 4. Type `student` into `Label name` and click `Create label`.
 5. Type `instructor` into `Label name` and click `Create label`.
-6. Type `question_proposal` into `Label name` and click `Create label`.
-7. Type `accepted_question` into `Label name` and click `Create label`.
+6. Type `question proposal` into `Label name` and click `Create label`.
+7. Type `accepted question` into `Label name` and click `Create label`.
 
 #### Enable Workflows
 
