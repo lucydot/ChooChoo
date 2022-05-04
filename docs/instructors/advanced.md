@@ -29,12 +29,21 @@ graph LR
      - `Checklist items`: Select the checklist items this question is designed to assess
 
 3. Click on `submit new issue`
-4. If you are happy with the question, you can add it to the question bank using `choochoo bank question`
-5. A message will be posted to the issue thread when the question has been successfully banked. 
-6. You can build the question bank for online viewing using `choochoo build question bank`
-7. A message will be posted to the issue thread which contains a link to the webpage. It may take a few minutes for the webpage to reflect your latest changes.
-8. You can link your new question to a particular objective using the command `choochoo add question [webpage address] to objective [positive integer]`. The webpage address could be an anchor link to a question in your question bank. To get the anchor link, hover over the question title - you will see a link icon appear. The objective number can be found in any `student` issue thread.
-9. To build a checklist containing this new link run `choochoo build checklists`.
+4. If you need to edit a question, see the [steps below](editing-a-question).
+5. Once you are happy with the question, you can add it to the question bank using `choochoo bank question`
+6. A message will be posted to the issue thread when the question has been successfully banked. 
+7. You can build the question bank for online viewing using `choochoo build question bank`
+8. A message will be posted to the issue thread which contains a link to the webpage. It may take a few minutes for the webpage to reflect your latest changes.
+9. You can link your new question to a particular objective using the command `choochoo add question [webpage address] to objective [positive integer]`. The webpage address could be an anchor link to a question in your question bank. To get the anchor link, hover over the question title - you will see a link icon appear. The objective number can be found in any `student` issue thread.
+10. To build a checklist containing this new link run `choochoo build checklists`.
+
+#### Editing a question
+
+1. Open your Question issue thread
+2. Click the button with the three dots (next to the smiley face) and click `Edit`. You will see Markdown text displayed. 
+3. Carefully edit the relevant fields. **Do not** edit the headings (starting withh `###`).
+4. Click on `Preview` to preview your edits.
+5. Once you are happy, click `Update comment`.
 
 !!! Important
 
