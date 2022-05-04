@@ -310,6 +310,33 @@
     2. Set repository permissions
   </a>
   
+    <nav class="md-nav" aria-label="2. Set repository permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-issues" class="md-nav__link">
+    Enable Issues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-workflows" class="md-nav__link">
+    Enable Workflows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-repository-secrets" class="md-nav__link">
+    Set repository secrets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -687,6 +714,33 @@
     2. Set repository permissions
   </a>
   
+    <nav class="md-nav" aria-label="2. Set repository permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-issues" class="md-nav__link">
+    Enable Issues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-workflows" class="md-nav__link">
+    Enable Workflows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-repository-secrets" class="md-nav__link">
+    Set repository secrets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -841,10 +895,18 @@ If you are new to Github we recommend forking an existing choochoo repository or
 </ul>
 </div>
 <h2 id="2-set-repository-permissions">2. Set repository permissions</h2>
+<h4 id="enable-issues">Enable Issues</h4>
+<ol>
+<li>Visit your repository (most likely at <code>github.com/username/repo_name/</code>).   </li>
+<li>Go to <code>Settings</code>-&gt; <code>General</code>-&gt; <code>Features</code>.</li>
+<li>Tick the box next to <code>Issues</code> to enable Issues.</li>
+</ol>
+<h4 id="enable-workflows">Enable Workflows</h4>
 <p>You need to enable workflows on the forked repository. To do this:    <br />
-1. Visit your repository (most likely at github.com/username/repo_name/) <br />
-2. click on the <code>Actions</code> tab towards the top of the page <br />
-3. Click on <code>I understand my workflows, go ahead and enable them</code>   </p>
+1. Visit your repository (most likely at <code>github.com/username/repo_name/</code>). <br />
+2. click on the <code>Actions</code> tab towards the top of the page. <br />
+3. Click on <code>I understand my workflows, go ahead and enable them</code>.   </p>
+<h4 id="set-repository-secrets">Set repository secrets</h4>
 <p>Commands to <code>choochoo-bot</code> trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses <code>secrets.BOT_ACCESS_TOKEN</code>,  which requires a <code>BOT_ACCESS_TOKEN</code> to be added to your repository secrets. To do this please get in contact through the <a href="https://github.com/lucydot/ChooChoo/discussions/">ChooChoo discussion page</a> or <a href="https://lucydot.github.io/about/">email</a>.</p>
 <p>Alternatively you can use the <code>secrets.GITHUB_TOKEN</code> which is automatically generated during any workflow run. The disadvantage of this approach is that <code>choochoo-bot</code> is replaced by the less charming <code>gh-actions</code> bot. To do this nonetheless: <br />
 1. Visit your repository (most likely at github.com/username/repo_name/) <br />
@@ -892,13 +954,7 @@ If you are new to Github we recommend forking an existing choochoo repository or
 <h2 id="5-generate-templates">5. Generate templates</h2>
 <ol>
 <li>Visit your choochoo repository (most likely github.com/username/repo_name)</li>
-<li>Click on  the <code>Issues</code> tab towards the top of the page</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you do not see the <code>Issues</code> tab you may need to enable issues in <code>Settings</code>-&gt; <code>General</code>-&gt; <code>Features</code>.</p>
-</div>
-<ol>
+<li>Click on  the <code>Issues</code> tab towards the top of the page    </li>
 <li>Click on <code>New Issue</code></li>
 <li>Click <code>Get Started</code> next to <code>ChooChoo instructor thread</code></li>
 <li>Click <code>Submit new issue</code></li>
