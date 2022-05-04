@@ -88,7 +88,7 @@ Alternatively you can use the `secrets.GITHUB_TOKEN` which is automatically gene
 
 ## 3. Specify ChooChoo settings
 
-All ChooChoo settings are contained within `./instructor/settings.yml`. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the [Tools page](./tools.md).
+All ChooChoo settings are contained within `./instructor/settings.yml`. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the [Tools page](./tools.md). You can edit plain text files (yaml or Markdown) directly in the Github interface on your web browser without downloading anything.
 
 !!! Important
 
