@@ -4,7 +4,6 @@ graph LR
   A(1. <a href='https://lucydot.github.io/ChooChoo/students/setup#1-register-for-github'>Register for Github</a>) --> B(2. <a href='https://lucydot.github.io/ChooChoo/students/setup#2-find-your-choochoo-repository'>Find your ChooChoo repository</a>);
   B --> C(3. <a href='https://lucydot.github.io/ChooChoo/students/setup#3-raise-a-student-issue'>Raise a student issue</a>);
   C --> D(4. <a href='https://lucydot.github.io/ChooChoo/students/setup#4-monitor-your-progress'>Monitor your progress</a>); 
-  C --> E(5. <a href='https://lucydot.github.io/ChooChoo/students/setup#5-generate-personalised-question-sets'>Generate personalised question sets</a>); 
 ```
 
 ## 1. Register for Github
@@ -52,17 +51,5 @@ At this point you should see a checklist displayed. This is your personal checkl
 !!! Info
 
     If you can't find your issue thread you can search for it from within Github. Visit the course ChooChoo repository and click on `Issues` towards the top of the page. In the search bar next to `Filters` type your Github username and press enter. This will display all of the issue threads you have raised. 
-    
-## 5. Generate personalised question sets
-
-- All ChooChoo participants can generate personalised question sets by typing `choochoo` commands into their issue thread comment boxes. There are two types of personalised question sets to generate:
-    1. `choochoo generate [positive integer] questions` will generate a webpage containing [positive integer] questions from the question bank. The questions correspond to the objectives which have not been ticked in the issue thread. 
-    2. `choochoo generate [positive integer] questions for objectives [positive integers with spaces]` will generate a webpage containing [positive integer] questions from the question bank. The questions correspond to the specified objectives.
-- A link to the question set webpage will be posted in the issue thread.
-
-!!! Note
-
-    - Do not re-edit an existing ChooChoo issue comment -`choochoo-bot` will not pick this up. 
-    If you make a mistake it is best to create a new comment in the issue thread.
-    - `choochoo` commands can take a few minutes to run...be patient!
+   
 
