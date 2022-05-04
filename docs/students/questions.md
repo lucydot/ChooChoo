@@ -1,15 +1,17 @@
 ## Student contributions to the question-bank
 
+ChooChoo is designed so that students can propose questions for the question bank. Other students then review the proposed questions, and up-vote those which they think should be accepted to the bank.
 
-!!! Question "Why should I bother writing a question for the question bank?"
+You may think that this is your instructor passing on the hard work of question-design to their students. Not so! It is now well established that learners construct knowledge when they are actively engaging with content rather than passively taking in education. Teaching is not a one-way process flowing from teacher to student; the best learning takes place when knowledge is co-created. By writing assessment questions you are actively engaging with the subject matter, and developing a deeper understanding of it. In addition you will learn how to use, an extremely popular language that is used across seveal technical domains.
 
-  
+And there is additional benefit for those who have contributions accepted, as your work will have value beyond your own learning. Most ChooChoo repositories are openly licensed and publicly shared with the global community; your work will be used to support the learning of others across the world. 
 
+!!! Question "What makes a good question?"
 
-
-!!! Info "Contributing to ChooChoo"
-
-  Your course repository is powered by ChooChoo, which is an open-source project. This means ChooChoo can be modified and shared freely as it is publically accessible. This also means that ChooChoo relies on a community of people (that includes you!) to make contributions and improvements. You do not need to be a programmer to make contributions to the ChooChoo code. It may be that you have spotted a mistake in the documentation, or you have a suggestion for how the software could be improved. If you are interested in improving ChooChoo (no matter how small the contribution), please visit the [Contributing docs](./contributing/welcome.md). All contributions will be recognised on the ChooChoo [README page](https://github.com/lucydot/ChooChoo/README#contributions).
+    Writing effective assessment questions is not always easy. 
+    A good rule of thumb is to have a variety of questions: some which are open-ended (for example, "write a piece of code that does X,Y and Z"),
+    and some which are closed (for example, "fill the blank" type questions).
+    Take a look at [existing ChooChoo question banks](./existing.md) for inspiration.
 
 ## Proposing a question
 
@@ -23,37 +25,36 @@
      - `Checklist items`: Select the checklist items this question is designed to assess
 
 3. Click on `submit new issue`
-4. If you are happy with the question, you can add it to the question bank using `choochoo bank question`
-5. A message will be posted to the issue thread when the question has been successfully banked. 
-6. You can build the question bank for online viewing using `choochoo build question bank`
-7. A message will be posted to the issue thread which contains a link to the webpage. It may take a few minutes for the webpage to reflect your latest changes.
-8. You can link your new question to a particular objective using the command `choochoo add question [webpage address] to objective [positive integer]`. The webpage address could be an anchor link to a question in your question bank. To get the anchor link, hover over the question title - you will see a link icon appear. The objective number can be found in any `student` issue thread.
-9. To build a checklist containing this new link run `choochoo build checklists`.
-
-
+4. Mention your classmates in the issue thread, and ask them to review your question. They will probably (hopefully!) have suggestions for improvement. Once they are happy with the question they can [vote it up](#voting-for-a-question).
+    
 !!! Info "Writing in Markdown"
 
-!!! Question "What makes a good question?"
-
-    Writing questions for self-assessment is not always easy. 
-    A good rule of thumb is to have a variety of questions: some which are open-ended (for example, "write a piece of code that does X,Y and Z"),
-    and some which are closed (for example, "fill the blank" type questions).
-    Take a look at [existing ChooChoo question banks](./existing.md) for inspiration.
-
+    Markdown is a language for creating formatted text using a plain-text editor. For example a `#` in markdown converts text to a heading; `# This is a heading` will be displayed as a bold heading in large font (without the `#`). It used in many technical domains, and is especially popular for software documentation. In addition Github supports Markdown; you can write plain text files in Markdown and then preview the formatted text using the `Preview` tab. For more information about Markdown we suggest you take a look at [one of the many tutorials online](https://www.markdownguide.org/basic-syntax/).
     
-## Voting for a question
+## Editing a question
 
-- Students are also allowed to propose questions using the `Question thread` issue form. 
-- ChooChoo participants can then vote their support for a question using the command `choochoo vote up` in the corresponding issue thread. 
-- When a certain number of votes are reached (determined by the `votes_required` option in `./instructor/settings.yml`), the admins will be mentioned in the issue thread. 
-- To accept and publish this student contribution follow steps 4 to 9 in [Step 6](#6-add-questions-to-the-question-bank) above.
+1. Open your Question issue thread
+2. Click the button with the three dots (next to the smiley face) and click `Edit`. You will see Markdown text displayed. 
+3. Carefully edit the relevant fields. **Do not** edit the headings (starting withh `###`).
+4. Click on `Preview` to preview your edits.
+5. Once you are happy, click `Update comment`.
+
 
 !!! Note "Course chit-chat"
 
-    Feel free to use the Github issue comments to discuss the question. The comment boxes aren't only for `choochoo` commands. If you have a question for a fellow student, try mentioning them (with an `@` sign before their username) in the issue thread - they will receive a notification when you do.
-    
-    
-    
-   
+    The issue comments aren't only for `choochoo` commands. You can also use this as a place for discussion, for example to suggest improvements to the question. If you have a question for a fellow student, try mentioning them (with an `@` sign before their username) in the issue thread - they will receive a notification when you do.
+
+## Voting for a question
+
+1. Open the `Question thread` issue you would like to vote for
+2. Double check that all of the proposed fields are correct  (`authors`, `title`, `question`, `answer`). 
+3. Verify that the correct Checklist items have been selected.
+4. If improvements can be made, make a comment in the issue thread. Mention (with an `@` sign) the authors of the question in the thread.
+5. Once you are happy with the proposed question, show your support with the command `choochoo vote up`.
+6. When a certain number of votes are reached (as determined by your instructor), the course admins will be mentioned and asked to add the question to the question bank.
+
+!!! Info "Contributing to ChooChoo"
+
+    Your course repository is powered by ChooChoo, which is an open-source project. This means ChooChoo can be modified and shared freely as it is publically accessible. This also means that ChooChoo relies on a community of people (that includes you!) to make contributions and improvements. You do not need to be a programmer to make contributions to the ChooChoo code. It may be that you have spotted a mistake in the documentation, or you have a suggestion for how the software could be improved. If you are interested in improving ChooChoo (no matter how small the contribution), please visit the [Contributing docs](./contributing/welcome.md). All contributions will be recognised on the ChooChoo [README page](https://github.com/lucydot/ChooChoo/README#contributions).
 
 
