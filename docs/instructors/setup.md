@@ -8,7 +8,7 @@
 ``` mermaid
 graph LR
   A[1. Get ChooChoo files] --> B[4. Set objectives];
-  A --> D[2. Set repository permissions];
+  A --> D[2. Set repository options];
   A --> C[3. Specify settings];
   D --> E[5. Generate templates];
   C --> E;
@@ -68,18 +68,34 @@ The third option (integrate) requires a good understanding of Github. If you are
 ## 2. Set repository permissions
 
 #### Enable Issues
+
+You may need to enable Issues on the repository. To do this:  
+
 1. Visit your repository (most likely at `github.com/username/repo_name/`).   
 2. Go to `Settings`-> `General`-> `Features`.
 3. Tick the box next to `Issues` to enable Issues.
 
+#### Add Issue labels
+
+You need to add Issue labels to the forked repository. To do this:
+
+1. Click on the `Issues` tab
+2. Click on the `Labels` button
+3. Click on the `New label` button
+4. Type `student` into `Label name` and click `Create label`.
+5. Type `instructor` into `Label name` and click `Create label`.
+6. Type `question_proposal` into `Label name` and click `Create label`.
+7. Type `accepted_question` into `Label name` and click `Create label`.
+
 #### Enable Workflows
 
-You need to enable workflows on the forked repository. To do this:      
-1. Visit your repository (most likely at `github.com/username/repo_name/`).   
-2. click on the `Actions` tab towards the top of the page.   
+You may need to enable workflows on the repository. To do this:      
+  
+2. Click on the `Actions` tab towards the top of the page.   
 3. Click on `I understand my workflows, go ahead and enable them`.   
 
 #### Set repository secrets
+
 Commands to `choochoo-bot` trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses `secrets.BOT_ACCESS_TOKEN`,  which requires a `BOT_ACCESS_TOKEN` to be added to your repository secrets. To do this please get in contact through the [ChooChoo discussion page](https://github.com/lucydot/ChooChoo/discussions/) or [email](https://lucydot.github.io/about/).
 
 Alternatively you can use the `secrets.GITHUB_TOKEN` which is automatically generated during any workflow run. The disadvantage of this approach is that `choochoo-bot` is replaced by the less charming `gh-actions` bot. To do this nonetheless:   
