@@ -1,6 +1,19 @@
+## Generating personalised question sets
+
+- All ChooChoo participants can generate personalised question sets by typing `choochoo` commands into their issue thread comment boxes. There are two types of personalised question sets to generate:
+    1. `choochoo generate [positive integer] questions` will generate a webpage containing [positive integer] questions from the question bank. The questions correspond to the objectives which have not been ticked in the issue thread. 
+    2. `choochoo generate [positive integer] questions for objectives [positive integers with spaces]` will generate a webpage containing [positive integer] questions from the question bank. The questions correspond to the specified objectives.
+- A link to the question set webpage will be posted in the issue thread.
+
+!!! Note
+
+    - Do not re-edit an existing ChooChoo issue comment -`choochoo-bot` will not pick this up. 
+    If you make a mistake it is best to create a new comment in the issue thread.
+    - `choochoo` commands can take a few minutes to run...be patient!
+
 ## Student contributions to the question-bank
 
-ChooChoo is designed so that students can propose questions for the question bank. Other students then review the proposed questions, and up-vote those which they think should be accepted to the bank.
+ChooChoo is designed so that instructors *and* students can propose questions for the question bank. Other students then review the proposed questions, and up-vote those which they think should be accepted to the bank.
 
 You may think that this is your instructor passing on the hard work of question-design to their students. Not so! It is now well established that learners construct knowledge when they are actively engaging with content rather than passively taking in education. Teaching is not a one-way process flowing from teacher to student; the best learning takes place when knowledge is co-created. By writing assessment questions you are actively engaging with the subject matter, and developing a deeper understanding of it. In addition you will learn how to use, an extremely popular language that is used across seveal technical domains.
 
