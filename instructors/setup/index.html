@@ -321,6 +321,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#add-issue-labels" class="md-nav__link">
+    Add Issue labels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#enable-workflows" class="md-nav__link">
     Enable Workflows
   </a>
@@ -725,6 +732,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#add-issue-labels" class="md-nav__link">
+    Add Issue labels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#enable-workflows" class="md-nav__link">
     Enable Workflows
   </a>
@@ -832,7 +846,7 @@
 </div>
 <pre class="mermaid"><code>graph LR
   A[1. Get ChooChoo files] --&gt; B[4. Set objectives];
-  A --&gt; D[2. Set repository permissions];
+  A --&gt; D[2. Set repository options];
   A --&gt; C[3. Specify settings];
   D --&gt; E[5. Generate templates];
   C --&gt; E;
@@ -896,16 +910,29 @@ If you are new to Github we recommend forking an existing choochoo repository or
 </div>
 <h2 id="2-set-repository-permissions">2. Set repository permissions</h2>
 <h4 id="enable-issues">Enable Issues</h4>
+<p>You may need to enable Issues on the repository. To do this:  </p>
 <ol>
 <li>Visit your repository (most likely at <code>github.com/username/repo_name/</code>).   </li>
 <li>Go to <code>Settings</code>-&gt; <code>General</code>-&gt; <code>Features</code>.</li>
 <li>Tick the box next to <code>Issues</code> to enable Issues.</li>
 </ol>
+<h4 id="add-issue-labels">Add Issue labels</h4>
+<p>You need to add Issue labels to the forked repository. To do this:</p>
+<ol>
+<li>Click on the <code>Issues</code> tab</li>
+<li>Click on the <code>Labels</code> button</li>
+<li>Click on the <code>New label</code> button</li>
+<li>Type <code>student</code> into <code>Label name</code> and click <code>Create label</code>.</li>
+<li>Type <code>instructor</code> into <code>Label name</code> and click <code>Create label</code>.</li>
+<li>Type <code>question_proposal</code> into <code>Label name</code> and click <code>Create label</code>.</li>
+<li>Type <code>accepted_question</code> into <code>Label name</code> and click <code>Create label</code>.</li>
+</ol>
 <h4 id="enable-workflows">Enable Workflows</h4>
-<p>You need to enable workflows on the forked repository. To do this:    <br />
-1. Visit your repository (most likely at <code>github.com/username/repo_name/</code>). <br />
-2. click on the <code>Actions</code> tab towards the top of the page. <br />
-3. Click on <code>I understand my workflows, go ahead and enable them</code>.   </p>
+<p>You may need to enable workflows on the repository. To do this:      </p>
+<ol>
+<li>Click on the <code>Actions</code> tab towards the top of the page.   </li>
+<li>Click on <code>I understand my workflows, go ahead and enable them</code>.   </li>
+</ol>
 <h4 id="set-repository-secrets">Set repository secrets</h4>
 <p>Commands to <code>choochoo-bot</code> trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses <code>secrets.BOT_ACCESS_TOKEN</code>,  which requires a <code>BOT_ACCESS_TOKEN</code> to be added to your repository secrets. To do this please get in contact through the <a href="https://github.com/lucydot/ChooChoo/discussions/">ChooChoo discussion page</a> or <a href="https://lucydot.github.io/about/">email</a>.</p>
 <p>Alternatively you can use the <code>secrets.GITHUB_TOKEN</code> which is automatically generated during any workflow run. The disadvantage of this approach is that <code>choochoo-bot</code> is replaced by the less charming <code>gh-actions</code> bot. To do this nonetheless: <br />
