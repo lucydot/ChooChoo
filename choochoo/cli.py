@@ -261,7 +261,7 @@ def issue_interface():
                     if objective["name"] == objective_name:
                         current_dict['sections'][i]['objectives'][j]["questions"].append(question_link)
                         obj.dict_to_yaml(current_dict)
-                        issue_thread.make_comment("Question link {} has been added to the objective \"{}\"".format(tutorial_link,objective_name))
+                        issue_thread.make_comment("Question link {} has been added to the objective \"{}\"".format(question_link,objective_name))
                         break
 
         else:
@@ -279,7 +279,7 @@ def issue_interface():
                     if objective["name"] == objective_name:
                         current_dict['sections'][i]['objectives'][j]["links"].append(link)
                         obj.dict_to_yaml(current_dict)
-                        issue_thread.make_comment("Link {} has been added to the objective \"{}\"".format(tutorial_link,objective_name))
+                        issue_thread.make_comment("Link {} has been added to the objective \"{}\"".format(link,objective_name))
                         break
         else:
             issue_thread.make_comment(no_permission_message)
