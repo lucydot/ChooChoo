@@ -72,7 +72,7 @@ class Settings:
     def remove_admins(self, old_admin_handles: List[str]) -> None:
         self._admins = [handle for handle in self._admins if handle not in old_admin_handles]
         self._dictionary["admins"] = self._admins
-        self.write_dictionary
+        self.write_dictionary()
 
     @property
     def instructors(self):
