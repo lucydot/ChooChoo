@@ -8,3 +8,6 @@
 *[Jupyter Notebook]: a web-browser based programme for creating and sharing interactive computational documents containing code, images and text.    
 *[Open-source]: refers to something people can modify and share because its design is publicly accessible. 
 *[Version control]: is the practice of tracking and managing changes to software code, documents or other collections of information.
+*[mention]: is used to send a notification to a Github user. To mention someone prefix `@` to their username in an issue or pull request.
+*[co-creation]: in education, co-creation is the collaboration between teachers and students, resulting in co-created outputs.
+
