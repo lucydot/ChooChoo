@@ -365,8 +365,11 @@ instructor_commands_message = """
 `choochoo generate [positive integer] questions for objectives [positive integers with spaces]` \n
 """
  
-def check_instructor():
-    handle = argv[1]
+def check_instructor(author=None):
+    if author:
+        handle = author
+    else:
+        handle = argv[1]
     env = environment.Env()
     repo = repository.Repository(env)
     if settings.Settings(repo).check_instructor(handle) is False and settings.Settings(repo).check_admin(handle) is False:
