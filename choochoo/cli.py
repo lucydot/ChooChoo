@@ -187,7 +187,7 @@ def issue_interface():
             qbank.build_user_markdown(random_questions,author)
             issue_thread.make_comment("All aboard! Your personalised webpage has been generated at "+
                 "["+user_settings.web_address+"/"+question_folder_path+author+".md]("+ 
-                user_settings.web_address+"/"+question_folder_path+author+".md)")
+                user_settings.web_address+"/"+question_folder_path+author+")")
 
         else:
             issue_thread.make_comment("Halt! You can only run this command in a choochoo student thread")
