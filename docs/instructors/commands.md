@@ -76,7 +76,7 @@
 
 **`choochoo vote up`**
 
-:    *Admin-only command / `question` issues only*  
+:   *`question` issues only*  
     Add an up-vote to the proposed question. Once a pre-specified number of votes is met an admin will be invited to add the question to the question bank.
 
 **`choochoo bank question`**
