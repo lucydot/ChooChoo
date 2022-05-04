@@ -76,7 +76,7 @@ Commands to `choochoo-bot` trigger a Github Action workflow. Permissions are nee
 
 Alternatively you can use the `secrets.GITHUB_TOKEN` which is automatically generated during any workflow run. The disadvantage of this approach is that `choochoo-bot` is replaced by the less charming `gh-actions` bot. To do this nonetheless:   
 1. Visit your repository (most likely at github.com/username/repo_name/)   
-2. For each file in the `.github/workflows/` directory, replace all instances of `secrets.BOT_ACCESS_TOKEN` with `secrets.GITHUB_TOKEN`.   
+2. In `.github/workflows/choochoo-fat-controller.yml` replace all instances of `secrets.BOT_ACCESS_TOKEN` with `secrets.GITHUB_TOKEN`.   
 
 ## 3. Specify ChooChoo settings
 
