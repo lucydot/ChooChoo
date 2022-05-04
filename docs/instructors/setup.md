@@ -67,11 +67,19 @@ The third option (integrate) requires a good understanding of Github. If you are
     
 ## 2. Set repository permissions
 
-You need to enable workflows on the forked repository. To do this:      
-1. Visit your repository (most likely at github.com/username/repo_name/)   
-2. click on the `Actions` tab towards the top of the page   
-3. Click on `I understand my workflows, go ahead and enable them`   
+#### Enable Issues
+1. Visit your repository (most likely at `github.com/username/repo_name/`).   
+2. Go to `Settings`-> `General`-> `Features`.
+3. Tick the box next to `Issues` to enable Issues.
 
+#### Enable Workflows
+
+You need to enable workflows on the forked repository. To do this:      
+1. Visit your repository (most likely at `github.com/username/repo_name/`).   
+2. click on the `Actions` tab towards the top of the page.   
+3. Click on `I understand my workflows, go ahead and enable them`.   
+
+#### Set repository secrets
 Commands to `choochoo-bot` trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses `secrets.BOT_ACCESS_TOKEN`,  which requires a `BOT_ACCESS_TOKEN` to be added to your repository secrets. To do this please get in contact through the [ChooChoo discussion page](https://github.com/lucydot/ChooChoo/discussions/) or [email](https://lucydot.github.io/about/).
 
 Alternatively you can use the `secrets.GITHUB_TOKEN` which is automatically generated during any workflow run. The disadvantage of this approach is that `choochoo-bot` is replaced by the less charming `gh-actions` bot. To do this nonetheless:   
@@ -130,12 +138,7 @@ Each objective contains:
 ## 5. Generate templates
 
 1. Visit your choochoo repository (most likely github.com/username/repo_name)
-2. Click on  the `Issues` tab towards the top of the page
-
-!!! Note
-
-    If you do not see the `Issues` tab you may need to enable issues in `Settings`-> `General`-> `Features`.
-    
+2. Click on  the `Issues` tab towards the top of the page    
 3. Click on `New Issue`
 4. Click `Get Started` next to `ChooChoo instructor thread`
 5. Click `Submit new issue`
