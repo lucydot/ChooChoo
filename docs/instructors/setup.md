@@ -158,7 +158,7 @@ Each objective contains:
 3. Click on `New Issue`
 4. Click `Get Started` next to `ChooChoo instructor thread`
 5. Click `Submit new issue`
-6. In the comment box type `choochoo generate checklists`
+6. In the comment box type `choochoo build checklists`
 
 !!! Note
 
