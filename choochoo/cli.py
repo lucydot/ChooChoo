@@ -215,15 +215,15 @@ def issue_interface():
         """Append question from the thread number specified to the question bank.
 
         Edit the labels to show that the question has been accepted."""
-        if user_settings.check_admin(author) and (issue_thread.check_label("question proposal") or issue_thread.check_label("accepted question")):
-
+        if issue_thread.check_label("accepted question"):
+            issue_thread.make_comment("Oh dear! You cannot bank a question that has already been accepted.")
+        if user_settings.check_admin(author) and issue_thread.check_label("question proposal"):
             if question.Question.from_issue(issue_thread).in_bank is True:
                 issue_thread.make_comment("Oh dear! A question with this title is already in the bank")
 
             else:
                 question.Question.from_issue(issue_thread).bank_question()  # change this to initalise from the issue_thread rather than number?
-                if issue_thread.check_label("question proposal") is True:
-                    issue_thread.remove_label("question proposal")
+                issue_thread.remove_label("question proposal")
                 issue_thread.add_label("accepted question")
                 issue_thread.make_comment("The question has been banked 💰")
             
