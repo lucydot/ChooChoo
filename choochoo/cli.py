@@ -215,7 +215,7 @@ def issue_interface():
         """Append question from the thread number specified to the question bank.
 
         Edit the labels to show that the question has been accepted."""
-        if user_settings.check_admin(author) and (issue_thread.check_label("question proposal") || issue_thread.check_label("accepted question")):
+        if user_settings.check_admin(author) and (issue_thread.check_label("question proposal") or issue_thread.check_label("accepted question")):
 
             if question.Question.from_issue(issue_thread).in_bank is True:
                 issue_thread.make_comment("Oh dear! A question with this title is already in the bank")
