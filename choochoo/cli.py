@@ -222,7 +222,8 @@ def issue_interface():
 
             else:
                 question.Question.from_issue(issue_thread).bank_question()  # change this to initalise from the issue_thread rather than number?
-                issue_thread.remove_label("question proposal")
+                if issue_thread.check_label("question proposal") is True:
+                    issue_thread.remove_label("question proposal")
                 issue_thread.add_label("accepted question")
                 issue_thread.make_comment("The question has been banked 💰")
             
