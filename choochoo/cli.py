@@ -32,7 +32,7 @@ def issue_interface():
     user_input_list = argv[1:]
     user_input = ' '.join(argv[1:])
 
-    check_student(author=author)  # check again if student, admin or instructor.
+    check_participant(author=author)  # check again if student, admin or instructor.
     
     # returns true if the command string matches the argument string
     input_matches = lambda string: bool(re.match("^"+string+"$", user_input))
@@ -377,7 +377,7 @@ def check_instructor(author=None):
         issue_thread.make_comment("[Checks ticket] I'm closing this issue as",handle,"is not listed as an or admin or instructor in settings.yml.")
         issue_thread.close_issue()
 
-def check_student(author=None):
+def check_participant(author=None):
     if author:
         handle = author
     else:
