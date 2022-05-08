@@ -27,6 +27,7 @@ class Settings:
         self.questions = self.dictionary["questions"]
         self.votes_required = self.dictionary["votes_required"]
         self.web_address = self.dictionary["web_address"]
+        self.choochoo_path = self.dictionary["choochoo_path"]
 
     @property
     def dictionary(self):
