@@ -1,7 +1,4 @@
 ![end-to-end testing](https://github.com/choochoo-bot/choochoo-testing/actions/workflows/e2e_tests.yml/badge.svg) ![Build status](https://github.com/lucydot/ChooChoo/workflows/build-status.yml/badge.svg) ![Fat Controller](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-fat-controller.yml/badge.svg) ![publishing plots](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-plots.yml/badge.svg) ![publishing questions](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-questions.yml/badge.svg) ![publishing tutorials](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-tutorials.yml/badge.svg) 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <img src="./docs/images/icon2.png" width="800">
 
