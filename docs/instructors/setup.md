@@ -127,16 +127,13 @@ All ChooChoo settings are contained within `./instructor/settings.yml`. This is 
 `admins`: A list of Github usernames without the `@` sign.           
 `instructors`: A list of Github usernames without the `@` sign.  
 `students`: A list of Github usernames without the `@` sign.
+`web_address`: The web address for this ChooChoo project. In most cases this will be `https://username.github.io/repo_name`.     
 
 #### User options (may edit)
 `questions`: If set to `true` students can propose their own questions for the question bank.     
 `votes_required`: The number of votes required before an admin is asked to add a question to the question bank.    
 `gh-pages`: If set to true then the question bank, tutorials and summary plot will be published on the `gh-pages_branch`. 
-
-#### Advanced options (expert users only)
-`choochoo_branch`: The branch where ChooChoo is installed. In most cases this will be the default `main` or `master` branch. 
 `gh-pages_branch`: The branch used to publish web content. This is most commonly `gh-pages`. For more information on Github Pages please see the [Tools page](./tools.md).     
-`web_address`: The web address for this ChooChoo project. In most cases this will be `https://username.github.io/repo_name`.     
 
 ## 4. Set ChooChoo objectives
 
