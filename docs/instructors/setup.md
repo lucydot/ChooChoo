@@ -50,7 +50,7 @@ The third option (integrate) requires a good understanding of Github. If you are
                     
     !!! Note
     
-    The contents of `ChooChoo-template`  should be copied into  the root of your repository. 
+    The contents of `ChooChoo-template`  should be copied into the root of your repository on a branch named `main`.
 
     1. Copy/clone the contents of [https://github.com/lucydot/ChooChoo-template/](https://github.com/lucydot/ChooChoo-template/) into the root of your existing repository. 
     
