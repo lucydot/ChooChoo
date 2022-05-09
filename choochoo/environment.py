@@ -4,7 +4,7 @@ A module for reading environment variables
 import os
 import dotenv
 import sys
-from choochoo.paths import env_path
+from choochoo import paths
 
 class Env:
 
@@ -29,7 +29,7 @@ class Env:
 
 
 	def getenv(self,variable):
-	    dotenv.load_dotenv(env_path)  
+	    dotenv.load_dotenv(paths.env_path)  
 	    if os.getenv(variable) is None:
 	    	sys.exit("Environment variable {} not found.".format(variable))
 	    else:
