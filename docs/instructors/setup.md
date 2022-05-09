@@ -47,14 +47,18 @@ The third option (integrate) requires a good understanding of Github. If you are
     
         This option requires a good understanding of Github. 
         If you are new to Github we recommend forking an existing choochoo repository or the template repository.
-                        
-    !!! Note
         
-        - The contents of `ChooChoo-template`  should be copied into  the root of your repository. 
+    !!! Note
+    
+        You can copy the ChooChoo files into a dedicated branch if preferred. Just be sure to specify the branch in `./instructor/settings.yml`.
 
-    1. Copy/clone the contents of [https://github.com/lucydot/ChooChoo-template/](https://github.com/lucydot/ChooChoo-template/) into the root of your existing repository. 
-        - You **do not** need the ChooChoo-template `.git` folder -  this can be safely ignored/removed.
-        - Merge the contents of `.github/` into any existing folder of the same name.
+    1. Visit https://github.com/lucydot/ChooChoo-template/
+    2. Copy the `./instructor` folder and contents into the root of your repository
+    3. Create an empty `./plots` folder in the root your repository
+    4. [optional] Create an empty `./questions` folder in the root of your repository
+    5. [optional] Create an empty `./tutorials` folder in the root of your repository
+    6. Copy the contents of `.github/ISSUE_TEMPLATE/` into your repository. You may need to create this folder if it does not already exist.
+    7. Copy the contents of `.github/workflows/` into your repository. You may need to create this folder if it does not already exist.
 
 !!! Note
 
@@ -120,7 +124,6 @@ All ChooChoo settings are contained within `./instructor/settings.yml`. This is 
 `admins`: A list of Github usernames without the `@` sign.           
 `instructors`: A list of Github usernames without the `@` sign.  
 `students`: A list of Github usernames without the `@` sign.
-`web_address`: The web address for this ChooChoo project. In most cases this will be `https://username.github.io/repo_name`.  
 
 #### User options (may edit)
 `questions`: If set to `true` students can propose their own questions for the question bank.     
@@ -128,8 +131,10 @@ All ChooChoo settings are contained within `./instructor/settings.yml`. This is 
 `gh-pages`: If set to true then the question bank, tutorials and summary plot will be published on the `gh-pages_branch`. 
 
 #### Advanced options (expert users only)
+`choochoo_branch`: The branch where ChooChoo is installed. In most cases this will be the default `main` or `master` branch. 
 `gh-pages_branch`: The branch used to publish web content. This is most commonly `gh-pages`. For more information on Github Pages please see the [Tools page](./tools.md).     
-   
+`web_address`: The web address for this ChooChoo project. In most cases this will be `https://username.github.io/repo_name`.     
+
 ## 4. Set ChooChoo objectives
 
 The ChooChoo checklist is generated from `./instructor/objectives.yml`. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the [Tools page](./tools.md).

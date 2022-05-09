@@ -7,7 +7,7 @@ Contains the Objectives class.
 import shutil
 import yaml
 import re
-from choochoo import utilities, paths
+from choochoo import utilities, objectives_header_path, objectives_yml_path, student_issue_template_path, question_issue_template_path
 
 def string_generator(section,long_name, short_name, table=False):
     string_list = []
@@ -32,7 +32,7 @@ class Objectives:
     def __init__(self, repository):
 
         self.repository = repository
-        self.dict_from_yaml = utilities.read_yaml(paths.objectives_yml_path)
+        self.dict_from_yaml = utilities.read_yaml(objectives_yml_path)
         self.names_from_yaml = self.names_from_yaml()
         self.dict_from_template = self.dict_from_template()
 
@@ -43,7 +43,7 @@ class Objectives:
         It returns a dictionary in which each value is itself a dictionary....
         lovely, messy nests"""
 
-        issue_template_content = self.repository.file_content(paths.student_issue_template_path)
+        issue_template_content = self.repository.file_content(student_issue_template_path)
         objectives = [item.strip() for item in re.findall(r'\[ ] (.*?)\|', issue_template_content)]
 
         objectives_dict = dict.fromkeys(objectives,{'id':0,'select':0})
@@ -58,7 +58,7 @@ class Objectives:
         return objectives_dict
 
     def dict_to_yaml(self,dictionary):
-        utilities.write_yaml(dictionary,paths.objectives_yml_path)
+        utilities.write_yaml(dictionary,objectives_yml_path)
 
     def objectives_list_by_id(self,id_list):
         """ return a list of objectives which have been selected by id number"""
@@ -78,19 +78,19 @@ class Objectives:
 
     def generate_student_thread(self):
 
-        shutil.copyfile(paths.objectives_header_path,
-            paths.student_issue_template_path)
+        shutil.copyfile(objectives_header_path,
+            student_issue_template_path)
 
         objectives_dictionary = self.dict_from_yaml
 
         count = 0
 
-        with open(paths.student_issue_template_path,"a") as stream:
+        with open(student_issue_template_path,"a") as stream:
 
             for section in objectives_dictionary['sections']:
-                print("\n\n### "+ section['name']+" | "+string_generator(section,'T1','T',table=False)
-                         +string_generator(section,'Q1','Q',table=False)
-                         +string_generator(section,'L1','L',table=False),file=stream)
+                print("\n\n### "+ section['name']+" | "+string_generator(section,'tutorials','T',table=False)
+                         +string_generator(section,'questions','Q',table=False)
+                         +string_generator(section,'links','L',table=False),file=stream)
 
                 for objective in section['objectives']:
 
@@ -98,13 +98,13 @@ class Objectives:
 
                     # note that the pipe below is important for the regex to find objectives
                     print(str(count)+") - [ ] "+objective['name']+" | "
-                        +string_generator(objective,'T1','T',table=False)
-                        +string_generator(objective,'Q1','Q',table=False)
-                        +string_generator(objective,'L1','L',table=False),file=stream)
+                        +string_generator(objective,'tutorials','T',table=False)
+                        +string_generator(objective,'questions','Q',table=False)
+                        +string_generator(objective,'links','L',table=False),file=stream)
 
     def generate_question_thread(self):
 
-        question_template_dictionary = utilities.read_yaml(paths.question_issue_template_path)
+        question_template_dictionary = utilities.read_yaml(question_issue_template_path)
 
         objectives_list = self.names_from_yaml
 
@@ -114,7 +114,7 @@ class Objectives:
         for objective in objectives_list:
             question_template_dictionary["body"][-1]["attributes"]["options"].append({"label":objective})
 
-        with open(paths.question_issue_template_path, "w") as stream:
+        with open(question_issue_template_path, "w") as stream:
             yaml.dump(question_template_dictionary,stream)
 
 
