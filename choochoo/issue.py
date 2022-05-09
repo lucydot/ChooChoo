@@ -3,7 +3,6 @@ A module for interacting with an Github repo issue thread.
 Contains the Issue class.
 """
 
-import github
 from choochoo import objectives
 
 class Issue:

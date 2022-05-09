@@ -3,7 +3,6 @@ generating summary plots"""
 
 import matplotlib.pyplot as plt
 from choochoo import paths
-from paths import output_plot_path
 
 def create_plot(repository,tick_count):
 	""" Create a bar chart to summarise class progress. Lists objectives and the number
@@ -31,5 +30,5 @@ def create_plot(repository,tick_count):
 	    item.set_fontsize(20)
 
 	plt.tight_layout()
-	plt.savefig(output_plot_path,dpi=250)
+	plt.savefig(paths.output_plot_path,dpi=250)
 

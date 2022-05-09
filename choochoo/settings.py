@@ -5,7 +5,6 @@ A module for reading and writing to the settings yml file.
 import yaml  # Pyyaml
 from typing import List # this is not needed for Python3.9+
 from choochoo import paths
-from paths import settings_path
 
 class Settings:
     """Class for reading and writing to the settings yml file.
@@ -16,7 +15,6 @@ class Settings:
     def __init__(self,repository):
 
         self.repository = repository
-        self.path = settings_path
         self._dictionary = self.load_dictionary()  
         self._project_title = self.dictionary["project_title"]
         self._admins = self.dictionary["admins"]
@@ -35,11 +33,11 @@ class Settings:
         return self._dictionary
 
     def load_dictionary(self):  
-        settings_string = self.repository.file_content(self.path)
+        settings_string = self.repository.file_content(paths.settings_path)
         return yaml.safe_load(settings_string)
   
     def write_dictionary(self):   
-        with open(self.path, 'w') as stream:
+        with open(paths.settings_path, 'w') as stream:
             yaml.dump(self._dictionary, stream)
 
     @property

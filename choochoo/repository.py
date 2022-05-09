@@ -5,7 +5,7 @@ Includes the Repository class.
 """
 import github
 from choochoo import issue, objectives
-import re
+
 
 class Repository:
     """ Class for reading repository information.

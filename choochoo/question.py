@@ -4,7 +4,6 @@
 import re
 import yaml
 from choochoo import question_bank, settings, paths
-from paths import question_bank_yml_path
 
 class Question:
     """ A class for holding and editing information about a Choochoo question.
@@ -82,6 +81,6 @@ class Question:
 
         dictionary_list = question_bank.QuestionBank(self.repository).get_dictionary_list()
         dictionary_list.append({"authors":self.authors,"title":self.title,"question":self.question,"answer":self.answer,"checklist_items":self.checklist_items})
-        with open(question_bank_yml_path, 'w') as stream:
+        with open(paths.question_bank_yml_path, 'w') as stream:
             yaml.dump(dictionary_list, stream)
       
