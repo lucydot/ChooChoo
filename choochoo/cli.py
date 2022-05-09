@@ -137,7 +137,7 @@ def issue_interface():
             total_tick_count = repo.total_tick_count()
             plot.create_plot(repo,total_tick_count)
             issue_thread.make_comment("The summary plot has been generated:","\n",
-              "![](../raw/{}/plots/summary_plot.png)".format(main))
+              "![](../raw/{}/plots/summary_plot.png)".format("main"))
         else:
            issue_thread.make_comment(no_permission_message)
 
