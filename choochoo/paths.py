@@ -1,3 +1,6 @@
+"""
+A module for storing paths to ChooChoo files
+"""
 from choochoo import environment, repository, settings
 
 env = environment.Env()
