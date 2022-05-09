@@ -2,7 +2,8 @@
 generating summary plots"""
 
 import matplotlib.pyplot as plt
-from choochoo import output_plot_path
+from choochoo import paths
+from paths import output_plot_path
 
 def create_plot(repository,tick_count):
 	""" Create a bar chart to summarise class progress. Lists objectives and the number

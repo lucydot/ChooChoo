@@ -3,8 +3,8 @@
 
 import re
 import yaml
-from choochoo import question_bank, question_bank_yml_path
-from choochoo import settings
+from choochoo import question_bank, settings, paths
+from paths import question_bank_yml_path
 
 class Question:
     """ A class for holding and editing information about a Choochoo question.

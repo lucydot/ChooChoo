@@ -1,5 +1,6 @@
 import yaml
-from choochoo import question_bank_yml_path, question_bank_markdown_path, question_folder_path, utilities
+from choochoo import paths, utilities
+from paths import question_bank_yml_path, question_bank_markdown_path, question_folder_path 
 
 class QuestionBank:
     """ A class for manipulating the question_bank and converting between yaml (for data storage)

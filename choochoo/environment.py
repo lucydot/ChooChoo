@@ -4,7 +4,8 @@ A module for reading environment variables
 import os
 import dotenv
 import sys
-from choochoo import env_path
+from choochoo import paths
+from paths import env_path
 
 class Env:
 

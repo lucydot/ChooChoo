@@ -7,7 +7,8 @@ Contains the Objectives class.
 import shutil
 import yaml
 import re
-from choochoo import utilities, objectives_header_path, objectives_yml_path, student_issue_template_path, question_issue_template_path
+from choochoo import utilities, paths
+from paths import objectives_header_path, objectives_yml_path, student_issue_template_path, question_issue_template_path
 
 def string_generator(section,long_name, short_name, table=False):
     string_list = []
