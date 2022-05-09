@@ -21,7 +21,6 @@ class Settings:
         self._admins = self.dictionary["admins"]
         self._instructors = self.dictionary["instructors"]
         self._students = self.dictionary["students"]
-        self.choochoo_branch = self.dictionary["choochoo_branch"]
         self.gh_pages_branch = self.dictionary["gh-pages_branch"]
         self.gh_pages = self.dictionary["gh-pages"]
         self.questions = self.dictionary["questions"]
