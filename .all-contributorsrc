@@ -1,0 +1,39 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "jcohen02",
+      "name": "Jeremy Cohen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8027703?v=4",
+      "profile": "https://github.com/jcohen02",
+      "contributions": [
+        "ideas"
+      ]
+    },
+      "login": "lucydot",
+      "name": "Lucy Whalley",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2452935?v=4",
+      "profile": "http://lucydot.github.io",
+      "contributions": [
+        "code",
+        "doc",
+        "test",
+        "ideas",
+        "infra",
+        "maintenance",
+        "projectManagement"
+
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "ChooChoo",
+  "projectOwner": "lucydot",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

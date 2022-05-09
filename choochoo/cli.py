@@ -8,7 +8,7 @@ from sys import argv
 import random
 
 from choochoo import repository, issue, settings, environment, plot, objectives, question, question_bank
-from choochoo import question_folder_path, question_bank_path, question_bank_yml_path
+from paths import question_folder_path, question_bank_path, question_bank_yml_path
 
 def issue_interface():
     """ This function interfaces between the user and the choochoo package.
@@ -32,7 +32,7 @@ def issue_interface():
     user_input_list = argv[1:]
     user_input = ' '.join(argv[1:])
 
-    check_student(author=author)  # check again if student, admin or instructor.
+    check_participant(author=author)  # check again if student, admin or instructor.
     
     # returns true if the command string matches the argument string
     input_matches = lambda string: bool(re.match("^"+string+"$", user_input))
@@ -187,7 +187,7 @@ def issue_interface():
             qbank.build_user_markdown(random_questions,author)
             issue_thread.make_comment("All aboard! Your personalised webpage has been generated at "+
                 "["+user_settings.web_address+"/"+question_folder_path+author+".md]("+ 
-                user_settings.web_address+"/"+question_folder_path+author+".md)")
+                user_settings.web_address+"/"+question_folder_path+author+")")
 
         else:
             issue_thread.make_comment("Halt! You can only run this command in a choochoo student thread")
@@ -215,8 +215,9 @@ def issue_interface():
         """Append question from the thread number specified to the question bank.
 
         Edit the labels to show that the question has been accepted."""
+        if issue_thread.check_label("accepted question"):
+            issue_thread.make_comment("Oh dear! You cannot bank a question that has already been accepted.")
         if user_settings.check_admin(author) and issue_thread.check_label("question proposal"):
-
             if question.Question.from_issue(issue_thread).in_bank is True:
                 issue_thread.make_comment("Oh dear! A question with this title is already in the bank")
 
@@ -261,6 +262,7 @@ def issue_interface():
                     if objective["name"] == objective_name:
                         current_dict['sections'][i]['objectives'][j]["questions"].append(question_link)
                         obj.dict_to_yaml(current_dict)
+                        issue_thread.make_comment("Question link {} has been added to the objective \"{}\"".format(question_link,objective_name))
                         break
 
         else:
@@ -278,6 +280,7 @@ def issue_interface():
                     if objective["name"] == objective_name:
                         current_dict['sections'][i]['objectives'][j]["links"].append(link)
                         obj.dict_to_yaml(current_dict)
+                        issue_thread.make_comment("Link {} has been added to the objective \"{}\"".format(link,objective_name))
                         break
         else:
             issue_thread.make_comment(no_permission_message)
@@ -294,6 +297,7 @@ def issue_interface():
                     if objective["name"] == objective_name:
                         current_dict['sections'][i]['objectives'][j]["tutorials"].append(tutorial_link)
                         obj.dict_to_yaml(current_dict)
+                        issue_thread.make_comment("Tutorial link {} has been added to the objective \"{}\"".format(tutorial_link,objective_name))
                         break
         else:
             issue_thread.make_comment(no_permission_message)
@@ -321,7 +325,7 @@ student_commands_message = """
 `choochoo check [@handle] is [student/admin/instructor]` \n
 `choochoo generate [positive integer] questions` \n
 `choochoo generate [positive integer] questions for objectives [positive integers with spaces]` \n \n
-❓🔖 The following command can be used in a issue thread labelled `question proposal`: \n
+❓ The following command can be used in a issue thread labelled `question proposal`: \n
 `choochoo vote up` \n
 
 """
@@ -338,12 +342,11 @@ admin_commands_message = """
 `choochoo add link [web address] to objective [positive integer]` \n
 `choochoo add tutorial [web address] to objective [positive integer]` \n
 `choochoo summarise class progress` \n \n
-❓Question management: \n
 `choochoo build question bank` \n \n
-🔖 The following command can be used in a issue thread labelled `question proposal`: \n
+❓ The following command can be used in a issue thread labelled `question proposal`: \n
 `choochoo vote up` \n
 `choochoo bank question` \n \n
-🔖 The following command can be used in a issue thread labelled `student`: \n
+👩🏽‍🎓 The following command can be used in a issue thread labelled `student`: \n
 `choochoo generate [positive integer] questions` \n
 `choochoo generate [positive integer] questions for objectives [positive integers with spaces]` \n
 """
@@ -356,15 +359,18 @@ instructor_commands_message = """
 `choochoo remove [@handle] as [student/instructor]` \n
 ☑️ Checklist monitoring: \n
 `choochoo summarise class progress` \n \n
-🔖 The following command can be used in a issue thread labelled `question proposal`: \n
+❓ The following command can be used in a issue thread labelled `question proposal`: \n
 `choochoo vote up` \n \n
-🔖 The following command can be used in a issue thread labelled `student`: \n
+👩🏽‍🎓 The following command can be used in a issue thread labelled `student`: \n
 `choochoo generate [positive integer] questions` \n
 `choochoo generate [positive integer] questions for objectives [positive integers with spaces]` \n
 """
  
-def check_instructor():
-    handle = argv[1]
+def check_instructor(author=None):
+    if author:
+        handle = author
+    else:
+        handle = argv[1]
     env = environment.Env()
     repo = repository.Repository(env)
     if settings.Settings(repo).check_instructor(handle) is False and settings.Settings(repo).check_admin(handle) is False:
@@ -372,7 +378,7 @@ def check_instructor():
         issue_thread.make_comment("[Checks ticket] I'm closing this issue as",handle,"is not listed as an or admin or instructor in settings.yml.")
         issue_thread.close_issue()
 
-def check_student(author=None):
+def check_participant(author=None):
     if author:
         handle = author
     else:

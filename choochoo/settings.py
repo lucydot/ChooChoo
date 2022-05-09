@@ -27,6 +27,7 @@ class Settings:
         self.questions = self.dictionary["questions"]
         self.votes_required = self.dictionary["votes_required"]
         self.web_address = self.dictionary["web_address"]
+        self.choochoo_path = self.dictionary["choochoo_path"]
 
     @property
     def dictionary(self):
@@ -72,7 +73,7 @@ class Settings:
     def remove_admins(self, old_admin_handles: List[str]) -> None:
         self._admins = [handle for handle in self._admins if handle not in old_admin_handles]
         self._dictionary["admins"] = self._admins
-        self.write_dictionary
+        self.write_dictionary()
 
     @property
     def instructors(self):

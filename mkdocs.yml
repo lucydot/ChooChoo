@@ -1,0 +1,57 @@
+site_name: ChooChoo Documentation
+site_description: 'Documentation site for ChooChoo the checklist tool'
+site_author: 'Lucy Whalley'
+docs_dir: docs/
+repo_name: 'lucydot/choochoo'
+repo_url: 'https://github.com/lucydot/choochoo'
+nav:
+    - Welcome: index.md
+    - Introduction: intro.md
+    - Instructors:
+      - Setup: instructors/setup.md
+      - Basic: instructors/basic.md
+      - Questions: instructors/advanced.md
+      - Commands: instructors/commands.md
+    - Students: 
+      - Basic: students/setup.md
+      - Questions: students/questions.md
+      - Commands: students/commands.md
+    - Commands: commands.md
+    - Tools: tools.md
+    - Pedagogy: pedagogy.md
+    - Projects: existing.md
+    - Contributing: 
+      - Welcome: contributing/welcome.md
+      - Development: contributing/development.md   
+    - Citation: citation.md
+
+theme:
+  name: 'material'
+  logo: images/1F683_color.png
+  favicon: images/1F683_color.png
+
+  
+markdown_extensions:
+  - def_list
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - abbr
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg      
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+          
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
