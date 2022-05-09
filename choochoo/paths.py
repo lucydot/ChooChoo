@@ -12,8 +12,6 @@ instructor_folder_path = choochoo_path+"./instructor/"
 question_folder_path = choochoo_path+"./questions/"
 plots_folder_path = choochoo_path+"./plots/"
 
-env_path = None # defaults to project root when set to None
-
 student_issue_template_path = ".github/ISSUE_TEMPLATE/choochoo-student-thread.md"
 question_issue_template_path = ".github/ISSUE_TEMPLATE/choochoo-questions.yml"
 
