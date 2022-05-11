@@ -6,9 +6,6 @@ graft choochoo
 include README.md 
 include LICENCE
 
-# Scripts
-graft scripts
-
 # Development Files and Full Documentation
 graft .github
 graft docs
