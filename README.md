@@ -12,7 +12,9 @@ ChooChoo is a **Ch**ecklist t**oo**l for educators.
 
 ✨ If you would like to create your own ChooChoo project please head over to the [ChooChoo-template repository](https://github.com/lucydot/ChooChoo-template/). Alternatively, you can use or adapt an [existing ChooChoo project](https://lucydot.github.io/ChooChoo/existing).
 
-✨ ChooChoo is free to use and adapt under a Creative Commons License. Pretty-please say hi :wave: if you are using ChooChoo - you can find my email address [here](https://lucydot.github.io/about/).
+✨ Pretty-please say hi :wave: if you are using ChooChoo - you can find my email address [here](https://lucydot.github.io/about/).
+
+ChooChoo is free to use and adapt under a Creative Commons License. The ChooChoo train logo is used with permission from JoyPixels (https://www.joypixels.com).
 
 ## Features
 
