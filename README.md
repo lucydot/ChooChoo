@@ -1,29 +1,39 @@
 ![end-to-end testing](https://github.com/choochoo-bot/choochoo-testing/actions/workflows/e2e_tests.yml/badge.svg) ![Build status](https://github.com/lucydot/ChooChoo/workflows/build-status.yml/badge.svg) ![Fat Controller](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-fat-controller.yml/badge.svg) ![publishing plots](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-plots.yml/badge.svg) ![publishing questions](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-questions.yml/badge.svg) ![publishing tutorials](https://github.com/lucydot/choochoo-template/actions/workflows/choochoo-tutorials.yml/badge.svg) 
 
-<img src="./docs/images/icon2.png" width="800">
+<img src="https://github.com/lucydot/ChooChoo/raw/main/docs/images/icon2.png" width="800">
 
 ChooChoo is a **Ch**ecklist t**oo**l for educators. 
 
-⚠️ ChooChoo is currently under development. It has a planned release date of September 2022. Documentation is on its way soon-ish 🐢.
+⚠️ ChooChoo is currently under development. It has a planned release date of September 2022. 
 
-✨ ChooChoo encourages learning through self-assessment, collaboration and diagnostic teaching. You can read more about the [pedagogy underlying ChooChoo here](https://lucydot.github.io/ChooChoo/pedagogy).
+✨ ChooChoo encourages learning through self-assessment, collaboration and diagnostic teaching.
 
-✨ This repository contains the Python package that powers ChooChoo.
-
-✨ If you would like to create your own ChooChoo project please head over to the [ChooChoo-template repository](https://github.com/lucydot/ChooChoo-template/). Alternatively, you can use or adapt an [existing ChooChoo project](https://lucydot.github.io/ChooChoo/existing).
+✨ For more information please see the [ChooChoo documentation](https://lucydot.github.io/ChooChoo).
 
 ✨ Pretty-please say hi :wave: if you are using ChooChoo - you can find my email address [here](https://lucydot.github.io/about/).
 
-ChooChoo is free to use and adapt under a Creative Commons License. The ChooChoo train logo is used with permission from JoyPixels (https://www.joypixels.com).
+✨ ChooChoo is free to use and adapt under a Creative Commons License. The ChooChoo train logo is used with permission from JoyPixels (https://www.joypixels.com).
 
 ## Features
 
-- 📋 Create checklists for your students to work through
-- 🔗 Link checklist items to a question bank and/or tutorials
-- ❓ Enable students contributions to the question bank
-- ☑️ Use student peer-review to decide which questions are published
-- 📊 Generate online plots to summarise class progress in real time
+**Checklists and tutorials**
 
+ - 📋 Create checklists for your students to work through
+ - 🖊️ Link checklist items to tutorials written with Jupyter Notebooks or Markdown
+
+**Student self-assessment**
+
+- ❓ Link checklist items to a question bank
+- 👩‍🎤 Allow students to generate their own personalised question sets
+
+**Class collaboration**
+
+ - 📢 Enable students contributions to the question bank
+ - 👩‍🎤 Use student peer-review to decide which questions are published
+
+**Diagnostic teaching**
+
+- 📊 Generate online plots to summarise class progress in real time
 
 ## Contributors ✨
 
