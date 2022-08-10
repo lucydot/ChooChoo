@@ -59,14 +59,8 @@ The third option (integrate) requires a good understanding of Github. If you are
 
 !!! Note
 
-- Your ChooChoo repo should be public if you have standard (free) Github account and want to publish tutorials, questions and summary plots online.
-- You are advised to create one ChooChoo repository for each class group. This will allow you to track the progress of each individual class rather than all classes combined.
-
-
-!!! Note
-
     - Your ChooChoo repo should be public if you have standard (free) Github account and want to publish tutorials, questions and summary plots online.
-    - You are advised to create one ChooChoo repository for each class group. This will allow you to track the progress of each individual class rather than all classes combined.
+    - You are advised to create one ChooChoo repository for each class group. This will allow you to track the progress of each individual class rather than all classes combined. As you cannot fork the same repository twice, you will need to use the `git clone` listed under the `Integrate` tab above to create multiple class repositories.
     
 ## 2. Set repository permissions
 
