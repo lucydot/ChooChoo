@@ -96,12 +96,13 @@ You may need to enable workflows on the repository. To do this:
 You may need to enable Github to publish your gh-pages branch. To do this:
 
 1. Go to `Settings` -> `Pages`.
-2. Select the drop-down menu below `Source`.
-3. Select `gh-pages`.
+2. Select `Deploy from a branch` in drop-down menu below `Source`.
+3. Select `gh-pages` and `/(root)` in the drop-down menu below `Branch`.
+4. Click `Save`.
 
 #### Set repository secrets
 
-Commands to `choochoo-bot` trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses `secrets.BOT_ACCESS_TOKEN`,  which requires a `BOT_ACCESS_TOKEN` to be added to your repository secrets. To do this please get in contact through the [ChooChoo discussion page](https://github.com/lucydot/ChooChoo/discussions/) or [email](https://lucydot.github.io/about/).
+Commands to `choochoo-bot` trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses `secrets.BOT_ACCESS_TOKEN`,  which requires a `BOT_ACCESS_TOKEN` to be added to your repository secrets. To do this please get in contact through the [ChooChoo discussion page](https://github.com/lucydot/ChooChoo/discussions/) or [email](https://lucydot.github.io/about/). You will also need to add `choochoo-bot` as a collaborator to your repository (`Settings` -> `Collaborators` -> `Add people`).
 
 Alternatively you can use the `secrets.GITHUB_TOKEN` which is automatically generated during any workflow run. The disadvantage of this approach is that `choochoo-bot` is replaced by the less charming `gh-actions` bot. To do this nonetheless:   
 1. Visit your repository (most likely at github.com/username/repo_name/)   
