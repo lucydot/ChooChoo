@@ -2,7 +2,7 @@
 
 !!! Note "We know you're busy"
 
-    The typical ChooChoo setup should take roughly one hour. The exact time depends on whether you are using an existing ChooChoo project (in which case setup should be quicker) or creating a ChooChoo project from scratch (in which case setup time will partly depend on how many objectives you are specifying). It will also depend on how familiar you are with the underlying tools: Github, yaml and markdown. For more support in using these tools please see the [Tools page](./tools.md). If you are stuck, please [get in contact](https://github.com/lucydot/ChooChoo/discussions).
+    The typical ChooChoo setup should take roughly one hour. The exact time depends on whether you are using an existing ChooChoo project (in which case setup should be quicker) or creating a ChooChoo project from scratch (in which case setup time will partly depend on how many objectives you are specifying). It will also depend on how familiar you are with the underlying tools: Github, yaml and markdown. For more support in using these tools please see the [Tools page](./tools.md). If you are stuck, please get in contact using the [Github discussions board](https://github.com/lucydot/ChooChoo/discussions) or via email ([see here](https://lucydot.github.io/about/)).
 
 
 ``` mermaid
@@ -21,23 +21,23 @@ graph LR
 
 There are three ways to get the files required to run ChooChoo:
 
-1. Fork the [choochoo-template repository](https://github.com/lucydot/ChooChoo-template/) and specify the objectives/questions/tutorials for your course.
+1. Copy the [choochoo-template repository](https://github.com/lucydot/ChooChoo-template/) and specify the objectives/questions/tutorials for your course.
 2. Fork an [existing choochoo repository](./existing.md) and use or extend objectives/questions/tutorials from an existing ChooChoo project.
 3. Integrate ChooChoo into an existing Github repository.
 
-The third option (integrate) requires a good understanding of Github. If you are new to Github we recommend forking the [choochoo-template](https://github.com/lucydot/ChooChoo-template/) or an [existing choochoo repository](./existing.md). For more setup details please select a tab below.
+The third option (integrate) requires a good understanding of Github. If you are new to Github we recommend copying the [choochoo-template](https://github.com/lucydot/ChooChoo-template/) or an [existing choochoo repository](./existing.md). For more setup details please select a tab below.
 
-=== "Fork template"
+=== "Copy template"
 
     1. Visit https://github.com/lucydot/ChooChoo-template/
-    2. Click on the `fork` icon in the top-right hand corner
+    2. Click on the green `Use this template` button towards the top-right hand corner
     3. Specify the owner, repository name and description
-    4. Click on `Create Fork`
+    4. Click on `Copy repository from template`
     
 === "Fork existing"
 
     1. Find an [existing ChooChoo repository](./existing.md) in your subject domain
-    2. Click on the `fork` icon in the top-right hand corner
+    2. Click on the `fork` icon towards the top-right hand corner
     3. Specify the owner, repository name and description
     4. Click on `Create Fork`
     
@@ -60,7 +60,7 @@ The third option (integrate) requires a good understanding of Github. If you are
 !!! Note
 
     - Your ChooChoo repo should be public if you have standard (free) Github account and want to publish tutorials, questions and summary plots online.
-    - You are advised to create one ChooChoo repository for each class group. This will allow you to track the progress of each individual class rather than all classes combined. As you cannot fork the same repository twice, you will need to use the `git clone` listed under the `Integrate` tab above to create multiple class repositories.
+    - You are advised to create one ChooChoo repository for each class group. This will allow you to track the progress of each individual class rather than all classes combined. 
     
 ## 2. Set repository permissions
 
@@ -74,7 +74,7 @@ You may need to enable Issues on the repository. To do this:
 
 #### Add Issue labels
 
-You need to add Issue labels to the forked repository. To do this:
+You need to add Issue labels to the repository. To do this:
 
 1. Click on the `Issues` tab
 2. Click on the `Labels` button
