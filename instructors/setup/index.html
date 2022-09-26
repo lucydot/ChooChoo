@@ -351,6 +351,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#add-choochoo-bot-as-a-collaborator" class="md-nav__link">
+    Add choochoo-bot as a collaborator
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -762,6 +769,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#add-choochoo-bot-as-a-collaborator" class="md-nav__link">
+    Add choochoo-bot as a collaborator
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -914,6 +928,10 @@ If you are new to Github we recommend forking an existing choochoo repository or
 </ul>
 </div>
 <h2 id="2-set-repository-permissions">2. Set repository permissions</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Github web interface does seem to change on a fairly frequent basis. We will try to keep instructions up-to-date, but please do let us know if they need updating.</p>
+</div>
 <h4 id="enable-issues">Enable Issues</h4>
 <p>You may need to enable Issues on the repository. To do this:  </p>
 <ol>
@@ -947,10 +965,15 @@ If you are new to Github we recommend forking an existing choochoo repository or
 <li>Click <code>Save</code>.</li>
 </ol>
 <h4 id="set-repository-secrets">Set repository secrets</h4>
-<p>Commands to <code>choochoo-bot</code> trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses <code>secrets.BOT_ACCESS_TOKEN</code>,  which requires a <code>BOT_ACCESS_TOKEN</code> to be added to your repository secrets. To do this please get in contact through the <a href="https://github.com/lucydot/ChooChoo/discussions/">ChooChoo discussion page</a> or <a href="https://lucydot.github.io/about/">email</a>. You will also need to add <code>choochoo-bot</code> as a collaborator to your repository (<code>Settings</code> -&gt; <code>Collaborators</code> -&gt; <code>Add people</code>).</p>
+<p>Commands to <code>choochoo-bot</code> trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses <code>secrets.BOT_ACCESS_TOKEN</code>,  which requires a <code>BOT_ACCESS_TOKEN</code> to be added to your repository secrets. To do this please get in contact through the <a href="https://github.com/lucydot/ChooChoo/discussions/">ChooChoo discussion page</a> or <a href="https://lucydot.github.io/about/">email</a>. </p>
 <p>Alternatively you can use the <code>secrets.GITHUB_TOKEN</code> which is automatically generated during any workflow run. The disadvantage of this approach is that <code>choochoo-bot</code> is replaced by the less charming <code>gh-actions</code> bot. To do this nonetheless: <br />
 1. Visit your repository (most likely at github.com/username/repo_name/) <br />
-2. In <code>.github/workflows/choochoo-fat-controller.yml</code> replace all instances of <code>secrets.BOT_ACCESS_TOKEN</code> with <code>secrets.GITHUB_TOKEN</code>.   </p>
+2. In <code>.github/workflows/choochoo-fat-controller.yml</code> replace all instances of <code>secrets.BOT_ACCESS_TOKEN</code> with <code>secrets.GITHUB_TOKEN</code>. </p>
+<h4 id="add-choochoo-bot-as-a-collaborator">Add <code>choochoo-bot</code> as a collaborator</h4>
+<p>If your workflow uses <code>secrets.BOT_ACCESS_TOKEN</code> (rather than <code>secrets.GITHUB_TOKEN</code>) you will need to add <code>choochoo-bot</code> as a collaborator to your repository.
+1. Go to <code>Settings</code> -&gt; <code>Collaborators</code> -&gt; <code>Add people</code>.
+2. Type <code>choochoo-bot</code> 
+3. Click <code>Add collaborator</code>.</p>
 <h2 id="3-specify-choochoo-settings">3. Specify ChooChoo settings</h2>
 <p>All ChooChoo settings are contained within <code>./instructor/settings.yml</code>. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the <a href="./tools.md">Tools page</a>. You can edit plain text files (yaml or Markdown) directly in the Github interface on your web browser without downloading anything.</p>
 <div class="admonition important">
