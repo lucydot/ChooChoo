@@ -64,6 +64,10 @@ The third option (integrate) requires a good understanding of Github. If you are
     
 ## 2. Set repository permissions
 
+!!! Note
+
+    The Github web interface does seem to change on a fairly frequent basis. We will try to keep instructions up-to-date, but please do let us know if they need updating.
+
 #### Enable Issues
 
 You may need to enable Issues on the repository. To do this:  
@@ -102,11 +106,18 @@ You may need to enable Github to publish your gh-pages branch. To do this:
 
 #### Set repository secrets
 
-Commands to `choochoo-bot` trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses `secrets.BOT_ACCESS_TOKEN`,  which requires a `BOT_ACCESS_TOKEN` to be added to your repository secrets. To do this please get in contact through the [ChooChoo discussion page](https://github.com/lucydot/ChooChoo/discussions/) or [email](https://lucydot.github.io/about/). You will also need to add `choochoo-bot` as a collaborator to your repository (`Settings` -> `Collaborators` -> `Add people`).
+Commands to `choochoo-bot` trigger a Github Action workflow. Permissions are needed to edit the repository during the workflow run. By default the workflow uses `secrets.BOT_ACCESS_TOKEN`,  which requires a `BOT_ACCESS_TOKEN` to be added to your repository secrets. To do this please get in contact through the [ChooChoo discussion page](https://github.com/lucydot/ChooChoo/discussions/) or [email](https://lucydot.github.io/about/). 
 
 Alternatively you can use the `secrets.GITHUB_TOKEN` which is automatically generated during any workflow run. The disadvantage of this approach is that `choochoo-bot` is replaced by the less charming `gh-actions` bot. To do this nonetheless:   
 1. Visit your repository (most likely at github.com/username/repo_name/)   
-2. In `.github/workflows/choochoo-fat-controller.yml` replace all instances of `secrets.BOT_ACCESS_TOKEN` with `secrets.GITHUB_TOKEN`.   
+2. In `.github/workflows/choochoo-fat-controller.yml` replace all instances of `secrets.BOT_ACCESS_TOKEN` with `secrets.GITHUB_TOKEN`. 
+
+#### Add `choochoo-bot` as a collaborator
+
+If your workflow uses `secrets.BOT_ACCESS_TOKEN` (rather than `secrets.GITHUB_TOKEN`) you will need to add `choochoo-bot` as a collaborator to your repository.
+1. Go to `Settings` -> `Collaborators` -> `Add people`.
+2. Type `choochoo-bot` 
+3. Click `Add collaborator`.
 
 ## 3. Specify ChooChoo settings
 
