@@ -125,12 +125,12 @@ class Settings:
     def check_instructor(self, handle: str) -> bool:
         """returns true if handle (with the @ prefix) is listed
         under instructors in the settings file"""
-        return handle in self.at_instructors
+        return handle in self.at_instructors()
 
     def check_admin(self, handle: str) -> bool:
-        return handle in self.at_admins 
+        return handle in self.at_admins()
 
     def check_student(self, handle: str) -> bool:
-        return handle in self.at_students
+        return handle in self.at_students()
 
 
