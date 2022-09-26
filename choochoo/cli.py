@@ -60,8 +60,8 @@ def issue_interface():
 
     elif input_matches("add @([\w-]+) as student"):
         handle = user_input_list[1]
-        if user_settings.check_instructor(author) \
-        or user_settings.check_admin(author):
+        if user_settings.check_instructor('@'+author) \
+        or user_settings.check_admin('@'+author):
             user_settings.add_students([handle[1:]])
             issue_thread.make_comment(handle, " is now a student. Choo-choo!")
         else:
@@ -69,8 +69,8 @@ def issue_interface():
 
     elif input_matches("add @([\w-]+) as instructor"):
         handle = user_input_list[1]
-        if user_settings.check_instructor(author) \
-        or user_settings.check_admin(author):
+        if user_settings.check_instructor('@'+author) \
+        or user_settings.check_admin('@'+author):
            user_settings.add_instructors([handle[1:]])
            issue_thread.make_comment(handle, " is now an instructor. Choo-choo!")
         else:
@@ -78,7 +78,7 @@ def issue_interface():
 
     elif input_matches("add (@[\w-]+) as admin"):
         handle = user_input_list[1]
-        if user_settings.check_admin(author):
+        if user_settings.check_admin('@'+author):
             user_settings.add_admins([handle[1:]])
             issue_thread.make_comment(handle, " is now an admin. Choo-choo!")
         else:
@@ -86,8 +86,8 @@ def issue_interface():
 
     elif input_matches("remove @([\w-]+) as student"):
         handle = user_input_list[1]
-        if user_settings.check_instructor(author) \
-        or user_settings.check_admin(author):
+        if user_settings.check_instructor('@'+author) \
+        or user_settings.check_admin('@'+author):
             user_settings.remove_students([handle[1:]])
             issue_thread.make_comment(handle, " is no longer a student. Bye-bye!")
         else:
@@ -95,8 +95,8 @@ def issue_interface():
 
     elif input_matches("remove @([\w-]+) as instructor"):
         handle = user_input_list[1]
-        if user_settings.check_instructor(author) \
-        or user_settings.check_admin(author):
+        if user_settings.check_instructor('@'+author) \
+        or user_settings.check_admin('@'+author):
             user_settings.remove_instructors([handle[1:]])
             issue_thread.make_comment(handle, " is no longer an instructor. Bye-bye!")
         else:
@@ -104,7 +104,7 @@ def issue_interface():
 
     elif input_matches("remove @([\w-]+) as admin"):
         handle = user_input_list[1]
-        if user_settings.check_admin(author):
+        if user_settings.check_admin('@'+author):
             user_settings.remove_admins([handle[1:]])
             issue_thread.make_comment(handle, " is no longer an admin. Bye-bye!")
         else:
@@ -120,7 +120,7 @@ def issue_interface():
         """Convert objectives.yml into the choochoo-student-thread.md
         and the choochoo-question-thread.yml.
         Bonus would be if it checks for broken links when building."""
-        if user_settings.check_admin(author):
+        if user_settings.check_admin('@'+author):
             obj.generate_student_thread()
             if user_settings.questions:
                 obj.generate_question_thread()
@@ -132,8 +132,8 @@ def issue_interface():
         """Update a webpage displaying class progress. 
         Print a link to this webpage on the thread.
         Also print summary data useful for teaching to issue thread"""
-        if user_settings.check_instructor(author) \
-        or user_settings.check_admin(author):
+        if user_settings.check_instructor('@'+author) \
+        or user_settings.check_admin('@'+author):
             total_tick_count = repo.total_tick_count()
             plot.create_plot(repo,total_tick_count)
             issue_thread.make_comment("The summary plot has been generated:","\n",
@@ -237,7 +237,7 @@ def issue_interface():
 
         Building this page triggers a github action to deploy on the gh_pages branch."""
         
-        if user_settings.check_admin(author):
+        if user_settings.check_admin('@'+author):
             qbank.build_bank_markdown()
             issue_thread.make_comment("The question bank is building and will soon be available at [{0}]({0})".format(user_settings.web_address+"/"+question_bank_path))
         else:
@@ -252,7 +252,7 @@ def issue_interface():
     elif input_matches("add question (.+) to objective ([1-9]+)"):
         """If question still proposed then move it to accepted.
         Add question to the specified objective."""
-        if user_settings.check_admin(author):
+        if user_settings.check_admin('@'+author):
             question_link = user_input_list[2]
             objective_number = int(user_input_list[5])
             objective_name = obj.objectives_list_by_id([objective_number])[0]
@@ -270,7 +270,7 @@ def issue_interface():
 
     elif input_matches("add link (.+) to objective ([1-9]+)"):
         """Add link to the specified objective."""
-        if user_settings.check_admin(author):
+        if user_settings.check_admin('@'+author):
             link = user_input_list[2]
             objective_number = int(user_input_list[5])
             objective_name = obj.objectives_list_by_id([objective_number])[0]
@@ -287,7 +287,7 @@ def issue_interface():
 
     elif input_matches("add tutorial (.+) to objective ([1-9]+)"):
         """Add tutorial to the specified objective."""
-        if user_settings.check_admin(author):
+        if user_settings.check_admin('@'+author):
             tutorial_link = user_input_list[2]
             objective_number = int(user_input_list[5])
             objective_name = obj.objectives_list_by_id([objective_number])[0]
@@ -303,7 +303,7 @@ def issue_interface():
             issue_thread.make_comment(no_permission_message)
 
     elif input_matches("list commands"):
-        if user_settings.check_admin(author):
+        if user_settings.check_admin('@'+author):
             issue_thread.make_comment(admin_commands_message)
         elif user_settings.check_instructor(author):
             issue_thread.make_comment(instructor_commands_message)
