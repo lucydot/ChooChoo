@@ -37,76 +37,76 @@ def issue_interface():
     # returns true if the command string matches the argument string
     input_matches = lambda string: bool(re.match("^"+string+"$", user_input))
     
-    if input_matches("check (@[\w-]+) is instructor"):    
+    if input_matches("check @([\w-]+) is instructor"):    
         handle = user_input_list[1]
         if user_settings.check_instructor(handle):
-            issue_thread.make_comment(handle," is an instructor")
+            issue_thread.make_comment("@",handle," is an instructor")
         else:
-            issue_thread.make_comment(handle," is not an instructor")
+            issue_thread.make_comment("@",handle," is not an instructor")
       
-    elif input_matches("check (@[\w-]+) is admin"):
+    elif input_matches("check @([\w-]+) is admin"):
         handle = user_input_list[1]
         if user_settings.check_admin(handle):
-            issue_thread.make_comment(handle," is an admin")
+            issue_thread.make_comment("@",handle," is an admin")
         else:
-            issue_thread.make_comment(handle," is not an admin")
+            issue_thread.make_comment("@",handle," is not an admin")
         
-    elif input_matches("check (@[\w-]+) is student"):
+    elif input_matches("check @([\w-]+) is student"):
         handle = user_input_list[1]
         if user_settings.check_student(handle):
-            issue_thread.make_comment(handle," is a student")
+            issue_thread.make_comment("@",handle," is a student")
         else:
-            issue_thread.make_comment(handle," is not a student")
+            issue_thread.make_comment("@",handle," is not a student")
 
-    elif input_matches("add (@[\w-]+) as student"):
+    elif input_matches("add @([\w-]+) as student"):
         handle = user_input_list[1]
         if user_settings.check_instructor(author) \
         or user_settings.check_admin(author):
-            user_settings.add_students([handle[1:]])
-            issue_thread.make_comment(handle, " is now a student. Choo-choo!")
+            user_settings.add_students([handle])
+            issue_thread.make_comment("@",handle, " is now a student. Choo-choo!")
         else:
            issue_thread.make_comment(no_permission_message)
 
-    elif input_matches("add (@[\w-]+) as instructor"):
+    elif input_matches("add @([\w-]+) as instructor"):
         handle = user_input_list[1]
         if user_settings.check_instructor(author) \
         or user_settings.check_admin(author):
-           user_settings.add_instructors([handle[1:]])
-           issue_thread.make_comment(handle, " is now an instructor. Choo-choo!")
+           user_settings.add_instructors([handle])
+           issue_thread.make_comment("@",handle, " is now an instructor. Choo-choo!")
         else:
            issue_thread.make_comment(no_permission_message)
 
     elif input_matches("add (@[\w-]+) as admin"):
         handle = user_input_list[1]
         if user_settings.check_admin(author):
-            user_settings.add_admins([handle[1:]])
-            issue_thread.make_comment(handle, " is now an admin. Choo-choo!")
+            user_settings.add_admins([handle])
+            issue_thread.make_comment("@",handle, " is now an admin. Choo-choo!")
         else:
             issue_thread.make_comment(no_permission_message)
 
-    elif input_matches("remove (@[\w-]+) as student"):
+    elif input_matches("remove @([\w-]+) as student"):
         handle = user_input_list[1]
         if user_settings.check_instructor(author) \
         or user_settings.check_admin(author):
-            user_settings.remove_students([handle[1:]])
-            issue_thread.make_comment(handle, " is no longer a student. Bye-bye!")
+            user_settings.remove_students([handle])
+            issue_thread.make_comment("@",handle, " is no longer a student. Bye-bye!")
         else:
            issue_thread.make_comment(no_permission_message)
 
-    elif input_matches("remove (@[\w-]+) as instructor"):
+    elif input_matches("remove @([\w-]+) as instructor"):
         handle = user_input_list[1]
         if user_settings.check_instructor(author) \
         or user_settings.check_admin(author):
-            user_settings.remove_instructors([handle[1:]])
-            issue_thread.make_comment(handle, " is no longer an instructor. Bye-bye!")
+            user_settings.remove_instructors([handle])
+            issue_thread.make_comment("@",handle, " is no longer an instructor. Bye-bye!")
         else:
             issue_thread.make_comment(no_permission_message)
 
-    elif input_matches("remove (@[\w-]+) as admin"):
+    elif input_matches("remove @([\w-]+) as admin"):
         handle = user_input_list[1]
         if user_settings.check_admin(author):
-            user_settings.remove_admins([handle[1:]])
-            issue_thread.make_comment(handle, " is no longer an admin. Bye-bye!")
+            user_settings.remove_admins([handle])
+            issue_thread.make_comment("@",handle, " is no longer an admin. Bye-bye!")
         else:
             issue_thread.make_comment(no_permission_message)
         
@@ -368,7 +368,7 @@ instructor_commands_message = """
  
 def check_instructor(author=None):
     if author:
-        handle = author
+        handle = '@'+author
     else:
         handle = '@'+argv[1]
     env = environment.Env()
@@ -380,7 +380,7 @@ def check_instructor(author=None):
 
 def check_participant(author=None):
     if author:
-        handle = author
+        handle = '@'+author
     else:
         handle = '@'+argv[1]
     env = environment.Env()
