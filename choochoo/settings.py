@@ -76,6 +76,10 @@ class Settings:
     @property
     def instructors(self):
         return self._instructors
+    
+    def at_instructors(self):
+        "a list of instructors with @ signs included"
+        return ["@"+item for item in self.instructors]
 
     @instructors.setter
     def instructors(self, new_instructor_handles: List[str]) -> None:  
@@ -96,6 +100,10 @@ class Settings:
     @property
     def students(self):
         return self._students
+    
+    def at_students(self):
+        "a list of students with @ signs included"
+        return ["@"+item for item in self.students]
 
     @students.setter
     def students(self, new_student_handles: List[str]) -> None:  
@@ -115,14 +123,14 @@ class Settings:
         self.write_dictionary()
   
     def check_instructor(self, handle: str) -> bool:
-        """returns true if handle (without the @ prefix) is listed
+        """returns true if handle (with the @ prefix) is listed
         under instructors in the settings file"""
-        return handle in self.instructors
+        return handle in self.at_instructors
 
     def check_admin(self, handle: str) -> bool:
-        return handle in self.admins 
+        return handle in self.at_admins 
 
     def check_student(self, handle: str) -> bool:
-        return handle in self.students
+        return handle in self.at_students
 
 
