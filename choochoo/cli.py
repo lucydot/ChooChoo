@@ -370,7 +370,7 @@ def check_instructor(author=None):
     if author:
         handle = author
     else:
-        handle = argv[1]
+        handle = '@'+argv[1]
     env = environment.Env()
     repo = repository.Repository(env)
     if settings.Settings(repo).check_instructor(handle) is False and settings.Settings(repo).check_admin(handle) is False:
@@ -382,7 +382,7 @@ def check_participant(author=None):
     if author:
         handle = author
     else:
-        handle = argv[1]
+        handle = '@'+argv[1]
     env = environment.Env()
     repo = repository.Repository(env)
     if settings.Settings(repo).check_student(handle) is False and settings.Settings(repo).check_admin(handle) is False and settings.Settings(repo).check_instructor(handle) is False:
