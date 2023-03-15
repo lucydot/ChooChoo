@@ -66,14 +66,14 @@ The first step is to setup a ChooChoo repository. The length of time this takes 
 
 ![A diagram\label{fig:setup}](setup.png)
 
-Once setup is complete, students can generate their own personalised checklists by raising a Github Issue. In addition, students and instructors can use ChooChoo commands in the issue comments to monitor class progress, propose new self-assessment questions and generate personalised question sets. For more detailed information about setup and usage please see the [ChooChoo documentation](https://lucydot.github.io/ChooChoo/)
+Once setup is complete, students can generate their own personalised checklists by raising a Github Issue. In addition, students and instructors can use ChooChoo commands in the issue comments to monitor class progress, propose new self-assessment questions and generate personalised question sets. For more detailed information about setup and usage please see the [ChooChoo documentation](https://lucydot.github.io/ChooChoo/).
 
-Contributing to the package. sharing your repos.
+ChooChoo has been used to teach first and second year undergraduate students on the physics degree programme at Northumbria University (UK). It had particular success as a tool to help second year students re-cap basic computing skills learnt during their first year. An example checklist from this course can be found in [ChooChoo examples](https://github.com/lucydot/ChooChoo/examples/python_novice/).
 
-My teaching
+Those who adopt ChooChoo for their own teaching are encouraged to share their checklists, question banks and tutorials for others to use and build on. Over time, we hope this will form a growing collection of ChooChoo repositories.
 
 # Acknowledgements
 
-LDW would like to thank Jeremy Cohen for discussions about the software design, and Ross Pallister for assistance in trialling this tool with students.
+LDW would like to thank Jeremy Cohen for discussions about the software design, and Ross Pallister and Prakriti Kayastha for assistance in trialling this tool with students.
 
 # References
