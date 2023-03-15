@@ -1,8 +1,3 @@
-!!! warning
-
-    ChooChoo (including this documentation) is currently under development 🐢. It has a planned release date of September 2022.
-    If you would like to beta-test ChooChoo for your own teaching, please [get in contact](https://lucydot.github.io/about/).  
-
 ## What is ChooChoo?
 
 - ✨ ChooChoo is a **Ch**ecklist t**oo**l for educators  
