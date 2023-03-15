@@ -27,7 +27,7 @@ ChooChoo is free to use and adapt under a Creative Commons License.
 
 Online repositories such as github are increasingly being used to open-source host educational content. 
 This content is often designed to be used in both a formal education setting (e.g university), and more informally (e.g. at home with students working through at their own pace). 
-In addition, adult students are often approaching content with various levels of prior expertise [@Jordan:2018]; this is especially relevant for more computation-focused courses, where the level of programming experience can vary widely [Dawson:2018].  
+In addition, adult students are often approaching content with various levels of prior expertise [@Jordan:2018]; this is especially relevant for more computation-focused courses, where the level of programming experience can vary widely [@Dawson:2018].  
 In such cases, a certain amount of self-directed, independent learning is required. Self-assessment, where students can independently assess their current level of understanding, is a key aspect of this [@Brown:2014]. Checklists in particular can be used for students to monitor and track their progress through a couse [@Makram:2022].
 However there are no checklist tools for education which can be easily integrated into a Github repository. The primary purpose of ChooChoo is to fill this gap.
 
