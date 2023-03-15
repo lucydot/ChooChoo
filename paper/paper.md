@@ -1,5 +1,5 @@
 ---
-title: 'LTPy - Learning tool for Python on Atmospheric Composition'
+title: 'ChooChoo the Checklist Tool'
 tags:
   - python
   - github
@@ -31,7 +31,7 @@ In addition, students are often approaching the content with various levels of p
 In such cases, a certain amount of self-directed, independent learning is required. Self-assessment, where students can independently assess their current level of understanding, is a key aspect of this [@Brown:2014]. Checklists in particular can be used for students to monitor and track their progress through a couse [@Makram:2022].
 However there are no checklist tools for education which can be easily integrated into a Github repository. The primary purpose of ChooChoo is to fill this gap.
 
-# Target Audience 
+# Target Audience 
 
 ChooChoo is primarily aimed at people who already use Github for their teaching, and who would like to integrate a simple tool for student self-assessment. It can be integrated into an existing Github repository, or templated as a standalone project. As the instructor must write the checklist specific to their course (if not cloning an existing ChooChoo project), ChooChoo is a domain agnostic tool. 
 
@@ -52,7 +52,7 @@ ChooChoo is based around Github and, in particular, Github Issues. In addition, 
 - Students can propose new questions for the question bank
 - Class votes to decide which questions are accepted into the bank
 
-# Software design 
+# Software design 
 
 At the core of ChooChoo is a Python 3 package (https://github.com/lucydot/ChooChoo). This uses the matplotlib Python library for plotting [@Hunter:2007], PyGithub to interact with Github repositories, python-dotenv for reading environment variables and pyyaml for reading and writing yaml files.
 
