@@ -1,4 +1,4 @@
-__version__ = "0.0.1"
+__version__ = "1.0.0"
 
 env_path = None # defaults to project root when set to None
 settings_path = "./instructor/settings.yml"
