@@ -27,7 +27,15 @@
         "infra",
         "maintenance",
         "projectManagement"
-
+      ]
+    },
+    {
+      "login": "r-pallister",
+      "name": "r-pallister",
+      "avatar_url": "https://avatars.githubusercontent.com/u/113981707?v=4",
+      "profile": "https://github.com/r-pallister",
+      "contributions": [
+        "test"
       ]
     }
   ],
@@ -36,5 +44,6 @@
   "projectOwner": "lucydot",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }
