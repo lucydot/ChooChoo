@@ -35,7 +35,7 @@ However there are no checklist tools for education which can be easily integrate
 
 ChooChoo is primarily aimed at people who already use Github for their teaching, and who would like to integrate a simple tool for student self-assessment. It can be integrated into an existing Github repository, or templated as a standalone project. As the instructor must write the checklist specific to their course (if not cloning an existing ChooChoo project), ChooChoo is a domain agnostic tool. 
 
-ChooChoo is based around Github and, in particular, Github Issues. In addition, instructors use yaml to specify the ChooChoo checklists and settings. Self-assessment questions and tutorials (both optional features) are written using Markdown and/or Jupyter Notebooks. All three tools (Github, Markdown, yaml, Jupyter Notebooks) are widely used within the research computing community, and familiarity with these tools will make adopting ChooChoo more straight-forward. Importantly, ChooChoo does not require any local installations; everything is installed and ran remotely via Github.
+ChooChoo is based around Github and, in particular, Github Issues. In addition, instructors use the yaml markup language to specify the ChooChoo checklists and settings. Self-assessment questions and tutorials (both optional features) are written using Markdown and/or Jupyter Notebooks. These tools are widely used within the research computing community, and familiarity with them will make adopting ChooChoo more straight-forward. Importantly, ChooChoo does not require any local installations; everything is installed and ran remotely via Github.
 
 # ChooChoo features 
 
