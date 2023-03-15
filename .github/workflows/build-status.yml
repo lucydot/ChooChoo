@@ -1,6 +1,6 @@
 name: gh-pages status
 on:
-  build-docs
+  build_docs
   
 jobs:
   see-page-build-payload:
