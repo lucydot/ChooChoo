@@ -27,7 +27,15 @@
         "infra",
         "maintenance",
         "projectManagement"
-
+      ]
+    },
+    {
+      "login": "prakayastha",
+      "name": "Prakriti Kayastha",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49740967?v=4",
+      "profile": "https://github.com/prakayastha",
+      "contributions": [
+        "test"
       ]
     }
   ],
@@ -36,5 +44,6 @@
   "projectOwner": "lucydot",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }
