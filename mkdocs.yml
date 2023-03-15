@@ -17,12 +17,8 @@ nav:
       - Questions: students/questions.md
       - Commands: students/commands.md
     - Commands: commands.md
-    - Tools: tools.md
-    - Pedagogy: pedagogy.md
     - Projects: existing.md
-    - Contributing: 
-      - Welcome: contributing/welcome.md
-      - Development: contributing/development.md   
+    - Contributing: contributing.md
     - Citation: citation.md
 
 theme:
