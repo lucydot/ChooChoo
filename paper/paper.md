@@ -27,7 +27,7 @@ ChooChoo is free to use and adapt under a Creative Commons License.
 
 Online repositories such as github are increasingly being used to open-source host educational content. 
 This content is often designed to be used in both a formal education setting (e.g university), and more informally (e.g. at home with students working through at their own pace). 
-In addition, students are often approaching the content with various levels of prior expertise; this is especially relevant for more computation-focused courses, where the level of programming experience can vary widely [@Dawson:2018, @Jordan:2018] 
+In addition, adult students are often approaching content with various levels of prior expertise [@Jordan:2018]; this is especially relevant for more computation-focused courses, where the level of programming experience can vary widely [Dawson:2018].  
 In such cases, a certain amount of self-directed, independent learning is required. Self-assessment, where students can independently assess their current level of understanding, is a key aspect of this [@Brown:2014]. Checklists in particular can be used for students to monitor and track their progress through a couse [@Makram:2022].
 However there are no checklist tools for education which can be easily integrated into a Github repository. The primary purpose of ChooChoo is to fill this gap.
 
@@ -35,7 +35,7 @@ However there are no checklist tools for education which can be easily integrate
 
 ChooChoo is primarily aimed at people who already use Github for their teaching, and who would like to integrate a simple tool for student self-assessment. It can be integrated into an existing Github repository, or templated as a standalone project. As the instructor must write the checklist specific to their course (if not cloning an existing ChooChoo project), ChooChoo is a domain agnostic tool. 
 
-ChooChoo is based around Github and, in particular, Github Issues. In addition, instructors use yaml to specify the ChooChoo checklists and settings. Self-assessment questions and tutorials (both optional features) are written using Markdown and/or Jupyter Notebooks. All three tools (Github, Markdown, yaml, Jupyter Notebooks) are widely used within the research computing community. Familiarity with these tools will make adopting ChooChoo for your own teaching more straight-forward. Importantly, ChooChoo does not require any local installations; everything is installed and ran remotely via Github.
+ChooChoo is based around Github and, in particular, Github Issues. In addition, instructors use yaml to specify the ChooChoo checklists and settings. Self-assessment questions and tutorials (both optional features) are written using Markdown and/or Jupyter Notebooks. All three tools (Github, Markdown, yaml, Jupyter Notebooks) are widely used within the research computing community, and familiarity with these tools will make adopting ChooChoo more straight-forward. Importantly, ChooChoo does not require any local installations; everything is installed and ran remotely via Github.
 
 # ChooChoo features 
 
@@ -54,7 +54,7 @@ ChooChoo is based around Github and, in particular, Github Issues. In addition, 
 
 # Software design 
 
-At the core of ChooChoo is a Python 3 package (https://github.com/lucydot/ChooChoo). This uses the matplotlib Python library for plotting [@Hunter:2007], PyGithub to interact with Github repositories, python-dotenv for reading environment variables and pyyaml for reading and writing yaml files.
+At the core of ChooChoo is a Python 3 package ([https://github.com/lucydot/ChooChoo](https://github.com/lucydot/ChooChoo)). The package dependencies are the matplotlib Python library for plotting [@Hunter:2007], PyGithub to interact with Github repositories, python-dotenv for reading environment variables and pyyaml for reading and writing yaml files.
 
 Students and instructors interact with ChooChoo by writing ChooChoo commands in a Github issue thread. Github actions are used to process and act on each comment. This is done remotely on the Github servers. In particular, the actions: (i) parse the comment; (ii) install ChooChoo; (iii) run the ChooChoo command; (iv) update repository and/or issue thread accordingly; (v) update the associated gh-pages site with latest questions, tutorials and/or progress charts. The ChooChoo configuration files and Github action workflows necessary for this are available in the [ChooChoo-template repository](https://github.com/lucydot/ChooChoo-template). 
 
@@ -62,9 +62,9 @@ Automatic tests are ran in a [dedicated testing repository](https://github.com/c
 
 # Integration into teaching
 
-The first step is to setup a ChooChoo repository. The length of time this takes will depend on the number of checklist items, questions and tutorials you are setting, and familiarity with the tools used (Github, yaml, markdown). In many cases it will take one or less for a basic implementation; a diagram outlining the setup steps is given in Figure \autoref{fig:setup}.
+The first step is for the instructor to setup a ChooChoo repository. The length of time this takes will depend on the number of checklist items, questions and tutorials you are setting, and familiarity with the tools used (Github, yaml, markdown). In many cases it will take one or less for a basic implementation; a diagram outlining the setup steps is given in \autoref{fig:setup}.
 
-![A diagram\label{fig:setup}](setup.png)
+![Diagram outlining the initial steps needed to setup a ChooChoo repository.\label{fig:setup}](setup.png)
 
 Once setup is complete, students can generate their own personalised checklists by raising a Github Issue. In addition, students and instructors can use ChooChoo commands in the issue comments to monitor class progress, propose new self-assessment questions and generate personalised question sets. For more detailed information about setup and usage please see the [ChooChoo documentation](https://lucydot.github.io/ChooChoo/).
 
