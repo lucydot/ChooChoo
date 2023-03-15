@@ -21,7 +21,7 @@ def create_plot(repository,tick_count):
 	ax.barh(range(num_objectives),tick_count_list, align='center')
 	ax.set_yticks(range(num_objectives))
 	ax.set_xticks(range(issue_count+1))
-	ax.set_yticklabels(tick_count.keys())
+	ax.set_yticklabels(tick_count.keys(), fontsize=8)
 	ax.invert_yaxis()
 	ax.set_xlabel('# completed')
 
