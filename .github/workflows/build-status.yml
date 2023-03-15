@@ -1,9 +1,9 @@
 name: gh-pages status
 on:
   workflow_run:
-  workflows: build-docs
-  types:
-    - completed
+    workflows: build-docs
+    types:
+      - completed
   
 jobs:
   see-page-build-payload:
