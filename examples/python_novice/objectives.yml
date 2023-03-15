@@ -1,0 +1,412 @@
+sections:
+
+- name: Running Python
+
+  links:
+  - https://lucydot.github.io/python_novice/01-run-quit/index.html
+  questions: []
+  tutorials: []
+  
+  # Each section contains one or more objectives
+  objectives:
+  
+  - name: Create a new Jupyter Notebook
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Save and download a Jupyter Notebook
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Create Markdown cells in a Jupyter Notebook
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Run Python code in a Jupyter Notebook
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Create in-line code comments using `#`
+    links: []
+    questions: []
+    tutorials: []
+
+- name: Variables and Assignment
+
+  links:
+  - https://lucydot.github.io/python_novice/02-variables/index.html
+  questions: []
+  tutorials: []
+  
+  objectives:
+  
+  - name: Use variables to store values
+    links: []
+    questions: []
+    tutorials: []
+  - name: Use `print` to display values
+    links: []
+    questions: []
+    tutorials: []
+  - name: Use meaningful variable names
+    links: []
+    questions: []
+    tutorials: []
+    
+- name: Data Types and Type Conversion
+
+  links:
+  - https://lucydot.github.io/python_novice/03-types-conversion/index.html
+  questions: []
+  tutorials: []
+  
+  objectives:
+  
+  - name: Explain the difference between integers and floats
+    links: []
+    questions: []
+    tutorials: []
+  - name: Explain the difference between numeric values and strings
+    links: []
+    questions: []
+    tutorials: []
+  - name: Convert between numbers and strings
+    links: []
+    questions: []
+    tutorials: []
+    
+- name: Built-in Functions, Help and Errors
+
+  links:
+  - https://lucydot.github.io/python_novice/04-built-in/index.html
+  questions: []
+  tutorials: []
+  
+  objectives:
+  
+  - name: Round a number to a specified number of decimal places
+    links: []
+    questions: []
+    tutorials: []
+  - name: Use `help()` or `?` (in Jupyter Notebooks) to access help documentation for a function
+    links: []
+    questions: []
+    tutorials: []
+  - name: Descrive the difference between syntax errors and runtime errors
+    links: []
+    questions: []
+    tutorials: []
+    
+- name: Lists
+
+  links:
+  - https://lucydot.github.io/python_novice/05-lists/index.html
+  questions: []
+  tutorials: []
+  
+  objectives:
+  
+  - name: Create a Python list
+    links: []
+    questions: []
+    tutorials: []
+  - name: Find the length of a list
+    links: []
+    questions: []
+    tutorials: []
+  - name: Fetch an item from a list using list indexing
+    links: []
+    questions: []
+    tutorials: []
+  - name: Fetch multiple item from a list using list slicing
+    links: []
+    questions: []
+    tutorials: []
+  - name: Replace an item in a list with a new value
+    links: []
+    questions: []
+    tutorials: []
+    
+- name: For Loops
+
+  links:
+  - https://lucydot.github.io/python_novice/06-for-loops/index.html
+  questions: []
+  tutorials: []
+  
+  objectives:
+  
+  - name: Identify the iterable, dummy variable and loop body in a For loop
+    links: []
+    questions: []
+    tutorials: []
+  - name: Use a For loop to repeat a basic programming task
+    links: []
+    questions: []
+    tutorials: []
+  - name: Use range to iterate over a sequence of numbers
+    links: []
+    questions: []
+    tutorials: []
+    
+- name: Conditionals
+
+  links:
+  - https://lucydot.github.io/python_novice/07-conditionals/index.html
+  questions: []
+  tutorials: []
+  
+  objectives:
+  
+  - name: Use `if` to control whether a block of code is executed
+    links: []
+    questions: []
+    tutorials: []
+  - name: Combine a `for` loop and an `if` loop to implement a basic programming task
+    links: []
+    questions: []
+    tutorials: []
+  - name: Use a combination of `if`, `elif` and `else` to implement a basic programming task
+    links: []
+    questions: []
+    tutorials: []
+  - name: Test if a combination of things are true using `and` or `or`.
+    links: []
+    questions: []
+    tutorials: []
+    
+- name: Writing Functions
+
+  links:
+  - https://lucydot.github.io/python_novice/08-writing-functions/index.html
+  questions: []
+  tutorials: []
+  
+  objectives:
+  
+  - name: Define a simple function that returns a value
+    links: []
+    questions: []
+    tutorials: []
+  - name: Call a custom-made function
+    links: []
+    questions: []
+    tutorials: []
+
+- name: Variable scope
+
+  links:
+  - https://lucydot.github.io/python_novice/09-scope/index.html
+  questions: []
+  tutorials: []
+  
+  objectives:
+  
+  - name: Explain the difference between local and global variables
+    links: []
+    questions: []
+    tutorials: []
+
+
+- name: Libraries
+
+  links:
+  - https://lucydot.github.io/python_novice/10-libraries/index.html
+  questions: []
+  tutorials: []
+  
+  objectives:
+  
+  - name: Import a library
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Import a library using an alias (nickname)
+    links: []
+    questions: []
+    tutorials: []
+    
+- name: Storing data in Numpy arrays
+
+  links:
+  - https://lucydot.github.io/python_novice/12-numpy-intro/index.html
+  questions: []
+  tutorials: []
+  
+  objectives:
+  
+  - name: Read in data from a text file
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Describe the difference between Numpy arrays and Python lists
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Write a Numpy array to a text file
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Create a one-dimensional Numpy array with zero-values
+    links: []
+    questions: []
+    tutorials: []
+     
+  - name: Create a two-dimensional Numpy array with zero-values
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Create a one-dimensional Numpy array with pre-defined values
+    links: []
+    questions: []
+    tutorials: [] 
+    
+  - name: Create a Numpy array with evenly spaced numbers over a given interval
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Create a Numpy array with evenly spaced numbers over a given interval in logspace
+    links: []
+    questions: []
+    tutorials: []
+  
+  - name: Combine the enumerate function with a `for` loop to populate a Numpy array
+    links: []
+    questions: []
+    tutorials: []
+    
+- name: Retrieving data from Numpy arrays
+
+  links:
+  - https://lucydot.github.io/python_novice/13-numpy-selecting/index.html
+  questions: []
+  tutorials: []
+  
+  objectives:
+  
+  - name: Use array indexing to select a single element from a 2D array
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Use array slicing to select a column of a 2D array
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Use array slicing to select a row of a 2D array
+    links: []
+    questions: []
+    tutorials: []
+    
+- name: Visualizing data with Matplotlib
+
+  links:
+  - https://lucydot.github.io/python_novice/14-visualising-data/index.html
+  questions: []
+  tutorials: []
+  
+  objectives:
+    
+  - name: Generate a basic line plot
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Generate a basic scatter plot
+    links: []
+    questions: []
+    tutorials: []
+     
+  - name: Label the plot with an x-axis label, y-axis label and title
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Create a plot legend
+    links: []
+    questions: []
+    tutorials: []
+  
+  - name: Use a figure and subplots to group similar plots
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Save a plot as a `.png` file
+    links: []
+    questions: []
+    tutorials: []
+  
+- name: Analysing data using Numpy
+
+  links:
+  - https://lucydot.github.io/python_novice/15-numpy-analysis/index.html
+  questions: []
+  tutorials: []
+  
+  objectives:
+    
+  - name: Use the least-squares method to fit a polynomial function to data
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Plot the polynomial fit alongside the raw data for comparison
+    links: []
+    questions: []
+    tutorials: []
+     
+  - name: Use Numpy array operations to perform mathematical operations across an array
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Use Numpy functions e.g. `mean`, `max`, `min` or `round` across one or more array axes.
+    links: []
+    questions: []
+    tutorials: []
+  
+  - name: Plot the uncertainty associated with a measurement using an errorbar
+    links: []
+    questions: []
+    tutorials: []
+  
+- name: Code Quality
+
+  links:
+  - https://lucydot.github.io/python_novice/16-style/index.html
+  questions: []
+  tutorials: []
+  
+  objectives:
+    
+  - name: Use assertions to check for internal errors
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Write docstrings to provide help messages
+    links: []
+    questions: []
+    tutorials: []
+     
+  - name: Print package version numbers to increase code reproducibility
+    links: []
+    questions: []
+    tutorials: []
+    
+  - name: Re-factor code to reduce code repetition and remove redundant code
+    links: []
+    questions: []
+    tutorials: []
