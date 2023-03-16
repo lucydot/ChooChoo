@@ -62,7 +62,7 @@ Automatic tests are ran in a [dedicated testing repository](https://github.com/c
 
 # Integration into teaching
 
-The first step is for the instructor to setup a ChooChoo repository. The length of time this takes will depend on the number of checklist items, questions and tutorials you are setting, and familiarity with the tools used (Github, yaml, markdown). In many cases it will take one or less for a basic implementation; a diagram outlining the setup steps is given in \autoref{fig:setup}.
+The first step is for the instructor to setup a ChooChoo repository. The length of time this takes will depend on the number of checklist items, questions and tutorials you are setting, and familiarity with the tools used (Github, yaml, markdown). In many cases it will take one hour or less for a basic implementation; a diagram outlining the setup steps is given in \autoref{fig:setup}.
 
 ![Diagram outlining the initial steps needed to setup a ChooChoo repository.\label{fig:setup}](setup.png)
 
