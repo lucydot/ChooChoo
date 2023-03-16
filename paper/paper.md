@@ -66,7 +66,7 @@ The first step is for the instructor to setup a ChooChoo repository. The length 
 
 ![Diagram outlining the initial steps needed to setup a ChooChoo repository.\label{fig:setup}](setup.png)
 
-Once setup is complete, students can generate their own personalised checklists by raising a Github Issue. In addition, students and instructors can use ChooChoo commands in the issue comments to monitor class progress, propose new self-assessment questions and generate personalised question sets. For more detailed information about setup and usage please see the [ChooChoo documentation](https://lucydot.github.io/ChooChoo/).
+Once setup is complete, students can generate their own personalised checklists by raising a Github Issue. In addition, students and instructors can use ChooChoo commands in the issue comment thread to monitor class progress, propose new self-assessment questions and generate personalised question sets. For more detailed information about setup and usage please see the [ChooChoo documentation](https://lucydot.github.io/ChooChoo/).
 
 ChooChoo has been used to teach first and second year undergraduate students on the physics degree programme at Northumbria University (UK). It had particular success as a tool to help second year students re-cap basic computing skills learnt during their first year. An example checklist from this course can be found in [ChooChoo examples](https://github.com/lucydot/ChooChoo/examples/python_novice/).
 
