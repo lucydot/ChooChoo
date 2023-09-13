@@ -22,17 +22,17 @@ graph LR
 There are three ways to get the files required to run ChooChoo:
 
 1. Copy the [choochoo-template repository](https://github.com/lucydot/ChooChoo-template/) and specify the objectives/questions/tutorials for your course.
-2. Fork an [existing choochoo repository](./existing.md) and use or extend objectives/questions/tutorials from an existing ChooChoo project.
+2. Fork an [existing choochoo repository](../existing.md) and use or extend objectives/questions/tutorials from an existing ChooChoo project.
 3. Integrate ChooChoo into an existing Github repository.
 
-The third option (integrate) requires a good understanding of Github. If you are new to Github we recommend copying the [choochoo-template](https://github.com/lucydot/ChooChoo-template/) or an [existing choochoo repository](./existing.md). For more setup details please select a tab below.
+The third option (integrate) requires a good understanding of Github. If you are new to Github we recommend copying the [choochoo-template](https://github.com/lucydot/ChooChoo-template/) or an [existing choochoo repository](../existing.md). For more setup details please select a tab below.
 
 === "Copy template"
 
     1. Visit https://github.com/lucydot/ChooChoo-template/
-    2. Click on the green `Use this template` button towards the top-right hand corner
+    2. Click on the green `Use this template` button towards the top-right hand corner and select `Create a new repository`
     3. Specify the owner, repository name and description
-    4. Click on `Copy repository from template`
+    4. Click on `Create repository`
     
 === "Fork existing"
 
@@ -66,15 +66,7 @@ The third option (integrate) requires a good understanding of Github. If you are
 
 !!! Note
 
-    The Github web interface does seem to change on a fairly frequent basis. We will try to keep instructions up-to-date, but please do let us know if they need updating.
-
-#### Enable Issues
-
-You may need to enable Issues on the repository. To do this:  
-
-1. Visit your repository (most likely at `github.com/username/repo_name/`).   
-2. Go to `Settings`-> `General`-> `Features`.
-3. Tick the box next to `Issues` to enable Issues.
+    The Github web interface does seem to change on a fairly frequent basis. We will try to keep instructions up-to-date, but please do let us know if they need updating. `Issues` and `Workflows` (under `Actions`) both need to be enabled, this is the current default.
 
 #### Add Issue labels
 
@@ -88,21 +80,14 @@ You need to add Issue labels to the repository. To do this:
 6. Type `question proposal` into `Label name` and click `Create label`.
 7. Type `accepted question` into `Label name` and click `Create label`.
 
-#### Enable Workflows
-
-You may need to enable workflows on the repository. To do this:      
-  
-1. Click on the `Actions` tab towards the top of the page.   
-2. Click on `I understand my workflows, go ahead and enable them`.   
-
 #### Enable Github Pages
 
 You may need to enable Github to publish your gh-pages branch. To do this:
 
-1. Go to `Settings` -> `Pages`.
-2. Select `Deploy from a branch` in drop-down menu below `Source`.
-3. Select `gh-pages` and `/(root)` in the drop-down menu below `Branch`.
-4. Click `Save`.
+1. Visit your repository (most likely at github.com/username/repo_name/) 
+2. Click on `main` towards the top left hand corner
+3. In the box with `find or create a branch` type `gh-pages`
+4. Click on `Create branch: gh-pages from main`
 
 #### Set repository secrets
 
