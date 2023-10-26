@@ -217,7 +217,7 @@ def issue_interface():
         Edit the labels to show that the question has been accepted."""
         if issue_thread.check_label("accepted question"):
             issue_thread.make_comment("Oh dear! You cannot bank a question that has already been accepted.")
-        if user_settings.check_admin(author) and issue_thread.check_label("question proposal"):
+        if user_settings.check_admin('@'+author) and issue_thread.check_label("question proposal"):
             if question.Question.from_issue(issue_thread).in_bank is True:
                 issue_thread.make_comment("Oh dear! A question with this title is already in the bank")
 
