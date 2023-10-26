@@ -48,7 +48,7 @@ The second option requires a solid understanding of Github. If you are new to Gi
     - Your ChooChoo repo should be public if you have standard (free) Github account and want to publish tutorials, questions and summary plots online.
     - You are advised to create one ChooChoo repository for each class group. This will allow you to track the progress of each individual class rather than all classes combined. 
     
-## 2. Set repository permissions
+## 2. Update Github labels and settings
 
 !!! Note
 
