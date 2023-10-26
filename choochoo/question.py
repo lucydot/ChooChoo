@@ -52,10 +52,10 @@ class Question:
         dictionary["issue"] = issue
         dictionary["repository"] = issue.repository
         issue_body = dictionary["issue"].pygh_issue.body
-        dictionary["question"] = re.search("(?s)(Question)(.*)### Answer",issue_body).group(2).strip()
-        dictionary["answer"] = re.search("(?s)(Answer)(.*)### Checklist",issue_body).group(2).strip()
-        dictionary["title"] = re.search("(?s)(Title)(.*)### Question",issue_body).group(2).strip()
-        dictionary["authors"] = re.search("(?s)(Authors)(.*)### Title",issue_body).group(2).strip().split()
+        dictionary["question"] = re.search("(?s)(Question)(.*)(### Answer)",issue_body).group(2).strip()
+        dictionary["answer"] = re.search("(?s)(Answer)(.*)(### Checklist)",issue_body).group(2).strip()
+        dictionary["title"] = re.search("(?s)(Title)(.*)(### Question)",issue_body).group(2).strip()
+        dictionary["authors"] = re.search("(?s)(Authors)(.*)(### Title)",issue_body).group(2).strip().split()
         dictionary["checklist_items"] = [item.strip() for item in re.findall("\[X\](.*?)\\n",issue_body)]
         dictionary["status"] = 'proposed'
         try:
