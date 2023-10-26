@@ -41,10 +41,9 @@ The second option requires a solid understanding of Github. If you are new to Gi
         - You **do not** need the ChooChoo-template `.git` folder -  this can be safely ignored/removed.
         - Merge the contents of `.github/` into any existing folder of the same name.
 
-!!! Note
+Whichever option you choose your repository should be public if you have standard (free) Github account and want to publish tutorials, questions and summary plots online.
 
-    - Your ChooChoo repo should be public if you have standard (free) Github account and want to publish tutorials, questions and summary plots online.
-    - You are advised to create one ChooChoo repository for each class group. This will allow you to track the progress of each individual class rather than all classes combined. 
+You are advised to create one ChooChoo repository for each class group. This will allow you to track the progress of each individual class rather than all classes combined. 
     
 ## 2. Update Github labels and settings
 
@@ -80,7 +79,7 @@ Commands to `choochoo` trigger a Github Action workflow. By default the action r
 1. Go to `Settings` -> `Collaborators` -> `Add people`.
 2. Type `choochoo-bot` 
 3. Click `Add collaborator`.
-4. Contact us through the [ChooChoo discussion page](https://github.com/lucydot/ChooChoo/discussions/) or [email](https://lucydot.github.io/about/) and we will send a `BOT_ACCESS_TOKEN`
+4. Contact us through [email](https://lucydot.github.io/about/) and we will send a `BOT_ACCESS_TOKEN`
 5. Add the BOT_ACCESS_TOKEN as a repository secret.
 6. In `.github/workflows/choochoo-fat-controller.yml` replace all instances of `secrets.GITHUB_TOKEN` with `secrets.BOT_ACCESS_TOKEN`.
 
