@@ -1,6 +1,6 @@
 ## All aboard! Setting up ChooChoo
 
-The typical ChooChoo setup should take roughly one hour. The exact time depends on whether you are using an existing ChooChoo project (in which case setup should be quicker) or creating a ChooChoo project from scratch (in which case setup time will partly depend on how many objectives you are specifying). It will also depend on how familiar you are with the underlying tools: Github, yaml and markdown. For more support in using these tools please see the [Tools page](./tools.md). If you are stuck, please get in contact using the [Github discussions board](https://github.com/lucydot/ChooChoo/discussions) or via email ([see here](https://lucydot.github.io/about/)).
+The typical ChooChoo setup should take roughly one hour. The exact time depends on whether you are using an existing ChooChoo project (in which case setup should be quicker) or creating a ChooChoo project from scratch (in which case setup time will partly depend on how many objectives you are specifying). It will also depend on how familiar you are with the underlying tools: Github, yaml and markdown. If you are stuck, please get in contact using the [Github discussions board](https://github.com/lucydot/ChooChoo/discussions) or via email ([see here](https://lucydot.github.io/about/)).
 
 
 ``` mermaid
