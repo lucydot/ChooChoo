@@ -363,8 +363,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#enable-github-pages" class="md-nav__link">
-    Enable Github Pages
+  <a href="#create-gh-pages-branch" class="md-nav__link">
+    Create gh-pages branch
   </a>
   
 </li>
@@ -745,8 +745,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#enable-github-pages" class="md-nav__link">
-    Enable Github Pages
+  <a href="#create-gh-pages-branch" class="md-nav__link">
+    Create gh-pages branch
   </a>
   
 </li>
@@ -899,10 +899,10 @@ If you are new to Github we recommend forking an existing choochoo repository or
 <li>Type <code>question proposal</code> into <code>Label name</code> and click <code>Create label</code>.</li>
 <li>Type <code>accepted question</code> into <code>Label name</code> and click <code>Create label</code>.</li>
 </ol>
-<h4 id="enable-github-pages">Enable Github Pages</h4>
+<h4 id="create-gh-pages-branch">Create gh-pages branch</h4>
 <p>You may need to enable Github to publish your gh-pages branch. To do this:</p>
 <ol>
-<li>Visit your repository (most likely at github.com/username/repo_name/) </li>
+<li>Visit your repository landing page (at github.com/organisation_name/repo_name/) </li>
 <li>Click on <code>main</code> towards the top left hand corner</li>
 <li>In the box with <code>find or create a branch</code> type <code>gh-pages</code></li>
 <li>Click on <code>Create branch: gh-pages from main</code></li>
@@ -918,14 +918,14 @@ If you are new to Github we recommend forking an existing choochoo repository or
 <li>In <code>.github/workflows/choochoo-fat-controller.yml</code> replace all instances of <code>secrets.GITHUB_TOKEN</code> with <code>secrets.BOT_ACCESS_TOKEN</code>.</li>
 </ol>
 <h2 id="3-specify-choochoo-settings">3. Specify ChooChoo settings</h2>
-<p>All ChooChoo settings are contained within <code>./instructor/settings.yml</code>. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the <a href="./tools.md">Tools page</a>. You can edit plain text files (yaml or Markdown) directly in the Github interface on your web browser without downloading anything.</p>
+<p>All ChooChoo settings are contained within <code>./instructor/settings.yml</code>. This is a yaml file. You can edit plain text files (yaml or Markdown) directly in the Github interface on your web browser without downloading anything.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Remember to add your own Github username to the list of <code>admins</code>.</p>
 </div>
 <h4 id="key-settings-must-edit">Key settings (must edit)</h4>
 <p><code>project_title</code>: The project title.  <br />
-<code>project_repo</code>: In the format <code>username/repo_name</code>.     <br />
+<code>project_repo</code>: In the format <code>organisation_name/repo_name</code>.     <br />
 <code>admins</code>: A list of Github usernames without the <code>@</code> sign.         <br />
 <code>instructors</code>: A list of Github usernames without the <code>@</code> sign.<br />
 <code>students</code>: A list of Github usernames without the <code>@</code> sign.
@@ -936,7 +936,7 @@ If you are new to Github we recommend forking an existing choochoo repository or
 <code>gh-pages</code>: If set to true then the question bank, tutorials and summary plot will be published on the <code>gh-pages_branch</code>. 
 <code>gh-pages_branch</code>: The branch used to publish web content. This is most commonly <code>gh-pages</code>. For more information on Github Pages please see the <a href="./tools.md">Tools page</a>.     </p>
 <h2 id="4-set-choochoo-objectives">4. Set ChooChoo objectives</h2>
-<p>The ChooChoo checklist is generated from <code>./instructor/objectives.yml</code>. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the <a href="./tools.md">Tools page</a>.</p>
+<p>The ChooChoo checklist is generated from <code>./instructor/objectives.yml</code>. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
@@ -957,7 +957,7 @@ If you are new to Github we recommend forking an existing choochoo repository or
 <code>links</code>: A list of other links associated with this objective.  </p>
 <h2 id="5-generate-templates">5. Generate templates</h2>
 <ol>
-<li>Visit your choochoo repository (most likely github.com/username/repo_name)</li>
+<li>Visit your choochoo repository (at github.com/organisation_name/repo_name)</li>
 <li>Click on  the <code>Issues</code> tab towards the top of the page    </li>
 <li>Click on <code>New Issue</code></li>
 <li>Click <code>Get Started</code> next to <code>ChooChoo instructor thread</code></li>
@@ -971,19 +971,17 @@ If the <code>choochoo</code> command is a success you will see a reply in the is
 </div>
 <h2 id="6-test-setup">6. Test setup</h2>
 <ol>
-<li>Visit your choochoo repository (most likely github.com/username/repo_name)</li>
+<li>Visit your choochoo repository (at github.com/organisation_name/repo_name)</li>
 <li>Click on  the <code>Issues</code> tab towards the top of the page</li>
 <li>Click on <code>New Issue</code></li>
-<li>Click <code>Get Started</code> next to <code>ChooChoo instructor thread</code></li>
+<li>Click <code>Get Started</code> next to <code>ChooChoo student thread</code></li>
 <li>Click on <code>Preview</code> to check the formatting looks correct</li>
-<li>Repeat steps 1 through 5 for <code>ChooChoo student thread</code> </li>
 <li>Click <code>Submit new issue</code> to automatically generate a checklist</li>
 <li>Read through the checklist and double check formatting, spelling, links etc</li>
 </ol>
 <p><em>If <code>questions</code> are enabled:</em>  </p>
 <ol>
-<li>Repeat steps 1 through 4 for <code>Question thread</code> (if questions are enabled)    </li>
-<li>Read through <code>Checklist items</code> at the bottom of the form and double check formatting, spelling etc.   </li>
+<li>Repeat for <code>Question thread</code> (if questions are enabled)    </li>
 </ol>
 <p><em>If <code>gh-pages</code> is enabled:</em>    </p>
 <ol>
