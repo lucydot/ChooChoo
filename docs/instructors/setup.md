@@ -63,11 +63,11 @@ You need to add Issue labels to the repository. To do this:
 6. Type `question proposal` into `Label name` and click `Create label`.
 7. Type `accepted question` into `Label name` and click `Create label`.
 
-#### Enable Github Pages
+#### Create gh-pages branch
 
 You may need to enable Github to publish your gh-pages branch. To do this:
 
-1. Visit your repository (most likely at github.com/username/repo_name/) 
+1. Visit your repository landing page (at github.com/organisation_name/repo_name/) 
 2. Click on `main` towards the top left hand corner
 3. In the box with `find or create a branch` type `gh-pages`
 4. Click on `Create branch: gh-pages from main`
@@ -85,7 +85,7 @@ Commands to `choochoo` trigger a Github Action workflow. By default the action r
 
 ## 3. Specify ChooChoo settings
 
-All ChooChoo settings are contained within `./instructor/settings.yml`. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the [Tools page](./tools.md). You can edit plain text files (yaml or Markdown) directly in the Github interface on your web browser without downloading anything.
+All ChooChoo settings are contained within `./instructor/settings.yml`. This is a yaml file. You can edit plain text files (yaml or Markdown) directly in the Github interface on your web browser without downloading anything.
 
 !!! Important
 
@@ -93,7 +93,7 @@ All ChooChoo settings are contained within `./instructor/settings.yml`. This is 
 
 #### Key settings (must edit)
 `project_title`: The project title.    
-`project_repo`: In the format `username/repo_name`.       
+`project_repo`: In the format `organisation_name/repo_name`.       
 `admins`: A list of Github usernames without the `@` sign.           
 `instructors`: A list of Github usernames without the `@` sign.  
 `students`: A list of Github usernames without the `@` sign.
@@ -107,7 +107,7 @@ All ChooChoo settings are contained within `./instructor/settings.yml`. This is 
 
 ## 4. Set ChooChoo objectives
 
-The ChooChoo checklist is generated from `./instructor/objectives.yml`. This is a yaml file;  if you are unfamiliar with yaml you can read more about the syntax on the [Tools page](./tools.md).
+The ChooChoo checklist is generated from `./instructor/objectives.yml`. 
 
 !!! Note
 
@@ -131,7 +131,7 @@ Each objective contains:
 
 ## 5. Generate templates
 
-1. Visit your choochoo repository (most likely github.com/username/repo_name)
+1. Visit your choochoo repository (at github.com/organisation_name/repo_name)
 2. Click on  the `Issues` tab towards the top of the page    
 3. Click on `New Issue`
 4. Click `Get Started` next to `ChooChoo instructor thread`
@@ -145,23 +145,21 @@ Each objective contains:
 
 ## 6. Test setup
 
-1. Visit your choochoo repository (most likely github.com/username/repo_name)
+1. Visit your choochoo repository (at github.com/organisation_name/repo_name)
 2. Click on  the `Issues` tab towards the top of the page
 3. Click on `New Issue`
-4. Click `Get Started` next to `ChooChoo instructor thread`
+4. Click `Get Started` next to `ChooChoo student thread`
 5. Click on `Preview` to check the formatting looks correct
-6. Repeat steps 1 through 5 for `ChooChoo student thread` 
-7. Click `Submit new issue` to automatically generate a checklist
-8. Read through the checklist and double check formatting, spelling, links etc
+6. Click `Submit new issue` to automatically generate a checklist
+7. Read through the checklist and double check formatting, spelling, links etc
 
 *If `questions` are enabled:*  
 
-9. Repeat steps 1 through 4 for `Question thread` (if questions are enabled)    
-10. Read through `Checklist items` at the bottom of the form and double check formatting, spelling etc.   
+9. Repeat for `Question thread` (if questions are enabled)    
 
 *If `gh-pages` is enabled:*    
 
-11. Visit the repository website (most likely username.github.io/repo_name) to verify that a page exists
+10. Visit the repository website (most likely username.github.io/repo_name) to verify that a page exists
 
 ## 7. Share documentation
 
