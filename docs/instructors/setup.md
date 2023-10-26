@@ -19,13 +19,12 @@ graph LR
 
 ## 1. Get ChooChoo files
 
-There are three ways to get the files required to run ChooChoo:
+There are two ways to get the files required to run ChooChoo:
 
 1. Copy the [choochoo-template repository](https://github.com/lucydot/ChooChoo-template/) and specify the objectives/questions/tutorials for your course.
-2. Fork an [existing choochoo repository](../existing.md) and use or extend objectives/questions/tutorials from an existing ChooChoo project.
-3. Integrate ChooChoo into an existing Github repository.
+2. Integrate ChooChoo into an existing Github repository.
 
-The third option (integrate) requires a good understanding of Github. If you are new to Github we recommend copying the [choochoo-template](https://github.com/lucydot/ChooChoo-template/) or an [existing choochoo repository](../existing.md). For more setup details please select a tab below.
+The second option requires a solid understanding of Github. If you are new to Github we recommend copying the [choochoo-template](https://github.com/lucydot/ChooChoo-template/). For more setup details please select a tab below.
 
 === "Copy template"
 
@@ -33,13 +32,6 @@ The third option (integrate) requires a good understanding of Github. If you are
     2. Click on the green `Use this template` button towards the top-right hand corner and select `Create a new repository`
     3. Specify the owner, repository name and description
     4. Click on `Create repository`
-    
-=== "Fork existing"
-
-    1. Find an [existing ChooChoo repository](./existing.md) in your subject domain
-    2. Click on the `fork` icon towards the top-right hand corner
-    3. Specify the owner, repository name and description
-    4. Click on `Create Fork`
     
 === "Integrate"
 
