@@ -28,7 +28,7 @@ The second option requires a solid understanding of Github. If you are new to Gi
 
 === "Copy template"
 
-    1. Visit https://github.com/lucydot/ChooChoo-template/
+    1. Visit [github.com/lucydot/ChooChoo-template](https://github.com/lucydot/ChooChoo-template/)
     2. Click on the green `Use this template` button towards the top-right hand corner and select `Create a new repository`
     3. Specify the owner, repository name and description
     4. Click on `Create repository`
