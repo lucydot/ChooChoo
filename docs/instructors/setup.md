@@ -35,16 +35,10 @@ The second option requires a solid understanding of Github. If you are new to Gi
     
 === "Integrate"
 
-    !!! Warning
-
     This option requires a good understanding of Github. Please use with caution.
     If you are new to Github we recommend forking an existing choochoo repository or the template repository.
-                    
-    !!! Note
-    
-    The contents of `ChooChoo-template`  should be copied into the root of your repository on a branch named `main`.
 
-    1. Copy/clone the contents of [https://github.com/lucydot/ChooChoo-template/](https://github.com/lucydot/ChooChoo-template/) into the root of your existing repository. 
+    1. Copy/clone the contents of [https://github.com/lucydot/ChooChoo-template/](https://github.com/lucydot/ChooChoo-template/) into the root of your existing repository on the `main` branch. 
     
         - You **do not** need the ChooChoo-template `.git` folder -  this can be safely ignored/removed.
         - Merge the contents of `.github/` into any existing folder of the same name.
