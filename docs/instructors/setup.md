@@ -78,8 +78,8 @@ Commands to `choochoo` trigger a Github Action workflow. By default the action r
 
 === "Personal access token"
 
-1. Generate a personal access token (see docs [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)).
-2. Add the BOT_ACCESS_TOKEN as a repository secret.
+1. Generate a personal access token (see docs [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)). The only scope required is `public_repo`.
+3. Add the BOT_ACCESS_TOKEN as a repository secret.
 
 === "Choochoo-bot token"
 
