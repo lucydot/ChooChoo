@@ -370,8 +370,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#optional-customise-your-bot" class="md-nav__link">
-    Optional: Customise your bot
+  <a href="#add-repository-secret" class="md-nav__link">
+    Add repository secret
   </a>
   
 </li>
@@ -752,8 +752,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#optional-customise-your-bot" class="md-nav__link">
-    Optional: Customise your bot
+  <a href="#add-repository-secret" class="md-nav__link">
+    Add repository secret
   </a>
   
 </li>
@@ -907,15 +907,26 @@ If you are new to Github we recommend forking an existing choochoo repository or
 <li>In the box with <code>find or create a branch</code> type <code>gh-pages</code></li>
 <li>Click on <code>Create branch: gh-pages from main</code></li>
 </ol>
-<h4 id="optional-customise-your-bot">Optional: Customise your bot</h4>
-<p>Commands to <code>choochoo</code> trigger a Github Action workflow. By default the action responds to issue comments using <code>secrets.GITHUB_TOKEN</code> which is automatically generated during any workflow run.  The disadvantage of this approach is that the display name for issue comments is the less charming <code>gh-actions bot</code>. To use <code>choochoo-bot</code> as the display name you can follow these <strong>optional</strong> steps:</p>
+<h4 id="add-repository-secret">Add repository secret</h4>
+<p>Commands to <code>choochoo</code> trigger a Github Action workflow. By default the action responds to issue comments using <code>secrets.CHOO_ACCESS_TOKEN</code>. You have to options for generating this token: i) generate the personal access token yourself and add this as a repository secret; ii) Contact ChooChoo developers for the access token. The second option has the advantage that each comment posted from a workflow will be authored by "choochoo-bot".</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Personal access token</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <ol>
-<li>Go to <code>Settings</code> -&gt; <code>Collaborators</code> -&gt; <code>Add people</code>.</li>
-<li>Type <code>choochoo-bot</code> </li>
-<li>Click <code>Add collaborator</code>.</li>
-<li>Contact us through <a href="https://lucydot.github.io/about/">email</a> and we will send a <code>BOT_ACCESS_TOKEN</code></li>
+<li>Generate a personal access token (see docs <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">here</a>).</li>
 <li>Add the BOT_ACCESS_TOKEN as a repository secret.</li>
-<li>In <code>.github/workflows/choochoo-fat-controller.yml</code> replace all instances of <code>secrets.GITHUB_TOKEN</code> with <code>secrets.BOT_ACCESS_TOKEN</code>.</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Choochoo-bot token</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<ol>
+<li>Contact us through <a href="https://lucydot.github.io/about/">email</a> and we will send a <code>CHOO_ACCESS_TOKEN</code></li>
+<li>Go to <code>Settings</code> -&gt; <code>Collaborators</code> -&gt; <code>Add people</code> and add username <code>choochoo-bot</code> as a collaborator.</li>
+<li>Add the CHOO_ACCESS_TOKEN as a repository secret (see docs <a href="https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository">here</a>).</li>
 </ol>
 <h2 id="3-specify-choochoo-settings">3. Specify ChooChoo settings</h2>
 <p>All ChooChoo settings are contained within <code>./instructor/settings.yml</code>. This is a yaml file. You can edit plain text files (yaml or Markdown) directly in the Github interface on your web browser without downloading anything.</p>
