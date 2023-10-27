@@ -41,7 +41,7 @@ The second option requires a solid understanding of Github. If you are new to Gi
         - You **do not** need the ChooChoo-template `.git` folder -  this can be safely ignored/removed.
         - Merge the contents of `.github/` into any existing folder of the same name.
 
-Whichever option you choose your repository should be public if you have standard (free) Github account and want to publish tutorials, questions and summary plots online.
+Whichever option you choose your repository should be public if you have standard (free) Github account and want to publish tutorials, questions and summary plots online. These will be published from a branch called `gh-pages`.
 
 You are advised to create one ChooChoo repository for each class group. This will allow you to track the progress of each individual class rather than all classes combined. 
     
@@ -65,7 +65,7 @@ You need to add Issue labels to the repository. To do this:
 
 #### Create gh-pages branch
 
-You may need to enable Github to publish your gh-pages branch. To do this:
+You need to create a gh-pages branch, this will be used to publish webpages from. To do this:
 
 1. Visit your repository landing page (at github.com/organisation_name/repo_name/) 
 2. Click on `main` towards the top left hand corner
@@ -102,8 +102,7 @@ All ChooChoo settings are contained within `./instructor/settings.yml`. This is 
 #### User options (may edit)
 `questions`: If set to `true` students can propose their own questions for the question bank.     
 `votes_required`: The number of votes required before an admin is asked to add a question to the question bank.    
-`gh-pages`: If set to true then the question bank, tutorials and summary plot will be published on the `gh-pages_branch`. 
-`gh-pages_branch`: The branch used to publish web content. This is most commonly `gh-pages`. For more information on Github Pages please see the [Tools page](./tools.md).     
+`gh-pages`: If set to true then the question bank, tutorials and summary plot will be published on the `gh-pages` branch. 
 
 ## 4. Set ChooChoo objectives
 
@@ -159,7 +158,7 @@ Each objective contains:
 
 *If `gh-pages` is enabled:*    
 
-10. Visit the repository website (most likely username.github.io/repo_name) to verify that a page exists
+10. Visit the repository website (most likely organisation_name.github.io/repo_name) to verify that a page exists
 
 ## 7. Share documentation
 
