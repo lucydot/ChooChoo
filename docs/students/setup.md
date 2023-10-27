@@ -15,7 +15,7 @@ graph LR
 
 !!! Note
 
-    If you have not used Github before there can be quite a bit to take in. Github (owned by Microsoft) is built on top of Git, which is an open-source version control system. Git and Github are extremely valuable tools to learn as they are used by most software developers in academia and industry. We are using only a very small part of Github/Git within a ChooChoo project. To learn more about Github and the other tools underlying ChooChoo please visit the [Tools page](./tools.md).
+    If you have not used Github before there can be quite a bit to take in. Github (owned by Microsoft) is built on top of Git, which is an open-source version control system. Git and Github are extremely valuable tools to learn as they are used by most software developers in academia and industry. We are using only a very small part of Github/Git within a ChooChoo project. 
 
 ## 2. Find your ChooChoo repository
 
