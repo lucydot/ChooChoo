@@ -12,7 +12,7 @@ graph LR
 
 ChooChoo is designed so that admins, instructors and students can propose questions for the question bank. Other participants then review the proposed questions, and up-vote those which they think should be accepted to the bank.
 
-This process is motivated by the evidenced benefits of co-creation in education. It is now well established that learners construct knowledge when they are actively engaging with content rather than passively taking in information. Teaching is not a one-way process flowing from teacher to student; the best learning takes place when knowledge is created together. By writing assessment questions the students are actively engaging with the subject matter, and developing a deeper understanding of it. In addition to this it is an opportunity to learn basic Markdown. For more about the pedagogy underlying ChooChoo, please see the [Pedagogy page](./pedagogy.md).
+This process is motivated by the evidenced benefits of co-creation in education. It is now well established that learners construct knowledge when they are actively engaging with content rather than passively taking in information. Teaching is not a one-way process flowing from teacher to student; the best learning takes place when knowledge is created together. By writing assessment questions the students are actively engaging with the subject matter, and developing a deeper understanding of it. In addition to this it is an opportunity to learn basic Markdown. 
 
 !!! Note
 
