@@ -72,16 +72,20 @@ You need to create a gh-pages branch, this will be used to publish webpages from
 3. In the box with `find or create a branch` type `gh-pages`
 4. Click on `Create branch: gh-pages from main`
 
-#### Optional: Customise your bot
+#### Add repository secret
 
-Commands to `choochoo` trigger a Github Action workflow. By default the action responds to issue comments using `secrets.GITHUB_TOKEN` which is automatically generated during any workflow run.  The disadvantage of this approach is that the display name for issue comments is the less charming `gh-actions bot`. To use `choochoo-bot` as the display name you can follow these **optional** steps:
+Commands to `choochoo` trigger a Github Action workflow. By default the action responds to issue comments using `secrets.CHOO_ACCESS_TOKEN`. You have to options for generating this token: i) generate the personal access token yourself and add this as a repository secret; ii) Contact ChooChoo developers for the access token. The second option has the advantage that each comment posted from a workflow will be authored by "choochoo-bot".
 
-1. Go to `Settings` -> `Collaborators` -> `Add people`.
-2. Type `choochoo-bot` 
-3. Click `Add collaborator`.
-4. Contact us through [email](https://lucydot.github.io/about/) and we will send a `BOT_ACCESS_TOKEN`
-5. Add the BOT_ACCESS_TOKEN as a repository secret.
-6. In `.github/workflows/choochoo-fat-controller.yml` replace all instances of `secrets.GITHUB_TOKEN` with `secrets.BOT_ACCESS_TOKEN`.
+=== "Personal access token"
+
+1. Generate a personal access token (see docs [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)).
+2. Add the BOT_ACCESS_TOKEN as a repository secret.
+
+=== "Choochoo-bot token"
+
+1. Contact us through [email](https://lucydot.github.io/about/) and we will send a `CHOO_ACCESS_TOKEN`
+1. Go to `Settings` -> `Collaborators` -> `Add people` and add username `choochoo-bot` as a collaborator.
+5. Add the CHOO_ACCESS_TOKEN as a repository secret (see docs [here](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository)).
 
 ## 3. Specify ChooChoo settings
 
