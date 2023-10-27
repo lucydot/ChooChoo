@@ -881,7 +881,7 @@ If you are new to Github we recommend forking an existing choochoo repository or
 </div>
 </div>
 </div>
-<p>Whichever option you choose your repository should be public if you have standard (free) Github account and want to publish tutorials, questions and summary plots online.</p>
+<p>Whichever option you choose your repository should be public if you have standard (free) Github account and want to publish tutorials, questions and summary plots online. These will be published from a branch called <code>gh-pages</code>.</p>
 <p>You are advised to create one ChooChoo repository for each class group. This will allow you to track the progress of each individual class rather than all classes combined. </p>
 <h2 id="2-update-github-labels-and-settings">2. Update Github labels and settings</h2>
 <div class="admonition note">
@@ -900,7 +900,7 @@ If you are new to Github we recommend forking an existing choochoo repository or
 <li>Type <code>accepted question</code> into <code>Label name</code> and click <code>Create label</code>.</li>
 </ol>
 <h4 id="create-gh-pages-branch">Create gh-pages branch</h4>
-<p>You may need to enable Github to publish your gh-pages branch. To do this:</p>
+<p>You need to create a gh-pages branch, this will be used to publish webpages from. To do this:</p>
 <ol>
 <li>Visit your repository landing page (at github.com/organisation_name/repo_name/) </li>
 <li>Click on <code>main</code> towards the top left hand corner</li>
@@ -933,8 +933,7 @@ If you are new to Github we recommend forking an existing choochoo repository or
 <h4 id="user-options-may-edit">User options (may edit)</h4>
 <p><code>questions</code>: If set to <code>true</code> students can propose their own questions for the question bank.   <br />
 <code>votes_required</code>: The number of votes required before an admin is asked to add a question to the question bank.  <br />
-<code>gh-pages</code>: If set to true then the question bank, tutorials and summary plot will be published on the <code>gh-pages_branch</code>. 
-<code>gh-pages_branch</code>: The branch used to publish web content. This is most commonly <code>gh-pages</code>. For more information on Github Pages please see the <a href="./tools.md">Tools page</a>.     </p>
+<code>gh-pages</code>: If set to true then the question bank, tutorials and summary plot will be published on the <code>gh-pages</code> branch. </p>
 <h2 id="4-set-choochoo-objectives">4. Set ChooChoo objectives</h2>
 <p>The ChooChoo checklist is generated from <code>./instructor/objectives.yml</code>. </p>
 <div class="admonition note">
@@ -985,7 +984,7 @@ If the <code>choochoo</code> command is a success you will see a reply in the is
 </ol>
 <p><em>If <code>gh-pages</code> is enabled:</em>    </p>
 <ol>
-<li>Visit the repository website (most likely username.github.io/repo_name) to verify that a page exists</li>
+<li>Visit the repository website (most likely organisation_name.github.io/repo_name) to verify that a page exists</li>
 </ol>
 <h2 id="7-share-documentation">7. Share documentation</h2>
 <div class="admonition important">
