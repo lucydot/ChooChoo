@@ -19,22 +19,23 @@ graph LR
 
 There are two ways to get the files required to run ChooChoo:
 
-1. Copy the [choochoo-template repository](https://github.com/lucydot/ChooChoo-template/) into a new Github repository.
+1. [Recommended] Copy the [choochoo-template repository](https://github.com/lucydot/ChooChoo-template/) into a new Github repository.
 2. Integrate the [choochoo-template repository](https://github.com/lucydot/ChooChoo-template/) into an existing Github repository.
 
-The second option requires a solid understanding of Github. If you are new to Github we recommend copying the [choochoo-template](https://github.com/lucydot/ChooChoo-template/). For more setup details please select a tab below.
+The second option requires a solid understanding of Github. We primarily recommend copying the [choochoo-template](https://github.com/lucydot/ChooChoo-template/) into a new repository. For more setup details please select a tab below.
 
 === "Copy template"
 
     1. Visit [github.com/lucydot/ChooChoo-template](https://github.com/lucydot/ChooChoo-template/)
     2. Click on the green `Use this template` button towards the top-right hand corner and select `Create a new repository`
+    3. Tick the box `Include all branches`
     3. Specify the owner, repository name and description
     4. Click on `Create repository`
     
 === "Integrate"
 
     This option requires a good understanding of Github. Please use with caution.
-    If you are new to Github we recommend forking an existing choochoo repository or the template repository.
+    We primarily recommend copying the existing choochoo template repository into a new repository.
 
     1. Copy/clone the contents of [https://github.com/lucydot/ChooChoo-template/](https://github.com/lucydot/ChooChoo-template/) into the root of your existing repository on the `main` branch. 
     
