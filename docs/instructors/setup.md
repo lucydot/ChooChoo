@@ -19,8 +19,8 @@ graph LR
 
 There are two ways to get the files required to run ChooChoo:
 
-1. Copy the [choochoo-template repository](https://github.com/lucydot/ChooChoo-template/) and specify the objectives/questions/tutorials for your course.
-2. Integrate ChooChoo into an existing Github repository.
+1. Copy the [choochoo-template repository](https://github.com/lucydot/ChooChoo-template/) into a new Github repository.
+2. Integrate the [choochoo-template repository](https://github.com/lucydot/ChooChoo-template/) into an existing Github repository.
 
 The second option requires a solid understanding of Github. If you are new to Github we recommend copying the [choochoo-template](https://github.com/lucydot/ChooChoo-template/). For more setup details please select a tab below.
 
