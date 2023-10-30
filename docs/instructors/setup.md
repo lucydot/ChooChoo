@@ -65,7 +65,7 @@ You need to add Issue labels to the repository. To do this:
 
 #### Create gh-pages branch
 
-You need to create a gh-pages branch, this will be used to publish webpages from. To do this:
+You *may* need to create a gh-pages branch, this will be used to publish webpages from. In some cases this may be automatically generated. To create the gh-pages branch:
 
 1. Visit your repository landing page (at github.com/organisation_name/repo_name/) 
 2. Click on `main` towards the top left hand corner
